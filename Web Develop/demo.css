@@ -1,0 +1,130 @@
+/* ====== base ====== */
+header, footer, main, section, article, nav, aside, figure, figcaption {
+	display: block;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	border: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+small {
+	font-size: 80%;
+}
+.page {
+	width:960px;
+	margin: 0 auto;
+}
+/* ====== 页面头部 ====== */
+.masthead {
+	position: relative;
+	border: 1px solid;
+}
+.logo {
+	margin-top: 12px;
+}
+.social-sites {
+	list-style: none;
+	position: absolute;
+	top: 46px;
+	right: 0;
+}
+.social-sites li {
+	display: inline;
+}
+.nav-main {
+	list-style: none;
+	border-top: 5px solid #019443;
+	border-bottom: 1px solid #c7c7c8;
+	padding: 0.5em 0;
+}
+.nav-main li {
+	display: inline-block;
+	/*font-size: 1.05625em;*/
+	border-left: 1px solid #c8c8c8;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	/*padding: 12px 25px;*/
+	padding: 0.75em 1.5625em;
+}
+.nav-main li:first-child {
+	border-left:none;
+}
+.nav-main a:link {
+	color: #292929;
+}
+.nav-main a:hover {
+	color: #029443;
+}
+.nav-main .current a:link, .nav-main .current a:hover{
+	color: #747474;
+	cursor: default;
+}
+/* ====== 页面主体 ====== */
+.container {
+	border: 1px solid green;
+}	
+	/* ====== 主体左侧内容 ======*/
+main {
+	float: left;
+	width: 600px;
+	margin-right: 30px;
+}
+.post {
+	margin-top: 3.4375em;
+}
+.post h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 3.25em;
+}
+.post .more:after {
+	content: ' »';
+}
+
+.pagination li {
+	display: inline;
+}
+.pagination-next:after {
+	content: ' »';
+}	
+	/* ====== 侧边栏内容 ====== */
+
+.sidebar {
+	border: 1px solid black;
+	float: right;
+	width: 300px;
+	/*margin-top: 30px;
+	margin-left: 30px;*/
+}
+.mod ul {
+	list-style: none;
+}
+.sidebar .more:after {
+	content: ' »';
+}
+/* ====== 页面页脚 ====== */
+
+/* ====== 清除浮动 ====== */
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}

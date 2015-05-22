@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+header, footer, main, nav, aside, section, article, figure, figcaption {display:block;}
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, input {margin:0; padding:0;}
+ul, ol {list-style:none;}
+a {text-decoration:none;}
+img {border:none;}
+
+/* clearfix */
+.clearfix:before, .clearfix:after {content:""; display:table;}
+.clearfix:after {clear:both;}
+.clearfix {zoom:1;}
