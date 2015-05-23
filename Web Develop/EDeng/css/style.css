@@ -12,5 +12,6 @@
 .navLink ul > li:last-child {padding-right:0;}
 .navLink ul li a {color:#979996;}
 .navLink ul li a:hover {color:#ff7300;text-decoration:underline;}
-.searchInfo {width:598px;height:33px;border:5px solid #ffeccd;border-radius:5px;}
-.searchInfo select {width:135px;height:30px;border:2px solid #ff7802;}
+.searchInfo {width:600px;height:33px;border:5px solid #ffeccd;border-radius:5px;background:#ffeccd;}
+.searchInfo select {width:138px;height:33px;border:2px solid #ff7802;float:left;}
+.searchInfo .searchText {width:371px;height:27px;border:2px solid #ff7802;float:left;color:#999;font-size:12px;margin:0 5px;}
