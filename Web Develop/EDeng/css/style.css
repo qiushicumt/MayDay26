@@ -12,6 +12,14 @@
 .navLink ul > li:last-child {padding-right:0;}
 .navLink ul li a {color:#979996;}
 .navLink ul li a:hover {color:#ff7300;text-decoration:underline;}
+.downNav img {float:left;}
+.search {float:left;}
 .searchInfo {width:600px;height:33px;border:5px solid #ffeccd;border-radius:5px;background:#ffeccd;}
 .searchInfo select {width:138px;height:33px;border:2px solid #ff7802;float:left;}
 .searchInfo .searchText {width:371px;height:27px;border:2px solid #ff7802;float:left;color:#999;font-size:12px;margin:0 5px;}
+.hotWords {font-size:12px;color:#cc0202;}
+.hotWords a {color:#0001cf;text-decoration:underline;}
+.downNav-right {float:right;}
+.downNav-right button {background:url(../img/fabu.gif);width:126px;height:37px;border:none;cursor:pointer;}
+.downNav-right ul li {display:inline;font-size:12px;}
+.downNav-right ul li a {color:#0001cf;text-decoration:underline;}
