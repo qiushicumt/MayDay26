@@ -12,14 +12,33 @@
 .navLink ul > li:last-child {padding-right:0;}
 .navLink ul li a {color:#979996;}
 .navLink ul li a:hover {color:#ff7300;text-decoration:underline;}
-.downNav img {float:left;}
-.search {float:left;}
+.downNav img {float:left;margin-top:5px;}
+.search {float:left;margin:8px 0 0 20px;}
 .searchInfo {width:600px;height:33px;border:5px solid #ffeccd;border-radius:5px;background:#ffeccd;}
 .searchInfo select {width:138px;height:33px;border:2px solid #ff7802;float:left;}
 .searchInfo .searchText {width:371px;height:27px;border:2px solid #ff7802;float:left;color:#999;font-size:12px;margin:0 5px;}
-.hotWords {font-size:12px;color:#cc0202;}
+.hotWords {font-size:12px;color:#cc0202;margin-left:5px;}
 .hotWords a {color:#0001cf;text-decoration:underline;}
-.downNav-right {float:right;}
+.downNav-right {float:right;margin:8px 6px 0 0;}
 .downNav-right button {background:url(../img/fabu.gif);width:126px;height:37px;border:none;cursor:pointer;}
-.downNav-right ul li {display:inline;font-size:12px;}
+.downNav-right ul li {display:inline;font-size:12px;width:40px;padding:0 8px 0 3px;border-right:1px solid #0000d0;}
+.downNav-right ul li:first-child {padding-left:9px;}
+.downNav-right ul li:last-child {border-right:none;}
 .downNav-right ul li a {color:#0001cf;text-decoration:underline;}
+
+/* content */
+.leftContent {float:left;margin-top:5px;width:750px;border-top:1px solid #bacee6;}
+.contentBanner {background:#f5f5f5;}
+.contentBanner-info {height:22px;line-height:22px;font-size:12px;border-bottom:1px solid #ddeef6;}
+.contentBanner-info a {margin-left:10px;}
+.contentBanner-info a:hover {text-decoration:underline;}
+.linkBanner {height:50px;}
+.linkBanner-left {float:left;width:145px;height:42px;border-right:1px solid #dceff6;margin:8px 0 0 15px;}
+.linkBanner-left a {color:#cc0001;display:block;}
+.linkBanner-left a:hover {text-decoration:underline;}
+.linkBanner-right {float:left;width:563px;height:42px;font-size:12px;}
+.linkBanner-right ul li {display:inline;}
+.linkBanner-right ul li a:hover {text-decoration:underline;}
+
+.sideBar {float:right;width:220px;margin-top:8px;}
+/* footer */
