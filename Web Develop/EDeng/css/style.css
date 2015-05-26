@@ -44,8 +44,8 @@
 .linkBanner-right ul li a:hover {text-decoration:underline;}
 .linkBanner-right p {float:left;margin:2px 0 0;padding-left:10px;}
 .linkBanner-right p a {text-decoration:underline;}
-.contentLinkInfo {width:180px;border:1px solid #f5dbb6;font-size:12px;}
-.contentLinkInfo h3 {background:url(../img/home_category_bg.jpg) repeat-x;height:27px;border-bottom:1px solid #f8edcf;line-height:27px;}
+.contentLinkInfo {width:180px;border:1px solid #f5dbb6;font-size:12px;border-top:none;float:left;margin-right:5px;}
+.contentLinkInfo h3 {background:url(../img/home_category_bg.jpg) repeat-x;height:27px;border-bottom:1px solid #f8edcf;border-top:1px solid #f8edcf;line-height:27px;}
 .contentLinkInfo h3 span {float:left;width:35px;height:27px;display:block;background-image:url(../img/icon_index.gif);}
 .contentLinkInfo h3 a {text-decoration:underline;margin-left:3px;}
 .contentLinkInfo ul a:hover {text-decoration:underline;}
