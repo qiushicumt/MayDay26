@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* basic elements */
-.wrapper {width:1025px;margin:0 auto;}
+.wrapper {width:980px;margin:0 auto;font-family:"宋体", arial;}
 
 /* header */
 .navLink {height:22px;border-bottom:1px solid #e6e6e6;background:#f8f8f8;font-size:12px;color:#979996;}
@@ -28,17 +28,28 @@
 
 /* content */
 .leftContent {float:left;margin-top:5px;width:750px;border-top:1px solid #bacee6;}
-.contentBanner {background:#f5f5f5;}
+.contentBanner {background:#f5f5f5;margin-bottom:2px;}
 .contentBanner-info {height:22px;line-height:22px;font-size:12px;border-bottom:1px solid #ddeef6;}
 .contentBanner-info a {margin-left:10px;}
 .contentBanner-info a:hover {text-decoration:underline;}
-.linkBanner {height:50px;}
+.linkBanner {height:52px;}
 .linkBanner-left {float:left;width:145px;height:42px;border-right:1px solid #dceff6;margin:8px 0 0 15px;}
 .linkBanner-left a {color:#cc0001;display:block;}
 .linkBanner-left a:hover {text-decoration:underline;}
-.linkBanner-right {float:left;width:563px;height:42px;font-size:12px;}
-.linkBanner-right ul li {display:inline;}
+.linkBanner-right {float:left;width:563px;height:42px;font-size:12px;margin:8px 0 0 14px;}
+.linkBanner-right ul li {float:left;padding-left:7px;white-space:nowrap;line-height:20px;}
+.linkBanner-right ul li:first-child {color:#9a9a9a;padding-left:0;}
+.linkBanner-right ul li:last-child {width:10px;white-space:nowrap;overflow:hidden;}
+.linkBanner-right ul li:nth-child(19) {padding-left:0;}
 .linkBanner-right ul li a:hover {text-decoration:underline;}
+.linkBanner-right p {float:left;margin:2px 0 0;padding-left:10px;}
+.linkBanner-right p a {text-decoration:underline;}
+.contentLinkInfo {width:180px;border:1px solid #f5dbb6;font-size:12px;}
+.contentLinkInfo h3 {background:url(../img/home_category_bg.jpg) repeat-x;height:27px;border-bottom:1px solid #f8edcf;line-height:27px;}
+.contentLinkInfo h3 span {float:left;width:35px;height:27px;display:block;background-image:url(../img/icon_index.gif);}
+.contentLinkInfo h3 a {text-decoration:underline;margin-left:3px;}
+.contentLinkInfo ul a:hover {text-decoration:underline;}
+.contentLinkInfo ul li {height:17px;line-height:17px;padding:3px 0 0 5px;margin-bottom:3px;}
 
 .sideBar {float:right;width:220px;margin-top:8px;}
 /* footer */
