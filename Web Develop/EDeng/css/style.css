@@ -88,5 +88,16 @@
 .contact2Link {color:#656567;text-decoration:underline;display:block;margin:0 0 12px 5px;}
 
 /* footer */
-.otherLink {width:980px;height:50px;border:1px solid #cccccc;}
-.otherLink ul li {float:left;}
+.footer {margin:10px 0 20px;}
+.otherLink {width:980px;height:50px;border:1px solid #cccccc;font-size:12px;line-height:1.5em;}
+.otherLink ul {padding:4px 0 0 15px;}
+.otherLink ul li {display:inline-block;width:108px;margin-right:80px;}
+.otherLink ul li a:hover {text-decoration:underline;}
+.footerOtherInfo {margin-top:5px;border-top:1px solid #ddd;text-align:center;}
+.footerOtherInfo ul {font-size:12px;padding:5px 118px;}
+.footerOtherInfo ul li {float:left;}
+.footerOtherInfo ul li a {color:#656565;}
+.footerOtherInfo ul li a:hover {text-decoration:underline;}
+.footerOtherInfo p {font-size:12px;width:590px;margin:10px auto;}
+.footerOtherInfo p a {color:#656565}
+.footerOtherInfo p a:hover {text-decoration:underline;}
