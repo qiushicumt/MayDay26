@@ -67,7 +67,7 @@
 			</div>
 		</header>
 		<main role="main" class="content clearfix">
-			<div class="leftContent clearfix">
+			<div class="leftContent">
 				<div class="contentBanner">
 					<p class="contentBanner-info"><a href="#">中国免费分类信息</a></p>
 					<div class="linkBanner clearfix">
@@ -114,8 +114,9 @@
 						</div>
 					</div>
 				</div>
+				<div class="clearfix">
 				<section class="contentLinkInfo">
-					<h3><span></span><a href="#">人才网</a></h3>
+					<h3><span class="show-1"></span><a href="#">人才网</a></h3>
 					<ul>
 						<li><a href="#">兼职</a></li>
 						<li><a href="#">个人简历</a></li>
@@ -139,7 +140,7 @@
     					<li><a href="#">秘书|客服|技术支持</a></li>
     					<li><a href="#">其他招聘信息</a></li>    
     				</ul>
-    				<h3><span></span><a href="#">生活网</a></h3>
+    				<h3><span class="show-2"></span><a href="#">生活网</a></h3>
 					<ul>
 						<li><a href="#">餐厅|美食</a></li>
 						<li><a href="#">茶馆|咖啡厅</a></li>
@@ -153,7 +154,7 @@
     				</ul>
 				</section>
 				<section class="contentLinkInfo">
-					<h3><span></span><a href="#">房产网</a></h3>
+					<h3><span class="show-3"></span><a href="#">房产网</a></h3>
 					<ul>
 						<li><a href="#">房屋出租</a></li>
 						<li><a href="#">房屋求租</a></li>
@@ -165,7 +166,7 @@
     					<li><a href="#">房产中介</a></li>
     					<li><a href="#">厂房出租</a></li>  
     				</ul>
-    				<h3><span></span><a href="#">企业黄页</a></h3>
+    				<h3><span class="show-4"></span><a href="#">企业黄页</a></h3>
 					<ul>
 						<li><a href="#">家电维修</a></li>
 						<li><a href="#">家具|家居</a></li>
@@ -188,7 +189,7 @@
     				</ul>
 				</section>
 				<section class="contentLinkInfo">
-					<h3><span></span><a href="#">二手网</a></h3>
+					<h3><span class="show-5"></span><a href="#">二手网</a></h3>
 					<ul>
 						<li><a href="#">古玩网</a></li>
 						<li><a href="#">化妆品</a></li>
@@ -209,7 +210,7 @@
     					<li><a href="#">礼品网</a></li>
     					<li><a href="#">其他二手信息</a></li>    
     				</ul>
-    				<h3><span></span><a href="#">社区|活动|宠物</a></h3>
+    				<h3><span class="show-6"></span><a href="#">社区|活动|宠物</a></h3>
 					<ul>
     					<li><a href="#">团购|打折|促销</a></li>
     					<li><a href="#">宠物|宠物用品</a></li>
@@ -218,7 +219,7 @@
     					<li><a href="#">通知|活动|聚会</a></li>
     					<li><a href="#">拼车|搭车|顺风车</a></li>	  
     				</ul>
-    				<h3><span></span><a href="#">招商加盟</a></h3>
+    				<h3><span class="show-7"></span><a href="#">招商加盟</a></h3>
 					<ul>
 						<li><a href="#">加盟|连锁</a></li>
 						<li><a href="#">代理|招商|合作</a></li>
@@ -226,7 +227,7 @@
     				</ul>
 				</section>
 				<section class="contentLinkInfo">
-					<h3><span></span><a href="#">交友</a></h3>
+					<h3><span class="show-8"></span><a href="#">交友</a></h3>
 					<ul>
 						<li><a href="#">浪漫交友</a></li>
 						<li><a href="#">兴趣交友</a></li>
@@ -234,7 +235,7 @@
     					<li><a href="#">找女朋友</a></li>
     					<li><a href="#">女找男</a></li>
     				</ul>
-    				<h3><span></span><a href="#">企业服务</a></h3>
+    				<h3><span class="show-9"></span><a href="#">企业服务</a></h3>
 					<ul>
 						<li><a href="#">网站建设|软件</a></li>
 						<li><a href="#">会计|财务</a></li>
@@ -243,7 +244,7 @@
     					<li><a href="#">工商|注册公司</a></li>	
     					<li><a href="#">其它企业服务</a></li>  
     				</ul>
-    				<h3><span></span><a href="#">便民服务</a></h3>
+    				<h3><span class="show-10"></span><a href="#">便民服务</a></h3>
 					<ul>
 						<li><a href="#">机票|特价机票</a></li>
 						<li><a href="#">电脑|家电维修</a></li>
@@ -256,7 +257,7 @@
     					<li><a href="#">租车|驾校|陪练</a></li>
     					<li><a href="#">其它便民服务</a></li>  
     				</ul>
-    				<h3><span></span><a href="#">易登论坛</a></h3>
+    				<h3><span class="show-11"></span><a href="#">易登论坛</a></h3>
 					<ul>
 						<li><a href="#">两性|健康|情感</a></li>
 						<li><a href="#">笑话|幽默</a></li>
@@ -266,12 +267,97 @@
     					<li><a href="#">小说|原创|网摘</a></li>
 					</ul>
 				</section>
+				</div>
+				<div class="contentSearch">
+					<form class="contentSearchInfo">
+						<select>
+							<option value="0" selected>全部</option>
+							<option value="1">人才网</option>
+							<option value="2">交友</option>
+							<option value="3">二手网</option>
+							<option value="4">房产网</option>
+							<option value="5">便民服务</option>
+							<option value="6">企业黄页</option>
+							<option value="7">企业服务</option>
+							<option value="8">社区|宠物|活动</option>
+							<option value="9">生活网</option>
+							<option value="10">易登论坛</option>
+							<option value="11">招商加盟</option>
+						</select>
+						<input type="text" class="searchText" value="想找什么？输入类别或关键字试试">
+						<input type="image" class="searchButton" src="../img/but_ix_y.gif" value="" name="tijiao">
+					</form>
+					<p class="hotWords">热门搜索：
+						<a href="#">招聘</a>
+						<a href="#">兼职</a>
+						<a href="#">北京</a>
+						<a href="#">司机</a>
+						<a href="#">拼车</a>
+					</p>
+				</div>
 			</div>
 			<div class="sideBar">
+				<h3><a href="#">修改删除信息</a></h3>
+				<div class="sideBarDown">
+					<aside class="sideInfo">
+						<h4>热门信息<span><a href="#">[网友推荐信息]</a></span></h4>
+						<div class="sideInfoLink clearfix">
+							<ul>
+								<li><a href="#">重庆招聘会</a></li>
+								<li><a href="#">武汉招聘会</a></li>
+								<li><a href="#">苏州招聘会</a></li>
+								<li><a href="#">西安招聘会</a></li>
+								<li><a href="#">沈阳招聘会</a></li>
+								<li><a href="#">南京招聘会</a></li>
+								<li><a href="#">北京招聘会</a></li>
+								<li><a href="#">天津招聘会</a></li>
+								<li><a href="#">长春招聘会</a></li>
+								<li><a href="#">南京招聘会</a></li>
+								<li><a href="#">济南招聘会</a></li>
+								<li><a href="#">北京货运公司</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">珠海兼职</a></li>
+								<li><a href="#">成都兼职</a></li>
+								<li><a href="#">TNT快递</a></li>
+								<li><a href="#">潍坊兼职</a></li>
+								<li><a href="#">渭南兼职</a></li>
+								<li><a href="#">江门兼职</a></li>
+								<li><a href="#">南昌兼职</a></li>
+								<li><a href="#">武汉兼职</a></li>
+								<li><a href="#">上海兼职</a></li>
+								<li><a href="#">西安兼职</a></li>
+								<li><a href="#">联邦快递</a></li>
+								<li class="li12"><a href="#">深圳货运公司</a></li>
+							</ul>
+						</div>
+					</aside>
+					<aside class="sideInfo">
+						<h4>联系易登<span>(每周一至周五9:30~18:00)</span></h4>
+						<p>易登网是国内领先的免费分类信息网站，每天有数万条信息发布，您可以在这里免费发布和浏览兼职、人才招聘、房屋出租、二手货、同城交友、生活服务等信息，免费发布信息就在中国易登网！</p>
+						<a class="contact2Link" href="#">反馈/投诉</a>
+						<a class="contact2Link" href="#">广告投放热线: 86-10-82790908</a>
+					</aside>
+				</div>
 			</div>
 		</main>
 		<footer class="footer">
-			
+			<div class="otherLink">
+				<ul>
+					<li><a href="#">上海电脑|家电维修</a></li>
+					<li><a href="#">北京兼职</a></li>
+					<li><a href="#">北京房屋出租</a></li>
+					<li><a href="#">深圳其他企业</a></li>
+					<li><a href="#">北京保洁|家政|保姆</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">上海写字楼出租</a></li>
+					<li><a href="#">北京电脑|家电维修</a></li>
+					<li><a href="#">北京商铺网</a></li>
+					<li><a href="#">北京房屋合租</a></li>
+					<li><a href="#">西安房屋出租</a></li>
+				</ul>
+			</div>
 		</footer>
 	</div>
 </body>
