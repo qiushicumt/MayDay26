@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 /* base elements */
-#container {background:url(../img/main_bg.jpg);}
+body {background:#1b1b1b;font-family:Microsoft Yahei,Arial,Verdana,Sans-Serif;font-size:12px;}
+#container {background:url(../img/main_bg.jpg) no-repeat top center #f90;}
 /* main */
 .main {width:960px;margin:0 auto;padding-top:35px;}
 	/* header */
