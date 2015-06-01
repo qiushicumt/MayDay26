@@ -10,7 +10,7 @@ body {background:#1b1b1b;font-family:Microsoft Yahei,Arial,Verdana,Sans-Serif;fo
 .headerContent {width:960px;margin:0 auto;padding:35px 0 20px 0;color:#fff;}
 .headerBanner {padding-bottom:15px;}
 .logo {float:left;}
-.headerInfo {float:left;width:327px;text-align:right;line-height:20px;margin:30px 0 0 25px;}
+.headerInfo {float:left;width:332px;text-align:right;line-height:20px;margin:30px 0 0 25px;overflow:hidden;}
 .headerInfo abbr {font-size:10px;}
 .phoneNum {float:left;margin:28px 0 0 8px;font-size:24px;font-weight:bold;line-height:28px;background:url(../img/header_phone_icon.png) no-repeat 0 0;padding:0 10px 0 48px;}
 .headerNav {padding:28px 0 30px;font-weight:bold;float:right;}
@@ -18,9 +18,15 @@ body {background:#1b1b1b;font-family:Microsoft Yahei,Arial,Verdana,Sans-Serif;fo
 .headerNav ul li a {color:#fff;padding:0 34px;}
 .headerNav ul li a:hover {color:#fea500;}
 .headerNav .headerNav-first {height:74px;background:url(../img/header_menu_bg1.png) no-repeat center 3px;padding:30px 34px;color:#fea500;cursor:default;}
-
 	/* content */
-
+.content {width:960px;margin:0 auto;padding:30px 0 20px;}
+.contentLeft {width:375px;float:left;}
+.contentLeft img:first-child {padding:40px 0 20px;}
+.contentLeft img:nth-child(2) {padding:35px 0 20px 20px;}
+.contentLeft img:nth-child(3) {padding:32px 0 20px;}
+/*.contentLeft p {padding-top:27px;}*/
+/*.contentLeft p span {line-height:24px;}*/
+.contentRight {width:540px;float:right;}
 
 
 /* footer */
