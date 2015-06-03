@@ -48,7 +48,11 @@ body {background:#1b1b1b;font-family:Microsoft Yahei,Arial,Verdana,Sans-Serif;fo
 .secondNav li a:hover {color:#fff;}
 .solutionContent {background:url(../img/solution_index_banner.png) no-repeat;padding-top:200px;}
 .solutionInfo {width:600px;}
-.solutionInfo p {line-height:24px;margin-bottom:10px;}
+.solutionInfo p {line-height:24px;margin-bottom:12px;text-indent:2em;}
+.solutionInfo ul li {float:left;background:url(../img/pages_button_bg.png) no-repeat;width:232px;height:52px;color:#fff;margin:20px 0 10px;}
+.solutionInfo ul li:hover {cursor:pointer;background:url(../img/pages_button_bg_hover.png) no-repeat;color:#f90;}
+.solutionInfo ul li:first-child {margin-right:20px;}
+.solutionInfo ul li:last-child {margin-left:20px;}
 
 /* footer */
 .footer {width:960px;margin:0 auto;padding-bottom:80px;}
