@@ -72,13 +72,14 @@ body {background:#1b1b1b;font-family:Microsoft Yahei,Arial,Verdana,Sans-Serif;fo
 .webDesignTitle-tips li span abbr {font-size:12px;font-weight:normal;display:block;}
 .webDesignLips {padding:33px 0 52px;border-bottom:1px dotted #000;}
 .webDesignLips span {display:block;font-size:14px;padding:16px 0 3px 0;font-weight:bold;}
-.webDesignPack {padding:33px 0;}
+.webDesignPack {padding:33px 0 40px;}
 .webDesignPack h2 {margin-bottom:27px;}
 .webDesignPack ul {padding-left:102px;}
 .webDesignPack ul:nth-child(2) {background:url(../img/webdesign_standard_icon.png) no-repeat top left;}
 .webDesignPack ul:nth-child(3) {background:url(../img/webdesign_professional_icon.png) no-repeat top left;}
 .webDesignPack ul:nth-child(4) {background:url(../img/webdesign_advanced_icon.png) no-repeat top left;}
-.webDesignPack ul li:last-child {font-size:12px;font-weight:normal;background:url(../img/li_icon.png) no-repeat top left;padding-left:16px;}
+.webDesignPack ul li:first-child {padding:8px 0 33px 0;line-height:25px;}
+.webDesignPack ul li:last-child {font-size:12px;font-weight:normal;background:url(../img/li_icon.png) no-repeat top left;padding:0 0 16px 16px;}
 .webDesignPack ul li span {font-size:14px;font-weight:bold;}
 .webDesignPack ul li span abbr {font-size:12px;font-family:Arial;display:block;}
 
@@ -98,6 +99,7 @@ body {background:#1b1b1b;font-family:Microsoft Yahei,Arial,Verdana,Sans-Serif;fo
 .copyrights a {color:#383838;}
 .copyrights a:first-child {background:url(../img/css_icon.png) no-repeat 1px center;padding-right:70px;}
 .copyrights a:nth-child(2) {background:url(../img/xhtml_icon.png) no-repeat 1px center;padding-right:70px;}
+.copyrights a:nth-child(3):hover {color:#f90;}
 .copyrights a:last-child {background:url(../img/nwp.png) no-repeat top right;padding:7px 151px 13px 10px;}
 .frendsLink {color:#383838;}
 .frendsLink ul li {float:left;padding-top:8px;}
