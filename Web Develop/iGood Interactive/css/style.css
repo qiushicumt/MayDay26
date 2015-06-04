@@ -57,6 +57,31 @@ body {background:#1b1b1b;font-family:Microsoft Yahei,Arial,Verdana,Sans-Serif;fo
 .solutionInfo ul li span {font-size:14px;font-weight:bold;}
 .solutionInfo ul li span abbr {font-size:12px;font-weight:normal;display:block;}
 
+	/* webdesign content */
+.webDesignContent {font-size:12px;}
+.webDesignTitle {background:url(../img/webdesign_index_banner.png) no-repeat;border-bottom:1px dotted #000;padding:85px 0 20px;}
+.webDesignTitle p {line-height:24px;width:340px;}
+.webDesignTitle-adv {padding-top:15px;}
+.webDesignTitle-adv li {background:url(../img/li_icon.png) no-repeat;padding-left:25px;margin-bottom:8px;}
+.webDesignTitle-tips {margin:20px 0;}
+.webDesignTitle-tips li {float:left;background:url(../img/pages_button_bg.png) no-repeat;width:232px;height:52px;color:#fff;}
+.webDesignTitle-tips li:hover {cursor:pointer;background:url(../img/pages_button_bg_hover.png) no-repeat;color:#f90;}
+.webDesignTitle-tips li:first-child {margin-right:20px;padding:8px 92px 10px 25px;box-sizing:border-box;}
+.webDesignTitle-tips li:last-child {margin-left:20px;padding:8px 62px 10px 25px;box-sizing:border-box;}
+.webDesignTitle-tips li span {font-size:14px;font-weight:bold;}
+.webDesignTitle-tips li span abbr {font-size:12px;font-weight:normal;display:block;}
+.webDesignLips {padding:33px 0 52px;border-bottom:1px dotted #000;}
+.webDesignLips span {display:block;font-size:14px;padding:16px 0 3px 0;font-weight:bold;}
+.webDesignPack {padding:33px 0;}
+.webDesignPack h2 {margin-bottom:27px;}
+.webDesignPack ul {padding-left:102px;}
+.webDesignPack ul:nth-child(2) {background:url(../img/webdesign_standard_icon.png) no-repeat top left;}
+.webDesignPack ul:nth-child(3) {background:url(../img/webdesign_professional_icon.png) no-repeat top left;}
+.webDesignPack ul:nth-child(4) {background:url(../img/webdesign_advanced_icon.png) no-repeat top left;}
+.webDesignPack ul li:last-child {font-size:12px;font-weight:normal;background:url(../img/li_icon.png) no-repeat top left;padding-left:16px;}
+.webDesignPack ul li span {font-size:14px;font-weight:bold;}
+.webDesignPack ul li span abbr {font-size:12px;font-family:Arial;display:block;}
+
 /* footer */
 .footer {width:960px;margin:0 auto;padding-bottom:80px;}
 .siteMap img {padding-left:6px;}
