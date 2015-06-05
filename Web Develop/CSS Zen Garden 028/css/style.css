@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* basic elements */
+body {background:url(../img/backdrop.title.jpg) no-repeat top center black;}
+
+/* .page-wrapper */
+.page-wrapper {width:750px;margin:0 auto;position:relative;/*background:url(../img/backdrop.title.jpg) no-repeat top left;*/color:#ddd;}
+
+	/* section intro */
+.intro {/*width:492px;*/position:relative;border:1px dashed #fff;margin-top:50px;margin-left:80px;}
+.intro header {display:none;}
+
+	/* aside sidebar */
+.sidebar {width:150px;}
