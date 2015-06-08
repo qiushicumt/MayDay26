@@ -1,13 +1,20 @@
 @charset "utf-8";
+
 /* basic elements */
-body {background:url(../img/backdrop.title.jpg) no-repeat top center black;}
+body {background:#000;color:#ddd;}
+.page-wrapper {background:url(../img/backdrop.title.jpg) no-repeat top left;width:750px;margin:0 auto;padding:1px;font-family:georgia,sans-serif;}
+a {color:#bcf;}
+a:hover {color:#fff;}
 
-/* .page-wrapper */
-.page-wrapper {width:750px;margin:0 auto;position:relative;/*background:url(../img/backdrop.title.jpg) no-repeat top left;*/color:#ddd;}
-
-	/* section intro */
-.intro {/*width:492px;*/position:relative;border:1px dashed #fff;margin-top:50px;margin-left:80px;}
+/* intro CSS */
+.intro {border:1px dashed #fff;margin:225px 40px 10px 218px;padding:10px 10px 0;}
 .intro header {display:none;}
+.summary {float:left;width:175px;font-style:italic;text-align:center;font-size:14px;margin-right:7px;}
+.summary p {margin:4px;line-height:28px;}
+.preamble h3 {color:#fff;font-weight:normal;margin-bottom:15px;}
+.preamble p {font-size:15px;text-align:left;line-height:21px;margin:14px 0;}
 
-	/* aside sidebar */
-.sidebar {width:150px;}
+/* main CSS */
+.main-supporting {margin:0 39px 10 218px;}
+.main-supporting h3 {font-weight:normal;color:#fff;border-top:1px solid #fff;border-bottom:1px solid #fff;margin:5px 0 15px;}
+.main-supporting p {font-size:0.93em;padding-bottom:20px;}
