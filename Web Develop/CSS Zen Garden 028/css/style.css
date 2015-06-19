@@ -7,14 +7,30 @@ a {color:#bcf;}
 a:hover {color:#fff;}
 
 /* intro CSS */
-.intro {border:1px dashed #fff;margin:225px 40px 10px 218px;padding:10px 10px 0;}
+.intro {border:1px dashed #fff;margin:225px 39px 10px 218px;padding:10px 10px 0;}
+.intro header {display:none;}
+.summary {float:left;text-align:center;font-style:italic;width:175px;font-size:14px;line-height:30px;padding:4px 12px 0 4px;}
+.preamble h3 {font-weight:normal;color:#fff;}
+.preamble p {margin:22px 0 18px;font-size:15px;}
+/*.intro {border:1px dashed #fff;margin:225px 40px 10px 218px;padding:10px 10px 0;}
 .intro header {display:none;}
 .summary {float:left;width:175px;font-style:italic;text-align:center;font-size:14px;margin-right:7px;}
 .summary p {margin:4px;line-height:28px;}
 .preamble h3 {color:#fff;font-weight:normal;margin-bottom:15px;}
-.preamble p {font-size:15px;text-align:left;line-height:21px;margin:14px 0;}
+.preamble p {font-size:15px;text-align:left;line-height:21px;margin:14px 0;}*/
 
 /* main CSS */
-.main-supporting {margin:0 39px 10 218px;}
+.main-supporting {margin:15px 39px 0 218px;}
+.main-supporting h3 {color:#fff;border-top:1px solid #fff;border-bottom:1px solid #fff;font-weight:normal;}
+.main-supporting p {font-size:0.93em;}
+/*.main-supporting {margin:0 39px 10 218px;}
 .main-supporting h3 {font-weight:normal;color:#fff;border-top:1px solid #fff;border-bottom:1px solid #fff;margin:5px 0 15px;}
-.main-supporting p {font-size:0.93em;padding-bottom:20px;}
+.main-supporting p {font-size:0.93em;padding-bottom:20px;}*/
+
+/* sidebar */
+.sidebar {font-size:12px;position:absolute;top:435px;left:380px;}
+.sidewrapper {width:150px;}
+.design-selection h3 {width:150px;height:21px;background:url(../img/linkhead-select.jpg) no-repeat top left;}
+.design-archives h3 {width:150px;height:21px;background:url(../img/linkhead-archives.jpg) no-repeat top left;}
+.design-resources h3 {width:150px;height:21px;background:url(../img/linkhead-resources.jpg) no-repeat top left;}
+.sidewrapper h3 span {display:none;}
