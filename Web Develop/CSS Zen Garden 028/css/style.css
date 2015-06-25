@@ -23,11 +23,13 @@ a:hover {color:#fff;text-decoration:underline;}
 /* sidebar */
 .sidebar {font-size:11px;position:absolute;top:435px;left:50px;}
 .sidewrapper {width:150px;}
+.sidewrapper nav {padding:0 0 10px 10px;}
 .design-selection h3, .design-archives h3, .design-resources h3 {width:150px;height:21px;background:url(../img/linkhead-select.jpg) no-repeat top left;margin-bottom:5px;}
 .design-archives h3 {background:url(../img/linkhead-archives.jpg) no-repeat top left;}
 .design-resources h3 {background:url(../img/linkhead-resources.jpg) no-repeat top left;}
 .sidewrapper h3 span {display:none;}
-.design-selection nav {padding:0 0 10px 10px;}
 .design-selection li {background:url(../img/docbullet.gif) no-repeat 0 2px;padding-left:10px;margin-bottom:10px;}
 .design-selection li:last-child {margin-bottom:0;}
 .design-name {display:block;text-transform:lowercase;}
+.design-archives li, .design-resources li {margin-bottom:10px;}
+.design-archives li:last-child, .design-resources li:last-child {margin-bottom:0;}
