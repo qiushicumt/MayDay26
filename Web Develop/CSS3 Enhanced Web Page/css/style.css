@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 /* basic elements */
-body {background:#efefef;font-family:Calibri,helvetica,arial,sans-serif;}
+/*body {background:#efefef;font-family:'Lato',helvetica,arial,sans-serif;}*/
+body {background:#efefef;font-family:helvetica,arial,sans-serif;}
 #page-wrapper {margin:0 auto;width:982px;padding-top:10px;}
 
 /* header */
@@ -10,10 +11,14 @@ body {background:#efefef;font-family:Calibri,helvetica,arial,sans-serif;}
 .bannertitle h2 {color:#4eb8ea;font-size:36px;}
 .bannertitle span {display:block;}
 .navigation ul li {display:inline;}*/
-.header {background:#fff;border-radius:20px 0;position:relative;height:70px;box-shadow:0 12px 8px -9px #555;}
-.bannertitle {height:65px;width:300px;border:1px solid;}
+.header {background:#fff;border-radius:20px 0;position:relative;height:50px;box-shadow:0 12px 8px -9px #555;padding-top:20px;}
+.bannertitle {height:65px;width:300px;position:absolute;top:0;left:0;}
 .bannertitle h1 {color:#4eb8ea;}
-.bannertitle h2 {font-size:0.8em;}
+.bannertitle h2 {font-size:0.9em;}
+.navmenu ul {text-align:center;}
+.navmenu ul li {display:inline-block;}
+
+.search {width:150px;height:30px;position:absolute;top:0;right:0;}
 /* main */
 
 .blogphoto {width:100px;height:127px;background:url(../img/charles_wyke-smith.jpg);}
