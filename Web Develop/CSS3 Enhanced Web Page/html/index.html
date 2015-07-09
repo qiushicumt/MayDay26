@@ -29,18 +29,18 @@
 			</nav>
 			<input type="text" value="search">
 		</header> -->
-		<header class="header">
+		<header id="header">
 			<div class="bannertitle">
 				<h1>Stylin&#8217; with CSS</h1>
 				<h2>The Blog and Books of Charles Wyke-Smith</h2>
 			</div>
 			<nav class="navmenu">
 				<ul>
-					<li><a href="#">Articles</a></li>
-					<li><a href="#">Books</a></li>
-					<li><a href="#">Resources</a></li>
-					<li><a href="#">Bookshelf</a></li>
-					<li><a href="#">Contact Me</a></li>
+					<li class="navArticles"><a href="#">Articles</a></li>
+					<li class="navBooks"><a href="#">Books</a></li>
+					<li class="navResources"><a href="#">Resources</a></li>
+					<li class="navBookshelf"><a href="#">Bookshelf</a></li>
+					<li class="navContact"><a href="#">Contact Me</a></li>
 				</ul>
 			</nav>
 			<form class="search" action="#" method="post">
@@ -49,7 +49,7 @@
 			</form>
 		</header>
 		<main class="content">
-			<section class="feature-area">
+			<section class="feature-area clearfix">
 				<article class="blog-leadoff">
 					<h3>September 7, 2012</h3>
 					<h2><a href="#">Managing CSS Classes with jQuery</a></h2>
@@ -74,7 +74,7 @@
 					</nav>
 				</aside>
 			</section>
-			<section class="book-area">
+			<section class="book-area clearfix">
 				<article class="left">
 					<div class="inner">
 						<h3>HTML5 + CSS3</h3>
@@ -121,7 +121,7 @@
 				</article>
 			</section>
 		</main>
-		<footer class="footer" role="footer-info">
+		<footer id="footer" role="footer-info">
 			<p class="footerInfo">A CSS template from <a href="#">Stylin' with CSS, Third Edition</a> by Charles Wyke-Smith</p>
 			<div class="navlink">
 				<ul>
