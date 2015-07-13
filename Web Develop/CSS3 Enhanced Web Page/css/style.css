@@ -11,10 +11,15 @@ body {background:#efefef;font-family:'Lato',Lato;}
 .bannertitle h2 {font-size:0.9em;font-weight:400;color:#333;font-family:Source Sans Pro;letter-spacing:-0.025em;line-height:1;}
 .navmenu {text-align:center;position:relative;}
 .navmenu ul li {display:inline-block;}
-.search {position:absolute;right:0;top:0;width:150px;}
+.search {position:absolute;right:20px;top:20px;width:150px;}
 .search label {display:none;}
-.search input {right:0;width:76px;height:26px;border:none;border-radius:10px 0;border-top:2px solid #848484;border-left:2px solid #848484;color:#c0c0c0;}
-
+.search input {float:right;padding-left:6px;width:70px;border-radius:10px 0;font-weight:400;color:#888;font-size:0.9em;
+	transition:width 0s;
+	-webkit-transition:width 0s;
+	-moz-transition:width 0s;
+	-o-transition:width 0s;
+}
+.search input:focus {width:146px;}
 /* content elements */
 .content {margin-top:15px;}
 .blog-leadoff {width:645px;background:white;border-radius:20px 0;box-shadow:0 12px 8px -9px #555;float:left;}
