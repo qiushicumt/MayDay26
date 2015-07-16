@@ -1,16 +1,33 @@
 @charset "utf-8";
 
 /* basic elements */
-body {background:#efefef;font-family:'Lato',Lato;}
+body {background:#efefef;font-family:'Lato',Lato,sans-serif;}
 #page-wrapper {width:980px;margin:10px auto 20px;}
 
 /* header elements */
 #header {background:#fff;position:relative;border-radius:20px 0;padding-top:20px;height:50px;box-shadow:0 12px 8px -9px #555;}
+/* header bannertitle */
 .bannertitle {position:absolute;width:250px;top:10px;left:12px;height:65px;}
 .bannertitle h1 {color:#4eb8ea;font-size:34px;line-height:34px;font-weight:900;}
 .bannertitle h2 {font-size:0.9em;font-weight:400;color:#333;font-family:Source Sans Pro;letter-spacing:-0.025em;line-height:1;}
-.navmenu {text-align:center;position:relative;}
-.navmenu ul li {display:inline-block;}
+/* navmenu */
+.navmenu {padding-left:280px;font-family:Source Sans Pro;font-size:0.98em;font-weight:600;}
+.navmenu li {float:left;position:relative;}
+.navmenu a {color:#fff;}
+.navmenu a:hover {color:#555;}
+.navmenu li a {display:block;padding:4px 12px;}
+.navmenu li li {float:none;}
+.navmenu li ul {display:none;}
+.navmenu li:hover > ul {display:block;}
+.navmenu li ul {position:absolute;left:0;top:100%;width:9.8em;}
+.navArticles a {background:#f58c21;border-radius:10px 0 0 0;}
+.navBooks a {background:#4eb8ea;}
+.navBooks li:last-child a {border-radius:0 0 8px 8px;}
+.navResources a {background:#d6e636;}
+.navResources li:last-child a {border-radius:0 0 8px 8px;}
+.navBookshelf a {background:#ee4c98;}
+.navContact a {background:#f58c21;border-radius:0 0 10px 0;}
+/* search form */
 .search {position:absolute;right:20px;top:20px;width:150px;}
 .search label {display:none;}
 .search input {float:right;padding-left:6px;width:70px;border-radius:10px 0;font-weight:400;color:#888;font-size:0.9em;
