@@ -1,9 +1,7 @@
 @charset "utf-8";
-
 /* basic elements */
 body {background:#efefef;font-family:'Lato',Lato,sans-serif;}
 #page-wrapper {width:980px;margin:10px auto 20px;}
-
 /* header elements */
 #header {background:#fff;position:relative;border-radius:20px 0;padding-top:20px;height:50px;box-shadow:0 12px 8px -9px #555;}
 /* header bannertitle */
@@ -39,21 +37,37 @@ body {background:#efefef;font-family:'Lato',Lato,sans-serif;}
 .search input:focus {width:146px;}
 /* content elements */
 .content {margin-top:15px;}
-.blog-leadoff {width:645px;background:white;border-radius:20px 0;box-shadow:0 12px 8px -9px #555;float:left;}
+/* blog elements */
+.blog-leadoff {width:621px;background:white;border-radius:20px 0;box-shadow:0 12px 8px -9px #555;float:left;padding:15px 12px;}
 .blog-leadoff h3 {color:#f58c21;font-size:14px;}
+.blog-leadoff h2 {font-size:1.75em;letter-spacing:-0.05em;font-weight:700;margin-bottom:12px;}
 .blog-leadoff h2 a, .blog-leadoff h2 a:hover {color:#555555;}
-.blogphoto {width:100px;height:127px;background-image:url(../img/charles_wyke-smith.jpg);float:left;}
-
+.blogphoto {width:100px;height:127px;background-image:url(../img/charles_wyke-smith.jpg);float:left;margin:0 10px 20px 0;}
+.blog-leadoff p span {font-size:4.5em;font-family:Lato;float:left;text-shadow:1px 3px 3px #ccc;font-weight:700;line-height:0.82;padding:0 0.05em 0.12em 0;}
+.blog-leadoff p {font-family:Source Sans Pro;color:#616161;text-align:justify;font-size:1.1em;line-height:1.48em;}
+.blog-leadoff p:first-line {font-variant:small-caps;font-size:1.25em;}
+/* sidebar elements */
 .sidebar {float:right;width:305px;}
-.signarea {background:white;border-radius:10px 0;box-shadow:0 12px 8px -9px #555;}
-.recentArticle {background:white;margin-top:15px;border-radius:10px 0;box-shadow:0 12px 8px -9px #555;}
-
+.signarea {background:white;border-radius:10px 0;box-shadow:0 12px 8px -9px #555;padding:6px 14px 12px;}
+.signarea h3 {line-height:1.6em;font-size:1.2em;color:#4eb8ea;margin-bottom:5px;}
+.signarea section {margin-bottom:10px;line-height:1.5em;color:#555;font-weight:600;}
+.signarea section input {float:right;width:150px;border-radius:10px 0;padding:2px 0 0 8px;color:#555;}
+.formbutton {float:right;border:none;background:#d6e636;color:#fff;font-size:1em;border-radius:8px 0;box-shadow:1px 1px 2px #888;font-weight:800;padding:2px 8px;}
+.signarea p {float:right;clear:both;font-size:0.8em;color:#555;margin-top:4px;}
+.signarea p a {color:#333;text-decoration:underline;}
+.signarea p a:hover {color:#777;text-decoration:none;}
+.recentArticle {background:white;margin-top:15px;border-radius:10px 0;box-shadow:0 12px 8px -9px #555;padding:10px 14px;}
+.recentArticle h3 {color:#aaa;font-size:1.25em;margin-bottom:10px;}
+.recentArticle ul li {padding-left:37px;position:relative;font-size:0.82em;}
+.recentArticle ul li:before {position:absolute;content:"";width:10px;height:10px;background-color:#d6e636;border-radius:5px 0;box-shadow:1px 1px 2px #888;top:2px;left:15px;}
+.recentArticle li a {color:#616161;}
+.recentArticle li a:hover {color:#000;}
+/* book-area elements */
 .book-area {margin-top:20px;border:1px solid #f58c21;border-radius:20px 0;}
 .left {float:left;margin-left:50px;}
 .left ol {border:2px solid #f58c21;}
 .right {float:right;margin-right:50px;}
 .right ol {border:2px solid #f58c21;}
-
 /* footer elements */
 #footer {margin:10px 0;background:#fff;border-radius:10px 0;box-shadow:0 12px 8px -9px #555;text-align:center;padding:10px 0 10px;font-family:Source Sans Pro;}
 .footerInfo {font-size:0.85em;font-weight:400;letter-spacing:-0.05em;color:#555;}
@@ -62,10 +76,8 @@ body {background:#efefef;font-family:'Lato',Lato,sans-serif;}
 .navlink ul li {display:inline-block;font-size:0.85em;color:#ccc;}
 .navlink ul li a {color:#aaa;}
 .navlink ul li a:hover {color:#777;}
-
 /* otherInfo elements */
 .otherInfo {margin-top:100px;}
-
 /* 字体设置 */
 @font-face {
 	font-family:'Lato';
@@ -78,38 +90,3 @@ body {background:#efefef;font-family:'Lato',Lato,sans-serif;}
 	font-weight:normal;
 	font-style:normal;
 }
-
-/*@import url(base.css);
-
-/* basic elements 
-
-body {font-family:'Lato',arial,sans-serif;}
-#page-wrapper {margin:0 auto;width:982px;padding-top:10px;}
-
-/* header 
-/*.header {background:#fff;border-radius:20px 0 20px 0;position:relative;}
-.bannertitle {position:absolute;width:250px;height:50px;}
-.bannertitle h2 {color:#4eb8ea;font-size:36px;}
-.bannertitle span {display:block;}
-.navigation ul li {display:inline;}
-
-
-.header {background:#fff;border-radius:20px 0;position:relative;height:50px;box-shadow:0 12px 8px -9px #555;padding-top:20px;}
-.bannertitle {height:65px;width:300px;position:absolute;top:0;left:0;}
-.bannertitle h1 {color:#4eb8ea;}
-.bannertitle h2 {font-size:0.9em;}
-.navmenu ul {text-align:center;}
-.navmenu ul li {display:inline-block;}
-
-.search {width:150px;height:30px;position:absolute;top:0;right:0;}
-
-
-/* main 
-
-.blogphoto {width:100px;height:127px;background:url(../img/charles_wyke-smith.jpg);}
-
-/* footer 
-
-.footer {margin:10px 0;background:#fff;border-radius:10px 0;font-size:12px;text-align:center;}
-
-*/

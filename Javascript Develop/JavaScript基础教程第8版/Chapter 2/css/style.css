@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+body, ul, li, a {margin:0;padding:0;}
+ul, ol {list-style:none;}
+a {text-decoration:none;}
+
+ul {margin:150px;}
+li:before {content:"";width:10px;height:10px;background:#d6e636;border-radius:5px 0;position:absolute;left:5px;top:2px;}
+li {padding-left:20px;position:relative;}
