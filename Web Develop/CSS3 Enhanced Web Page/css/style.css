@@ -64,12 +64,36 @@ body {background:#efefef;font-family:'Lato',Lato,sans-serif;}
 .recentArticle li a:hover {color:#000;}
 /* book-area elements */
 .book-area {margin-top:20px;border:1px solid #f58c21;border-radius:20px 0;}
-.book-area article {float:left;margin:0 48px 0 50px;}
-.inner {position:relative;}
-.inner h3 {color:#ccc;}
-.inner img:hover + ol {display:block;}
-.inner ol {border:2px solid #f58c21;background:#fff;border-radius:8px 0;display:none;}
-.inner ol a {color:#616161;}
+.book-area article {float:left;width:25%;padding:10px 0;background:none;}
+.inner {position:relative;width:140px;margin:0 auto;}
+.inner h3 {color:#ccc;position:absolute;width:160px;left:112%;bottom:5px;font-size:1.4em;font-weight:900;text-align:left;
+	-ms-transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+	-ms-transform-origin:left bottom;
+	-moz-transform-origin:left bottom;
+	-webkit-transform-origin:left bottom;
+	-o-transform-origin:left bottom;
+}
+.book-area article:last-child h3 {left:84%;}
+.inner img {box-shadow:0px 12px 8px -9px #555;}
+.inner ol {position:absolute;z-index:1;padding:8px 2px 4px;border:2px solid #f58c21;background:#fff;
+	border-radius:8px 0;display:none;width:200px;box-shadow:4px 4px 16px #555;font-family:Source Sans Pro;line-height:1.5em;
+}
+article:hover ol {display:block;}
+.left ol {left:75%;top:14px;}
+.right ol {right:75%;top:14px;}
+/*橙色三角形做背景*/
+.inner ol:after {content:"";border:12px solid;position:absolute;top:33px;height:0;width:0;}
+.left ol:after {border-color:transparent #f58c21 transparent transparent;right:100%;}
+.right ol:after {border-color:transparent transparent transparent #f58c21;left:100%;}
+/*白色三角形做前景*/
+.inner ol:before {content:"";border:8px solid;position:absolute;z-index:10;top:37px;height:0;width:0;}
+.left ol:before {border-color:transparent #fff transparent transparent;right:100%;}
+.right ol:before {border-color:transparent transparent transparent #fff;left:100%;}
+.inner ol li {line-height:1.2em;padding:0.2em 0 0.5em 1em;}
+.inner ol a {color:#616161;font-size:1em;}
 .inner ol a:hover {color:#333;}
 /* footer elements */
 #footer {margin:15px 0;background:#fff;border-radius:10px 0;box-shadow:0 12px 8px -9px #555;text-align:center;padding:10px 0 10px;font-family:Source Sans Pro;}
