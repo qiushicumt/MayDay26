@@ -4,6 +4,7 @@ body, ul, li, a {margin:0;padding:0;}
 ul, ol {list-style:none;}
 a {text-decoration:none;}
 
-ul {margin:150px;}
+.wrappage {border:2px solid rgb(166,226,46);margin:0 auto;width:960px;}
+ul {margin:50px auto;width:300px;}
 li:before {content:"";width:10px;height:10px;background:#d6e636;border-radius:5px 0;position:absolute;left:5px;top:2px;}
 li {padding-left:20px;position:relative;}
