@@ -1,0 +1,5 @@
+@charset "utf-8";
+@import url(../../reset.css);
+
+/* basic elements */
+#wrappage {width:1920px;margin:0 auto;}
