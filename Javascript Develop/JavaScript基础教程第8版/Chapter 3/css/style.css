@@ -5,7 +5,7 @@ body {background:#fff;color:#000;font-size:20px;font-family:"Lucida Grande", Ver
 #wrappage {width:960px;margin:20px auto;}
 h1, th {font-family:Georgia, "Times New Roman", Times, sans-serif;}
 h1 {font-size:28px;}
-table {border-collapse:collapse;}
+table {border-collapse:collapse;margin-top:10px;}
 th, td {padding:10px;border:2px solid #666;text-align:center;width:20%;}
 #free, .pickedBG {background-color:#f66;}
 .winningBG {background-image:url(../images/redFlash.gif);}
