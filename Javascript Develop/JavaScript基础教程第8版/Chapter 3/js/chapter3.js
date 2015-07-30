@@ -110,7 +110,7 @@ function reloadWeb() {
 	window.location = "BingoCard.html";
 	return false;
 }
-*/
+
 // 3-9 脚本
 window.onload = initAll;
 usedNums = new Array(76);
@@ -141,5 +141,44 @@ function getRandom() {
 }
 function reloadWeb() {
 	window.location = "BingoCard.html";
+	return false;
+}
+*/
+// 3-10 脚本
+window.onload = initAll;
+usedNums = new Array(75);
+function initAll() {
+	if(document.getElementById) {
+		document.getElementById("reload").onclick = reloadWeb;	// 单击超链接，调用reloadWeb函数刷新bingo表
+		newCard();
+	}
+	else {
+		alert("Your browser don't support this script.");
+	}
+}
+function newCard() {
+	for(var i = 0; i < 24; i++) {
+		setNum(i);
+	}
+}
+function setNum(squareId) {
+	var currentId = "square" + squareId;
+	var colPlace = new Array(0,0,0,0,0,1,1,1,1,1,2,2,2,2,3,3,3,3,3,4,4,4,4,4);
+	var newNum;
+
+	do {
+		newNum = colPlace[squareId] * 15 + getRandom() + 1;
+	}while(usedNums[newNum]);
+	usedNums[newNum] = true;
+	document.getElementById(currentId).innerHTML = newNum;
+}
+function getRandom() {
+	return Math.floor(Math.random() * 15);
+}
+function reloadWeb() { 
+	for(var i = 0; i < usedNums.length; i++) {
+		usedNums[i] = false;
+	}
+	newCard();
 	return false;
 }
