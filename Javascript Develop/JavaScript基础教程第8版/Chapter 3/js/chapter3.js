@@ -143,7 +143,7 @@ function reloadWeb() {
 	window.location = "BingoCard.html";
 	return false;
 }
-*/
+
 // 3-10 脚本
 window.onload = initAll;
 usedNums = new Array(75);
@@ -175,10 +175,83 @@ function setNum(squareId) {
 function getRandom() {
 	return Math.floor(Math.random() * 15);
 }
+// reload函数会把usedNums数组的元素全部重置为0，然后重新调用newCard函数
 function reloadWeb() { 
 	for(var i = 0; i < usedNums.length; i++) {
 		usedNums[i] = false;
 	}
 	newCard();
 	return false;
+}
+
+// 3-11 脚本
+window.onload = initAll;
+usedNums = new Array(76);
+function initAll() {
+	if(document.getElementById) {
+		document.getElementById("reload").onclick = reloadWeb;
+		newCard();
+	}
+	else {
+		alert("Your browser don't support this script.");
+	}
+}
+function newCard() {
+	for(var i = 0; i <24; i++) {
+		setNum(i);
+	}
+}
+function setNum(squareId) {
+	var currentId = "square" + squareId;
+	var colPlace = new Array(0,0,0,0,0,1,1,1,1,1,2,2,2,2,3,3,3,3,3,4,4,4,4,4);
+	var newNum;
+	do {
+		newNum = colPlace[squareId] * 15 + getRandom() + 1;
+	} while(usedNums[newNum]);
+	usedNums[newNum] = true;
+	document.getElementById(currentId).innerHTML = newNum;
+	document.getElementById(currentId).className = "";				// 把当前空格的className设置为""	
+	document.getElementById(currentId).onmousedown = toggleColor;	// 设置点击空格调用toggleColor函数
+}
+function getRandom() {
+	return Math.floor(Math.random() * 15);
+}
+function reloadWeb() {
+	for(var i = 0; i < usedNums.length; i++) {
+		usedNums[i] = false;
+	}
+	newCard();
+	return false;
+}
+function toggleColor(evt) {					
+	if(evt) {			
+		var thisSquare = evt.target;		// 非IE浏览器，获取焦点后会传入evt参数，通过evt.target得到thisSquare对象
+	}
+	else {
+		var thisSquare = window.event.srcElement;	// IE浏览器，需要通过window.event.srcElement得到thisSquare对象
+	}
+	if(thisSquare.className == "") {
+		thisSquare.className = 'pickedBG';		// 将thisSquare对象的className设置为pickedBG，即可以设置css效果
+	}
+	else {
+		thisSquare.className = "";			// 再次点击格子，可以将className重新设置为空，即可以取消背景颜色
+	}
+}
+*/
+// 3-12 脚本
+window.onload = initAll;
+usedNums = new Array(75);
+function initAll() {
+	if(document.getElementById) {
+		document.getElementById("reload").onclick = reloadWeb;
+		newCard(); 
+	}
+	else {
+		alert("Your browser don't support this script.");
+	}
+}
+function newCard() {
+	for(var i = 0; i < 24; i++) {
+		
+	}
 }
