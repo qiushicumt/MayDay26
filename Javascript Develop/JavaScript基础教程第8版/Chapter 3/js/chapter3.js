@@ -252,6 +252,68 @@ function initAll() {
 }
 function newCard() {
 	for(var i = 0; i < 24; i++) {
-		
+		setNum(i);
+	}
+}
+function setNum(squareId) {
+	var currentId = "square" + squareId;
+	var colPlace = new Array(0,0,0,0,0,1,1,1,1,1,2,2,2,2,3,3,3,3,3,4,4,4,4,4);
+	var newNum;
+	do {
+		newNum = colPlace[squareId] * 15 + getRandom() + 1;
+	} while(usedNums[newNum]);
+	usedNums[newNum] = true;
+	document.getElementById(currentId).innerHTML = newNum;
+	document.getElementById(currentId).className = "";
+	document.getElementById(currentId).onmousedown = toggleColor;
+}
+function getRandom() {
+	return Math.floor(Math.random() * 15);
+}
+function reloadWeb() {
+	for(var i = 0; i < 24; i++) {
+		usedNums[i] = false;
+	}
+	newCard();
+	return false;
+}
+function toggleColor(evt) {
+	if(evt) {
+		var thisSquare = evt.target;
+	}
+	else {
+		var thisSquare = window.event.srcElement;		// event.srcElement就是指向触发事件的元素，srcElement 是事件初始目标的html元素对象引用
+	}
+	if(thisSquare.className == "") {
+		thisSquare.className = 'pickedBG';
+	}
+	else {
+		thisSquare.className = "";
+	}
+	checkWin();
+}
+function checkWin() {
+	var winningOption = -1;		// 存储用户可能遇到的获胜选项
+	var setSquare = 0;			// 存储已经单击的格子
+	var winners = new Array(31, 992, 15360, 507904, 541729, 557328, 1083458, 2162820, 4329736, 8519745, 8659472, 16252928);		// 数组存储的是有效获胜组合的编码值
+	for(var i = 0; i < 24; i++) {
+		var currentId = "square" + i;
+		if(document.getElementById(currentId).className != "") {
+			document.getElementById(currentId).className = 'pickedBG';
+			setSquare = setSquare | Math.pow(2, i);		// 对setSquare和数字2的i次方进行按位或操作
+		}
+	}
+	for(var i = 0; i < winners.length; i++) {
+		if((winners[i] & setSquare) == winners[i]) {
+			winningOption = i;
+		}
+	}
+	if(winningOption > -1) {
+		for(var i = 0; i < 24; i++) {
+			if(winners[winningOption] & Math.pow(2, i)) {
+				currentId = "square" + i;
+				document.getElementById(currentId).className = 'winningBG';
+			}
+		}
 	}
 }
