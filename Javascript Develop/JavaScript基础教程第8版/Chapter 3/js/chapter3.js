@@ -237,7 +237,7 @@ function toggleColor(evt) {
 		thisSquare.className = "";			// 再次点击格子，可以将className重新设置为空，即可以取消背景颜色
 	}
 }
-*/
+
 // 3-12 脚本
 window.onload = initAll;
 usedNums = new Array(75);
@@ -312,6 +312,89 @@ function checkWin() {
 		for(var i = 0; i < 24; i++) {
 			if(winners[winningOption] & Math.pow(2, i)) {
 				currentId = "square" + i;
+				document.getElementById(currentId).className = 'winningBG';
+			}
+		}
+	}
+}
+*/
+// 3-13 Buzzword Bingo脚本
+var buzzWords = new Array("Aggregate", "Ajax", "API", "Bandwidth", "Beta",
+						"Bleeding edge", "Convergence", "Design pattern", "Disruptive", "DRM",
+						"Enterprise", "Facilitate", "Folksonomy", "Framework", "Impact",
+						"Innovate", "Long tail", "Mashup", "Microformats", "Mobile",
+						"Monetize", "Open social", "Paradigm", "Podcast", "Proactive",
+						"Rails", "Scalable", "Social bookmarks", "Social graph", "Social software",
+						"Spam", "Synergy", "Tagging", "Tipping point", "Truthiness",
+						"User-generated", "Vlog", "Webinar", "Wiki", "Workflow");
+var usedWords = new Array(buzzWords.length);
+window.onload = initAll;
+function initAll() {
+	if(document.getElementById) {
+		document.getElementById("reload").onclick = reloadWeb;
+		newCard();
+	}
+	else {
+		alert("Your browser don't support this script.");
+	}
+}
+function newCard() {
+	for(var i = 0; i < 24; i++) {
+		setSquare(i);
+	}
+}
+function setSquare(squareId) {
+	var currentId = "square" + squareId;
+	do {
+		var randomWord = Math.floor(Math.random() * buzzWords.length);
+	} while(usedWords[randomWord]);
+	usedWords[randomWord] = true;
+	document.getElementById(currentId).innerHTML = buzzWords[randomWord];
+	document.getElementById(currentId).className = "";
+	document.getElementById(currentId).onmousedown = toggleColor;
+}
+function toggleColor(evt) {
+	if(evt) {
+		var thisSquare = evt.target; 
+	}
+	else {
+		var thisSquare = window.event.srcElement;
+	}
+	if(thisSquare.className == "") {
+		thisSquare.className = 'pickedBG';
+	}
+	else {
+		thisSquare.className = "";
+	}
+	checkWin();
+}
+function reloadWeb() {
+	for(var i = 0; i < 24; i++) {
+		usedWords[i] = false;
+	}
+	newCard();
+	return false;
+}
+function checkWin() {
+	var winningOption = -1;
+	var setSquare = 0;
+	var winners = new Array(31, 992, 15360, 507904, 541729, 557328, 1083458, 2162820, 4329736, 8519745, 8659472, 16252928);
+	for(var i = 0; i < 24; i++) {
+		var currentId = "square" + i;
+		if(document.getElementById(currentId).className != "") {
+			document.getElementById(currentId).className = 'pickedBG';
+			setSquare = setSquare | Math.pow(2, i);
+		}
+	}
+	for(var i = 0; i < winners.length; i++) {
+		if((winners[i] & setSquare) == winners[i]) {
+			winningOption = i;
+		}
+	}
+	if(winningOption > -1) {
+		for(var i = 0; i < 24; i++) {
+			if(winners[winningOption] & Math.pow(2, i)) {
+				var currentId = "square" + i;
 				document.getElementById(currentId).className = 'winningBG';
 			}
 		}
