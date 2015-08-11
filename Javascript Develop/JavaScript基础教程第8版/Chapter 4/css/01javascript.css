@@ -1,8 +1,9 @@
 @charset "utf-8";
-@import url(../reset.css);
+@import url("../../reset.css");
 
 body {background:#fff;}
 #arrow, #arrowImg {width:147px;height:82px;}
 #button1, #button2 {width:113px;height:33px;}
 .centered {text-align:center;}
 #adBanner {width:400px;height:75px;}
+.buttonChange {margin-top:20px;}
