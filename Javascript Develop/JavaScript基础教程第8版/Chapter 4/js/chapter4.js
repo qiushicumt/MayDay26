@@ -6,7 +6,7 @@ function changeRed() {
 function changeBlack() {
 	document.getElementById("arrow").src = '../images/arrow_off.gif';
 }
-*/
+
 // 4-2 脚本
 function changeRed() {
 	document.images['arrow'].src = '../images/arrow_on.gif';
@@ -40,3 +40,37 @@ function setupRollover(thisImage) {
 		this.src = this.overImage.src;
 	}
 }
+*/
+
+// 4-4 脚本
+window.onload = initAll;
+function initAll() {
+	for (var i = 0; i < document.images.length; i++) {
+		if (document.images[i].parentNode.tagName == "A") {
+			setupRollover(document.images[i]);
+		}
+		else {
+			alert('Script error or your browser don\'t support this script.');
+		}
+	}
+}
+function setupRollover(thisImage) {
+	thisImage.outImage = new Image();
+	thisImage.outImage.src = thisImage.src;
+	thisImage.onmouseout = function() {
+		this.src = this.outImage.src;
+	}
+	thisImage.onclickImage = new Image();
+	thisImage.onclickImage.src = '../images/' + thisImage.id + '_click.gif';
+	thisImage.onclick = function() {
+		this.src = this.onclickImage.src;
+	}
+	thisImage.overImage = new Image();
+	thisImage.overImage.src = '../images/' + thisImage.id + '_on.gif';
+	thisImage.onmouseover = function() {
+		this.src = this.overImage.src;
+	}
+}
+
+
+
