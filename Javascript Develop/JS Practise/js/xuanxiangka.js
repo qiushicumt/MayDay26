@@ -1,13 +1,14 @@
 // 1-1 选项卡脚本1
 window.onload = function() {
 	var inputAll = document.getElementsByTagName("input");
-	// inputAll[0].onclick = function() {inputAll[0].style.background = "#ff8400";}
+	var divAll = document.getElementsByTagName("div");
 	
 	for(var i = 0; i < inputAll.length; i++) {
 		inputAll[i].onclick = function() {
-			alert(i);
-			inputAll[i].style.background = "#ff8400";
+			this.className = 'nactive';
+			
 		}
+		
 	}
 	
 }

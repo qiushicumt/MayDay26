@@ -40,7 +40,6 @@ function setupRollover(thisImage) {
 		this.src = this.overImage.src;
 	}
 }
-*/
 
 // 4-4 脚本
 window.onload = initAll;
@@ -70,6 +69,41 @@ function setupRollover(thisImage) {
 	thisImage.onmouseover = function() {
 		this.src = this.overImage.src;
 	}
+}
+*/
+// 4-5 脚本
+window.onload = initAll; 
+function initAll() {
+	if(document.getElementById) {
+		rolloverInit();
+	}
+	else {
+		alert('Your browser don\'t support this script.');
+	}
+}
+function rolloverInit() {
+	for(var i = 0; i < document.links.length; i++) {
+		var linkObj = document.links[i];
+		if(linkObj.id) {
+			var imgObj = document.getElementById(linkObj.id + 'Img');
+			if(imgObj) {
+				setupRollover(linkObj, imgObj);
+			}
+		}
+	}
+}
+function setupRollover(thisLink, thisImage) {
+	thisLink.imgToChange = thisImage;
+	thisLink.onmouseout = function() {
+		this.imgToChange.src = this.outImage.src;
+	}
+	thisLink.onmouseover = function() {
+		this.imgToChange.src = this.overImage.src;
+	}
+	thisLink.outImage = new Image();
+	thisLink.outImage.src = thisImage.src;
+	thisLink.overImage = new Image();
+	thisLink.overImage.src = '../images/' + thisLink.id + '.gif';
 }
 
 
