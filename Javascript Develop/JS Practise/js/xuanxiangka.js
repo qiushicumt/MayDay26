@@ -1,37 +1,38 @@
-// 1-1 选项卡脚本1
+/*
+// 1-1 选项卡脚本1 onclick事件触发选项卡
 window.onload = function() {
 	var inputAll = document.getElementsByTagName("input");
 	var divAll = document.getElementsByTagName("div");
 	
-	for(var i = 0; i < inputAll.length; i++) {
-		inputAll[i].onclick = function() {
-			this.className = 'nactive';
-			
-		}
-		
-	}
-	
-}
+	for(i = 0; i < inputAll.length; i++) {
+		inputAll[i].index = i;
 
-/*
-window.onload = initAll;
-function initAll() {
-	var oInput = document.getElementsByTagName("input");
-	var oDiv = document.getElementsByTagName("div");
-	for(i = 0; i < oInput.length; i++) {
-		oInput
+		inputAll[i].onclick = function() {
+			for(var j = 0; j < inputAll.length; j++) {
+				inputAll[j].className = '';
+				divAll[j].style.display = 'none';
+			}
+			this.className = 'nactive';
+			divAll[this.index].style.display = 'block';
+		}
 	}
-	
-	oInput[2].onclick = function() {
-		oInput[2].style.backgroundColor = "#ff8400";
-		alert(oInput[1].value);
-		alert(oInput.length);
-	}
-	// for(var i = 0; i < oInput.length; i++) {
-	// 	oInput[i].onclick = function() {
-	// 		alert(oInput[i].value);
-	// 		alert(oInput[i].value);
-	// 	}
-	// }
 }
 */
+// 1-2 选项卡脚本2 onmouseover触发选项卡
+window.onload = function() {
+	var inputAll = document.getElementsByTagName("input");
+	var divAll = document.getElementsByTagName("div");
+	for(var i = 0; i < inputAll.length; i++) {
+		inputAll[i].index = i;
+
+		inputAll[i].onmouseover = function(){
+			for(var i = 0; i < inputAll.length; i++) {
+				inputAll[i].className = '';
+				divAll[i].style.display = "none";
+			}
+			this.className = 'nactive';
+			divAll[this.index].style.display = "block";
+		}
+	}
+}
+
