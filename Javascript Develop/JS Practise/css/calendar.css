@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import url("reset.css");
+
+#wrappage {width:960px;margin:50px auto;}
+#wrappage a {color:#fff;}
+ul {border:5px solid #f2e8f1;width:210px;height:280px;background:#f2e8f1;}
+ul li {width:58px;height:48px;float:left;margin:5px;background:#444146;font-weight:bold;text-align:center;padding-top:10px;border:1px solid;}
+ul li span {display:block;}
+#calendorInfoBox {width:200px;height:80px;border:10px solid #dfdfdf;border-top:none;padding:10px 0;font-family:"微软雅黑";}
+#calendorInfoBox h2 {font-weight:bold;}
+#calendorInfoBox p {font-size:14px;margin-top:15px;text-indent:2em;}
+
+.nactive {background:#fff;color:#f95a7c;border-color:#5d535c;}
