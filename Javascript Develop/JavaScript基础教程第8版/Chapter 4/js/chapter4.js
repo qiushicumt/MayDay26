@@ -103,7 +103,8 @@ function setupRollover(thisLink, thisImage) {
 	thisLink.outImage = new Image();
 	thisLink.outImage.src = thisImage.src;
 	thisLink.overImage = new Image();
-	thisLink.overImage.src = '../images/' + thisLink.id + '.gif';
+	thisLink.overImage.src = '../images/' + thisLink.id + '_on.gif';
+
 }
 
 
