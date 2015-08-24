@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS显示窗口</title>
+	<link rel="stylesheet" href="../css/16-2-style.css">
+</head>
+<body>
+	<div id="wrappage">
+		<div class="window" style="left:10px;top:10px;z-index:10;">
+			<div class="titleBar">Test Window</div>
+			<div class="content">
+				1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0<br><!-- Lots of lines to -->
+				1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0<br><!-- demonstrate scrolling-->
+			</div>
+		</div>
+		<div class="window" style="left:75px;top:110px;z-index:20;">
+			<div class="titleBar">Another Window</div>
+			<div class="content translucent" style="background-color:#ccc; font-weight:bold;">
+				This is another window. Its <tt>z-index</tt> puts it on top of the other one. CSS styles make its content area translucent, in browsers that support that.
+			</div>
+		</div>
+	</div>
+</body>
+</html>
