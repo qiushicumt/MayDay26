@@ -70,7 +70,7 @@ function setupRollover(thisImage) {
 		this.src = this.overImage.src;
 	}
 }
-*/
+
 // 4-5 脚本
 window.onload = initAll; 
 function initAll() {
@@ -105,6 +105,33 @@ function setupRollover(thisLink, thisImage) {
 	thisLink.overImage = new Image();
 	thisLink.overImage.src = '../images/' + thisLink.id + '_on.gif';
 }
+*/
+// 4-6 脚本
+window.onload = function() {
+	var oLink = document.links;		// 获取文档中的所有链接
+	for(var i = 0; i < oLink.length; i++) {
+		var linkObj = oLink[i];
+		if(linkObj.className) {		// 当链接节点有效时，根据链接节点的className生成正确的img对象
+			var imgObj = document.getElementById(linkObj.className);
+			if(imgObj) {
+				setupRollover(linkObj, imgObj);
+			}
+		}
+	}
+}
 
+function setupRollover(thisLink, textImage) {
+	thisLink.imgToChange = textImage;
+	thisLink.onmouseout = function() {
+		this.imgToChange.src = this.outImage.src;
+	}
+	thisLink.onmouseover = function() {
+		this.imgToChange.src = this.overImage.src;
+	}
 
+	thisLink.outImage = new Image();
+	thisLink.outImage.src = textImage.src;
 
+	thisLink.overImage = new Image();
+	thisLink.overImage.src = '../images/' + thisLink.id + 'Text.gif';
+}
