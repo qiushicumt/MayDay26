@@ -135,3 +135,56 @@ function setupRollover(thisLink, textImage) {
 	thisLink.overImage = new Image();
 	thisLink.overImage.src = '../images/' + thisLink.id + 'Text.gif';
 }
+/*
+// 4-7 脚本
+window.onload = function() {
+	oLink = document.links;
+	for(var i = 0; i < oLink.length; i++) {
+		var linkObj = oLink[i];
+		if(linkObj) {
+			var imageObj = document.getElementById(linkObj.className);
+			if(imageObj) {
+				setupRollover(linkObj, imageObj);
+			}
+		}
+	}
+}
+function setupRollover(thisLink, thisImage) {
+	thisLink.imgToChange = new Array;
+	thisLink.outImage = new Array;
+	thisLink.overImage = new Array;
+
+	thisLink.imgToChange[0] = thisImage;
+	thisLink.onmouseout = rollOut;
+	thisLink.onmouseover = rollOver;
+
+	thisLink.outImage[0] = new Image();
+	thisLink.outImage[0].src = thisImage.src;
+
+	thisLink.overImage[0] = new Image();
+	thisLink.overImage[0].src = "../images/" + thisLink.id + "Text.gif";
+
+	var rolloverObj = document.getElementById(thisLink.id + "Img");
+	if(rolloverObj) {
+		thisLink.imgToChange[1] = rolloverObj;
+
+		thisLink.outImage[1] = new Image();
+		thisLink.outImage[1].src = rolloverObj.src;
+
+		thisLink.overImage[1] = new Image();
+		thisLink.overImage[1].src = "../images/" + thisLink.id + "_on.gif";
+	}
+
+	function rollOut() {
+		for(var i = 0; i < this.imgToChange.length; i++) {
+			this.imgToChange[i].src = this.outImage[i].src;
+		}
+	}
+
+	function rollOver() {
+		for(var i = 0; i < this.imgToChange.length; i++) {
+			this.imgToChange[i].src = this.overImage[i].src;
+		}
+	}
+}
+*/
