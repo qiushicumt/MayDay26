@@ -1,6 +1,7 @@
 window.onload = function() {
-	oDiv = document.getElementById("wrappage");
-	oUl = oDiv.getElementsByTagName("ul")[0];
+	var oDiv = document.getElementById("wrappage");
+	var oUl = oDiv.getElementsByTagName("ul")[0];
+	var oDiv1 = document.getElementById("buttonDiv");
 	var timer;
 	oUl.innerHTML = oUl.innerHTML + oUl.innerHTML;
 	function movefunc() {
