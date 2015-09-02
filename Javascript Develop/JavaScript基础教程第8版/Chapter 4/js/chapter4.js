@@ -105,7 +105,7 @@ function setupRollover(thisLink, thisImage) {
 	thisLink.overImage = new Image();
 	thisLink.overImage.src = '../images/' + thisLink.id + '_on.gif';
 }
-*/
+
 // 4-6 脚本
 window.onload = function() {
 	var oLink = document.links;		// 获取文档中的所有链接
@@ -135,8 +135,9 @@ function setupRollover(thisLink, textImage) {
 	thisLink.overImage = new Image();
 	thisLink.overImage.src = '../images/' + thisLink.id + 'Text.gif';
 }
+*/
 /*
-// 4-7 脚本
+// 4-7 脚本1
 window.onload = function() {
 	oLink = document.links;
 	for(var i = 0; i < oLink.length; i++) {
@@ -188,3 +189,33 @@ function setupRollover(thisLink, thisImage) {
 	}
 }
 */
+
+// 4-7脚本2
+window.onload = function() {
+	if(document.getElementById) {
+		setupRollover();
+	}
+	else {
+		alert('Your browser don\'t support this script.');
+	}
+}
+function setupRollover() {
+	var oCdiv = document.getElementById("captionDiv");
+	var oIdiv = document.getElementById("inventionDiv");
+	var oImgShow = oCdiv.getElementsByTagName("img")[1];
+	var oLink = oIdiv.getElementsByTagName("a");
+
+	var currentSrc = oImgShow.src;
+
+	for(var i = 0; i < oLink.length; i++) {
+		oLink[i].onmouseover = function(){
+			oImgShow.src = "../images/" + this.id + "Text.gif";
+			this.getElementsByTagName("img")[0].src = "../images/" + this.id + "_on.gif";
+		}
+
+		oLink[i].onmouseout = function() {
+			oImgShow.src = currentSrc;
+			this.getElementsByTagName("img")[0].src = "../images/" + this.id + ".gif";
+		}
+	}
+}
