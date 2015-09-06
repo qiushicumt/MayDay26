@@ -188,7 +188,6 @@ function setupRollover(thisLink, thisImage) {
 		}
 	}
 }
-*/
 
 // 4-7脚本2
 window.onload = function() {
@@ -217,5 +216,28 @@ function setupRollover() {
 			oImgShow.src = currentSrc;
 			this.getElementsByTagName("img")[0].src = "../images/" + this.id + ".gif";
 		}
+	}
+}
+*/
+// 4-8 脚本1
+window.onload = function() {
+	var thisImageSrc = new Array("../images/reading1.gif", "../images/reading2.gif", "../images/reading3.gif");
+	var oImg = document.getElementById("adBanner");
+	var i = 0;
+	function changeImage() {		
+		if(i < thisImageSrc.length) {
+			oImg.src = thisImageSrc[i];
+			i++;
+		}
+		else {
+			i = 0;
+		}		
+	}
+	var timer = setInterval(changeImage, 2000);
+	oImg.onmouseover = function() {
+		clearInterval(timer);
+	}
+	oImg.onmouseout = function() {
+		timer = setInterval(changeImage, 2000);
 	}
 }
