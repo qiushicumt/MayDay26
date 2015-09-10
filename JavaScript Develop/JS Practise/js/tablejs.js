@@ -1,15 +1,17 @@
 // table 脚本4
 window.onload = function() {
-	oDiv = document.getElementById("inputDIV");
-	oInput = oDiv.getElementsByTagName("input");
-	oTab = document.getElementById("myTable");
-	oRow = oTab.tBodies[0].rows;
+	var oDiv = document.getElementById("inputDIV");
+	var oInput = oDiv.getElementsByTagName("input");
+	var oTab = document.getElementById("myTable");
+	var oRow = oTab.tBodies[0].rows;
+	var id = oRow.length;
 
 	oInput[2].onclick = function() {
 		var oTr = document.createElement("tr");
 
 		var oTd = document.createElement("td");
-		oTd.innerHTML = oRow.length + 1;
+		// 通过使用全局变量id来保存id的值，可以使id不会随着表格行的删除而减小
+		oTd.innerHTML = ++id;
 		oTr.appendChild(oTd);
 
 		var oTd = document.createElement("td");
@@ -24,11 +26,20 @@ window.onload = function() {
 		oTd.innerHTML = "<a href=\"javascript:;\">删除</a>";
 		oTr.appendChild(oTd);
 
+		// 直接寻找最后一个td的子元素就是a，通过removeChild()方法删除子节点
+		oTd.getElementsByTagName("A")[0].onclick = function() {
+			oTab.tBodies[0].removeChild(this.parentNode.parentNode);
+		}
+
 		oTab.tBodies[0].appendChild(oTr);
 	}
-	for(var i = 0; i < oRow.length; i++) {
-		
-	}
+	// for(var i = 0; i < oRow.length; i++) {
+	// 	var oLink = oRow[i].cells[3];
+	// 	oLink.onclick = function() {
+	// 		//this.parentNode.parentNode.parentNode.removeChild("tr");
+	// 		oTab.removeChild(this.parentNode.parentNode);
+	// 	}
+	// }
 }
 
 /*
