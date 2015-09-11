@@ -1,3 +1,53 @@
+// table 脚本5
+window.onload = function() {
+	addTableRow();
+	searchName();
+}
+function addTableRow() {
+	var oInputDiv = document.getElementById("inputDIV");
+	var oInput = oInputDiv.getElementsByTagName("input");
+	var oAddButton = document.getElementById("addButton");
+	var oTab = document.getElementById("myTable");
+	var oRow = oTab.tBodies[0].rows;
+	var id = oRow.length;
+	oAddButton.onclick = function() {
+		var oTr = document.createElement("tr");
+		var oTd = document.createElement("td");
+		oTd.innerHTML = ++id;
+		oTr.appendChild(oTd);
+		var oTd = document.createElement("td");
+		oTd.innerHTML = oInput[0].value;
+		oTr.appendChild(oTd);
+		var oTd = document.createElement("td");
+		oTd.innerHTML = oInput[1].value;
+		oTr.appendChild(oTd);
+		oTab.tBodies[0].appendChild(oTr);
+	}
+}
+function searchName() {
+	var oInputDiv = document.getElementById("inputDIV");
+	var oInput = oInputDiv.getElementsByTagName("input");
+	var oTab = document.getElementById("myTable");
+	var oRow = oTab.tBodies[0].rows;
+	var oSearchButton = document.getElementById("searchButton");
+
+	oSearchButton.onclick = function() {
+		for(var i = 0; i < oRow.length; i++) {
+			var oTabText = oRow[i].cells[1].innerHTML;
+			// split()方法用于将字符串按照传入的参数进行匹配隔断，返回为一个包含所有子字符串的数组
+			// 例， var str1 = "abc uhd kks";
+			//      var str2 = str1.split(" ");  // str2为一个数组为("abc", "uhd", "kks")
+			var oText = oInput[0].value.split(" ");
+			oRow[i].style.background = "";
+			for(j = 0; j < oText.length; j++) {
+				if(oTabText.search(oText[j]) != -1) {
+					oRow[i].style.background = "yellow";
+				}
+			}
+		}
+	}
+}
+/*
 // table 脚本4
 window.onload = function() {
 	var oDiv = document.getElementById("inputDIV");
