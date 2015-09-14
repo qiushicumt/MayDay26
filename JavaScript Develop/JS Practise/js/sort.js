@@ -1,3 +1,55 @@
+// 脚本3
+window.onload = function() {
+	addRow();
+	sortRow();
+}
+function addRow() {
+	var oName = document.getElementById("nameText");
+	var oNumber = document.getElementById("numberText");
+
+	var oBtn1 = document.getElementById("btn1");
+
+	var oTab = document.getElementById("myTable");
+	var oRow = oTab.tBodies[0].rows;
+	var id = oRow.length;
+
+	oBtn1.onclick = function() {
+		var oTr = document.createElement("tr");
+		var oTd = document.createElement("td");
+		oTd.innerHTML = ++id;
+		oTr.appendChild(oTd);
+		var oTd = document.createElement("td");
+		oTd.innerHTML = oName.value;
+		oTr.appendChild(oTd);
+		var oTd = document.createElement("td");
+		oTd.innerHTML = oNumber.value;
+		oTr.appendChild(oTd);
+		oTab.tBodies[0].appendChild(oTr);
+	}
+}
+function sortRow() {
+	var oBtn2 = document.getElementById("btn2");
+	var oTab = document.getElementById("myTable");
+	var oRow = oTab.tBodies[0].rows;
+
+	oBtn2.onclick = function() {
+		var rowArray = new Array();
+		for(var i = 0; i < oRow.length; i++) {
+			rowArray[i] = oRow[i];
+		}
+		rowArray.sort(function(tr1, tr2) {
+			var n1 = tr1.cells[0].innerHTML;
+			var n2 = tr2.cells[0].innerHTML;
+			return n1 - n2;
+		});
+		for(var i = 0; i < rowArray.length; i++) {
+			oTab.tBodies[0].appendChild(rowArray[i]);
+			console.log(rowArray[i].innerHTML);
+		}
+	}
+}
+
+/*
 // 脚本2
 window.onload = function() {
 	addTable();
@@ -48,7 +100,7 @@ function sortTable() {
 		}
 	}
 }
-/*
+
 // 脚本1
 window.onload = function() {
 	var oUl1 = document.getElementById("ul1");
