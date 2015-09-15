@@ -1,6 +1,10 @@
-
+// 6-2 脚本2
+window.onload = function() {
+	document.getElementById("months").selectedIndex = 0;
+	document.getElementById("months").
+}
 /*
-// 6-2 脚本
+// 6-2 脚本1
 window.onload = function() {
 	document.getElementById("months").selectedIndex = 0;	// selectedIndex选中的选项的index
 	document.getElementById("months").onchange = populateDays;
