@@ -2,5 +2,5 @@
 @import url("reset.css");
 
 /*#wrappage {width:960px;margin:50px auto;}*/
-#div1 {width:200px;height:280px;background:green;top:100px;position:absolute;}
-#div1 span {width:20px;height:60px;/*line-height:20px;*/position:absolute;background:blue;top:100px;left:200px;}
+#div1 {width:160px;height:280px;background:green;top:100px;position:absolute;}
+#div1 span {width:20px;height:60px;font-weight:bold;position:absolute;background:blue;top:100px;left:160px;color:#fff;}
