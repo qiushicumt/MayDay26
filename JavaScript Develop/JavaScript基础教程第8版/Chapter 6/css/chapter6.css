@@ -1,5 +1,7 @@
 @charset "utf-8";
 @import url("../../reset.css");
 
-#wrappage {width:960px;margin:50px auto;}
+#wrappage {width:960px;margin:50px auto;color:#000;background-color:#fff;}
+input.invalid {background-color:#ff9;border:2px red inset;}
+label.invalid {color:#f00; font-weight:bold;}
 .centered {text-align:center;}

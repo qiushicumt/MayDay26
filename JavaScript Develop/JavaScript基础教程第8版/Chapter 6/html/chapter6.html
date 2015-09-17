@@ -1,19 +1,26 @@
-<!--
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Chapter6</title>
 	<script src="../js/chapter6.js"></script>
+	<link rel="stylesheet" href="../css/chapter6.css">
 </head>
 <body>
 	<div id="wrappage">
-
+		<form action="#" id="myForm">
+			<p><label for="userName">Your name:<input type="text" size="30" id="userName" class="reqd"></label> </p>
+			<p><label for="passwd1">Choose a password: <input type="password" id="passwd1" class="reqd"></label></p>
+			<p><label for="passwd2">Verify password:<input type="password" id="passwd2" class="reqd passwd1"></label></p>
+			<p><input type="submit" value="Submit">&nbsp;<input type="reset"></p>			
+		</form>
 	</div>
 </body>
 </html>
--->
 
+<!--
+// 
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +54,7 @@
 	</div>
 </body>
 </html>
-<!--
+
 // 选择链接跳转
 <!DOCTYPE html>
 <html>
