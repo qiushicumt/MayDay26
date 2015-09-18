@@ -3,6 +3,35 @@
 <head>
 	<meta charset="utf-8">
 	<title>DivMove</title>
+	<style type="text/css">
+	#wrappage {width:960px;margin:50px auto;position:relative;}
+	#inputDIV {margin-bottom:10px;}
+	#div1 {width:180px;height:120px;position:absolute;background:red;left:650px;top:100px;}
+	.line1, .line2 {position:absolute;width:1px;height:300px;background:#000;}
+	.line1 {left:100px;}
+	.line2 {left:400px;}
+	</style>
+	<script src="../js/divmove.js"></script>
+</head>
+<body>
+	<div id="wrappage">
+		<div id="inputDIV">
+			<input type="button" id="btn1" value="左移">
+			<input type="button" id="btn2" value="右移">
+		</div>
+		<div class="line1"></div>
+		<div class="line2"></div>
+		<div id="div1"></div>
+	</div>
+</body>
+</html>
+<!-- 
+// 侧边栏移入移出
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DivMove</title>
 	<link rel="stylesheet" href="../css/divmove.css">
 	<script src="../js/divmove.js"></script>
 </head>
@@ -14,3 +43,4 @@
 	</div>
 </body>
 </html>
+-->

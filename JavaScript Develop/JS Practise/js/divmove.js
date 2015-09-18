@@ -1,4 +1,44 @@
-// 最终脚本
+
+/*
+// div匀速运动
+window.onload = function() {
+	var oDiv = document.getElementById("inputDIV");
+	var leftBtn = oDiv.getElementsByTagName("input")[0];
+	var rightBtn = oDiv.getElementsByTagName("input")[1];
+	leftBtn.onclick = function() {
+		moveFunc(100);
+	}
+	rightBtn.onclick = function() {
+		moveFunc(400);
+	}
+}
+var timer = null;
+function moveFunc(iTarget) {
+	clearInterval(timer);
+	var oDiv = document.getElementById("div1");
+	timer = setInterval(function(){
+		var speed;
+		if(oDiv.offsetLeft < iTarget) {
+			speed = 7;
+		}
+		else {
+			speed = -7;
+		}
+		// 当div移动到offsetLeft与iTarget之间差值小于speed时，div会在目标位置处来回摆动。
+		// 为了消除摆动，在此处时直接将div的left值设置为iTarget
+		if(Math.abs(oDiv.offsetLeft - iTarget) < 7) {
+			oDiv.style.left = iTarget + "px";
+		}
+		if(oDiv.offsetLeft == iTarget) {
+			clearInterval(timer);
+		}
+		else {
+			oDiv.style.left = oDiv.offsetLeft + speed + "px";
+		}
+	}, 30);
+}
+
+// 侧边栏移入移出 最终脚本
 window.onload = function() {
 	oDiv = document.getElementById("div1");
 	oDiv.style.left = -160 + "px";
@@ -28,7 +68,7 @@ function moveFunc(iTarget) {
 		}
 	}, 30);
 }
-/*
+
 // 脚本3  根据目标距离，设定speed值
 window.onload = function() {
 	oDiv = document.getElementById("div1");
