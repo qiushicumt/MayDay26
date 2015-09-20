@@ -1,4 +1,36 @@
-// 脚本3  多个div的颜色淡入淡出效果
+// 脚本4  多个div的颜色淡入淡出效果，使用各自的属性
+window.onload = function() {
+	var theDiv = document.getElementById("wrappage");
+	var oDiv = theDiv.getElementsByTagName("div");
+	for(var i = 0; i < oDiv.length; i++) {
+		// 给每个运动的div添加各自的alpha、timer属性，这样就不会互相影响
+		oDiv[i].alpha = 30;
+		oDiv[i].timer = null;
+		oDiv[i].onmouseover = function() {
+			moveFunc(this, 100);
+		}
+		oDiv[i].onmouseout = function() {
+			moveFunc(this, 30);
+		}
+	}
+ }
+function moveFunc(obj, iTarget) {
+	clearInterval(obj.timer);
+	obj.timer = setInterval(function(){
+		var speed = (iTarget - obj.alpha)/6;
+		speed = speed>0 ? Math.ceil(speed) : Math.floor(speed);
+		if(obj.alpha == iTarget) {
+			clearInterval(obj.timer);
+		}
+		else {
+			obj.alpha += speed;
+			obj.style.filter = "alpha(opacity=" + obj.alpha + ");";
+			obj.style.opacity = obj.alpha/100;
+		}
+	}, 30);
+}
+/*
+// 脚本3  多个div的颜色淡入淡出效果，公用的一个透明度
 window.onload = function() {
 	var theDiv = document.getElementById("wrappage");
 	var oDiv = theDiv.getElementsByTagName("div");
@@ -31,7 +63,7 @@ function moveFunc(obj, iTarget) {
 		}
 	}, 30);
 }
-/*
+
 // 脚本2  各自触发事件使用各自的定时器
 window.onload = function() {
 	var theDiv = document.getElementById("wrappage");
