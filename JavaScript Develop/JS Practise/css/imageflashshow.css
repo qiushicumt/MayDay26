@@ -1,0 +1,16 @@
+@charset "utf-8";
+@import url("reset.css");
+
+#wrappage {width:960px;margin:50px auto;}
+#mainImage {width:600px;height:400px;background-image:url("../img/201501.jpg");position:relative;}
+#mainImage .prev, #mainImage .next {width:40px;height:40px;opacity:0;filter:alpha(opacity=0);position:absolute;}
+#mainImage .prev:hover, #mainImage .next:hover {cursor:pointer;}
+#mainImage .prev {background-image:url("../img/leftskin-2.png");left:10px;top:180px;}
+#mainImage .next {background-image:url("../img/rightskin-2.png");right:10px;top:180px;}
+#mainImage a {width:300px;height:400px;float:left;}
+#mainImage .text, #mainImage .length {width:290px;height:22px;padding-top:8px;color:#fff;font-size:14px;background-color:black;opacity:0.3;filter:alpha(opacity=30);position:absolute;}
+#mainImage .text {left:0;top:370px;padding-left:10px;}
+#mainImage .length {right:0;top:370px;text-align:right;padding-right:10px;}
+#imageSlide {width:600px;margin:10px auto;}
+#listImage ul {background-color:rgb(154,151,155);width:600px;}
+#listImage ul li {float:left;margin:15px 0 15px 15px;}
