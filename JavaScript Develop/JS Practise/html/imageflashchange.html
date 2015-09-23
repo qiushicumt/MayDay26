@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test</title>
+	<style type="text/css">
+	#wrappage {width:600px;margin:50px auto;}
+	#wrappage ul {width:600px;height:400px;position:relative;overflow:hidden;}
+	#wrappage ul li {width:600px;height:400px;position:absolute;left:0;top:0;z-index:0;overflow:hidden;}
+	</style>
+	<script>
+	function getClass(oParent, sClass) {
+		var oEle = oParent.getElementsByTagName("*");	//	第一步、获取oParent下的所有元素
+		var oResult = new Array();						//	第二步、声明一个数组，存储最后得到的符合sClass值得元素
+		//	循环遍历所有元素，判断每一个元素的className与所要寻找的sClass匹配，若符合，则将元素放入数组中
+		for(var i = 0; i < oEle.length; i++) {
+			if(oEle[i].className == sClass) {
+				oResult.push(oEle[i]);
+			}
+		}
+		return oResult;		//	返回最终得到的符合sClass的元素
+	}
+	function getStyle(obj, attr) {		//	返回元素属性值
+		if(obj.currentStyle) {
+			return obj.currentStyle[attr];		//	IE6~8中获得元素属性值
+		}
+		else {
+			return getComputedStyle(obj, null)[attr];	//	IE9、Chrome、Firefox浏览器获取元素属性值
+		}
+	}
+	function moveFunc(obj, attr, iTarget) {		//	运动函数框架
+		clearInterval(obj.timer);				//	先将对象的上一个定时器关闭
+		obj.timer = setInterval(function(){		//	设置定时器
+			var cur;							//	声明一个cur变量，用于赋值对象属性的当前值
+			//	根据属性为opacity和其他，设置当前属性值
+			if(attr == "opacity") {
+			//	Math.round()函数用于四舍五入，opacity属性值为小数，所以用parseFloat转化为浮点数
+				cur = Math.round(parseFloat(getStyle(obj, attr))*100);	
+			}
+			else {
+			//	属性不是opacity时，直接对返回的结果进行parseInt转化为整数
+				cur = parseInt(getStyle(obj,attr));
+			}
+			var speed = (iTarget - cur)/6;		//	用iTarget减去cur当前属性值，然后除6来设置speed
+			//	对得到的speed进行取整，speed大于0时，使用Math.ceil()函数进行向下取整数值，
+			//	speed小于0时，使用Math.floor()函数进行向上取整数值
+			speed = speed>0 ? Math.ceil(speed) : Math.floor(speed);	
+
+			//	然后对当前值与目标值进行比较，相等则停止定时器，不相等则对当前值进行运算
+			if(cur == iTarget) {
+				clearInterval(obj.timer);
+			}
+			else {
+				if(attr == "opacity") {
+					obj.style["filter"] = "alpha(opacity=" + (cur + speed) + ");";
+					obj.style[attr] = (cur + speed)/100;
+				}
+				else {
+					obj.style[attr] = cur + speed + "px";
+				}
+			}
+		}, 30);
+		// console.log(obj.style[attr]);
+	}
+	window.onload = function() {
+		var oDiv = document.getElementById("wrappage");
+		var oUl = oDiv.getElementsByTagName("ul")[0];
+		var oLi = oDiv.getElementsByTagName("li");
+		var nowZIndex = 1;
+		var now = 0;
+		
+		var timer = setInterval(function(){
+			if(now == 5) {
+				now = 0;
+			}
+			oLi[now].style.zIndex = nowZIndex++;
+			oLi[now].style.height = 0;
+			moveFunc(oLi[now], "height", 400);
+			now++;
+		}, 3000);
+	}
+	</script>
+</head>
+<body>
+	<div id="wrappage">
+		<ul>
+			<li style="z-index:1;"><img src="../img/201501.jpg"></li>
+			<li><img src="../img/201502.jpg"></li>
+			<li><img src="../img/201503.jpg"></li>
+			<li><img src="../img/201504.jpg"></li>
+			<li><img src="../img/201505.jpg"></li>
+		</ul>
+	</div>
+</body>
+</html>
