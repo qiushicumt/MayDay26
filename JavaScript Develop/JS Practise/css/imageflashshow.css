@@ -4,7 +4,7 @@
 /* 最终样式 */
 #wrappage {width:600px;height:550px;margin:50px auto;position:relative;background:#808080;}
 /* 大图样式 */
-#bigImage {width:600px;height:400px;position:relative;}
+#bigImage {width:600px;height:400px;position:relative;overflow:hidden;}
 #bigImage .prev, #bigImage .next {width:40px;height:40px;filter:alpha(opacity=0);opacity:0;position:absolute;z-index:80001;cursor:pointer;}
 .prev { background:url("../img/leftskin-2.png") no-repeat left top; left:10px; top:180px;}
 .next { background:url("../img/rightskin-2.png") no-repeat left top; right:10px; top:180px;}
@@ -15,11 +15,14 @@
 .text { float:left;}
 .length {float:right; }
 #bigImage ul { width:600px;height:400px;position:relative;}
-#bigImage ul li { position:absolute;width:600px;height:400px;z-index:0;}
+/* 设置li的overflow属性值为hidden，可以在js中产生图片下拉效果 */
+#bigImage ul li { position:absolute;width:600px;height:400px;z-index:0;left:0;top:0;overflow:hidden;}   
+
 /* 小图样式 */
 #smallImage { width:585px;height:120px;position:relative;margin:15px 0 15px 15px;overflow:hidden;}
 #smallImage ul { width:585px;height:120px;position:absolute;left:0;top:0;}
 #smallImage li { width:180px;height:120px;float:left;padding-right:15px;cursor:pointer;filter:alpha(opacity=50);opacity:0.5;}
+
 /*
 #wrappage {width:600px;margin:50px auto;}
 
@@ -31,13 +34,14 @@
 #bg .text, #bg .length {display:inline;}  .text {float:left;}  .length {float:right;}
 #bigImage a {width:300px;height:400px;opacity:0;filter:alpha(opacity=0);position:absolute;z-index:80000;}
 .mark_left {left:0;top:0;background:red;} .mark_right {right:0;top:0;background:green;}
-#bigImage ul {width:600px;height:400px;position:relative;overflow:hidden;}
-#bigImage ul li {width:600px;height:400px;position:absolute;left:0;top:0;z-index:0;}
+#bigImage ul {width:600px;height:400px;position:relative;}
+#bigImage ul li {width:600px;height:400px;position:absolute;left:0;top:0;z-index:0;overflow:hidden;}
 
 #smallImage {width:600px;height:150px;position:relative;background:#ccc;overflow:hidden;}
 #smallImage ul {width:600px;height:150px;overflow:hidden;}
 #smallImage ul li {width:180px;height:120px;float:left;margin:15px 0 15px 15px;}
 
+/*********************************************************
 #wrappage {width:600px; margin:50px auto;}
 #wrappage #big_img {width:600px;height:400px;position:relative;}
 #big_img ul {position:relative;width:600px;height:400px;}

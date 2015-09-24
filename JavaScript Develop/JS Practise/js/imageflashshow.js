@@ -1,8 +1,85 @@
-//  �ű�4 ���սű�
-function getClass(oParent, sClass) { }
+﻿//  脚本4 最终脚本
+function getClass(oParent, sClass) {
+    var oEle = oParent.getElementsByTagName("*");
+    var oResult = new Array();
+    for (var i = 0; i < oEle.length; i++) {
+        if (oEle[i].className == sClass) {
+            oResult.push(oEle[i]);
+        }
+    }
+    return oResult;
+}
+
+window.onload = initAll;
+function initAll() {
+    var oDiv = document.getElementById("wrappage");
+    var oBigImage = document.getElementById("bigImage");
+    var oSmallImage = document.getElementById("smallImage");
+
+    var prevButton = getClass(oBigImage, "prev")[0];
+    var nextButton = getClass(oBigImage, "next")[0];
+    var oMarkLeft = getClass(oBigImage, "mark_left")[0];
+    var oMarkRight = getClass(oBigImage, "mark_right")[0];
+
+    var oUlBig = oBigImage.getElementsByTagName("ul")[0];
+    var oLiBig = oUlBig.getElementsByTagName("li");
+    var oUlSmall = oSmallImage.getElementsByTagName("ul")[0];
+    var oLiSmall = oUlSmall.getElementsByTagName("li");
+
+    var nowZIndex = 2;
+    var now = 0;
+
+    //  左右按钮显示隐藏
+    prevButton.onmouseover = oMarkLeft.onmouseover = function () {
+        moveFunc(prevButton, "opacity", 100);
+    }
+    prevButton.onmouseout = oMarkLeft.onmouseout = function () {
+        moveFunc(prevButton, "opacity", 0);
+    }
+    nextButton.onmouseover = oMarkRight.onmouseover = function () {
+        moveFunc(nextButton, "opacity", 100);
+    }
+    nextButton.onmouseout = oMarkRight.onmouseout = function () {
+        moveFunc(nextButton, "opacity", 0);
+    }
+  
+    //  点击小图切换大图效果和鼠标悬停小图淡入淡出效果
+    for (var i = 0; i < oLiSmall.length; i++) {
+        oLiSmall[i].index = i;
+        oLiSmall[i].onclick = function () {
+            if (this.index == now) { return; }
+            now = this.index;       //  now变量用于标记当前
+            
+        }
+        oLiSmall[i].onmouseover = function () {
+            moveFunc(this, "opacity", 100);
+        }
+        oLiSmall[i].onmouseout = function () {
+            //  当smallImage的li的index=now时，表示当前大图正在显示这个小图，所以，index！=now的时候执行改变为半透明的操作
+            if (this.index != now) {
+                moveFunc(this, "opacity", 50);
+            }
+        }
+    }
+
+    function tab() {
+        //  通过将大图的z-index值变大，使大图显示出来
+        oLiBig[now].style.zIndex = nowZIndex++;
+
+        //  在点击小图的时候，先将所有小图的透明度设置为半透明，然后再将被点击的小图的透明度设置为不透明
+        for (var j = 0; j < oLiSmall.length; j++) {
+            moveFunc(oLiSmall[j], "opacity", 50);
+        }
+        moveFunc(this, "opacity", 100);
+
+        //  图片刷新产生下拉效果，先把li高度设为0，然后再调用运动函数还原高度。
+        oLiBig[now].style.height = 0;
+        moveFunc(oLiBig[now], "height", 400);
+    }
+}
 
 /*
-// �ű�3
+// 脚本3
 function getClass(oParent, sClass){
     var oEle = oParent.getElementsByTagName("*");
     var oResult = new Array();
@@ -23,7 +100,7 @@ function initAll() {
     var oMarkLeft = getClass(oBigDiv, "mark_left")[0];
     var oMarkRight = getClass(oBigDiv, "mark_right")[0];
 
-    //  ���Ұ�ť��ʾ
+    //  左右按钮显示
     prevButton.onmouseover = oMarkLeft.onmouseover = function() {
         moveFunc(prevButton, "opacity", 100);
     }
@@ -38,7 +115,7 @@ function initAll() {
     }
 }
 
-// �ű�2
+// 脚本2
  function getClass(oParent, sClassName) {
      var oEle = oParent.getElementsByTagName('*');
      var oResult = new Array();
@@ -78,7 +155,7 @@ function initAll() {
         moveFunc(nextButton, 'opacity', 0);
      }
 
- //  ���Сͼ��ʹ��Ӧ�Ĵ�ͼ�����л�
+ //  点击小图，使对应的大图进行切换
      for(var i = 0; i < oSmallLi.length; i++) {
          oSmallLi[i].index = i;
          oSmallLi[i].onclick = function() {
@@ -89,16 +166,16 @@ function initAll() {
      }
  }
 
-//  �ű�1
+//  脚本1
  function getClass(oParent, oClass) {
-     var oEle = oParent.getElementsByTagName("*");       //  ʹ��ͨ�����*��������ȡ��ǩ�����е�Ԫ��
-     var oResult = [];                                   //  �����������ڴ���������ķ���ClassName��Ԫ�ر�ǩ
+     var oEle = oParent.getElementsByTagName("*");       //  使用通配符‘*’，来获取标签下所有的元素
+     var oResult = [];                                   //  声明数组用于存放搜索到的符合ClassName的元素标签
      for(var i = 0; i < oEle.length; i++) {
          if(oEle[i].className == oClass) {
-            oResult.push(oEle[i]);                      //  ��Ԫ��push��������
+            oResult.push(oEle[i]);                      //  将元素push到数组中
          }
      }
-     return oResult;                                     //  ������������
+     return oResult;                                     //  返回整个数组
  }
 
  window.onload = function() {
@@ -111,7 +188,7 @@ function initAll() {
      var oText = getClass(oDiv1, 'text')[0];
      var oLength = getClass(oDiv1, 'length')[0];
 
- //  ���Ұ�ť�ĵ��뵭��
+ //  左右按钮的淡入淡出
      leftButton.onmouseover = oMarkLeft.onmouseover = function() {
         moveFunc(leftButton, 'opacity', 100);
      }
