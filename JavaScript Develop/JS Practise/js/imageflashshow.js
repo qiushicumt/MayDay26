@@ -20,6 +20,8 @@ function initAll() {
     var nextButton = getClass(oBigImage, "next")[0];
     var oMarkLeft = getClass(oBigImage, "mark_left")[0];
     var oMarkRight = getClass(oBigImage, "mark_right")[0];
+    var oText = getClass(oBigImage, "text")[0];
+    var oLength = getClass(oBigImage, "length")[0];
 
     var oUlBig = oBigImage.getElementsByTagName("ul")[0];
     var oLiBig = oUlBig.getElementsByTagName("li");
@@ -28,8 +30,13 @@ function initAll() {
 
     var nowZIndex = 2;
     var now = 0;
+    var textArray = ["图片1", "图片2", "图片3", "图片4", "图片5", "图片6"];
 
     oUlSmall.style.width = oLiSmall[0].offsetWidth * oLiSmall.length + "px";    //  将小图的ul的width设置为所有小图的offsetWidth之和
+
+    //  初始化显示的文字以及图片数量
+    oText.innerHTML = textArray[now];
+    oLength.innerHTML = (now + 1) + "/" + oLiBig.length;
     
     //  左右按钮显示隐藏
     prevButton.onmouseover = oMarkLeft.onmouseover = function () {
@@ -76,9 +83,21 @@ function initAll() {
         tab();
     }
 
+    var timer = setInterval(nextButton.onclick, 3000);
+    oBigImage.onmouseover = function () {
+        clearInterval(timer);
+    }
+    oBigImage.onmouseout = function () {
+        timer = setInterval(nextButton.onclick, 3000);
+    }
+
     function tab() {
         //  通过将大图的z-index值变大，使大图显示出来
         oLiBig[now].style.zIndex = nowZIndex++;
+
+        //  设置显示的文字以及图片数量
+        oText.innerHTML = textArray[now];
+        oLength.innerHTML = (now + 1) + "/" + oLiBig.length;
 
         //  通过改变小图的ul的left值，使小图跟随大图的切换进行运动
         if (now == 0) {
