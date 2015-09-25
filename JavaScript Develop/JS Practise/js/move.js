@@ -9,7 +9,7 @@ function getStyle(obj, attr) {      //  返回元素属性值
         return getComputedStyle(obj, null)[attr];   //  IE9、Chrome、Firefox浏览器获取元素属性值
     }
 }
-function moveFunc(obj, attr, iTarget) {     //  运动函数框架
+function moveFunc(obj, attr, iTarget, newFunc) {     //  运动函数框架
     clearInterval(obj.timer);               //  先将对象的上一个定时器关闭
     obj.timer = setInterval(function(){     //  设置定时器
         var cur;                            //  声明一个cur变量，用于赋值对象属性的当前值
@@ -30,6 +30,7 @@ function moveFunc(obj, attr, iTarget) {     //  运动函数框架
         //  然后对当前值与目标值进行比较，相等则停止定时器，不相等则对当前值进行运算
         if(cur == iTarget) {
             clearInterval(obj.timer);
+            if (newFunc) { newFunc();}      //  在定时器运行结束后，对newFunc进行判断，若传入newFunc，则调用newFunc方法，若没有传入newFunc，则不执行
         }
         else {
             if(attr == "opacity") {
