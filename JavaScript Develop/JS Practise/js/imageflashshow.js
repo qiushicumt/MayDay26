@@ -29,6 +29,8 @@ function initAll() {
     var nowZIndex = 2;
     var now = 0;
 
+    oUlSmall.style.width = oLiSmall[0].offsetWidth * oLiSmall.length + "px";    //  将小图的ul的width设置为所有小图的offsetWidth之和
+    
     //  左右按钮显示隐藏
     prevButton.onmouseover = oMarkLeft.onmouseover = function () {
         moveFunc(prevButton, "opacity", 100);
@@ -49,7 +51,7 @@ function initAll() {
         oLiSmall[i].onclick = function () {
             if (this.index == now) { return; }
             now = this.index;       //  now变量用于标记当前
-            
+            tab();
         }
         oLiSmall[i].onmouseover = function () {
             moveFunc(this, "opacity", 100);
@@ -61,16 +63,38 @@ function initAll() {
             }
         }
     }
+    //  左右按钮点击进行图片切换
+    prevButton.onclick = function () {
+        now--;
+        if (now == -1) { now = oLiBig.length - 1; }
+        tab();
+    }
+
+    nextButton.onclick = function () {
+        now++;
+        if (now == oLiBig.length) { now = 0; }
+        tab();
+    }
 
     function tab() {
         //  通过将大图的z-index值变大，使大图显示出来
         oLiBig[now].style.zIndex = nowZIndex++;
 
-        //  在点击小图的时候，先将所有小图的透明度设置为半透明，然后再将被点击的小图的透明度设置为不透明
+        //  通过改变小图的ul的left值，使小图跟随大图的切换进行运动
+        if (now == 0) {
+            moveFunc(oUlSmall, "left", 0);
+        }
+        else if (now == oLiBig.length - 1) {
+            moveFunc(oUlSmall, "left", -(now - 2) * oLiSmall[0].offsetWidth);
+        }
+        else {
+            moveFunc(oUlSmall, "left", -(now - 1) * oLiSmall[0].offsetWidth);
+        }
+        //  先将所有小图的透明度设置为半透明，然后再将当前正在显示的大图对应的小图的透明度设置为不透明
         for (var j = 0; j < oLiSmall.length; j++) {
             moveFunc(oLiSmall[j], "opacity", 50);
         }
-        moveFunc(this, "opacity", 100);
+        moveFunc(oLiSmall[now], "opacity", 100);    //  错误：moveFunc(this, "opacity", 100);  //  此处不能继续使用this
 
         //  图片刷新产生下拉效果，先把li高度设为0，然后再调用运动函数还原高度。
         oLiBig[now].style.height = 0;
