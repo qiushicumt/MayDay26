@@ -1,7 +1,7 @@
 ﻿window.onload = function () {
     var oDiv = document.getElementById("div1");
     oDiv.onmouseover = function () {
-        moveFunc(oDiv, {width:300, height:300, opacity:100});   //  传入json数据后，在定时器每一次运行的过程中，会对json中的每一对键值对进行操作一次
+        moveFunc(oDiv, { width: 200, height: 300, opacity: 100 });   //  传入json数据后，在定时器每一次运行的过程中，会对json中的每一对键值对进行操作一次
     }
     oDiv.onmouseout = function () {
         moveFunc(oDiv, {width:120, height:120, opacity:30});
