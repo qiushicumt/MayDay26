@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>下拉菜单</title>
+    <style type="text/css">
+        #wrappage { width:960px;margin:50px auto;}
+        #div1 { width:300px;height:300px;background:#ccc;display:none;}
+    </style>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById("btn1");
+            var oDiv = document.getElementById("div1");
+
+            oBtn.onclick = function () {
+                oDiv.style.display = "block";
+                event.cancelBubble = true;      //  event事件的cancelBubble属性设置为true，可以阻止事件向上冒泡
+            }
+            document.onclick = function () {
+                oDiv.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="wrappage">
+        <input type="button" value="弹出" id="btn1">
+        <div id="div1"></div>
+    </div>
+</body>
+</html>
+<!-- 
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bubble Demo</title>
+    <style type="text/css">
+        div { padding:100px;}        
+    </style>
+    <script>
+        window.onload = function () {
+            document.getElementById("div1").onclick = function () {
+                alert(this.style.background);
+            }
+            document.getElementById("div2").onclick = function () {
+                alert(this.style.background);                
+            }
+            document.getElementById("div3").onclick = function () {
+                alert(this.style.background);
+                event.cancelBubble = true;
+            }
+        }
+	</script>
+</head>
+<body>
+    <div id="div1" style="background:#000;">
+        <div id="div2" style="background:green;">
+            <div id="div3" style="background:red;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>	    
+-->
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <script>
+        //  兼容性代码
+        window.onload = function () {
+            document.onclick = function (ev) {
+                var iEvent = ev || event;   //  此处运用||运算符，Firefox浏览器取ev对象，IE浏览器取event对象
+                alert(iEvent.clientX + ", " + iEvent.clientY);
+            }
+        }
+        //  Firefox代码
+        window.onload = function () {
+            document.onclick = function (ev) {
+                alert(ev.clientX + ", " + ev.clientY);
+            }
+        }
+        //  IE代码
+        window.onload = function () {
+            document.onclick = function () {
+                alert(event.clientX + ", " + event.clientY);
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
+-->

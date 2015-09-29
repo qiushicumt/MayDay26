@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>OnMouseMove Demo</title>
+    <style type="text/css">
+        #div1 { width:200px;height:200px;background:red;position:absolute;}
+    </style>
+    <script>
+        //  document的onmouseover事件，鼠标在页面上移动触发事件
+        document.onmousemove = function (ev) {
+            var oEvent = ev || event;
+            var oDiv = document.getElementById("div1");
+        //  clientY坐标为页面可视区域的纵坐标
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            oDiv.style.left = oEvent.clientX + "px";
+            oDiv.style.top = oEvent.clientY + scrollTop + "px";
+        }
+    </script>
+</head>
+<body style="height:2000px;">
+    <div id="div1"></div>
+</body>
+</html>
+
+<!--
+
+//  当页面长度大于可视区域，即页面出现滚动条时会出现Bug
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>OnMouseMove Demo</title>
+    <style type="text/css">
+        #div1 { width:200px;height:200px;background:red;position:absolute;}
+    </style>
+    <script>
+        //  document的onmouseover事件，鼠标在页面上移动触发事件
+        document.onmousemove = function (ev) {
+            var oEvent = ev || event;
+            var oDiv = document.getElementById("div1");
+            oDiv.style.left = oEvent.clientX + "px";
+            oDiv.style.top = oEvent.clientY + "px";
+        }        
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>
+-->
