@@ -1,5 +1,60 @@
 ﻿<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <title>OnMouseMove Demo</title>
+        <style type="text/css">
+            div { width:16px;height:14px;background:url("../img/redheart.png") no-repeat left top;position:absolute;}
+        </style>
+        <script>
+            function getPos(ev) {
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+
+                var posX = scrollLeft + ev.clientX;
+                var posY = scrollTop + ev.clientY;
+
+                return { x: posX, y: posY };
+            }
+            document.onmousemove = function (ev) {
+                var oEvent = ev || event;
+                var oDiv = document.getElementsByTagName("div");
+                for (var i = (oDiv.length - 1) ; i > 0; i--) {
+                    oDiv[i].style.left = oDiv[i - 1].offsetLeft + "px";
+                    oDiv[i].style.top = oDiv[i - 1].offsetTop + "px";
+                }
+                oDiv[0].style.left = getPos(ev).x + "px";
+                oDiv[0].style.top = getPos(ev).y + "px";
+            }
+        </script>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </body>
+</html>
+<!--
+
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8" />
     <title>OnMouseMove Demo</title>
@@ -22,8 +77,6 @@
     <div id="div1"></div>
 </body>
 </html>
-
-<!--
 
 //  当页面长度大于可视区域，即页面出现滚动条时会出现Bug
 <!DOCTYPE html>
