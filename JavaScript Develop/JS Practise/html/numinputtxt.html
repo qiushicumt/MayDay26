@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Number Input Text Demo</title>
+    <script>
+        window.onload = function () {
+            var oTxt = document.getElementById("txt1");
+            oTxt.onkeydown = function (ev) {
+                var oEvent = ev || event;
+                //  数字0~9对应的keyCode为48~57，Backspace键对应的keyCode为8
+                if (oEvent.keyCode != 8 && (oEvent.keyCode < 48 || oEvent.keyCode > 57)) {
+                    return false;
+                }
+            }
+        }
+        //document.onkeydown = function (ev) {
+        //    var oEvent = ev || event;
+        //    alert(oEvent.keyCode);
+        //}
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1" />
+</body>
+</html>
