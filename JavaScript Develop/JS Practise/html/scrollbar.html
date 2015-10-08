@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ScrollBar Demo</title>
+    <style type="text/css">
+        #wrappage { width:960px;margin:50px auto;}
+        #div1 {width:600px;height:20px;background-color:#ccc;position:relative;margin:10px auto;}
+        #div2 {width:24px;height:20px;background-color:red;position:absolute;}
+        #div3 {width:0px;height:0px;background-color:green;}
+        #div4 {width:300px;height:300px;background-color:green;opacity:0;filter:alpha(opacity=0);}
+        #div5 { width:400px;height:300px;border:1px solid #000;padding:5px;overflow:hidden;position:relative;}
+        #div6 { position:absolute;top:0;left:0;}
+    </style>
+    <script src="../js/scrollbar.js"></script>
+</head>
+<body>
+    <div id="wrappage">
+        <div id="div1">
+            <div id="div2"></div>
+        </div>
+        <!--<div id="div3"></div>
+        <div id="div4"></div>-->
+        <div id="div5">
+            <div id="div6">
+                replace函数的语法是：stringObj.replace(rgExp, replaceText) 其中stringObj是字符串(string)，reExp可以是正则表达式对象(RegExp)也可以是字符串(string)，replaceText是替代查找到的字符串。
+                为了帮助大家更好的理解，下面举个简单例子说明一下：第二个错别字“不简明的”并没有被替换成“简明”，我们可以执行二次replace方法把第二个错别字“简明”也替换掉，程序经过改进之后如下：我们可以仔细的想一下，如果有N的N次方个错别字，是不是也要执行N的N次方replace方法来替换掉错别字呢？？呵，不用怕，有了正则表达式之后不用一个错别字要执行一次replace方法。。程序经过改进之后的代码如下：上面讲的是replace方法最简单的应用，不知道大家有没有看懂？？
+                下面开始讲稍微复杂一点的应用。大家在一些网站上搜索文章的时候，会发现这么一个现象，就是搜索的关键字会高亮改变颜色显示出来？？这是怎么实现的呢？？其实我们可以用正则表达式来实现，具体怎么样实现呢？简单的原理请看下面的代码：
+                可能大家都会对$1这个特殊字符表示什么意思不是很理解，其实$1表示的就是左边表达式中括号内的字符，即第一个子匹配，同理可得$2表示第二个子匹配。。什么是子匹配呢？？通俗点讲，就是左边每一个括号是第一个字匹配，第二个括号是第二个子匹配。
+    当我们要把查找到的字符进行运算的时候，怎么样实现呢？？在实现之前，我们先讲一下怎么样获取某一个函数的参数。。在函数Function的内部，有一个arguments集合，这个集合存储了当前函数的所有参数，通过arguments可以获取到函数的所有参数，
+                我们惊奇的发现，匿名函数竟然被执行了二次，并且在函数里还带有三个参数，为什么会执行二次呢？？这个很容易想到，因为我们写的正则表达式是匹配单个数字的，而被检测的字符串刚好也有二个数字，故匿名函数被执行了二次。。在匿名函数内部的那三个参数到底是什么内容呢？？
+                经过观察我们发现，第一个参数表示匹配到的字符，第二个参数表示匹配时的字符最小索引位置(RegExp.index)，第三个参数表示被匹配的字符串(RegExp.input)。其实这些参数的个数，还会随着子匹配的变多而变多的。
+                replace函数的语法是：stringObj.replace(rgExp, replaceText) 其中stringObj是字符串(string)，reExp可以是正则表达式对象(RegExp)也可以是字符串(string)，replaceText是替代查找到的字符串。
+                为了帮助大家更好的理解，下面举个简单例子说明一下：第二个错别字“不简明的”并没有被替换成“简明”，我们可以执行二次replace方法把第二个错别字“简明”也替换掉，程序经过改进之后如下：我们可以仔细的想一下，如果有N的N次方个错别字，是不是也要执行N的N次方replace方法来替换掉错别字呢？？呵，不用怕，有了正则表达式之后不用一个错别字要执行一次replace方法。。程序经过改进之后的代码如下：上面讲的是replace方法最简单的应用，不知道大家有没有看懂？？
+                下面开始讲稍微复杂一点的应用。大家在一些网站上搜索文章的时候，会发现这么一个现象，就是搜索的关键字会高亮改变颜色显示出来？？这是怎么实现的呢？？其实我们可以用正则表达式来实现，具体怎么样实现呢？简单的原理请看下面的代码：
+                可能大家都会对$1这个特殊字符表示什么意思不是很理解，其实$1表示的就是左边表达式中括号内的字符，即第一个子匹配，同理可得$2表示第二个子匹配。。什么是子匹配呢？？通俗点讲，就是左边每一个括号是第一个字匹配，第二个括号是第二个子匹配。
+    当我们要把查找到的字符进行运算的时候，怎么样实现呢？？在实现之前，我们先讲一下怎么样获取某一个函数的参数。。在函数Function的内部，有一个arguments集合，这个集合存储了当前函数的所有参数，通过arguments可以获取到函数的所有参数，
+                我们惊奇的发现，匿名函数竟然被执行了二次，并且在函数里还带有三个参数，为什么会执行二次呢？？这个很容易想到，因为我们写的正则表达式是匹配单个数字的，而被检测的字符串刚好也有二个数字，故匿名函数被执行了二次。。在匿名函数内部的那三个参数到底是什么内容呢？？
+                经过观察我们发现，第一个参数表示匹配到的字符，第二个参数表示匹配时的字符最小索引位置(RegExp.index)，第三个参数表示被匹配的字符串(RegExp.input)。其实这些参数的个数，还会随着子匹配的变多而变多的。
+            </div>
+        </div>
+    </div>
+</body>
+</html>

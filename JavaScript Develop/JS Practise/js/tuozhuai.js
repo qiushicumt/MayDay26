@@ -1,5 +1,32 @@
 ﻿// JavaScript source code
-
+//  脚本6 带框拖拽
+window.onload = function () {
+    var oWap = document.getElementById("wrappage");
+    var oDiv = document.getElementById("div1");
+    oDiv.onmousedown = function (ev) {
+        var oEvent = ev || event;
+        var newDiv = document.createElement("div");
+        newDiv.className = "biankuang";
+        oWap.appendChild(newDiv);
+        newDiv.style.left = (oDiv.offsetLeft - 1) + "px";
+        newDiv.style.top = (oDiv.offsetTop - 1) + "px";
+        posX = oEvent.clientX - newDiv.offsetLeft;
+        posY = oEvent.clientY - newDiv.offsetTop;
+        newDiv.onmousemove = function (ev) {
+            var oEvent = ev || event;
+            newDiv.style.left = oEvent.clientX - posX + "px";
+            newDiv.style.top = oEvent.clientY - posY + "px";
+        }
+        newDiv.onmouseup = function () {
+            newDiv.onmouseover = null;
+            oDiv.style.left = (newDiv.offsetLeft + 1) + "px";
+            oDiv.style.top = (newDiv.offsetTop + 1) + "px";
+            newDiv.className = "";           
+            newDiv.onmouseup = null;
+        }
+    }
+}
+/*
 //  脚本5 磁性吸附，子级div在被拖动到靠近父级div边缘的时候，可以被吸附直接停靠在父级边缘
 window.onload = function () {
     var oDiv = document.getElementById("wrappage");
@@ -36,7 +63,6 @@ window.onload = function () {
         return false;
     }
 }
-/*
 //  脚本4 不能拖出父级对象的div
 window.onload = function () {
     var oDiv = document.getElementById("wrappage");
@@ -112,7 +138,6 @@ window.onload = function () {
         return false;
     }
 }
-
 //  脚本2 标准的拖拽
 //  mousedown事件为鼠标按钮被点击发生的动作，mouseup事件为鼠标按钮被抬起发生的动作
 document.onmousedown = function (ev) {
@@ -133,7 +158,6 @@ document.onmousedown = function (ev) {
 
     return false;   //  return false在此处用于阻止firefox自带的bug
 }
-
 //  脚本1 自写的拖拽
 document.onmousedown = function (ev) {
     var oDiv = document.getElementById("div1");
