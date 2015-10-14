@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RegExp Demo</title>
+	<style type="text/css"></style>
+	<script >
+	window.onload = function() {
+		var oTxt = document.getElementById("txt1");
+		var oBtn = document.getElementById("btn1");
+		//	var testChar = /[\d{3,4}][\-][\d{3, 8}]/;
+		var testStr = /^\d{3,4}\-\d{3,8}$/;
+		oBtn.onclick = function() {			
+			if(!testStr.test(oTxt.value)) {
+				alert("Please enter correct phone-number!");
+			}
+			else {
+				alert(oTxt.value);
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<input type="text" id="txt1">
+	<input type="button" id="btn1" value="Check">
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo2.1过滤输入的字符串空格</title>
+	<script>
+	    window.onload = function () {
+	        //var oTxt = document.getElementById("txt1");
+	        //var oBtn = document.getElementById("btn1");
+            //  querySelector()方法可以选择元素、类或者ID，返回的是符合条件的第一个选择
+	        var oTxt = document.querySelector("#txt1");
+	        var oBtn = document.querySelector("#btn1");
+	        oBtn.onclick = function () {
+	            //  在正则表达式里，"\s"匹配任何空格(如Tab、换行、空格)
+	            oTxt.value = oTxt.value.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g,"");     
+	        }
+	    }
+	</script>
+</head>
+<body>
+	<div id="wrappage">
+		<form id="myForm">
+            <input type="text" id="txt1">
+            <input type="button" id="btn1" value="过滤">
+		</form>
+	</div>
+</body>
+</html>
+-->
