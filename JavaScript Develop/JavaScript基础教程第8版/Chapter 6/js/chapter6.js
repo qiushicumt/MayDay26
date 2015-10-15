@@ -1,3 +1,23 @@
+//  6-9 脚本
+window.onload = function () {
+    var oForm = document.getElementById("myForm");
+    oForm.onsubmit = validForm;
+}
+function validForm() {
+    var allGood = true;
+    var oForm = document.getElementById("myForm");
+    var oTags = oForm.getElementsByTagName("*");
+    for (var i = 0; i < oTags.length; i++) {
+        if (!validTag(oTags[i])) {
+            allGood = false;
+        }
+    }
+    return allGood;
+}
+function validTag(theTag) {
+
+}
+/*
 // 6-3 脚本
 window.onload = initForm;
 function initForm() {
@@ -56,7 +76,7 @@ function initForm() {
 		}
 	}
 }
-/*
+
 // 6-2 脚本2
 window.onload = function() {
 	document.getElementById("months").selectedIndex = 0;
