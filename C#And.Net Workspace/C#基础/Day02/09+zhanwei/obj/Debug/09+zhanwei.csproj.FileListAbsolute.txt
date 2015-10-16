@@ -1,1 +1,7 @@
 F:\workspace\C#And.Net Workspace\C#基础\Day02\09+zhanwei\bin\Debug\09+zhanwei.exe.config
+E:\My Github\MayDay26\C#And.Net Workspace\C#基础\Day02\09+zhanwei\bin\Debug\09+zhanwei.exe.config
+E:\My Github\MayDay26\C#And.Net Workspace\C#基础\Day02\09+zhanwei\bin\Debug\09+zhanwei.exe
+E:\My Github\MayDay26\C#And.Net Workspace\C#基础\Day02\09+zhanwei\bin\Debug\09+zhanwei.pdb
+E:\My Github\MayDay26\C#And.Net Workspace\C#基础\Day02\09+zhanwei\obj\Debug\09+zhanwei.csprojResolveAssemblyReference.cache
+E:\My Github\MayDay26\C#And.Net Workspace\C#基础\Day02\09+zhanwei\obj\Debug\09+zhanwei.exe
+E:\My Github\MayDay26\C#And.Net Workspace\C#基础\Day02\09+zhanwei\obj\Debug\09+zhanwei.pdb
