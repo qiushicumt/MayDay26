@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Cookie Demo</title>
+    <script>
+        /*
+        //  1、cookie的赋值。    cookie添加内容的格式为 键=值
+        //  使用"="可以为cookie添加多个内容，而不是覆盖之前的内容
+        //  示例代码
+        document.cookie = 'user = Frank';
+        document.cookie = 'passwd = 18';       
+
+        //  2、设置cookie的过期时间     设置cookie的expires为想要设置的时间值
+        //  document.cookie = 'a=b;expires=' + timer
+        //  示例代码
+        document.cookie = 'user=frank';
+        var oDate = new Date();
+        oDate.setDate(oDate.getDate() + 2);
+        document.cookie = 'pass=123456;expires=' + oDate;
+        alert(document.cookie);
+
+        //  封装一个cookie函数，setCookie
+        function setCookie(name, value, iDay) {
+            var oDate = new Date();
+            oDate.setDate(oDate.getDate() + iDay);
+            document.cookie = name + '=' + value + ';expires=' + oDate;
+        }
+
+        setCookie('userName', 'Frank', 365);    //  设置一条userName=Frank的cookie信息，过期时间为365天
+        setCookie('password', '19871021', 30);  //  设置一条password=19871021的cookie信息，过期时间为30天
+        */
+
+        //  3、读取cookie中的某一条信息的值。    
+        //  cookie是一个字符串，每条cookie信息之间由“; ”隔开。通过split()方法，对字符串进行分割操作。
+        function setCookie(name, value, iDay) {
+            var oDate = new Date();
+            oDate.setDate(oDate.getDate() + iDay);
+            document.cookie = name + "=" + value + ";expires=" + oDate;
+        }
+        setCookie('userName', 'Frank', 36);
+        setCookie('password', '19871021', 14);
+
+        function getCookie(name) {
+            var strArr = document.cookie.split("; ");       //  将每一条cookie信息通过split("; ")方法分割，形成一个数组
+            for (var i = 0; i < strArr.length; i++) {
+                var strArr1 = strArr[i].split("=");         //  在数组strArr中，每一个数组元素为“A=B”，使用split("=")进一步分割，形成一个新的数组strArr1，strArr中只包含两个元素，第一个元素为cookie名，第二个元素为cookie值
+                if (strArr1[0] == name) {
+                    alert(strArr1[1]);
+                }
+            }
+            return '';
+        }
+        getCookie("password");
+
+        //  4、删除一条cookie信息。     利用setCookie函数将过期时间设置为负值，可以删除一条cookie信息
+        function removeCookie(name) {
+            setCookie(name, "21", -1);
+        }
+        removeCookie("userName");
+        alert(document.cookie);
+    </script>
+</head>
+<body>
+    <!-- 
+        cookie是页面用于保存信息，包括用户名信息等
+        特点：   同一域名所代表的网站使用一套cookie
+                数量、大小有限（4K~10K）
+                cookie有过期的时间
+        格式：   cookie中存储信息的格式为键值对，键=值
+         -->
+</body>
+</html>

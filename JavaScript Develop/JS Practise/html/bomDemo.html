@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>BOM Demo</title>
+    <style type="text/css">
+        /*#wrappage { width:960px;margin:50px auto;}*/
+        body { height:2500px;}
+        #div1 { width:60px;height:120px;background-color:yellow;position:absolute;left:0;top:500px;}
+    </style>
+    <script>
+        /*
+        //  1、BOM相关操作之open、write方法
+        //      wondow.open()方法用于打开一个新的窗口，open()方法的第一个参数为url链接地址，第二个参数为打开新窗口的方式，默认为_blank.
+        //      document.write()方法用于给当前页面重新写入内容。
+        //  示例代码
+        window.onload = function () {
+            var oTxt = document.getElementById("myTxtArea");
+            var oBtn = document.getElementById("btn");
+            oBtn.onclick = function () {
+                var newWin = window.open("about:blank");         //  open方法传入"about:blank"，用于打开一个空白窗口，window.open()方法可以返回新打开的窗口
+                newWin.document.write(oTxt.value);
+            }
+        }
+
+        //  2、window.close()方法用于关闭当前窗口。在IE、Chrome中，window.close()方法都可以关闭当前窗口。
+        //    在Firefox中，window.close()方法不能关闭由用户打开的窗口，只能关闭用户通过window.open()方法打开的窗口
+        //  示例代码
+        window.onload = function () {
+            var oBtn = document.getElementById("btn");
+            oBtn.onclick = function () {
+                window.close();
+            }
+        }
+
+        //  3、window.navigator对象中包含了浏览器相关信息，包括浏览器版本等。
+        //      userAgent属性用于显示浏览器的版本信息
+        //  示例代码
+        alert(window.navigator.userAgent);
+
+        //  4、window.location对象包含了与当前显示的URL相关的信息。当给window.location赋值时，当前窗口会打开赋值的URL地址
+        //  示例代码
+        alert(window.location)      //  返回当前页面的URL信息
+        window.location = "http://www.baidu.com";       //  当前页面加载新的URL地址
+        */
+        
+        //  5、固定定位
+        //  document.documentElement.clientWidth/document.documentElement.clientHeight  用来获取可视区的宽高(IE、Firefox)
+        //  document.body.clientWidth/document.body.clientHeight    用来获取可视区的宽高(Chrome)
+        //  document.documentElement.scrollTop/document.documentElement.scrollLeft      用来获取浏览器的滚动距离(IE、Firefox)
+        //  document.body.scrollTop/document.body.scrollLeft    用来获取浏览器的滚动距离(Chrome)
+        //  示例代码    浏览器左下角固定一个div
+
+        window.onload = function () {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            document.title = scrollTop;
+        }
+        window.onscroll = function () {
+            var oScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var oHeight = document.documentElement.clientHeight || document.body.clientHeight;
+            var oDiv = document.getElementById('div1');
+            oDiv.style.top = oScrollTop + oHeight - oDiv.offsetHeight - 100 + 'px';            
+        }
+    </script>
+</head>
+<body>
+       <!-- window.open和document.write
+        <input type="button" value="open" onclick="window.open('http://www.baidu.com')" />
+        <input type="button" value="write" onclick="document.write('djeioshaudieuhssaxnjk')" />
+       -->
+        <!--
+            点击按钮，弹出新窗口，新窗口页面的内容为textarea中输入的内容
+            <textarea id="myTxtArea" rows="10" cols="30"></textarea>
+            <input type="button" id="btn" value="运行代码" />
+        -->
+        <!--<input type="button" value="close" id="btn" />-->
+       <!-- <input type="button" value="newLocation" id="btn" />-->
+    <div id="div1"></div>
+</body>
+</html>
