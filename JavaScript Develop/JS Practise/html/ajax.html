@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ajax Demo</title>
+		<style type="text/css">
+		#wrappage {width:960px;margin:50px auto;}
+		</style>
+		<script src="../js/ajax.js"></script>		<!-- 引入ajax库 -->
+		<script>
+			window.onload = function() {
+				var oDiv = document.getElementById("wrappage");
+				var oBtn = oDiv.getElementsByTagName("input")[0];
+				var oUl = oDiv.getElementsByTagName("ul")[0];
+				
+				oBtn.onclick = function() {
+					ajax("../other/data.txt?t="+new Date().getTime(), function(str){
+						var txtArray = eval(str);
+						
+						for(var i = 0; i<txtArray.length; i++ ) {
+							var oLi = document.createElement("li");
+							oLi.innerHTML = "用户名是：" + txtArray[i].user + "， 密码是：" + txtArray[i].password;
+							oUl.appendChild(oLi);
+						}
+						
+					}, function(){
+						alert("读取文件失败!");
+					});
+				}
+			}			
+			
+			/*
+			//	脚本2	阻止ajax读取缓存
+			window.onload = function() {
+				var oTxt = document.getElementById("myTxt");
+				var oBtn = document.getElementById("btn1");
+				
+				oBtn.onclick = function() {
+					//	ajax()函数传入三个参数，ajax(A, B, C)
+					//	第一个参数为读取目标文件的路径及文件名
+					//	第二个参数为读取成功后执行的函数，可以传入一个参数用于接收读取到的文件内容
+					//	第三个参数为读取失败后执行的函数
+					
+					//	在文件名后面添加 new Date().getTime()，相当于在文件名后面添加一个时间戳，这样每次在调用ajax方法打开文件时，不会去读取缓存
+					ajax("../other/readTxt.txt?t="+new Date().getTime(), function(str){
+						oTxt.value = str;
+					}, function(){
+						alert("Read Error!");
+					});
+				}
+			}
+			//	脚本1	通过ajax方法读取文本文件中的内容
+			window.onload = function() {
+				var oTxt = document.getElementById("myTxt");
+				var oBtn = document.getElementById("btn1");
+				
+				oBtn.onclick = function() {
+					//	ajax()函数传入三个参数，ajax(A, B, C)
+					//	第一个参数为读取目标文件的路径及文件名
+					//	第二个参数为读取成功后执行的函数，可以传入一个参数用于接收读取到的文件内容
+					//	第三个参数为读取失败后执行的函数
+					
+					ajax("../other/readTxt.txt", function(str){
+						oTxt.value = str;
+					}, function(){
+						alert("Read Error!");
+					});
+				}
+			}										
+				
+			*/
+		</script>
+	</head>
+	<body>
+		<div id="wrappage">
+			<input type="button" id="btn1" value="Click">
+			<ul></ul>
+		</div>
+		<!--  读取txt文件中的内容，存放到textarea中
+		<div id="wrappage">
+			<textarea id="myTxt" cols="40" rows="10"></textarea><br />
+			<input type="button" id="btn1" value="读取数据">
+		</div>
+		-->
+	</body>
+</html>
