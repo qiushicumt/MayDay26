@@ -6,8 +6,17 @@
 		<style type="text/css">
 		#wrappage {width:960px;margin:50px auto;}
 		</style>
-		<script src="../js/ajax.js"></script>		<!-- 引入ajax库 -->
+		<script src="../js/myAjax.js"></script>		<!-- 引入ajax库 -->
 		<script>
+			window.onload = function() {
+				var oBtn = document.getElementById("btn1");
+				oBtn.onclick = function() {
+					ajax();
+				}
+			}
+			
+			/*
+			//	脚本3	ajax读取json数据
 			window.onload = function() {
 				var oDiv = document.getElementById("wrappage");
 				var oBtn = oDiv.getElementsByTagName("input")[0];
@@ -29,7 +38,7 @@
 				}
 			}			
 			
-			/*
+			
 			//	脚本2	阻止ajax读取缓存
 			window.onload = function() {
 				var oTxt = document.getElementById("myTxt");
@@ -73,9 +82,13 @@
 	</head>
 	<body>
 		<div id="wrappage">
+			<input type="button" value="读取" id="btn1" />
+		</div>
+		<!-- 使用自己的ajax库，读取文件
+		<div id="wrappage">
 			<input type="button" id="btn1" value="Click">
 			<ul></ul>
-		</div>
+		</div>-->
 		<!--  读取txt文件中的内容，存放到textarea中
 		<div id="wrappage">
 			<textarea id="myTxt" cols="40" rows="10"></textarea><br />
