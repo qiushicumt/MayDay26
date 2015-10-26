@@ -10,8 +10,19 @@
 		<script>
 			window.onload = function() {
 				var oBtn = document.getElementById("btn1");
+				var oDiv = document.getElementById("wrappage");
+				var oUl = oDiv.getElementsByTagName("ul")[0];
 				oBtn.onclick = function() {
-					ajax();
+					ajax("../other/data.txt?t="+new Date().getTime(), function(str){						
+						var oJson = JSON.parse(str);
+						for(var i in oJson) {
+							var oLi = document.createElement("li");
+							oLi.innerHTML = "用户名是："+oJson[i].user+ " ,密码是： "+oJson[i].password;
+							oUl.appendChild(oLi);
+						}
+					}, function(){
+						alert("读取失败！");
+					});
 				}
 			}
 			
@@ -83,6 +94,7 @@
 	<body>
 		<div id="wrappage">
 			<input type="button" value="读取" id="btn1" />
+			<ul></ul>
 		</div>
 		<!-- 使用自己的ajax库，读取文件
 		<div id="wrappage">
