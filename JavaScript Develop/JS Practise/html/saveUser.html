@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SaveUser Demo</title>
+    <style type="text/css">
+        #wrappage { width:960px;margin:50px auto;}
+    </style>
+    <script src="../js/cookie.js"></script>
+    <script>
+        window.onload = function () {
+            var oForm = document.getElementById("myForm");
+            var oUser = document.getElementsByName("username")[0];
+            oForm.onsubmit = function () {
+                setCookie("userName", oUser.value, 14);
+            }
+            oUser.value = getCookie("userName");
+        }
+    </script>
+</head>
+<body>
+    <div id="wrappage">
+        <form id="myForm" action="http://www.baidu.com" name="form">
+            用户名：<input type="text" name="username" /><br />
+            密码：<input type="password" name="password" /><br />
+            <input type="submit" value="登录" />
+        </form>
+    </div>
+</body>
+</html>
