@@ -16,6 +16,8 @@ namespace _01YiChang
             //  在try语句块中，发生的异常的语句后的代码不执行
             //  若try语句块中的语句没有出现异常，则程序不执行catch语句块中的语句
 
+            //  注：在try{}--catch{}语句块中间不能写任何代码
+
             Console.WriteLine("请输入一个数字：");
             bool flag = true;
             int num = 0;
@@ -34,7 +36,6 @@ namespace _01YiChang
             Console.ReadKey();
             //  在此处，当程序出现异常时，本语句得到就不是有效的结果。可以在程序中设置一个标志位变量，进行判断是否需要执行本条语句
             //  Console.WriteLine(num * 2);     
-
         }
     }
 }
