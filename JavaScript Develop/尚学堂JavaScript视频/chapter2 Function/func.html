@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>test</title>
+	<script>
+		var k = 10;
+		function test() {
+			this.k = 20;
+		}
+		alert(k);
+		setInterval(function(){
+			test();
+			
+			//	test没有k这个局部变量。在test函数中，this.k指的是全局k，因为在test被调用的时候，调用test的为window，this.k-->window.k
+			alert(test.k);		
+			alert(k);
+		}, 3000);
+	</script>
+</head>
+<body>
+</body>
+</html>

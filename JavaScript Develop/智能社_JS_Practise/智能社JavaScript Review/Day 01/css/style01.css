@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import url("../../reset.css");
+
+/*
+//	效果2、 javascript添加class属性
+#div1 {width:80px;height:80px;border:1px solid #000;}
+.redClass {background-color:red;}
+
+//	效果3、鼠标悬停显示提示框内容
+#div1 {width:120px;height:80px;background-color:gray;border:1px solid #000;display:none;}
+*/
+.myclass {width:80px;height:80px;background:red;}
+/*.changeClass {width:180px;height:180px;background-color: green;}*/

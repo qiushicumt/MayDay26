@@ -3,11 +3,37 @@
 <head>
 	<meta charset="utf-8">
 	<title>Day01 Demo</title>
+	<style type="text/css">
+	#wrappage {width:960px;margin:50px auto;}
+	</style>
+	<link rel="stylesheet" href="../css/style01.css">
 	<script src="../js/day01.js"></script>
 </head>
 <body>
 	<div id="wrappage">
-		
+		<!-- 效果1、js禁止超链接跳转。
+		方法：让<a>标签的href属性等于'javascript:;'		
+		<a href="javascript:;">链接</a>
+		-->
+		<!-- 效果2、给div添加属性		
+		<input type="button" value="变红" id="btn1" />
+		<br /><br /><br />
+		<div id="div1"></div>
+		-->
+		<!-- 效果3、点击button按钮，触发alert事件 
+		<input type="button" id="btn1" value="点击" />
+		-->
+		<!-- 效果4、鼠标悬停显示内容 
+		<input type="checkbox" id="box1" />
+		<div id="div1">一个人的北京--好妹妹乐队</div>
+		-->
+		<!-- 效果5、修改title属性 
+		<input type="text" id="txt1">
+		<input type="button" id="btn1" value="setTitle">
+		-->
+		<!-- 效果6、鼠标悬停实现多个属性变化 -->
+		<!--<div id="div1" class="myclass"></div>-->
+		<div id="div1" class="myclass" ></div>
 	</div>
 </body>
 </html>

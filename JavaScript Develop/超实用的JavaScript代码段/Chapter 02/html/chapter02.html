@@ -7,12 +7,29 @@
 </head>
 <body>
 	<div id="wrappage">
-		<!--  //  1、过滤文字两边的空格  -->
+		
+		<!--
+			3、禁止用户输入
+		-->
+		<form id="myForm">
+			JavaScript控制禁止输入<input type="text" id="txt1" value="禁止输入" />
+			<input type="button" id="btn1" value="禁止输入" />
+		</form>
+		<!-- 
+		// 2、验证用户是否输入 
+		<form id="myForm">
+			<h2>验证用户输入是否为空</h2>
+			<input type="text" id="txt1" />
+			<input type="button" id="btn1" value="验证是否为空" />
+		</form>
+		
+		//  1、过滤文字两边的空格  
 		<form id="myForm" method="get" action="http://www.baidu.com">
 			<h2></h2>
 			<input type="text" id="str1" value="       需要过滤空格 " />
 			<input type="button" id="btn1" value="过滤">
 		</form>
+		-->
 	</div>
 </body>
 </html>
