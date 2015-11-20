@@ -63,8 +63,6 @@ namespace _10Practise
             return sum;
         }
     }
-    */
-    #endregion
 
     //  练习1、提示用户输入两个整数，计算这两个整数之间所有数字之和
     //  注：方法1、用户只能输入数字；
@@ -150,6 +148,28 @@ namespace _10Practise
                     num2 = StrToInt(str2);
                 }
             }
+        }
+    }
+     */
+    #endregion
+
+    //  练习2、用方法来实现，一个字符串数组为{"卡尔马龙","迈克尔乔丹","雷吉米勒","诺维茨基","蒂姆邓肯","科比布莱恩特"}，输出最长的字符串
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] nameStr = { "卡尔马龙", "迈克尔乔丹", "雷吉米勒", "诺维茨基", "蒂姆邓肯", "科比布莱恩特" };
+            string myStringName = judgeStr(nameStr);
+        }
+
+        /// <summary>
+        /// 判断一个字符串数组中最长的字符串并输出
+        /// </summary>
+        /// <param name="strArray">传入一个字符串数组</param>
+        /// <returns>返回最长的字符串</returns>
+        public static string judgeStr(string[] strArray)
+        {
+
         }
     }
 }
