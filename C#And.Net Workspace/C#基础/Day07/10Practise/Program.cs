@@ -150,16 +150,17 @@ namespace _10Practise
             }
         }
     }
-     */
-    #endregion
 
     //  练习2、用方法来实现，一个字符串数组为{"卡尔马龙","迈克尔乔丹","雷吉米勒","诺维茨基","蒂姆邓肯","科比布莱恩特"}，输出最长的字符串
+    //  字符串的长度可以通过str.Length获得
     class Program
     {
         static void Main(string[] args)
         {
             string[] nameStr = { "卡尔马龙", "迈克尔乔丹", "雷吉米勒", "诺维茨基", "蒂姆邓肯", "科比布莱恩特" };
             string myStringName = judgeStr(nameStr);
+            Console.WriteLine("最长的字符串是：{0}", myStringName);
+            Console.ReadKey();
         }
 
         /// <summary>
@@ -169,7 +170,101 @@ namespace _10Practise
         /// <returns>返回最长的字符串</returns>
         public static string judgeStr(string[] strArray)
         {
+            string myStr = strArray[0];
+            for (var i = 0; i < strArray.Length; i++)
+            {
+                if (strArray[i].Length > myStr.Length)
+                {
+                    myStr = strArray[i];
+                }
+            }
+            return myStr;
+        }
+    } 
 
+    //  练习3、用方法实现计算一个整型数组的平均值
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numArray = { 21, 43, 54, 1, 12, 36, 68 };
+            double avgNum = arrayAvg(numArray);
+            Console.WriteLine("数组的平均值为：{0}", avgNum);
+            Console.ReadKey();
+        }
+
+        /// <summary>
+        /// 计算一个整型数组的平均值
+        /// </summary>
+        /// <param name="nums">传入一个int型数组</param>
+        /// <returns>返回数组的所有数字的平均值</returns>
+        public static double arrayAvg(int[] nums) 
+        {
+            double sum = 0.00;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                sum += nums[i];
+            }
+            return sum / nums.Length;
+        }
+    }
+    */
+    #endregion
+
+    //  练习4、写一个方法，判断用户输入的数字是否为质数。
+    //  另写一个方法，若用户输入的不是数字，则要求用户一直输入数字
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("请输入一个数字：");
+            string str1 = Console.ReadLine();
+            int num1 = StrToInt(str1);
+            bool flag = ZhiShu(num1);
+            if (flag)
+                Console.WriteLine("{0}是一个质数!", num1);
+            else
+                Console.WriteLine("{0}不是质数!", num1);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// 将用户输入的string转换为int
+        /// </summary>
+        /// <param name="str">传入string类型数据</param>
+        /// <returns>返回int型数据</returns>
+        public static int StrToInt(string str)
+        {
+            while (true)
+            {
+                int num1 = 0;
+                bool flag = Int32.TryParse(str, out num1);
+                if (flag)
+                {
+                    return num1;    //  当用户输入正确转换为数字时，跳出函数，return数字                   
+                }
+                else
+                {
+                    Console.WriteLine("你输入的不是一个有效数字，请重新输入!");
+                    str = Console.ReadLine();
+                }
+            }
+        }
+        /// <summary>
+        /// 判断用户输入的数字是否为质数
+        /// </summary>
+        /// <param name="num">int型数据</param>
+        /// <returns>返回一个bool值，用户输入质数，返回true，不是质数，返回false</returns>
+        public static bool ZhiShu(int num)
+        {
+            bool flag = true;
+            for (int i = 2; i < num; i++)
+            {
+                if ((num % i) == 0)
+                {
+                    flag = false;
+                }
+            }
+            return flag;
         }
     }
 }
