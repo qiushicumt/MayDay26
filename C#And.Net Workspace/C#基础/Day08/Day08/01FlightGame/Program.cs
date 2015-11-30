@@ -48,7 +48,7 @@ namespace _01FlightGame
                 {
                     PlayerStatus[1] = false;
                 }
-                if (PlayerPos[0] >= 99)
+                if (PlayerPos[1] >= 99)
                 {
                     Console.WriteLine("Congratulations!玩家{0}获得胜利！！", PlayerName[1]);
                 }
@@ -375,6 +375,7 @@ namespace _01FlightGame
             Console.ReadKey(true);
             Console.WriteLine("玩家{0}按任意键开始行动", PlayerName[playerNum]);
             PlayerPos[playerNum] += rNum;       //  玩家行动，位置增加rNum
+            PosJudge();                         //  在玩家行动位置改变了后，对玩家位置进行判断。
             Console.ReadKey(true);
             Console.WriteLine("玩家{0}行动完了", PlayerName[playerNum]);
             Console.ReadKey(true);            
