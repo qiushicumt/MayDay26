@@ -1,9 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning Class", "Learning Class\Learning Class.csproj", "{1C8A79E9-ED5E-4CD1-BD7B-FC0623DC0457}"
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Lei_ZiDuan_ShuXing", "01Lei_ZiDuan_ShuXing\01Lei_ZiDuan_ShuXing.csproj", "{6F6104BD-1BA1-4139-AA00-8A26F7801AEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1C8A79E9-ED5E-4CD1-BD7B-FC0623DC0457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C8A79E9-ED5E-4CD1-BD7B-FC0623DC0457}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C8A79E9-ED5E-4CD1-BD7B-FC0623DC0457}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C8A79E9-ED5E-4CD1-BD7B-FC0623DC0457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F6104BD-1BA1-4139-AA00-8A26F7801AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F6104BD-1BA1-4139-AA00-8A26F7801AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F6104BD-1BA1-4139-AA00-8A26F7801AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F6104BD-1BA1-4139-AA00-8A26F7801AEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
