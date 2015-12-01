@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Lei_ZiDuan_ShuXing", "01Lei_ZiDuan_ShuXing\01Lei_ZiDuan_ShuXing.csproj", "{6F6104BD-1BA1-4139-AA00-8A26F7801AEA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Static_And_NonStatic", "02Static_And_NonStatic\02Static_And_NonStatic.csproj", "{9D0F3199-E823-4B8C-993C-E8D71627ED19}"
@@ -10,6 +8,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03Object_Practise", "03Object_Practise\03Object_Practise.csproj", "{1F9D43A6-410A-4D41-AF6C-75CC7334B4DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04ConstructorFunc", "04ConstructorFunc\04ConstructorFunc.csproj", "{7CE4E952-00EF-404D-B69D-5CFEB5CBE1CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05Class Practise", "05Class Practise\05Class Practise.csproj", "{C141FDAE-22B1-4F4B-9B1E-2E6FAD8E92EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +33,10 @@ Global
 		{7CE4E952-00EF-404D-B69D-5CFEB5CBE1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CE4E952-00EF-404D-B69D-5CFEB5CBE1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CE4E952-00EF-404D-B69D-5CFEB5CBE1CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C141FDAE-22B1-4F4B-9B1E-2E6FAD8E92EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C141FDAE-22B1-4F4B-9B1E-2E6FAD8E92EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C141FDAE-22B1-4F4B-9B1E-2E6FAD8E92EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C141FDAE-22B1-4F4B-9B1E-2E6FAD8E92EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
