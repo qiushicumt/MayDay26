@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Object Review", "01Object Review\01Object Review.csproj", "{8C284FA0-60FF-44F9-87DA-809270FEBDB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Namespace", "02Namespace\02Namespace.csproj", "{139CB8CB-E365-4EAB-982A-184E68353718}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03Zhi_YinYong", "03Zhi_YinYong\03Zhi_YinYong.csproj", "{FEEDF20B-FE06-42BB-85FE-888954D85BDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04String_And_String Practise", "04String_And_String Practise\04String_And_String Practise.csproj", "{DB5C704B-D78D-4471-85E4-2DA172657DC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,10 @@ Global
 		{139CB8CB-E365-4EAB-982A-184E68353718}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{139CB8CB-E365-4EAB-982A-184E68353718}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{139CB8CB-E365-4EAB-982A-184E68353718}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FEEDF20B-FE06-42BB-85FE-888954D85BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FEEDF20B-FE06-42BB-85FE-888954D85BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FEEDF20B-FE06-42BB-85FE-888954D85BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FEEDF20B-FE06-42BB-85FE-888954D85BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB5C704B-D78D-4471-85E4-2DA172657DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB5C704B-D78D-4471-85E4-2DA172657DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB5C704B-D78D-4471-85E4-2DA172657DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5C704B-D78D-4471-85E4-2DA172657DC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
