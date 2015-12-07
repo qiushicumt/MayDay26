@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Namespace", "02Namespace\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04String_And_String Practise", "04String_And_String Practise\04String_And_String Practise.csproj", "{DB5C704B-D78D-4471-85E4-2DA172657DC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05String_Practise", "05String_Practise\05String_Practise.csproj", "{19A15B57-875B-4AAF-A570-1F208BF766CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{DB5C704B-D78D-4471-85E4-2DA172657DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB5C704B-D78D-4471-85E4-2DA172657DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB5C704B-D78D-4471-85E4-2DA172657DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A15B57-875B-4AAF-A570-1F208BF766CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A15B57-875B-4AAF-A570-1F208BF766CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A15B57-875B-4AAF-A570-1F208BF766CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A15B57-875B-4AAF-A570-1F208BF766CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
