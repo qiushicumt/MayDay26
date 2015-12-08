@@ -85,7 +85,33 @@ namespace _05String_Practise
             domain = myString[1];
         }
     }
-     * 
+    
+    //  练习4：文本文件中存储了多个文章标题、作者，标题和作者之间用若干空格（数量不定）隔开，每行一个，标题有的长有的短
+    //  输出到控制台的时候最多标题长度10，如果超过10，则截取长度8的子串并且最后添加“...”，加一个竖线后输出作者的名字。
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string path = @"../../../1.txt";      //  在字符串前加上@符号，表示忽略字符串中的转移符
+            string[] myTxt = File.ReadAllLines(path);              //  File.ReadAllLines()方法用于打开指定路径下的文本文档，返回读取的内容的字符串数组，然后关闭
+            
+            for (int i = 0; i < myTxt.Length; i++)
+            {
+                char[] splitChar = { ' ' };
+                //  string[] newString = myTxt[i].Split(splitChar, System.StringSplitOptions);
+                //  strA.Split(char[], StringSplitOptions.RemoveEmptyEntries)方法用于分割字符串，参数StringSplitOptions.RemoveEmptyEntries表示忽略返回的空数组
+                string[] newString = myTxt[i].Split(splitChar, StringSplitOptions.RemoveEmptyEntries);
+                if(newString[0].Length > 10)
+                {
+                    newString[0] = newString[0].Substring(0, 8);
+                }
+                Console.WriteLine(newString[0] + '|' + newString[1]);
+            }
+
+            Console.ReadKey();
+        }
+    }
+     
     //  练习6：让用户输入一句话,判断这句话中有没有邪恶,如果有邪恶就替换成这种形式然后输出,如:老牛很邪恶,输出后变成老牛很**;
     class Program
     {
@@ -137,16 +163,49 @@ namespace _05String_Practise
         }
     }
     */
-    //  练习4：文本文件中存储了多个文章标题、作者，标题和作者之间用若干空格（数量不定）隔开，每行一个，标题有的长有的短，输出到控制台的时候最多标题长度10，如果超过10，则截取长度8的子串并且最后添加“...”，加一个竖线后输出作者的名字。
+
+    //  练习5：让用户输入一句话,找出所有e的位置
     class Program
     {
         static void Main(string[] args)
         {
-            string path = @"D:\myGitHub\C#And.Net Workspace\C#基础\Day10\Day10\1.txt";      //  在字符串前加上@符号，表示忽略字符串中的转移符
-            string[] myTxt = File.ReadAllLines(path);              //  File.ReadAllLines()方法用于打开指定路径下的文本文档，返回读取的内容的字符串数组，然后关闭
+            Console.Write("请输入一句话：");
+            string myStr = Console.ReadLine();
+            //  int[] indexArray;
+            List<int> indexArray = new List<int>();
+            //  List<string> strArray1 =  new List<string>();
+            myStr = myStr.ToLower();        //  将字符串先全部转换为小写字母
+            while(true)
+            {
+                if (myStr.Contains('e'))    //  判断是否包含字母e
+                {
+                    if (indexArray.Count > 0)       // 判断位置集合中是否已经含有元素
+                    {
+                        indexArray.Add(myStr.IndexOf('e') + 1 + indexArray[indexArray.Count - 1]);      //  将新找到的e的index+1+上一次找到的e的index
+                    }                        
+                    else
+                    {
+                        indexArray.Add(myStr.IndexOf('e'));     //  将第一次找到的e的index添加到集合中
+                    }
+                    myStr = myStr.Substring(myStr.IndexOf('e')+1);      //  从e后截取子字符串
+                }
+                else
+                {                   
+                    break;
+                }
+            }
+            if(indexArray.Count > 0)
+            {
+                for(int i = 0; i < indexArray.Count; i++)
+                {
+                    Console.WriteLine("第{0}个字母e的位置为:{1}", i + 1, indexArray[i]);
+                }
+            }
+            else
+            {
+                Console.WriteLine("语句中不包含字母e");
+            }
             Console.ReadKey();
         }
     }
-    //  练习5：让用户输入一句话,找出所有e的位置
-
 }

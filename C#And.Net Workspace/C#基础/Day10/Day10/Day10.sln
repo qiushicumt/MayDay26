@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Object Review", "01Object Review\01Object Review.csproj", "{8C284FA0-60FF-44F9-87DA-809270FEBDB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Namespace", "02Namespace\02Namespace.csproj", "{139CB8CB-E365-4EAB-982A-184E68353718}"
