@@ -103,7 +103,7 @@ namespace _05String_Practise
                 string[] newString = myTxt[i].Split(splitChar, StringSplitOptions.RemoveEmptyEntries);
                 if(newString[0].Length > 10)
                 {
-                    newString[0] = newString[0].Substring(0, 8);
+                    newString[0] = newString[0].Substring(0, 8)+"...";
                 }
                 Console.WriteLine(newString[0] + '|' + newString[1]);
             }
@@ -165,6 +165,7 @@ namespace _05String_Practise
     */
 
     //  练习5：让用户输入一句话,找出所有e的位置
+    /*
     class Program
     {
         static void Main(string[] args)
@@ -205,6 +206,26 @@ namespace _05String_Practise
             {
                 Console.WriteLine("语句中不包含字母e");
             }
+            Console.ReadKey();
+        }
+    }
+    */
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("请输入一句英文:");
+            string myStr1 = Console.ReadLine();
+            int count = 0;
+            for(int i = 0; i < myStr1.Length; i++)
+            {
+                if(myStr1[i] == 'e')
+                {
+                    count++;
+                    Console.WriteLine("第{0}个e出现的位置为{1}",count, i);
+                }
+            }
+
             Console.ReadKey();
         }
     }
