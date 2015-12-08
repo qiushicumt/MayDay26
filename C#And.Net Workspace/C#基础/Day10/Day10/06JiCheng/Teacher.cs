@@ -15,6 +15,12 @@ namespace _06JiCheng
             set { _salary = value; }
         }
 
+        //  子类需要定义构造函数，并显式调用父类的构造函数
+        public Teacher(string name, int age, char gender, int salary):base(name, age, gender)
+        {
+            this.Salary = salary;
+        }
+
         public void Teach()
         {
             Console.WriteLine("老师会教书");

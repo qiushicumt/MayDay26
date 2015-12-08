@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Object Review", "01Object Review\01Object Review.csproj", "{8C284FA0-60FF-44F9-87DA-809270FEBDB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Namespace", "02Namespace\02Namespace.csproj", "{139CB8CB-E365-4EAB-982A-184E68353718}"
@@ -12,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05String_Practise", "05String_Practise\05String_Practise.csproj", "{19A15B57-875B-4AAF-A570-1F208BF766CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06JiCheng", "06JiCheng\06JiCheng.csproj", "{94BEF7B6-0A6E-4D65-89E2-80D114119862}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07JiCheng_Practise", "07JiCheng_Practise\07JiCheng_Practise.csproj", "{A6B96ED5-6568-47D3-9434-0C38A1A874D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +39,10 @@ Global
 		{94BEF7B6-0A6E-4D65-89E2-80D114119862}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94BEF7B6-0A6E-4D65-89E2-80D114119862}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94BEF7B6-0A6E-4D65-89E2-80D114119862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6B96ED5-6568-47D3-9434-0C38A1A874D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6B96ED5-6568-47D3-9434-0C38A1A874D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6B96ED5-6568-47D3-9434-0C38A1A874D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6B96ED5-6568-47D3-9434-0C38A1A874D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _06JiCheng
+namespace _07JiCheng_Practise
 {
     class Person
     {
@@ -29,17 +29,11 @@ namespace _06JiCheng
             set { _gender = value; }
         }
 
-        //  父类自定义一个带参数的构造函数
         public Person(string name, int age, char gender)
         {
             this.Name = name;
             this.Age = age;
             this.Gender = gender;
-        }
-
-        public void CHLSS()
-        {
-            Console.WriteLine("吃喝拉撒睡");
         }
     }
 }

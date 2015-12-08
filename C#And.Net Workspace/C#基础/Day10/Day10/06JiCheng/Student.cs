@@ -15,6 +15,12 @@ namespace _06JiCheng
             set { _id = value; }
         }
 
+        public Student(string name, int age, char gender, int id)
+            : base(name, age, gender)
+        {
+            this.ID = id;
+        }
+
         public void Study()
         {
             Console.WriteLine("学生会学习！");
