@@ -45,6 +45,7 @@ namespace _03ArrayList
                 Console.WriteLine(list1[i]);
             }
 
+            //  Contains()方法用于判断集合中是否包含该元素
             bool b = list1.Contains('1');
             if(b)
             {
