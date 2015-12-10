@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01LiShiZhuanHuan", "01LiShiZhuanHuan\01LiShiZhuanHuan.csproj", "{797A5018-B232-4EB0-9E22-F1F00AD24108}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02LiShiZhuanHuan_Practise", "02LiShiZhuanHuan_Practise\02LiShiZhuanHuan_Practise.csproj", "{337E40F9-E2BB-4F78-A6F7-AC8A11BF15CF}"
@@ -12,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04ArrayList_Length", "04ArrayList_Length\04ArrayList_Length.csproj", "{13E9F0DE-832C-4661-9D05-6448EFFB408D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05ArrayList_Practise", "05ArrayList_Practise\05ArrayList_Practise.csproj", "{F85B543D-0347-47FE-8847-6C6CF937071F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06Hashtable", "06Hashtable\06Hashtable.csproj", "{07D37A9F-3A5D-4718-B510-A87B33C4E4F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07Hashtable_Practise", "07Hashtable_Practise\07Hashtable_Practise.csproj", "{87B4EC22-D65F-4CF5-B3AB-10704FDC2D30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,14 @@ Global
 		{F85B543D-0347-47FE-8847-6C6CF937071F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F85B543D-0347-47FE-8847-6C6CF937071F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F85B543D-0347-47FE-8847-6C6CF937071F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D37A9F-3A5D-4718-B510-A87B33C4E4F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D37A9F-3A5D-4718-B510-A87B33C4E4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D37A9F-3A5D-4718-B510-A87B33C4E4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D37A9F-3A5D-4718-B510-A87B33C4E4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87B4EC22-D65F-4CF5-B3AB-10704FDC2D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87B4EC22-D65F-4CF5-B3AB-10704FDC2D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87B4EC22-D65F-4CF5-B3AB-10704FDC2D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87B4EC22-D65F-4CF5-B3AB-10704FDC2D30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
