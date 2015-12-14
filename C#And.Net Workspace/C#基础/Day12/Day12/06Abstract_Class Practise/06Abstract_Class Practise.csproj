@@ -42,10 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle.cs" />
+    <Compile Include="Computer.cs" />
+    <Compile Include="MobileDisk.cs" />
+    <Compile Include="MobileStorages.cs" />
+    <Compile Include="MP3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Sharp.cs" />
+    <Compile Include="UDisk.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
