@@ -23,11 +23,16 @@ namespace _02Dictionary
             if (!dicOne.ContainsKey(4))
                 dicOne[4] = "王鼻子";
 
+            /*
             foreach (var item in dicOne.Keys)       //  foreach(var item in dictionary.Keys)循环在字典的键中遍历，然后可取出对应值
             {
                 Console.WriteLine(dicOne[item]);
             }
-
+            */
+            foreach (KeyValuePair<int, string>kv in dicOne)     //  在Foreach中定义 KeyValuePair<TKey, TValue>kv 在dictionary中遍历， kv.Key、kv.Value可以得到dictionary中的键、值
+            {
+                Console.WriteLine(kv.Value);
+            }
             Console.ReadKey();
         }
     }
