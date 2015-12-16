@@ -11,6 +11,98 @@ namespace _10SuperMarket
     //      为了取消4个类别的差异性，将每一个集合的类型设置为父类Product,方便通过循环进行赋值
     //  2、存货入库
     //  3、提货出库
+
+    public class CangKu
+    {
+        //  创建一个类型为List<Product>的List集合，即proList中的每一项为一个Product类型的List集合
+        //  List<Product>分别存储每一个子类的实例对象
+        //  proList[0]存储Acer类对象的List集合
+        //  proList[1]存储SamSung类对象的List集合
+        //  proList[2]存储Banana类对象的List集合
+        //  proList[3]存储JiangYou类对象的List集合
+        List<List<Product>> proList = new List<List<Product>>();
+
+        //  通过构造函数，在创建CangKu类的实例对象时就将4个List
+        public CangKu()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                proList[i] = new List<Product>();
+            }
+        }
+
+        /// <summary>
+        /// 获得商品的对象，商品入库
+        /// </summary>
+        /// <param name="count">数量</param>
+        /// <param name="proType">类型</param>
+        public void GetInProduct(int count, string proType)
+        {
+            for(int i = 0; i < count; i++)
+            {
+                switch (proType)
+                {
+                    case "Acer":
+                        proList[0].Add(new Acer(Guid.NewGuid().ToString(), 2800, "Acer笔记本电脑"));
+                        break;
+                    case "SamSung":
+                        proList[1].Add(new SamSung(Guid.NewGuid().ToString(), 2400, "Samsung手机"));
+                        break;
+                    case "Banana":
+                        proList[2].Add(new Banana(Guid.NewGuid().ToString(), 5.2, "海南Banana"));
+                        break;
+                    case "JiangYou":
+                        proList[3].Add(new JiangYou(Guid.NewGuid().ToString(), 8.3, "老抽"));
+                        break;
+                }
+            }            
+        }
+
+        /// <summary>
+        /// 取出商品
+        /// </summary>
+        /// <param name="count">取出的数量</param>
+        /// <param name="proType">商品类型</param>
+        /// <returns>返回一个取出的商品的集合</returns>
+        public List<Product> GetOutProduct(int count, string proType)
+        {
+            List<Product> list = new List<Product>();
+            for(int i = 0; i < count; i++)
+            {
+                switch (proType)
+                {
+                    case "Acer":
+                        list[i] = proList[0][0];        //  将对象赋值给list
+                        proList[0].RemoveAt(0);         //  将对象从原List中移除
+                        break;
+                    case "SamSung":
+                        list[i] = proList[1][0];
+                        proList[1].RemoveAt(0);
+                        break;
+                    case "Banana":
+                        list[i] = proList[2][0];
+                        proList[2].RemoveAt(0);
+                        break;
+                    case "JiangYou":
+                        list[i] = proList[3][0];
+                        proList[3].RemoveAt(0);
+                        break;
+                }
+            }
+            return list;          
+        }
+
+        public void ProShow()
+        {
+            foreach (var item in proList)
+            {
+                Console.WriteLine("仓库里面有{0}, 有{1}个，每个{2}元。", item[0].ProductName, item.Count, item[0].Price);
+            }
+        }
+
+    }
+
+    /*
     public class CangKu
     {
         List<List<Product>> productList = new List<List<Product>>();
@@ -46,4 +138,5 @@ namespace _10SuperMarket
             }
         }
     }
+    */
 }
