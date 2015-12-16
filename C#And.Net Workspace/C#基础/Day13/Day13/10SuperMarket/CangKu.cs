@@ -27,8 +27,14 @@ namespace _10SuperMarket
         {
             for (int i = 0; i < 4; i++)
             {
-                proList[i] = new List<Product>();
+                proList.Add(new List<Product>());
             }
+            /*
+            proList[0] = new List<Product>();
+            proList[1] = new List<Product>();
+            proList[2] = new List<Product>();
+            proList[3] = new List<Product>();
+             * */
         }
 
         /// <summary>
@@ -92,11 +98,12 @@ namespace _10SuperMarket
             return list;          
         }
 
+        //  仓库显示库存信息
         public void ProShow()
         {
             foreach (var item in proList)
             {
-                Console.WriteLine("仓库里面有{0}, 有{1}个，每个{2}元。", item[0].ProductName, item.Count, item[0].Price);
+                Console.WriteLine("超市里面有{0}, 有{1}个，每个{2}元。", item[0].ProductName, item.Count, item[0].Price);
             }
         }
 

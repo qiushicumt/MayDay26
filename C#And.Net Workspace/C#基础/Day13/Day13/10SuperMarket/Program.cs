@@ -10,6 +10,13 @@ namespace _10SuperMarket
     {
         static void Main(string[] args)
         {
+            //  创建超市对象
+            SuperMarket myMarket = new SuperMarket();
+
+            //  展示超市信息
+            myMarket.SuperMarketShow();
+
+            Console.ReadKey();
         }
     }
 }
