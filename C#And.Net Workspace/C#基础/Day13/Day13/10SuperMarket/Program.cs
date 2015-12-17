@@ -16,6 +16,9 @@ namespace _10SuperMarket
             //  展示超市信息
             myMarket.SuperMarketShow();
 
+            //  询问购买物品
+            myMarket.AskBuying();
+
             Console.ReadKey();
         }
     }

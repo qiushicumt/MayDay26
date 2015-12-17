@@ -40,6 +40,8 @@ namespace _10SuperMarket
             CalFather myCal = GetCal(inputCal);
             double realPrice = myCal.GetRealMoney(totalPrice);
             Console.WriteLine("打折后，最终应付{0}元", realPrice);
+            //  显示商品小票信息
+            ShowTicket(list);
         }
 
         /// <summary>
@@ -87,6 +89,17 @@ namespace _10SuperMarket
         public void SuperMarketShow()
         {
             myCangKu.ProShow();
+        }
+        /// <summary>
+        /// 显示所购买物品的信息
+        /// </summary>
+        /// <param name="list">购买的物品的集合</param>
+        public void ShowTicket(List<Product> list)
+        {
+            foreach (var item in list)
+            {
+                Console.WriteLine("商品编号：{0}\t商品名称：{1}\t商品单价：{2}", item.ID, item.ProductName, item.Price);
+            }
         }
     }
 }

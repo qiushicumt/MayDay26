@@ -58,7 +58,7 @@ namespace _10SuperMarket
                         proList[2].Add(new Banana(Guid.NewGuid().ToString(), 5.2, "海南Banana"));
                         break;
                     case "JiangYou":
-                        proList[3].Add(new JiangYou(Guid.NewGuid().ToString(), 8.3, "老抽"));
+                        proList[3].Add(new JiangYou(Guid.NewGuid().ToString(), 8.3, "老抽酱油"));
                         break;
                 }
             }            
@@ -78,19 +78,24 @@ namespace _10SuperMarket
                 switch (proType)
                 {
                     case "Acer":
-                        list[i] = proList[0][0];        //  将对象赋值给list
+
+                        //  错误写法：list[i] = proList[0][0];        //  将对象赋值给list
+                        list.Add(proList[0][0]);
                         proList[0].RemoveAt(0);         //  将对象从原List中移除
                         break;
                     case "SamSung":
-                        list[i] = proList[1][0];
+                        //  list[i] = proList[1][0];
+                        list.Add(proList[1][0]);
                         proList[1].RemoveAt(0);
                         break;
                     case "Banana":
-                        list[i] = proList[2][0];
+                        //  list[i] = proList[2][0];
+                        list.Add(proList[2][0]);
                         proList[2].RemoveAt(0);
                         break;
                     case "JiangYou":
-                        list[i] = proList[3][0];
+                        //  list[i] = proList[3][0];
+                        list.Add(proList[3][0]);
                         proList[3].RemoveAt(0);
                         break;
                 }
