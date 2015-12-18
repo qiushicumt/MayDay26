@@ -1,0 +1,12 @@
+﻿/* index样式 */
+
+/* 首页footer */
+.ui-footer {
+    width:100%;
+    bottom:0;
+    position:fixed;
+}
+/*.index-ui-footer {
+    width:100%;
+    bottom:0 !important;
+}*/
