@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Handler", "01Handler\01Handler.csproj", "{021F860C-9957-4A55-8442-52BB3F01D651}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Redirect", "02Redirect\02Redirect.csproj", "{D3EEFD90-1865-4377-8069-E4306106A440}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{021F860C-9957-4A55-8442-52BB3F01D651}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{021F860C-9957-4A55-8442-52BB3F01D651}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{021F860C-9957-4A55-8442-52BB3F01D651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3EEFD90-1865-4377-8069-E4306106A440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EEFD90-1865-4377-8069-E4306106A440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3EEFD90-1865-4377-8069-E4306106A440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3EEFD90-1865-4377-8069-E4306106A440}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
