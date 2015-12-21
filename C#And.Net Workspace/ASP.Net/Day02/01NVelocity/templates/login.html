@@ -6,8 +6,12 @@
 </head>
 <body>
     <p>登录</p>
-    <form action="../handlers/loginHandler.ashx">
-        用户名：<input type="text" name="username">
+    <form action="../handlers/loginHandler.ashx" method="post">
+        用户名：<input type="text" name="username" value="$username" /><br />
+        密&nbsp;码：<input type="text" name="password" value="$password" /><br />
+        <p name="msg">$message</p>
+        <input type="button" name="submit" value="提交">
     </form>
+
 </body>
 </html>
