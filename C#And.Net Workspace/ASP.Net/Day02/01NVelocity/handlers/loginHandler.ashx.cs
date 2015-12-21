@@ -17,6 +17,31 @@ namespace _01NVelocity.handlers
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/html";
+
+            Person onePerson = new Person();
+            onePerson.Name = "张三";
+            onePerson.Age = 28;
+            onePerson.Dad = new Person();
+            onePerson.Dad.Age = 58;
+            onePerson.Dad.Name = "张满顺";
+            VelocityEngine vltEngine = new VelocityEngine();
+            vltEngine.SetProperty(RuntimeConstants.RESOURCE_LOADER, "file");
+            vltEngine.SetProperty(RuntimeConstants.FILE_RESOURCE_LOADER_PATH, System.Web.Hosting.HostingEnvironment.MapPath("~/templates"));//模板文件所在的文件夹
+            vltEngine.Init();
+
+            VelocityContext vltContext = new VelocityContext();
+
+            //  可以将一个实例对象赋值给模板页中的变量
+            vltContext.Put("oneperson", onePerson);    //设置参数，在模板中可以通过$data来引用，给模板中的$data数据赋值
+            
+            Template vltTemplate = vltEngine.GetTemplate("test.html");
+            System.IO.StringWriter vltWriter = new System.IO.StringWriter();
+            vltTemplate.Merge(vltContext, vltWriter);
+
+            string html = vltWriter.GetStringBuilder().ToString();
+            context.Response.Write(html);
+            #region
+            /*
             //  获取传递给服务器的值
             string userName = context.Request["username"];
             string passWord = context.Request["password"];     
@@ -67,6 +92,8 @@ namespace _01NVelocity.handlers
                     context.Response.Write(html);
                 }
             }
+             * */
+            #endregion
         }
 
         public bool IsReusable

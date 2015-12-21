@@ -63,16 +63,23 @@
   <ItemGroup>
     <Content Include="NVelocity.dll" />
     <Content Include="templates\login.html" />
+    <Content Include="templates\test.html" />
+    <Content Include="templates\testDict.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="handlers\loginHandler.ashx.cs">
       <DependentUpon>loginHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="handlers\loginHandler2.ashx.cs">
+      <DependentUpon>loginHandler2.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="handlers\loginHandler.ashx" />
+    <Content Include="handlers\loginHandler2.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
