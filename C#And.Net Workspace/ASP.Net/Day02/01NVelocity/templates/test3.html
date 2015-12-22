@@ -1,0 +1,11 @@
+﻿<!-- #include从外部引入模块文件 -->
+<!-- #parse也可以从外部读取文件加载，parse可以解析NVelocity元素 -->
+#include("header1.html")
+<div id="main">
+    <ul>  
+        #foreach($p in $Singers)
+        <li>$p.Name的年龄是$p.Age岁，他的成名曲是“$p.SongName”</li>
+        #end
+    </ul>
+</div>
+#include("footer1.html")

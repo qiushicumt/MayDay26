@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>HandlerTest</title>
+    <style type="text/css">
+        #main { width:800px; margin:50px auto; }
+    </style>
+</head>
+<body>
+    <!-- #foreach...#end循环和#if...#else...#end条件语句  -->
+    <div id="main">      
+        <ul>  
+            #foreach($p in $Singers)
+                #if($p.Age > 50)
+                    <li>$p.Name的年龄是$p.Age岁，他已经是老歌手了，他的成名曲是“$p.SongName”</li>
+                #else
+                    <li>$p.Name的年龄是$p.Age岁，他已经是中年歌手了，他的成名曲是“$p.SongName”</li>
+                #end
+            #end
+        </ul>
+        <!--
+        <ul>  
+            #foreach($p in $Singers)
+            <li>$p.Name的年龄是$p.Age岁，他的成名曲是“$p.SongName”</li>
+            #end
+        </ul>
+        -->
+    </div>
+</body>
+</html>
