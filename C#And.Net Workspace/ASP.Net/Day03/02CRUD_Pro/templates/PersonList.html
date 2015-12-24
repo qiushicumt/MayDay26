@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>PersonList HTML</title>
+    <style type="text/css">
+        #main { width:800px; margin:50px auto; }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <table>
+            <thead>
+                <tr>
+                    <td style="width:30%">姓名</td>
+                    <td style="width:30%">年龄</td>
+                    <td style="width:40%">Email</td>
+                </tr>
+            </thead>
+            <tbody>
+                #foreach($p in $Data)
+                    <tr>
+                        <td>$p.Name</td>
+                        <td>$p.Age</td>
+                        <td>$p.Email</td>
+                    </tr>
+                #end
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
