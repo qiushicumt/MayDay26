@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+        #if($Data.Action == "AddNew")
+        新增用户
+        #else
+        编辑用户
+        #end
+    </title>
+
+</head>
+<body>
+    <form action="PersonEdit.ashx" method="post">
+        #if($Data.Action == "Edit")
+        <table>
+            <tr><td>姓名：</td><td><input type="text" name="Name" value="$Data.Person.Name" /></td></tr>
+            <tr><td>年龄：</td><td><input type="text" name="Age" value="$Data.Person.Age" /></td></tr>
+            <tr><td>Email：</td><td><input type="text" name="Email" value="$Data.Person.Email" /></td></tr>
+            <tr><td><input type="submit" value="保存" /></td></tr>
+        </table>
+        #else
+        <table>
+            <tr><td>姓名：</td><td><input type="text" name="Name" /></td></tr>
+            <tr><td>年龄：</td><td><input type="text" name="Age" /></td></tr>
+            <tr><td>Email：</td><td><input type="text" name="Email" /></td></tr>
+            <tr><td><input type="submit" value="保存" /></td></tr>
+        </table>
+        #end
+        <!-- 添加两个隐藏的字段 -->  
+        <!-- 第一个隐藏字段name设置为action，值为$Data.Action，即表示向服务器传送数据为 $Data.Action，表示新增 -->
+        <!-- 第二个隐藏字段name设置为save，值为True，即表示向服务器传送数据为 save=True，表示新增保存 -->
+        <!-- 第三个隐藏字段name设置为Id，值为$Data.Person.Id，表示向服务器传送当前编辑的数据的Id -->
+        <input type="hidden" name="action" value="$Data.Action">      
+        <input type="hidden" name="save" value="True">
+        <input type="hidden" name="Id" value="$Data.Person.Id">
+    </form>
+</body>
+</html>

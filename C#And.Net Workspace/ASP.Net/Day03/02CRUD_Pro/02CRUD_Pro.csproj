@@ -62,10 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NVelocity.dll" />
+    <Content Include="templates\PersonEdit.html" />
     <Content Include="templates\PersonList.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="handler\PersonEdit.ashx.cs">
+      <DependentUpon>PersonEdit.ashx</DependentUpon>
+    </Compile>
     <Compile Include="handler\PersonList.ashx.cs">
       <DependentUpon>PersonList.ashx</DependentUpon>
     </Compile>
@@ -75,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="handler\PersonList.ashx" />
+    <Content Include="handler\PersonEdit.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

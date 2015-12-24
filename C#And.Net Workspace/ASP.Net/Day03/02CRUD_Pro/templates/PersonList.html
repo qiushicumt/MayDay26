@@ -4,11 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>PersonList HTML</title>
     <style type="text/css">
+        a { color:#000; text-decoration:none; }
         #main { width:800px; margin:50px auto; }
+        .aButton { width:65px; height:20px; display:block; border:1px solid #000; background-color:#f8f389;}
     </style>
 </head>
 <body>
     <div id="main">
+        <a href="PersonEdit.ashx?action=AddNew" class="aButton">新增成员</a>        
         <table>
             <thead>
                 <tr>
@@ -23,6 +26,7 @@
                         <td>$p.Name</td>
                         <td>$p.Age</td>
                         <td>$p.Email</td>
+                        <td><a href="PersonEdit.ashx?action=Edit&Id=$p.Id" class="aButton">编辑</a></td>      <!-- 把action=Edit传给服务器，表示对数据进行编辑，同时，把当前数据的Id传递给服务器 -->
                     </tr>
                 #end
             </tbody>
