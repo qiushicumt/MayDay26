@@ -25,6 +25,16 @@
             <tr><td>姓名：</td><td><input type="text" name="Name" /></td></tr>
             <tr><td>年龄：</td><td><input type="text" name="Age" /></td></tr>
             <tr><td>Email：</td><td><input type="text" name="Email" /></td></tr>
+            <tr>
+                <td>班级：</td>
+                <td>
+                    <select name="ClassId">
+                    #foreach($c in $Data.Classes)
+                    <option value="$c.Id">$c.Name</option>
+                    #end
+                    </select>
+                </td>
+            </tr>
             <tr><td><input type="submit" value="保存" /></td></tr>
         </table>
         #end

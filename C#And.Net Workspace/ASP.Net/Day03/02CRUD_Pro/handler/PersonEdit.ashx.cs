@@ -38,12 +38,16 @@ namespace _02CRUD_Pro.handler
                 //  save!=True，表示的展示新增页面，则渲染一个空白的新增成员的页面，返回给浏览器
                 else
                 {
-                    var data = new { Action = "AddNew" };       //  向模板传递action值
+                    //  查询T_Classes表获得T_Classes表中的Name数据
+                    DataTable dtClass = SQLHelper.ExecuteDataTable("select * from T_Classes");
+
+                    var data = new { Action = "AddNew", Classes = dtClass.Rows };       //  向模板传递action值
                     html = NVelocity.ReturnHtml("PersonEdit.html", data);
                 }               
             }
             else if (action == "Edit")
             {
+                //  编辑数据
                 string save = context.Request["save"];
                 
                 //  save==True，表示编辑保存
@@ -81,6 +85,13 @@ namespace _02CRUD_Pro.handler
                         html = NVelocity.ReturnHtml("PersonEdit.html", data);
                     }   
                 }
+            }
+            else if (action == "Delete")
+            {
+                //  删除数据
+                int id = Convert.ToInt32(context.Request["Id"]);
+                SQLHelper.ExecuteNonQuery("delete from T_Person where Id=@Id", new SqlParameter("@Id", id));
+                context.Response.Redirect("PersonList.ashx");
             }
             else
             {

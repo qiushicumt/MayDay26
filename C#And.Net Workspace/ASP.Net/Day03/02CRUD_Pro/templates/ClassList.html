@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>班级显示列表</title>
+    <style type="text/css">
+        a { color:#000; text-decoration:none; }
+        #main { width:600px; margin:50px auto; }
+        .aButton{ width:65px; height:20px; display:block; border:1px solid #000; background-color:#feff7a; }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <a href="ClassEdit.ashx?action=AddNew" class="aButton">新增班级</a>
+        <table>
+            <thead>
+                <tr style="width:50%">
+                    <td>班级名称</td>
+                </tr>
+            </thead>
+            <tbody>
+                #foreach($c in $Data)
+                <tr style="width:50%">
+                    <td>$c.Name</td>
+                    <td><a href="ClassEdit.ashx?action=Edit&Id=$c.Id" class="aButton">编辑</a></td>       <!-- 传递action=Edit参数的同时，将当前的数据的Id传递给服务器 -->
+                    <td><a href="ClassEdit.ashx?action=Delete&Id=$c.Id" class="aButton">删除</a></td>     <!-- 传递action=Delete参数的同时，将当前的数据的Id传递给服务器 -->
+                </tr>
+                #end
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

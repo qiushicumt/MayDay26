@@ -62,11 +62,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NVelocity.dll" />
+    <Content Include="templates\ClassEdit.html" />
+    <Content Include="templates\ClassList.html" />
     <Content Include="templates\PersonEdit.html" />
     <Content Include="templates\PersonList.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="handler\ClassEdit.ashx.cs">
+      <DependentUpon>ClassEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\ClassList.ashx.cs">
+      <DependentUpon>ClassList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="handler\PersonEdit.ashx.cs">
       <DependentUpon>PersonEdit.ashx</DependentUpon>
     </Compile>
@@ -80,6 +88,8 @@
   <ItemGroup>
     <Content Include="handler\PersonList.ashx" />
     <Content Include="handler\PersonEdit.ashx" />
+    <Content Include="handler\ClassList.ashx" />
+    <Content Include="handler\ClassEdit.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
