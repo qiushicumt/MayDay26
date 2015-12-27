@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web;
 
-namespace _02CRUD_Pro.handler
+namespace _03StudentManage_Pro.handlers
 {
     /// <summary>
     /// ClassList 的摘要说明
@@ -14,14 +13,8 @@ namespace _02CRUD_Pro.handler
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/html";
-
-            string html = null;
-
-            DataTable dtClass = SQLHelper.ExecuteDataTable("select * from T_Classes");
-            html = NVelocity.ReturnHtml("ClassList.html", dtClass.Rows);
-
-            context.Response.Write(html);
+            context.Response.ContentType = "text/plain";
+            context.Response.Write("Hello World");
         }
 
         public bool IsReusable

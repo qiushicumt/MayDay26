@@ -16,13 +16,14 @@ namespace _02CRUD_Pro.handler
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/html";
+            /*
             string html = null;
 
             DataTable dtPerson = SQLHelper.ExecuteDataTable("select * from T_Person");
             DataTable dtClass = SQLHelper.ExecuteDataTable("select * from T_Classes");
 
             context.Response.Write(html);
-            /*
+            */
             string html = null;
             //  调用SQLHelper的ExecuteDataTable方法，传入的参数为查询数据表的命令语句，返回查询得到的DataTable
             DataTable dt = SQLHelper.ExecuteDataTable("select * from T_Person");            
@@ -30,8 +31,7 @@ namespace _02CRUD_Pro.handler
             //  DataTable.Rows属性是一个集合，可以被遍历，所以传递给NVelocity的方法
             html = NVelocity.ReturnHtml("PersonList.html", dt.Rows);
 
-            context.Response.Write(html);
-            */
+            context.Response.Write(html);            
         }
 
         public bool IsReusable

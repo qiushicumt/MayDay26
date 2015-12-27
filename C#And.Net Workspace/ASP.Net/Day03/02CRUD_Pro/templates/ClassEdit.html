@@ -2,42 +2,43 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>
+        #if($Data.Action == "AddNew")
+        新增班级
+        #else
+        修改班级
+        #end
+    </title>
     <style type="text/css">
-        #main { width:600px; margin:50px auto; }
+        #main {
+            width:600px;
+            margin:50px auto;
+        }
     </style>
 </head>
 <body>
     <div id="main">
         <form action="ClassEdit.ashx" method="post">
-            <table>
-                <thead>
-                    <tr>
-                        <td>班级名称</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    #if($Data.Action=="AddNew")
-                    <tr>
-                        <td><input type="text" name="className" /></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="保存"  /> </td>
-                    </tr>
-                    #else
-                    <tr>
-                        <td><input type="text" name="className" value="$Data.myClass.Name" /></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="保存"  /> </td>
-                    </tr>
-                    #end
-                </tbody>
-            </table>       
-            
-            <input type="hidden" name="action" value="$Data.Action" />
+            <input type="hidden" name="Action" value="$Data.Action">
             <input type="hidden" name="save" value="True" />
-            <input type="hidden" name="Id" value="$Data.myClass.Id" />
+            <input type="hidden" name="Id" value="$Data.Classes.Id" />
+            #if($Data.Action == "AddNew")
+            <table>
+                <tr>
+                    <td>班级名称</td>
+                    <td><input type="text" name="className" /></td>
+                    <td><input type="submit" value="保存"></td>
+                </tr>   
+            </table>
+            #else
+            <table>
+                <tr>
+                    <td>班级名称</td>
+                    <td><input type="text" name="className" value="$Data.Classes.ClassName" /></td>
+                    <td><input type="submit" value="保存" /></td>
+                </tr>   
+            </table>
+            #end
         </form>
     </div>
 </body>

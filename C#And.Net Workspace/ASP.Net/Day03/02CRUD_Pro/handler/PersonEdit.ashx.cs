@@ -28,21 +28,22 @@ namespace _02CRUD_Pro.handler
                     string name = context.Request["Name"];
                     int age = Convert.ToInt32(context.Request["Age"]);
                     string email = context.Request["Email"];
-                    SQLHelper.ExecuteNonQuery("Insert into T_Person(Name, Age, Email) values(@Name, @Age, @Email)", 
+                    int classId = Convert.ToInt32(context.Request["ClassId"]);
+                    SQLHelper.ExecuteNonQuery("Insert into T_Person(Name, Age, Email, ClassId) values(@Name, @Age, @Email, @ClassId)", 
                         new SqlParameter("@Name",name),
                         new SqlParameter("@Age", age),
-                        new SqlParameter("@Email", email)
+                        new SqlParameter("@Email", email),
+                        new SqlParameter("@ClassId", classId)
                         );
                     context.Response.Redirect("PersonList.ashx");   //  保存成功后页面转向PersonList显示页面
                 }
                 //  save!=True，表示的展示新增页面，则渲染一个空白的新增成员的页面，返回给浏览器
                 else
                 {
-                    //  查询T_Classes表获得T_Classes表中的Name数据
                     DataTable dtClass = SQLHelper.ExecuteDataTable("select * from T_Classes");
-
-                    var data = new { Action = "AddNew", Classes = dtClass.Rows };       //  向模板传递action值
+                    var data = new { Action = "AddNew", Classes = dtClass.Rows };
                     html = NVelocity.ReturnHtml("PersonEdit.html", data);
+                    context.Response.Write(html);
                 }               
             }
             else if (action == "Edit")
@@ -57,10 +58,12 @@ namespace _02CRUD_Pro.handler
                     string name = context.Request["Name"];
                     int age = Convert.ToInt32(context.Request["Age"]);
                     string email = context.Request["Email"];
-                    SQLHelper.ExecuteNonQuery("update T_Person set Name=@Name, Age=@Age, Email=@Email where Id=@Id",
+                    int classId = Convert.ToInt32(context.Request["ClassId"]);
+                    SQLHelper.ExecuteNonQuery("update T_Person set Name=@Name, Age=@Age, Email=@Email, ClassId=@ClassId where Id=@Id",
                         new SqlParameter("@Name", name),
                         new SqlParameter("@Age", age),
                         new SqlParameter("@Email", email),
+                        new SqlParameter("@ClassId", classId),
                         new SqlParameter("@Id", id)
                         );
                     context.Response.Redirect("PersonList.ashx");
@@ -80,9 +83,11 @@ namespace _02CRUD_Pro.handler
                     }
                     else 
                     {
+                        DataTable dtClass = SQLHelper.ExecuteDataTable("select * from T_Classes");
                         DataRow row = dt.Rows[0];
-                        var data = new { Action = "Edit", Person = row };
+                        var data = new { Action = "Edit", Person = row, Classes = dtClass.Rows };
                         html = NVelocity.ReturnHtml("PersonEdit.html", data);
+                        context.Response.Write(html);
                     }   
                 }
             }
@@ -97,8 +102,6 @@ namespace _02CRUD_Pro.handler
             {
                 context.Response.Write("Action参数错误!");
             }
-
-            context.Response.Write(html);
         }
 
         public bool IsReusable

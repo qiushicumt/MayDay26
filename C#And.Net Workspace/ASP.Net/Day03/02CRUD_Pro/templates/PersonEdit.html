@@ -9,7 +9,6 @@
         编辑用户
         #end
     </title>
-
 </head>
 <body>
     <form action="PersonEdit.ashx" method="post">
@@ -18,9 +17,20 @@
             <tr><td>姓名：</td><td><input type="text" name="Name" value="$Data.Person.Name" /></td></tr>
             <tr><td>年龄：</td><td><input type="text" name="Age" value="$Data.Person.Age" /></td></tr>
             <tr><td>Email：</td><td><input type="text" name="Email" value="$Data.Person.Email" /></td></tr>
+            <tr>
+                <td>班级：</td>
+                <td>
+                    <select name="ClassId">
+                        #foreach($c in $Data.Classes)
+                        <option value="$c.Id">$c.ClassName</option>
+                        #end
+                    </select>
+                </td>
+            </tr>
             <tr><td><input type="submit" value="保存" /></td></tr>
         </table>
         #else
+        <!-- 新增页面的展示 -->
         <table>
             <tr><td>姓名：</td><td><input type="text" name="Name" /></td></tr>
             <tr><td>年龄：</td><td><input type="text" name="Age" /></td></tr>
@@ -29,12 +39,16 @@
                 <td>班级：</td>
                 <td>
                     <select name="ClassId">
-                    #foreach($c in $Data.Classes)
-                    <option value="$c.Id">$c.Name</option>
-                    #end
-                    </select>
+                        #foreach($c in $Data.Classes)
+                            #if($c.Id == $Data.Person.ClassId)                            
+                            <option value="$Data.Person.ClassId" selected>$c.ClassName</option>
+                            #else
+                            <option value="$c.Id">$c.ClassName</option>
+                            #end
+                        #end
+                    </select>                    
                 </td>
-            </tr>
+            </tr>            
             <tr><td><input type="submit" value="保存" /></td></tr>
         </table>
         #end
@@ -42,9 +56,10 @@
         <!-- 第一个隐藏字段name设置为action，值为$Data.Action，即表示向服务器传送数据为 $Data.Action，表示新增 -->
         <!-- 第二个隐藏字段name设置为save，值为True，即表示向服务器传送数据为 save=True，表示新增保存 -->
         <!-- 第三个隐藏字段name设置为Id，值为$Data.Person.Id，表示向服务器传送当前编辑的数据的Id -->
-        <input type="hidden" name="action" value="$Data.Action">      
-        <input type="hidden" name="save" value="True">
-        <input type="hidden" name="Id" value="$Data.Person.Id">
+        <input type="hidden" name="action" value="$Data.Action" />      
+        <input type="hidden" name="save" value="True" />
+        <input type="hidden" name="Id" value="$Data.Person.Id" />
+        <input type="hidden" name="ClassId" value="$Data.Person.ClassId" />
     </form>
 </body>
 </html>
