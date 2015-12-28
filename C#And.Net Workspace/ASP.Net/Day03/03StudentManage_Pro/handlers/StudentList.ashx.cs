@@ -14,7 +14,9 @@ namespace _03StudentManage_Pro.handlers
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/html";
-            context.Response.Write("Hello World");
+            string html = null;
+            
+            
         }
 
         public bool IsReusable

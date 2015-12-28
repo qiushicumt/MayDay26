@@ -64,6 +64,7 @@
     <Content Include="NVelocity.dll" />
     <Content Include="templates\ClassEdit.html" />
     <Content Include="templates\ClassList.html" />
+    <Content Include="templates\FooterTemp.html" />
     <Content Include="templates\HeaderTemp.html" />
     <Content Include="templates\StudentEdit.html" />
     <Content Include="templates\StudentList.html" />

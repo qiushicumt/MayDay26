@@ -2,9 +2,39 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>StudentList HTML</title>
+    <style type="text/css">
+        #wrappage { width:800px; margin:50px auto; }
+    </style>
 </head>
 <body>
-
+    <div id="wrappage">
+        #parse("HeaderTemp.html")
+        <div id="main">
+            <table>
+                <thead>
+                    <tr>
+                        <td style="width:16%;">姓名</td>
+                        <td style="width:16%;">性别</td>
+                        <td style="width:16%;">生日</td>
+                        <td style="width:16%;">身高</td>
+                        <td style="width:16%;">班级</td>
+                        <td >是否特长生</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width:16%;">$Data.Name</td>
+                        <td style="width:16%;">$Data.Gender</td>
+                        <td style="width:16%;">$Data.Birthday</td>
+                        <td style="width:16%;">$Data.</td>
+                        <td style="width:16%;"></td>
+                        <td >是否特长生</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        #parse("FooterTemp.html")
+    </div>
 </body>
 </html>
