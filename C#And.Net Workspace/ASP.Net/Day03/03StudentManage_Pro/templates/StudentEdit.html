@@ -2,7 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>StudentManage StuEdit</title>
+    <title>
+        #if($Data.Action == "AddNew")
+            StudentManage StuAdd
+        #else
+            StudentManage StuEdit
+        #end
+    </title>
     <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
@@ -12,6 +18,9 @@
         </div>
         <div id="main">
             <form action="StudentEdit.ashx" method="post">
+                <input type="hidden" name="action" value="$Data.Action">
+                <input type="hidden" name="save" value="True">
+                #if($Data.Action == "AddNew")
                 <table>
                     <tr>
                         <td>姓名：</td>
@@ -34,7 +43,7 @@
                         <td>班级：</td>
                         <td>
                             <select name="ClassId">
-                                #foreach($c in $Data)
+                                #foreach($c in $Data.Class)
                                 <option value="$c.Id">$c.ClassName</option>
                                 #end
                             </select>
@@ -54,6 +63,59 @@
                         </td>
                     </tr>
                 </table>
+                #else
+                <table>
+                    <tr>
+                        <td>姓名：</td>
+                        <td><input type="text" name="Name" value="$Data.Student.Name"></td>
+                    </tr>
+                    <tr>
+                        <td>性别：</td>
+                        <td>
+                            #if($Data.Student.Gender == "男")
+                            <input type="radio" name="Gender" value="男" id="male2" checked><label for="male2">男</label>
+                            #else
+                            <input type="radio" name="Gender" value="女" id="female2" checked><label for="female2">女</label>
+                            #end
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>出生日期：</td>
+                        <td><input type="date" name="Birthday" value="$Data.Student.Birthday"></td>
+                    </tr>
+                    <tr>
+                        <td>身高(cm)：</td>
+                        <td><input type="text" name="Height" value="$Data.Student.Height"></td>
+                    </tr>
+                    <tr>
+                        <td>班级：</td>
+                        <td>
+                            <select name="ClassId">
+                                #foreach($c in $Data.Class)
+                                    #if($c.Id == $Data.Student.ClassId)
+                                        <option value="$c.Id" selected>$c.ClassName</option>
+                                    #else
+                                        <option value="$c.Id">$c.ClassName</option>
+                                    #end
+                                #end
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>是否特长生：</td>
+                        <td>
+                            <input type="radio" name="IsTeChang" value="True" id="Radio3"><label for="trueTC">是</label>
+                            <input type="radio" name="IsTeChang" value="False" id="Radio4"><label for="falseTC">不是</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="保存">
+                        </td>
+                    </tr>
+                </table>
+                #end
             </form>
         </div>
         <div id="footer">

@@ -15,11 +15,11 @@
             <table>
                 <thead>
                     <tr>
-                        <td style="width:16%;">姓名</td>
-                        <td style="width:16%;">性别</td>
-                        <td style="width:16%;">出生日期</td>
-                        <td style="width:16%;">身高</td>
-                        <td style="width:16%;">班级</td>
+                        <td style="width:11%;">姓名</td>
+                        <td style="width:11%;">性别</td>
+                        <td style="width:11%;">出生日期</td>
+                        <td style="width:11%;">身高</td>
+                        <td style="width:11%;">班级</td>
                         <td>是否特长生</td>
                     </tr>
                 </thead>                
@@ -49,11 +49,11 @@
                 -->
                 #foreach($s in $Data.Student)
                 <tr>
-                    <td style="width:16%;">$s.Name</td>
-                    <td style="width:16%;">$s.Gender</td>
-                    <td style="width:16%;">$s.Birthday</td>
-                    <td style="width:16%;">$s.Height</td>
-                    <td style="width:16%;">
+                    <td style="width:11%;">$s.Name</td>
+                    <td style="width:11%;">$s.Gender</td>
+                    <td style="width:11%;">$s.Birthday</td>
+                    <td style="width:11%;">$s.Height</td>
+                    <td style="width:11%;">
                     #foreach($c in $Data.Class)
                         #if($c.Id == $s.ClassId)
                             $c.ClassName
@@ -66,6 +66,12 @@
                         #else
                             是
                         #end
+                    </td>
+                    <td style="width:11%;">
+                        <a href="StudentEdit.ashx?action=Edit&Id=$s.Id&ClassId=$s.ClassId">编辑修改</a>
+                    </td>
+                    <td style="width:11%;">
+                        <a href="StudentEdit.ashx?action=Delete&Id=$s.Id">删除</a>
                     </td>
                 </tr>
                 #end

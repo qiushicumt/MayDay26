@@ -32,19 +32,28 @@ namespace _03StudentManage_Pro.handlers
                     DateTime dt = Convert.ToDateTime(context.Request["Birthday"]);      //  设置DateTime格式
                     float stuHeight = float.Parse(context.Request["Height"]);
                     int stuClassId = Convert.ToInt32(context.Request["ClassId"]);
+                    bool stuTeChang;
                     if (context.Request["IsTeChang"] == "True")
                     {
-                        bool stuTeChang = true;
+                        stuTeChang = true;
                     }
                     else
                     {
-                        bool stuTeChang = false;
+                        stuTeChang = false;
                     }
+                    SQLHelper.ExecuteNonQuery("insert into T_Student(Name, Gender, Birthday, Height, ClassId, IsTeChang) values(@Name, @Gender, @Birthday, @Height, @ClassId, @IsTeChang)",
+                        new SqlParameter("@Name", stuName),
+                        new SqlParameter("@Gender", stuGender),
+                        new SqlParameter("@Birthday", dt),
+                        new SqlParameter("@Height", stuHeight),
+                        new SqlParameter("@ClassId", stuClassId),
+                        new SqlParameter("@IsTeChang", stuTeChang));
+                    context.Response.Redirect("StudentList.ashx");
                 }
                 else 
                 {
                     DataTable dtClass = SQLHelper.ExecuteDataTable("select * from T_Class");
-                    var data = new { action = "AddNew", Class = dtClass.Rows };
+                    var data = new { Action = "AddNew", Class = dtClass.Rows };
                     html = NVelocity.ReturnHtml("StudentEdit.html", data);
                     context.Response.Write(html);
                 }
@@ -59,7 +68,27 @@ namespace _03StudentManage_Pro.handlers
                 }
                 else
                 {
-
+                    int id = Convert.ToInt32(context.Request["Id"]);
+                    DataTable dtStu = SQLHelper.ExecuteDataTable("select * from T_Student where Id=@Id",
+                        new SqlParameter("@Id", id));
+                    if (dtStu.Rows.Count <= 0)
+                    {
+                        context.Response.Write("查询到ID为" + id + "的数据为0");
+                    }
+                    else if (dtStu.Rows.Count > 1)
+                    {
+                        context.Response.Write("查询到ID为" + id + "的数据有多条");
+                    }
+                    else
+                    {                       
+                        DataRow rowStu = dtStu.Rows[0];
+                        int classId = Convert.ToInt32(context.Request["ClassId"]);
+                        DataTable dtClass = SQLHelper.ExecuteDataTable("select * from T_Class where Id=@Id", new SqlParameter("@Id", classId));
+                        DataRow rowClass = dtClass.Rows[0];
+                        var data = new { Action = "Edit", Student = rowStu, Class = rowClass };
+                        html = NVelocity.ReturnHtml("StudentEdit.html", data);
+                        context.Response.Write(html);
+                    }
                 }
             }
             else if (action == "Delete")
