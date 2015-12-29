@@ -7,13 +7,13 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{318DC595-BCD1-4ADC-8DEA-D066AEF69958}</ProjectGuid>
+    <ProjectGuid>{EE4195E7-FAB9-48A5-AAC4-14C355B30929}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_03StudentManage_Pro</RootNamespace>
     <AssemblyName>03StudentManage_Pro</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -61,35 +61,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\base.css" />
     <Content Include="NVelocity.dll" />
-    <Content Include="templates\ClassEdit.html" />
-    <Content Include="templates\ClassList.html" />
     <Content Include="templates\FooterTemp.html" />
     <Content Include="templates\HeaderTemp.html" />
     <Content Include="templates\StudentEdit.html" />
     <Content Include="templates\StudentList.html" />
-    <Content Include="templates\TeacherEdit.html" />
     <Content Include="templates\TeacherList.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="handlers\ClassEdit.ashx.cs">
-      <DependentUpon>ClassEdit.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="handlers\ClassList.ashx.cs">
-      <DependentUpon>ClassList.ashx</DependentUpon>
-    </Compile>
     <Compile Include="handlers\StudentEdit.ashx.cs">
       <DependentUpon>StudentEdit.ashx</DependentUpon>
     </Compile>
     <Compile Include="handlers\StudentList.ashx.cs">
       <DependentUpon>StudentList.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="handlers\TeacherEdit.ashx.cs">
-      <DependentUpon>TeacherEdit.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="handlers\TeacherList.ashx.cs">
-      <DependentUpon>TeacherList.ashx</DependentUpon>
     </Compile>
     <Compile Include="NVelocity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,10 +84,6 @@
   <ItemGroup>
     <Content Include="handlers\StudentList.ashx" />
     <Content Include="handlers\StudentEdit.ashx" />
-    <Content Include="handlers\TeacherList.ashx" />
-    <Content Include="handlers\TeacherEdit.ashx" />
-    <Content Include="handlers\ClassList.ashx" />
-    <Content Include="handlers\ClassEdit.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

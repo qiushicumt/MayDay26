@@ -2,9 +2,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>StudentManage StuList</title>
+    <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
-
+    <div id="wrappage">
+        <div id="header">
+            #parse("HeaderTemp.html")
+        </div>
+        <div id="main">
+            <a href="TeacherEdit.ashx?action=AddNew" style="display:block; margin-bottom:10px;">新增</a>
+            <table>
+                <tr>
+                    <td style="width:16%;">姓名</td>                    
+                    <td style="width:16%;">出生日期</td>
+                    <td style="width:16%;">电话号码</td>
+                    <td style="width:16%;">电子邮箱</td>
+                </tr>                
+                #foreach($s in $Data)
+                <tr>
+                    <td style="width:16%;">$s.Name</td>
+                    <td style="width:16%;">$s.Birthday</td>
+                    <td style="width:16%;">$s.Height</td>
+                    <td style="width:16%;">$s.Email</td>                   
+                </tr>
+                #end
+            </table>
+        </div>
+        <div id="footer">
+            #parse("FooterTemp.html")
+        </div>
+    </div>
 </body>
 </html>

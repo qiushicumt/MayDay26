@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("_03StudentManage_Pro")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("_03StudentManage_Pro")]
-[assembly: AssemblyCopyright("版权所有(C) Microsoft 2015")]
+[assembly: AssemblyCopyright("版权所有(C)  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("32c398e7-cf98-4d13-bc67-472993d73d3e")]
+[assembly: Guid("1da2dd98-8619-45d0-95bf-27a05fd82fc6")]
 
 // 程序集的版本信息由下列四个值组成:
 //

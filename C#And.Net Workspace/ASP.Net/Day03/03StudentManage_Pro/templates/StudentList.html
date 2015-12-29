@@ -2,39 +2,78 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>StudentList HTML</title>
-    <style type="text/css">
-        #wrappage { width:800px; margin:50px auto; }
-    </style>
+    <title>StudentManage StuList</title>
+    <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
     <div id="wrappage">
-        #parse("HeaderTemp.html")
+        <div id="header">
+            #parse("HeaderTemp.html")
+        </div>
         <div id="main">
+            <a href="StudentEdit.ashx?action=AddNew" style="display:block; margin-bottom:10px;">新增</a>
             <table>
                 <thead>
                     <tr>
                         <td style="width:16%;">姓名</td>
                         <td style="width:16%;">性别</td>
-                        <td style="width:16%;">生日</td>
+                        <td style="width:16%;">出生日期</td>
                         <td style="width:16%;">身高</td>
                         <td style="width:16%;">班级</td>
-                        <td >是否特长生</td>
+                        <td>是否特长生</td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="width:16%;">$Data.Name</td>
-                        <td style="width:16%;">$Data.Gender</td>
-                        <td style="width:16%;">$Data.Birthday</td>
-                        <td style="width:16%;">$Data.</td>
-                        <td style="width:16%;"></td>
-                        <td >是否特长生</td>
-                    </tr>
-                </tbody>
+                </thead>                
+                <!--
+                    截取字符串操作
+                    原始字符串：$!ag.tagValue，也许很长，前端页面展示时需要截取字符串。    
+                    #set($str=$!ag.tagValue)
+                    #if($str.length()>30)
+                        #set($str=$str.substring(0,30))
+                        $str ...
+                    #else
+                    $!ag.tagValue
+                    #end
+                -->
+
+                <!--
+                #foreach($s in $Data.Student)
+                <tr>
+                    <td style="width:16%;">$s.Name</td>
+                    <td style="width:16%;">$s.Gender</td>
+                    <td style="width:16%;">$s.Birthday</td>
+                    <td style="width:16%;">$s.Height</td>
+                    <td style="width:16%;">$s.ClassId</td>
+                    <td>$s.IsTeChang</td>
+                </tr>
+                #end
+                -->
+                #foreach($s in $Data.Student)
+                <tr>
+                    <td style="width:16%;">$s.Name</td>
+                    <td style="width:16%;">$s.Gender</td>
+                    <td style="width:16%;">$s.Birthday</td>
+                    <td style="width:16%;">$s.Height</td>
+                    <td style="width:16%;">
+                    #foreach($c in $Data.Class)
+                        #if($c.Id == $s.ClassId)
+                            $c.ClassName
+                        #end
+                    #end
+                    </td>
+                    <td>
+                        #if($s.IsTeChang == "False")
+                            不是
+                        #else
+                            是
+                        #end
+                    </td>
+                </tr>
+                #end
             </table>
         </div>
-        #parse("FooterTemp.html")
+        <div id="footer">
+            #parse("FooterTemp.html")
+        </div>
     </div>
 </body>
 </html>
