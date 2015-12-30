@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+        #if($Data.Action == "AddNew")
+        StudentManage ClaAdd
+        #else
+        StudentManage ClaEdit
+        #end
+    </title>
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+    <div id="wrappage">
+        <div id="header">
+            #parse("HeaderTemp.html")
+        </div>
+        <div id="main">           
+            <form action="ClassEdit.ashx" method="post">
+                <input type="hidden" name="action" value="$Data.Action">
+                <input type="hidden" name="Id" value="$Data.Class.Id">
+                #if($Data.Action == "AddNew")
+                <table>
+                    <tr><td>班级名称</td><td><input type="text" name="ClassName"></td></tr>
+                    <tr><td>教室号</td><td><input type="text" name="ClassroomNum"></td></tr>
+                    <tr>
+                        <td>班主任老师</td>
+                        <td>
+                            <select name="TeacherId">
+                                #foreach($t in $Data.Teacher)
+                                <option value="$t.Id">$t.Name</option>
+                                #end
+                            </select>
+                        </td>
+                    </tr>
+                    <tr><td></td><td><input type="submit" name="save" value="保存"></td></tr>
+                </table>            
+                #else
+                <table>
+                    <tr><td>班级名称</td><td><input type="text" name="ClassName" value="$Data.Class.ClassName"></td></tr>
+                    <tr><td>教室号</td><td><input type="text" name="ClassroomNum" value="$Data.Class.ClassroomNum"></td></tr>
+                    <tr>
+                        <td>班主任老师</td>
+                        <td>
+                            <select id="TeacherId">
+                                #foreach($t in $Data.Teacher)
+                                    #if($t.Id == $Data.Class.TeacherId)
+                                    <option value="$t.Id" selected>$t.Name</option>
+                                    #else
+                                    <option value="$t.Id">$t.Name</option>
+                                    #end
+                                #end
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                #end
+            </form>
+        </div>
+        <div id="footer">
+            #parse("FooterTemp.html")
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>StudentManage ClassList</title>
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+    <div id="wrappage">
+        <div id="header">
+            #parse("HeaderTemp.html")
+        </div>
+        <div id="main">
+            <a href="ClassEdit.ashx?action=AddNew">新增</a>
+            <table>
+                <thead>
+                    <tr>
+                        <td style="width:25%">班级名称</td>
+                        <td style="width:25%">教室号</td>
+                        <td style="width:25%">班主任老师</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    #foreach($c in $Data.Class)
+                    <tr>
+                        <td style="width:25%">$c.ClassName</td>
+                        <td style="width:25%">$c.ClassroomNum</td>
+                        <td style="width:25%">
+                            #foreach($t in $Data.Teacher)
+                                #if($t.Id == $c.TeacherId)
+                                $t.Name
+                                #end
+                            #end
+                        </td>
+                        <td style="width:15%"><a href="ClassEdit.ashx?action=Edit&Id=$c.Id">编辑修改</a></td>
+                        <td><a href="ClassEdit.ashx?action=Delete&Id=$c.Id">删除</a></td>
+                    </tr>
+                    #end
+                </tbody>
+            </table>
+        </div>
+        <div id="footer">
+            #parse("FooterTemp.html")
+        </div>
+    </div>
+</body>
+</html>
