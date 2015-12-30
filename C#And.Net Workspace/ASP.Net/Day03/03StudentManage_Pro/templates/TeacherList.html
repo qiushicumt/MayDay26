@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>StudentManage StuList</title>
+    <title>StudentManage TeaList</title>
     <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
@@ -22,9 +22,14 @@
                 #foreach($s in $Data)
                 <tr>
                     <td style="width:16%;">$s.Name</td>
-                    <td style="width:16%;">$s.Birthday</td>
-                    <td style="width:16%;">$s.Height</td>
-                    <td style="width:16%;">$s.Email</td>                   
+                    <td style="width:16%;">
+                        #set($str = "$s.Birthday")
+                        $str.SubString(0,10)
+                    </td>
+                    <td style="width:16%;">$s.PhoneNum</td>
+                    <td style="width:32%;">$s.Email</td>  
+                    <td style="width:10%;"><a href="TeacherEdit.ashx?action=Edit&Id=$s.Id">编辑修改</a></td>  
+                    <td style="width:10%;"><a href="TeacherEdit.ashx?action=Delete&Id=$s.Id">删除</a></td>               
                 </tr>
                 #end
             </table>

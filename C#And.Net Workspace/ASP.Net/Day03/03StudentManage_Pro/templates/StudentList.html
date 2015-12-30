@@ -22,19 +22,7 @@
                         <td style="width:11%;">班级</td>
                         <td>是否特长生</td>
                     </tr>
-                </thead>                
-                <!--
-                    截取字符串操作
-                    原始字符串：$!ag.tagValue，也许很长，前端页面展示时需要截取字符串。    
-                    #set($str=$!ag.tagValue)
-                    #if($str.length()>30)
-                        #set($str=$str.substring(0,30))
-                        $str ...
-                    #else
-                    $!ag.tagValue
-                    #end
-                -->
-
+                </thead>                                
                 <!--
                 #foreach($s in $Data.Student)
                 <tr>
@@ -51,7 +39,10 @@
                 <tr>
                     <td style="width:11%;">$s.Name</td>
                     <td style="width:11%;">$s.Gender</td>
-                    <td style="width:11%;">$s.Birthday</td>
+                    <td style="width:16%;">
+                        #set($str = "$s.Birthday")
+                        $str.SubString(0,10)
+                    </td>
                     <td style="width:11%;">$s.Height</td>
                     <td style="width:11%;">
                     #foreach($c in $Data.Class)
@@ -68,7 +59,8 @@
                         #end
                     </td>
                     <td style="width:11%;">
-                        <a href="StudentEdit.ashx?action=Edit&Id=$s.Id&ClassId=$s.ClassId">编辑修改</a>
+                        <!-- <a href="StudentEdit.ashx?action=Edit&Id=$s.Id&ClassId=$s.ClassId">编辑修改</a> -->
+                        <a href="StudentEdit.ashx?action=Edit&Id=$s.Id">编辑修改</a>
                     </td>
                     <td style="width:11%;">
                         <a href="StudentEdit.ashx?action=Delete&Id=$s.Id">删除</a>

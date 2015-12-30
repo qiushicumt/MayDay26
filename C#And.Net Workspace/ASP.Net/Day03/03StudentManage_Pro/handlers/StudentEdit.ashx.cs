@@ -64,7 +64,29 @@ namespace _03StudentManage_Pro.handlers
                 //  save为True，表示点击保存按钮，页面为编辑保存，否则为展示编辑页面
                 if (save == "True")
                 {
-
+                    int stuId = Convert.ToInt32(context.Request["Id"]);
+                    string stuName = context.Request["Name"];
+                    string stuGender = context.Request["Gender"];
+                    DateTime stuDT = Convert.ToDateTime(context.Request["Birthday"]);
+                    float stuHeight = float.Parse(context.Request["Height"]);
+                    int stuClassId = Convert.ToInt32(context.Request["ClassId"]);
+                    bool stuTeChang;
+                    if (context.Request["IsTeChang"] == "True")
+                    {
+                        stuTeChang = true;
+                    }
+                    else
+                    {
+                        stuTeChang = false;
+                    }
+                    SQLHelper.ExecuteNonQuery("update T_Student set Name=@Name, Gender=@Gender, Birthday=@Birthday, Height=@Height, ClassId=@ClassId, IsTeChang=@IsTeChang",
+                        new SqlParameter("@Name", stuName),
+                        new SqlParameter("@Gender", stuGender),
+                        new SqlParameter("@Birthday", stuDT),
+                        new SqlParameter("@Height", stuHeight),
+                        new SqlParameter("@ClassId", stuClassId),
+                        new SqlParameter("@IsTeChang", stuTeChang));
+                    context.Response.Redirect("StudentList.ashx");
                 }
                 else
                 {
@@ -83,9 +105,11 @@ namespace _03StudentManage_Pro.handlers
                     {                       
                         DataRow rowStu = dtStu.Rows[0];
                         int classId = Convert.ToInt32(context.Request["ClassId"]);
-                        DataTable dtClass = SQLHelper.ExecuteDataTable("select * from T_Class where Id=@Id", new SqlParameter("@Id", classId));
-                        DataRow rowClass = dtClass.Rows[0];
-                        var data = new { Action = "Edit", Student = rowStu, Class = rowClass };
+                        //DataTable dtClass = SQLHelper.ExecuteDataTable("select * from T_Class where Id=@Id", new SqlParameter("@Id", classId));
+                        //DataRow rowClass = dtClass.Rows[0];
+                        DataTable dtClass = SQLHelper.ExecuteDataTable("select * from T_Class");
+
+                        var data = new { Action = "Edit", Student = rowStu, Classes = dtClass.Rows };
                         html = NVelocity.ReturnHtml("StudentEdit.html", data);
                         context.Response.Write(html);
                     }

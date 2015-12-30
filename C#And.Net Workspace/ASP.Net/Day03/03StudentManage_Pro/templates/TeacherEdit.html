@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+        #if($Data.Action == "AddNew")
+        StudentManege TeaAdd
+        #else
+        StudentManege TeaEdit
+        #end
+    </title>
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+    <div id="wrappage">
+        <div id="header">
+            #parse("HeaderTemp.html")
+        </div>
+        <div id="main">
+            <form action="TeacherEdit.ashx" method="post">
+                <input type="hidden" name="action" value="$Data.Action">
+                <input type="hidden" name="Id" value="$Data.Teacher.Id">
+                #if($Data.Action == "AddNew")
+                <table>
+                    <tr>
+                        <td>姓名：</td>
+                        <td><input type="text" name="Name"></td>
+                    </tr>
+                    <tr>
+                        <td>出生日期：</td>
+                        <td><input type="date" name="Birthday"></td>
+                    </tr>
+                    <tr>
+                        <td>电话号码：</td>
+                        <td><input type="tel" name="PhoneNum"></td>
+                    </tr>
+                    <tr>
+                        <td>电子邮箱：</td>
+                        <td><input type="email" name="Email"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" name="save" value="保存"></td>
+                    </tr>                    
+                </table>
+                #else
+                <table>
+                    <tr>
+                        <td>姓名：</td>
+                        <td><input type="text" name="Name" value="$Data.Teacher.Name"></td>
+                    </tr>
+                    <tr>
+                        <td>出生日期：</td>
+                        <td>                            
+                            #set($str="$Data.Teacher.Birthday")    <!-- ""修饰的变量会被解析出来  赋值给$str，$str.SubString(0,10)方法对字符串进行截取 -->
+                            <input type="date" name="Birthday" value="$str.SubString(0,10)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>电话号码：</td>
+                        <td><input type="tel" name="PhoneNum" value="$Data.Teacher.PhoneNum"></td>
+                    </tr>
+                    <tr>
+                        <td>电子邮箱：</td>
+                        <td><input type="email" name="Email" value="$Data.Teacher.Email"></td>
+                    </tr>
+                    <tr>
+                        <td></td>                       
+                        <td><input type="submit" name="save" value="保存"></td>
+                    </tr>
+                </table>
+                #end
+            </form>
+        </div>
+        <div id="footer">
+            #parse("FooterTemp.html")
+        </div>
+    </div>
+</body>
+</html>

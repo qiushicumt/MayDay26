@@ -20,6 +20,7 @@
             <form action="StudentEdit.ashx" method="post">
                 <input type="hidden" name="action" value="$Data.Action">
                 <input type="hidden" name="save" value="True">
+                <input type="hidden" name="Id" value="$Data.Student.Id">
                 #if($Data.Action == "AddNew")
                 <table>
                     <tr>
@@ -28,8 +29,8 @@
                     </tr>
                     <tr>
                         <td>性别：</td>
-                        <td><input type="radio" name="Gender" value="男" id="male"><label for="male">男</label>
-                        <input type="radio" name="Gender" value="女" id="female"><label for="female">女</label></td>
+                        <td><input type="radio" name="Gender" value="男" id="male1"><label for="male1">男</label>
+                        <input type="radio" name="Gender" value="女" id="female1"><label for="female1">女</label></td>
                     </tr>
                     <tr>
                         <td>出生日期：</td>
@@ -52,8 +53,8 @@
                     <tr>
                         <td>是否特长生：</td>
                         <td>
-                            <input type="radio" name="IsTeChang" value="True" id="trueTC"><label for="trueTC">是</label>
-                            <input type="radio" name="IsTeChang" value="False" id="falseTC"><label for="falseTC">不是</label>
+                            <input type="radio" name="IsTeChang" value="True" id="trueTC1"><label for="trueTC1">是</label>
+                            <input type="radio" name="IsTeChang" value="False" id="falseTC1"><label for="falseTC1">不是</label>
                         </td>
                     </tr>
                     <tr>
@@ -74,14 +75,19 @@
                         <td>
                             #if($Data.Student.Gender == "男")
                             <input type="radio" name="Gender" value="男" id="male2" checked><label for="male2">男</label>
+                            <input type="radio" name="Gender" value="女" id="female2"><label for="female2">女</label>
                             #else
-                            <input type="radio" name="Gender" value="女" id="female2" checked><label for="female2">女</label>
+                            <input type="radio" name="Gender" value="男"　id="male3"><label for="male3">男</label>
+                            <input type="radio" name="Gender" value="女" id="female3" checked><label for="female2">女</label>
                             #end
                         </td>
                     </tr>
                     <tr>
                         <td>出生日期：</td>
-                        <td><input type="date" name="Birthday" value="$Data.Student.Birthday"></td>
+                        <td>
+                            #set($str = "$Data.Student.Birthday")                        
+                            <input type="date" name="Birthday" value="$str.SubString(0,10)">
+                        </td>
                     </tr>
                     <tr>
                         <td>身高(cm)：</td>
@@ -91,7 +97,7 @@
                         <td>班级：</td>
                         <td>
                             <select name="ClassId">
-                                #foreach($c in $Data.Class)
+                                #foreach($c in $Data.Classes)
                                     #if($c.Id == $Data.Student.ClassId)
                                         <option value="$c.Id" selected>$c.ClassName</option>
                                     #else
@@ -104,8 +110,13 @@
                     <tr>
                         <td>是否特长生：</td>
                         <td>
-                            <input type="radio" name="IsTeChang" value="True" id="Radio3"><label for="trueTC">是</label>
-                            <input type="radio" name="IsTeChang" value="False" id="Radio4"><label for="falseTC">不是</label>
+                            #if($Data.Student.IsTeChang == 1)
+                            <input type="radio" name="IsTeChang" value="True" id="trueTC2" checked><label for="trueTC2">是</label>
+                            <input type="radio" name="IsTeChang" value="False" id="falseTC2"><label for="falseTC2">不是</label>
+                            #else
+                            <input type="radio" name="IsTeChang" value="True" id="trueTC3"><label for="trueTC3">是</label>
+                            <input type="radio" name="IsTeChang" value="False" id="falseTC3" checked><label for="falseTC3">不是</label>
+                            #end
                         </td>
                     </tr>
                     <tr>
