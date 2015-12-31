@@ -3,6 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>UserLogin</title>
+    <style type="text/css">
+        #wrappage { width: 750px; margin: 50px auto; }
+    </style>
 </head>
 <body>
     <div id="wrappage">
@@ -17,11 +20,16 @@
                     <td><input type="password" name="password"></td>
                 </tr>
                 <tr>
+                    <td></td>
                     <td>$Data.Info</td>
                 </tr>
                 <tr>
+                    <td></td>
                     <td><input type="checkbox" name="remember" value="save">记住用户名</td>
-                    <td><input type="submit" name="login" value="登录"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="登录" name="login" /></td>
                 </tr>
             </table>
         </form>
