@@ -14,9 +14,9 @@ namespace _04Session_Pro.handlers
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/html";
-            if (context.Request.Cookies != null)
-            {
-                HttpCookie myCookie = context.Request.Cookies["ZhangBenId"];
+            HttpCookie myCookie = context.Request.Cookies["ZhangBenId"];
+            if (myCookie != null)
+            {               
                 string userId = myCookie.Value;
                 Guid id = new Guid(userId);     //  根据得到的userId生成GUID变量id
                 if (SessionMgr.IsJiZhang(id))

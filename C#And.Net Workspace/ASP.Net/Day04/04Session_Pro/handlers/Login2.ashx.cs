@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 
 namespace _04Session_Pro.handlers
 {
     /// <summary>
-    /// Login 的摘要说明
+    /// Login2 的摘要说明
     /// </summary>
-    public class Login : IHttpHandler
+    public class Login2 : IHttpHandler, IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
@@ -18,25 +19,25 @@ namespace _04Session_Pro.handlers
             string login = context.Request["login"];
             if (String.IsNullOrEmpty(login))
             {
-                html = NVelocity.ReturnHtml("Login.html", null);
+                html = NVelocity.ReturnHtml("Login2.html", null);
                 context.Response.Write(html);
             }
             else
             {
                 string userName = context.Request["username"];
                 string passWord = context.Request["password"];
-                if(passWord == "123456")
+                if (userName == "" || passWord == "")
                 {
-                    //错误写法  Guid userId = new Guid();
-                    Guid userId = Guid.NewGuid();
-                    SessionMgr.JiZhang(userId, userName);
-
-                    HttpCookie myCookie = new HttpCookie("ZhangBenId", userId.ToString());
-                    
-
-                    context.Response.SetCookie(myCookie);
-
-                    context.Response.Redirect("Test.ashx");
+                    context.Response.Write("请输入用户名或密码进行登录！");
+                }
+                else if (passWord == "123456")
+                {
+                    context.Session["UserName"] = userName;
+                    context.Response.Redirect("Test2.ashx");
+                }
+                else
+                {
+                    context.Response.Write("请输入正确的密码");
                 }
             }
         }
