@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Session HTML</title>
+    <style type="text/css">
+        #wrappage { width: 800px; margin: 50px auto; }
+    </style>
+    <script>
+        function getSessionClick(action)
+        {
+            var hidId = document.getElementById("hidlgc");
+            hidId.value = "";
+            hidId.value = action;
+        }
+    </script>
+</head>
+<body>
+    <div id="wrappage">
+        <form action="Login.ashx" method="post">
+            <input type="hidden" id="hidlgc" name="hidlgclick" value="">
+            <table>
+                <tr>
+                    <td>用户名：</td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="登录" onclick="getSessionClick('lgClick')"></td>
+                    <td><input type="submit" value="获取Session" onclick="getSessionClick('getSessionClick')"></td>
+                    <td><input type="submit" value="退出登录" onclick="getSessionClick('backlgClick')"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
