@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>VideoShow HTML</title>
+    <style type="text/css">
+        #wrappage { width:600px; margin:50px auto; }
+    </style>
+    <script src="../js/AjaxJS.js"></script>
+    <script>
+        function SubAction(action) {
+            var xmlHttp;
+            var targetURL = "VideoShow.ashx?action=" + action;
+            alert(action);
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlHttp = new XMLHttpRequest();
+            }
+            else {
+                // code for IE6, IE5
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlHttp.open("POST", targetURL, true);
+            xmlHttp.onreadystatechange = function() {
+                if(xmlHttp.readyState == 4) {
+                    if(xmlHttp.status == 200) {
+                        if(action=="zan") {
+                            document.getElementById("zanLab").innerHTML = xmlHttp.responseText;
+                        }
+                        else {
+                            document.getElementById("caiLab").innerHTML = xmlHttp.responseText;
+                        }
+                    }
+                }
+            }
+            xmlHttp.send();
+        }
+    </script>
+</head>
+<body>
+    <div id="wrappage">
+        <video src="../others/oneHomeBook.mp4" autoplay controls></video>
+        <form action="VideoShow.ashx" method="post">
+            <input type="button" name="zan" value="赞" onclick="SubAction(zan)" /><label id="zanLab">$Data.ZanCount</label>
+            <input type="button" name="cai" value="踩" onclick="SubAction(cai)" /><label id="caiLab">$Data.CaiCount</label>
+        </form>
+    </div>
+</body>
+</html>
