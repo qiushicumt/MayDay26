@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Register HTML</title>
+    <style type="text/css">
+        #wrappage { width:750px;margin:50px auto; }
+        #usernameMsg { display:inline-block;font-size:10px;color:#f83a1f;padding-left:5px; }
+    </style>
+    <script src="../js/ajax.js"></script>
+    <script>
+        function checkUser() {
+            var username = document.getElementById('userName');
+            var usernameMsg = document.getElementById('usernameMsg');
+            ajax("../handlers/Register.ashx?username=" + username.value, function (resText) {
+                if (resText == "Yes") {
+                    usernameMsg.innerHTML = "用户名不存在，可以注册";
+                }
+                else if (resText == "Empty") {
+                    usernameMsg.innerHTML = "用户名不能为空";
+                }
+                else {
+                    usernameMsg.innerHTML = "用户名已存在";
+                }
+            });
+        }
+
+        function check() {
+            var username = document.getElementById('userName');
+            var usernameMsg = document.getElementById('usernameMsg');
+            if (username.value == "") {
+                usernameMsg.innerHTML = "用户名不能为空";
+                username.focus();
+                return false;
+            }
+            else if (username.value == "admin" || username == "Admin") {
+                usernameMsg.innerHTML = "用户名不能为admin或Admin";
+                username.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="wrappage">
+        <form action="../handlers/Login.ashx" method="post" onsubmit="return check()">
+            <table>
+                <tr>
+                    <td>用户名：</td>
+                    <td><input type="text" id="userName" name="username" onblur="checkUser()"></td>
+                    <td><span id="usernameMsg"></span></td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td><input type="password" name="password"></td>
+                    <td><span id="passwordMsg"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="注册" onclick="check()"></td>                    
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
