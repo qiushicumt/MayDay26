@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GetAmount HTML</title>
+    <style type="text/css">
+        #wrappage { width: 800px; margin: 50px auto; }
+        #spanMsg { color:#ff3e00; font-size:10px; font-weight:bold; }
+    </style>
+    <script src="../js/GetAmount.js"></script>
+    <!--
+    <script>
+        function check() {
+            var oText = document.getElementById('myAmount');
+            var oLabel = document.getElementById('labelMsg');
+            if (oText.value != null && oText.value != "") {
+                var amount = Number(oText.value);
+                if (amount >= 2000) {
+                    oLabel.innerHTML = "取款金额不能大于2000";
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+            else {
+                oLabel.innerHTML = "请输入取款金额";
+                return false;
+            }
+        }
+    </script>
+    -->
+</head>
+<body>
+    <div id="wrappage">
+        <form action="GetAmount.ashx" method="post" onsubmit="return check()">
+            <input type="hidden" name="isPostBack" value="postback">
+            <table>
+                <tr>
+                    <td>请输入取款金额：</td>
+                    <td><input type="text" name="amount" id="myAmount" /></td>
+                    <td><span id="spanMsg"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="取款"  /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

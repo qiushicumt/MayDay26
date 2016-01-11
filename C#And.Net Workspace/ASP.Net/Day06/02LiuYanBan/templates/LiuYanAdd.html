@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>LiuYanAdd HTML</title>
+    <link rel="stylesheet" href="../style/base.css">
+    <script src="../js/LiuYanCheck.js"></script>
+</head>
+<body>
+    <div id="wrappage">
+        #parse("Header.html")
+        <div id="main">
+            <form action="LiuYanAdd.ashx" method="post" onsubmit="return Check()">                
+                <table>
+                    <tr>
+                        <td>昵称：</td>
+                        <td>
+                            <input type="text" name="nickname" id="myNickName">
+                            <input type="checkbox" name="noname" id="myNoName"><label id="nameCheckBox" for="myNoName">匿名</label>
+                            <span class="errorMsg" id="nicknameError"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>标题：</td>
+                        <td>
+                            <input type="text" name="texttitle" id="textTitle">
+                            <span class="errorMsg" id="titleError"></span>
+                        </td>                        
+                    </tr>
+                    <tr>
+                        <td>正文：</td>
+                        <td>
+                            <textarea name="publishtext" id="publishText" rows="10" cols="50"></textarea>
+                            <span class="errorMsg" id="textError"></span>
+                        </td>                        
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="发表" name="publish"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        #parse("Footer.html")
+    </div>
+</body>
+</html>

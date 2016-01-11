@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Client", "01Client\01Client.csproj", "{B86BD064-3562-4C34-A1B0-82DBB365B56C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02LiuYanBan", "02LiuYanBan\02LiuYanBan.csproj", "{0371A026-C399-44BD-A814-FA4D0A1D47AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B86BD064-3562-4C34-A1B0-82DBB365B56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B86BD064-3562-4C34-A1B0-82DBB365B56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B86BD064-3562-4C34-A1B0-82DBB365B56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B86BD064-3562-4C34-A1B0-82DBB365B56C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0371A026-C399-44BD-A814-FA4D0A1D47AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0371A026-C399-44BD-A814-FA4D0A1D47AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0371A026-C399-44BD-A814-FA4D0A1D47AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0371A026-C399-44BD-A814-FA4D0A1D47AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

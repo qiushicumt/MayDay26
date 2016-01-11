@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>LiuYanShow HTML</title>
+    <link rel="stylesheet" href="../style/base.css">
+</head>
+<body>
+    <div id="wrappage">
+        #parse("Header.html")
+        <div id="main">
+            
+            <table class="showTable">
+                #foreach($t in $Data)
+                <tr>
+                    <td>标题：</td>
+                    <td>$t.TextTitle</td>
+                </tr>
+                <tr>
+                    <td>昵称：</td>
+                    <td>$t.NickName</td>
+                </tr>
+                <tr>
+                    <td>发表日期：</td>
+                    <td>$t.PublishTime</td>
+                </tr>
+                <tr>
+                    <td>客户端IP：</td>
+                    <td>$t.ClientIP</td>
+                </tr>
+                <tr>
+                    <th rowspan="2"><span>$t.PublishText</span></th>
+                </tr>
+                #end
+            </table>
+        </div>
+        #parse("Footer.html")
+    </div>
+</body>
+</html>

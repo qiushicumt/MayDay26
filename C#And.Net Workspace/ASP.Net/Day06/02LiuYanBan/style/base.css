@@ -1,0 +1,12 @@
+﻿/* Base Style */
+body , ul, li, ol, p, div { margin:0; padding:0; }
+ul, ol { list-style:none; }
+a, a:hover { text-decoration:none; }
+a, a:visited { color:#000; }
+
+#wrappage { width:600px; margin:10px auto 25px; }
+#header { margin-bottom: 20px; text-align:left; }
+#footer { margin-top: 25px; text-align:center; }
+
+.showTable tr { padding:15px; border-bottom:1px dashed #ccc; }
+.errorMsg { font-size:10px; color:#ff3a04; font-weight:bold; }
