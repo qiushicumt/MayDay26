@@ -25,8 +25,17 @@ namespace _02LiuYanBan.handlers
             else
             {
                 string nickName = context.Request["nickname"];
-                string textTitle = context.Request["texttitle"];
-                Boolean isNoName = Convert.ToBoolean(context.Request["noname"]);
+                string textTitle = context.Request["texttitle"];                
+                string checkName = context.Request["noname"];
+                Boolean isNoName = false;
+                if (checkName == "on")
+                {
+                    isNoName = true;
+                }
+                else
+                {
+                    isNoName = false;
+                }
                 string publishText = context.Request["publishtext"];
                 DateTime publishTime = DateTime.Now;                    //  DateTime.Now属性可以获得当前时间
                 string clientIP = context.Request.UserHostAddress;      //  context.Request.UserHostAddress属性可以从socket中获取客户端的IP
@@ -38,7 +47,7 @@ namespace _02LiuYanBan.handlers
                     new SqlParameter("@PublishText", publishText),
                     new SqlParameter("@IsNoName", isNoName),
                     new SqlParameter("@TextTitle", textTitle));
-                context.Response.Redirect("LiuYanShow.ashx");
+                context.Response.Redirect("LiuYanShow.ashx");                  
             }
         }
 
