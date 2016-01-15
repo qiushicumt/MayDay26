@@ -8,5 +8,7 @@ a, a:visited { color:#000; }
 #header { margin-bottom: 20px; text-align:left; }
 #footer { margin-top: 25px; text-align:center; }
 
-.showTable tr { padding:15px; border-bottom:1px dashed #ccc; }
+.showTable tr:first-child { padding-top:15px; border-bottom:1px dashed #ccc; }
 .errorMsg { font-size:10px; color:#ff3a04; font-weight:bold; }
+
+.aBtn { display: inline-block; border: 1px solid #ccc; font-size: 12px; width: 65px; height: 20px; background-color: #fff542; text-align:center; padding-top:6px;}

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>VedioShow HTML</title>
+    <link rel="stylesheet" href="../style/base.css">
+</head>
+<body>
+    <div id="wrappage">
+        #parse("Header.html")
+        <div id="main">
+            <section>
+                <video src="../contents/MV1.mp4" autoplay width="426" height="240"></video>
+            </section>
+            <section>
+                <textarea id="commentMsg" name="msg"></textarea>
+                <input type="button" id="submit" value="发表评论" />
+            </section>
+            <section>
+                <table>
+                    #foreach($m in $Data)
+                    <tr>
+                        <td>用户名：</td>
+                    </tr>
+                    <tr>
+                        <td>发表日期：$m.CommentTime</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    #end
+                </table>
+            </section>
+        </div>
+        #parse("Footer.html")
+    </div>
+</body>
+</html>

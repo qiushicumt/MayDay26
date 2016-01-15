@@ -5,6 +5,12 @@
     <title>LiuYanAdd HTML</title>
     <link rel="stylesheet" href="../style/base.css">
     <script src="../js/LiuYanCheck.js"></script>
+    <script src="../js/ckeditor/ckeditor.js"></script>
+    <script>
+        window.onload = function () {
+            CKEDITOR.replace('publishText');
+        }
+    </script>
 </head>
 <body>
     <div id="wrappage">
@@ -29,10 +35,13 @@
                     </tr>
                     <tr>
                         <td>正文：</td>
-                        <td>
+                        <td></td>                        
+                    </tr>
+                    <tr>
+                        <td colspan="2">
                             <textarea name="publishtext" id="publishText" rows="10" cols="50"></textarea>
                             <span class="errorMsg" id="textError"></span>
-                        </td>                        
+                        </td>
                     </tr>
                     <tr>
                         <td></td>

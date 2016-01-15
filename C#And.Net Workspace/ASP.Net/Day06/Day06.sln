@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Client", "01Client\01Clie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02LiuYanBan", "02LiuYanBan\02LiuYanBan.csproj", "{0371A026-C399-44BD-A814-FA4D0A1D47AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03Comment", "03Comment\03Comment.csproj", "{512852CF-87B7-4193-95BC-842D1C03BD36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{0371A026-C399-44BD-A814-FA4D0A1D47AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0371A026-C399-44BD-A814-FA4D0A1D47AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0371A026-C399-44BD-A814-FA4D0A1D47AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{512852CF-87B7-4193-95BC-842D1C03BD36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{512852CF-87B7-4193-95BC-842D1C03BD36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{512852CF-87B7-4193-95BC-842D1C03BD36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{512852CF-87B7-4193-95BC-842D1C03BD36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

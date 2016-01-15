@@ -9,7 +9,7 @@
     <div id="wrappage">
         #parse("Header.html")
         <div id="main">
-            
+            <a href="LiuYanAdd.ashx" class="aBtn">新增留言</a>
             <table class="showTable">
                 #foreach($t in $Data)
                 <tr>
@@ -18,7 +18,13 @@
                 </tr>
                 <tr>
                     <td>昵称：</td>
-                    <td>$t.NickName</td>
+                    <td>
+                        #if($t.IsNoName==false)
+                        $t.NickName
+                        #else
+                        匿名
+                        #end
+                    </td>
                 </tr>
                 <tr>
                     <td>发表日期：</td>
@@ -29,8 +35,29 @@
                     <td>$t.ClientIP</td>
                 </tr>
                 <tr>
-                    <th rowspan="2"><span>$t.PublishText</span></th>
+                    <td colspan="2"><span>$t.PublishText</span></td>
                 </tr>
+                <!--
+                <tr>
+                    <td>标题：$t.TextTitle</td>
+                </tr>
+                <tr>
+                    #if($t.IsNoName==false)
+                    <td>昵称：$t.NickName</td>
+                    #else
+                    <td>昵称：匿名</td>
+                    #end
+                </tr>
+                <tr>
+                    <td>发表日期：$t.PublishTime</td>
+                </tr>
+                <tr>
+                    <td>客户端IP：$t.ClientIP</td>
+                </tr>
+                <tr>
+                    <td><span>$t.PublishText</span></td>
+                </tr>
+                -->
                 #end
             </table>
         </div>

@@ -3,7 +3,7 @@
     var nicknameError = document.getElementById('nicknameError');
     var titleText = document.getElementById('textTitle');
     var titleError = document.getElementById('titleError');
-    var textArea = document.getElementById('publishText');
+    var textArea = document.getElementById('cke_publishText');
     var textError = document.getElementById('textError');
     if (nicknameText.value == null || nicknameText.value == "") {
         nicknameError.innerHTML = "用户昵称不能为空";
@@ -26,7 +26,7 @@
         }
     }
     if (textArea.value == null || textArea.value == "") {
-        textError.innerHTML = "标题不能为空";
+        textError.innerHTML = "正文不能为空";
         textArea.focus();
         return false;
     }
