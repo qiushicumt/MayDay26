@@ -1,0 +1,73 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* Reset CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+     background:#f6f6f6 url(../images/body_bg.gif) top repeat-x;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration:none;
+}
+/* Clear浮动 */
+.clearfix:before, .clearfix:after {content:"";display:block;}
+.clearfix:after {clear:both;}
+.clearfix {*zoom:1;}
+
+/* Base CSS */
+#wrappage {
+    width:980px;
+    margin:0 auto;
+}
+    /* Header */
+#header-top { position:relative; }
+.header-lan { position:absolute; top:15px; right:30px; }
+.header-lan img { display:inline-block; margin-right:5px; }
+.header-lan a { font-family: Tahoma,Helvetica,Arial; font-size: 12px; display:inline-block; }
+.header-lan a, .header-lan a:visited { color:#000; }
+.header-lan a:hover { color:#488afd; }
+
+#header-nav { background: url(../images/MainMenu_bg.gif); width:980px; height:38px; font-size:13px; }
+#header-nav ul li {display:inline-block;}
+    /* Footer */
+#footer {
+    font-size:12px;
+    text-align:center;
+    font-family:Tahoma,Helvetica,Arial;
+}
+#footer p {margin-bottom:5px;}
+#footer a, #footer a:visited { color:#000; }
+#footer a:hover { color:#488afd; }
