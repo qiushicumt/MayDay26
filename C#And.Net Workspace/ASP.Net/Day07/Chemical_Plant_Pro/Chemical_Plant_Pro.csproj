@@ -61,9 +61,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="html\Admin\Footer.html" />
+    <Content Include="html\Admin\Header.html" />
+    <Content Include="html\Admin\ProductList.html" />
     <Content Include="html\Front\Footer.html" />
     <Content Include="html\Front\Header.html" />
-    <Content Include="html\Front\index.html" />
+    <Content Include="html\Front\Index.html" />
     <Content Include="images\40.png" />
     <Content Include="images\banner01.jpg" />
     <Content Include="images\banner02.jpg" />
@@ -91,6 +94,24 @@
     <Content Include="images\site_nav.gif" />
     <Content Include="images\site_title.gif" />
     <Content Include="images\tel.gif" />
+    <Content Include="images\productImg\20110611014993929392.jpg" />
+    <Content Include="images\productImg\20110611021745864586.jpg" />
+    <Content Include="images\productImg\20110611022328652865.jpg" />
+    <Content Include="images\productImg\20110611023092419241.jpg" />
+    <Content Include="images\productImg\20110611023489748974.jpg" />
+    <Content Include="images\productImg\20110611023652335233.jpg" />
+    <Content Include="images\productImg\20110611024088718871.jpg" />
+    <Content Include="images\productImg\20110611024280778077.jpg" />
+    <Content Include="images\productImg\20110611025642914291.jpg" />
+    <Content Include="images\productImg\20110611030589108910.jpg" />
+    <Content Include="images\productImg\20110611031086798679.jpg" />
+    <Content Include="images\productImg\20110611031134093409.jpg" />
+    <Content Include="images\productImg\20110611031576567656.jpg" />
+    <Content Include="images\productImg\2011061103170236236.jpg" />
+    <Content Include="images\productImg\2011061103180984984.jpg" />
+    <Content Include="images\productImg\20110611032067186718.jpg" />
+    <Content Include="images\productImg\20110611032516391639.jpg" />
+    <Content Include="images\productImg\20110611032733583358.jpg" />
     <Content Include="images\v_line.gif" />
     <Content Include="images\v_line2.gif" />
     <Content Include="NVelocity.dll" />
@@ -98,6 +119,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="handlers\adminProductList.ashx.cs">
+      <DependentUpon>adminProductList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="handlers\frontIndex.ashx.cs">
       <DependentUpon>frontIndex.ashx</DependentUpon>
     </Compile>
@@ -107,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="handlers\frontIndex.ashx" />
+    <Content Include="handlers\adminProductList.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -115,7 +140,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="html\Admin\" />
     <Folder Include="js\" />
   </ItemGroup>
   <PropertyGroup>

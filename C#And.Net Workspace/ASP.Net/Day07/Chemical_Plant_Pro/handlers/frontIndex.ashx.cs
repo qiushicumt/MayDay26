@@ -15,7 +15,7 @@ namespace Chemical_Plant_Pro.handlers
         {
             context.Response.ContentType = "text/html";
             string html = null;
-            html = NVelocity.ReturnHtml("/Front/index.html", null);
+            html = NVelocity.ReturnHtml("/Front/Index.html", null);
             context.Response.Write(html);
         }
 

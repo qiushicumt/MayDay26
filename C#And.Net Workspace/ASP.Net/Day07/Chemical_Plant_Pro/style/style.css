@@ -48,10 +48,7 @@ a {
 .clearfix {*zoom:1;}
 
 /* Base CSS */
-#wrappage {
-    width:980px;
-    margin:0 auto;
-}
+#wrappage { width:980px; margin:0 auto; }
     /* Header */
 #header-top { position:relative; }
 .header-lan { position:absolute; top:15px; right:30px; }
@@ -59,15 +56,10 @@ a {
 .header-lan a { font-family: Tahoma,Helvetica,Arial; font-size: 12px; display:inline-block; }
 .header-lan a, .header-lan a:visited { color:#000; }
 .header-lan a:hover { color:#488afd; }
-
 #header-nav { background: url(../images/MainMenu_bg.gif); width:980px; height:38px; font-size:13px; }
 #header-nav ul li {display:inline-block;}
     /* Footer */
-#footer {
-    font-size:12px;
-    text-align:center;
-    font-family:Tahoma,Helvetica,Arial;
-}
-#footer p {margin-bottom:5px;}
+#footer { font-size:12px; text-align:center; font-family:Tahoma,Helvetica,Arial; }
+#footer p { margin-bottom:5px; }
 #footer a, #footer a:visited { color:#000; }
 #footer a:hover { color:#488afd; }
