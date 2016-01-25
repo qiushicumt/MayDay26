@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ChemicalPlant Admin</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />      <!-- 应用于在移动设备上的初始化 -->
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+
+    <!-- 引入全局样式 -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+    <link href="../js/metronic/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../js/metronic/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../js/metronic/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../js/metronic/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="../js/metronic/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- 全局样式结束 -->
+    <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+    <link href="../js/metronic/assets/global/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
+    <link href="../js/metronic/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
+    <link href="../js/metronic/assets/global/plugins/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"/>
+    <link href="../js/metronic/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css"/>
+    <!-- END PAGE LEVEL PLUGIN STYLES -->
+    <!-- BEGIN PAGE STYLES -->
+    <link href="../js/metronic/assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
+    <!-- END PAGE STYLES -->
+    <!-- BEGIN THEME STYLES -->
+    <link href="../js/metronic/assets/global/css/components.css" rel="stylesheet" type="text/css"/>
+    <link href="../js/metronic/assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="../js/metronic/assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="../js/metronic/assets/admin/layout/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="../js/metronic/assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+    <!-- END THEME STYLES -->
+    <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+    <div id="wrappage">
+        #parse("Header.html")
+        <div class="clearfix"></div>
+        <div class="page-container" style="margin-top:46px;">
+            #parse("SideBar.html")
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <h3 class="page-title">产品管理&nbsp;<small>产品列表</small></h3>
+                    <div class="page-bar">
+                        <ul class="page-breadcrumb">					        
+					        <li>
+						        <a href="#">产品管理</a>
+                                <i class="fa fa-angle-right"></i>
+					        </li>
+				        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="portlet box blue">
+						        <div class="portlet-title">
+							        <div class="caption">
+								        <i class="icon-handbag"></i>产品列表
+							        </div>							    
+						        </div>
+                                <div class="portlet-body">
+                                    <div class="table-toolbar">
+                                        <div class="row">
+                                            <div class="col-md-6">
+										        <div class="btn-group">
+											        <button id="sample_editable_1_new" class="btn green">
+											        Add New <i class="fa fa-plus"></i>
+											        </button>
+										        </div>
+									        </div>
+                                        </div>
+                                    </div>
+                                    <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+							            <thead>
+							                <tr role="row" class="heading">
+									            <th width="1%">
+										            <input type="checkbox" class="group-checkable">
+									            </th>
+									            <th width="24%">
+										             产品ID
+									            </th>
+									            <th width="25%">
+										             产品名称
+									            </th>
+									            <th width="25%">
+										             产品类别
+									            </th>									    
+									            <th width="25%">
+										             操作
+									            </th>
+								            </tr>
+							            </thead>
+                                        <tbody>
+							                <tr>
+								                <td width="1%">
+									                 <input type="checkbox" class="group-checkable">
+								                </td>
+								                <td width="24%">
+									                 Alex Nilson
+								                </td>
+								                <td width="25%">
+									                 1234
+								                </td>
+								                <td width="25%">
+									                 power user
+								                </td>
+								                <td width="25%">
+									                <a class="edit" href="javascript:;">
+									                Edit </a>
+								                </td>								                
+							                </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="portlet-body">
+                                <div class="table-container">
+                                    <table class="table table-striped table-bordered table-hover" id="datatable_products">
+								    <thead>
+								    <tr role="row" class="heading">
+									    <th width="1%">
+										    <input type="checkbox" class="group-checkable">
+									    </th>
+									    <th width="24%">
+										     产品ID
+									    </th>
+									    <th width="25%">
+										     产品名称
+									    </th>
+									    <th width="25%">
+										     产品类别
+									    </th>									    
+									    <th width="25%">
+										     操作
+									    </th>
+								    </tr>
+								    
+                                    <tr role="row" class="filter">
+									    <td>
+                                            sdawwd
+									    </td>
+									    <td>
+										    <input type="text" class="form-control form-filter input-sm" name="product_id">
+									    </td>
+									    <td>
+										    <input type="text" class="form-control form-filter input-sm" name="product_name">
+									    </td>
+									    <td>
+										    <select name="product_category" class="form-control form-filter input-sm">
+											    <option value="">Select...</option>
+											    <option value="1">Mens</option>
+											    <option value="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Footwear</option>
+											    <option value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clothing</option>
+											    <option value="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accessories</option>
+											    <option value="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fashion Outlet</option>
+											    <option value="6">Football Shirts</option>
+											    <option value="7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Premier League</option>
+											    <option value="8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Football League</option>
+											    <option value="9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Serie A</option>
+											    <option value="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bundesliga</option>
+											    <option value="11">Brands</option>
+											    <option value="12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adidas</option>
+											    <option value="13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nike</option>
+											    <option value="14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Airwalk</option>
+											    <option value="15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA Pro</option>
+											    <option value="16">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kangol</option>
+										    </select>
+									    </td>
+									    <td>
+										    <div class="margin-bottom-5">
+											    <input type="text" class="form-control form-filter input-sm" name="product_price_from" placeholder="From"/>
+										    </div>
+										    <input type="text" class="form-control form-filter input-sm" name="product_price_to" placeholder="To"/>
+									    </td>
+									    <td>
+										    <div class="margin-bottom-5">
+											    <input type="text" class="form-control form-filter input-sm" name="product_quantity_from" placeholder="From"/>
+										    </div>
+										    <input type="text" class="form-control form-filter input-sm" name="product_quantity_to" placeholder="To"/>
+									    </td>
+									    <td>
+										    <div class="input-group date date-picker margin-bottom-5" data-date-format="dd/mm/yyyy">
+											    <input type="text" class="form-control form-filter input-sm" readonly name="product_created_from" placeholder="From">
+											    <span class="input-group-btn">
+											    <button class="btn btn-sm default" type="button"><i class="fa fa-calendar"></i></button>
+											    </span>
+										    </div>
+										    <div class="input-group date date-picker" data-date-format="dd/mm/yyyy">
+											    <input type="text" class="form-control form-filter input-sm" readonly name="product_created_to " placeholder="To">
+											    <span class="input-group-btn">
+											    <button class="btn btn-sm default" type="button"><i class="fa fa-calendar"></i></button>
+											    </span>
+										    </div>
+									    </td>
+									    <td>
+										    <select name="product_status" class="form-control form-filter input-sm">
+											    <option value="">Select...</option>
+											    <option value="published">Published</option>
+											    <option value="notpublished">Not Published</option>
+											    <option value="deleted">Deleted</option>
+										    </select>
+									    </td>
+									    <td>
+										    <div class="margin-bottom-5">
+											    <button class="btn btn-sm yellow filter-submit margin-bottom"><i class="fa fa-search"></i> Search</button>
+										    </div>
+										    <button class="btn btn-sm red filter-cancel"><i class="fa fa-times"></i> Reset</button>
+									    </td>
+								    </tr>
+                                    
+								    </thead>
+								    <tbody>
+								    </tbody>
+								    </table>
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        #parse("Footer.html")
+    </div>
+    #parse("PageEnds.html")
+</body>
+</html>

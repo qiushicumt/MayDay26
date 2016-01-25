@@ -39,12 +39,17 @@
 <body>
     <div id="wrappage">
         #parse("Header.html")
-        #parse("SideBar.html")
-        <div class="page-content-wrapper">
-            <div class="page-content">
+        <div class="clearfix"></div>
+        <div class="page-container" style="margin-top:46px;">
+            #parse("SideBar.html")
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <h1>苏州商旅网通科技有限公司</h1>
+                </div>
             </div>
         </div>
         #parse("Footer.html")
     </div>
+    #parse("PageEnds.html")
 </body>
 </html>

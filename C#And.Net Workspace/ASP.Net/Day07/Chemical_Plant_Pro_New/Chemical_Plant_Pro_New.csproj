@@ -2853,15 +2853,20 @@
     <Content Include="js\metronic\templates\frontend\shop-wishlist.html" />
     <Content Include="NVelocity.dll" />
     <Content Include="templates\Admin\adminIndex.html" />
+    <Content Include="templates\Admin\productList.html" />
     <Content Include="templates\Content.html" />
     <Content Include="templates\Footer.html" />
     <Content Include="templates\Header.html" />
+    <Content Include="templates\PageEnds.html" />
     <Content Include="templates\SideBar.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="handlers\adminIndex.ashx.cs">
       <DependentUpon>adminIndex.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\productList.ashx.cs">
+      <DependentUpon>productList.ashx</DependentUpon>
     </Compile>
     <Compile Include="NVelocity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -3219,6 +3224,7 @@
     <Content Include="js\metronic\templates\admin\demo\typeahead_nhl.json" />
     <Content Include="js\metronic\templates\admin\demo\username_checker.php" />
     <Content Include="handlers\adminIndex.ashx" />
+    <Content Include="handlers\productList.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
