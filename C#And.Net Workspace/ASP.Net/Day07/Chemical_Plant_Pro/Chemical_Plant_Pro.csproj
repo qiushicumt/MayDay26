@@ -63,6 +63,7 @@
   <ItemGroup>
     <Content Include="html\Admin\Footer.html" />
     <Content Include="html\Admin\Header.html" />
+    <Content Include="html\Admin\ProductEdit.html" />
     <Content Include="html\Admin\ProductList.html" />
     <Content Include="html\Front\Footer.html" />
     <Content Include="html\Front\Header.html" />
@@ -119,6 +120,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="handlers\adminProductEdit.ashx.cs">
+      <DependentUpon>adminProductEdit.ashx</DependentUpon>
+    </Compile>
     <Compile Include="handlers\adminProductList.ashx.cs">
       <DependentUpon>adminProductList.ashx</DependentUpon>
     </Compile>
@@ -132,6 +136,7 @@
   <ItemGroup>
     <Content Include="handlers\frontIndex.ashx" />
     <Content Include="handlers\adminProductList.ashx" />
+    <Content Include="handlers\adminProductEdit.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chemical_Plant_Pro", "Chemical_Plant_Pro\Chemical_Plant_Pro.csproj", "{5D92527E-B9C0-4A66-9B40-A61DDB2ACCB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{CEDB7C73-0E19-4198-A994-02FC4D17A6FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chemical_Plant_Pro_New", "Chemical_Plant_Pro_New\Chemical_Plant_Pro_New.csproj", "{077CCDC3-F1F4-4401-938E-A5CC95C82A2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{5D92527E-B9C0-4A66-9B40-A61DDB2ACCB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D92527E-B9C0-4A66-9B40-A61DDB2ACCB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D92527E-B9C0-4A66-9B40-A61DDB2ACCB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEDB7C73-0E19-4198-A994-02FC4D17A6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEDB7C73-0E19-4198-A994-02FC4D17A6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEDB7C73-0E19-4198-A994-02FC4D17A6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEDB7C73-0E19-4198-A994-02FC4D17A6FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077CCDC3-F1F4-4401-938E-A5CC95C82A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077CCDC3-F1F4-4401-938E-A5CC95C82A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077CCDC3-F1F4-4401-938E-A5CC95C82A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077CCDC3-F1F4-4401-938E-A5CC95C82A2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

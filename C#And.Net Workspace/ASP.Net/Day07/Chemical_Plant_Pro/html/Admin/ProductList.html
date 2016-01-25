@@ -25,15 +25,20 @@
     <div id="wrappage">
         #parse("/Admin/Header.html")
         <div id="main">
-            <table>
+            <a href="adminProductEdit.ashx?action=addProduct" class="aButton">新增产品</a>
+            <table class="adminProListTable">
                 <tr>
-                    <td>产品名称</td>
-                    <td>产品类别</td>
+                    <td style="width:20%;">产品名称</td>
+                    <td style="width:50%;">产品类别</td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 #foreach($p in $Data.Products)
                 <tr>
-                    <td>$p.Name</td>
-                    <td>$p.CategoryId</td>
+                    <td style="width:20%;">$p.ProductName</td>
+                    <td style="width:50%;">$p.CategoryName</td>
+                    <td style="width:15%;"><a href="adminProductEdit.ashx?action=editProduct&id=$p.Id" class="aButton">编辑</a></td>
+                    <td style="width:15%;"><a href="adminProductEdit.ashx?action=deleteProduct&id=$p.Id" class="aButton">删除</a></td>
                 </tr>
                 #end
             </table>

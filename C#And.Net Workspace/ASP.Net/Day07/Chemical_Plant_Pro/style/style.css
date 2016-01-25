@@ -39,9 +39,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-a {
+a, a:hover {
     text-decoration:none;
 }
+
+
 /* Clear浮动 */
 .clearfix:before, .clearfix:after {content:"";display:block;}
 .clearfix:after {clear:both;}
@@ -63,3 +65,10 @@ a {
 #footer p { margin-bottom:5px; }
 #footer a, #footer a:visited { color:#000; }
 #footer a:hover { color:#488afd; }
+    /* A Button */
+.aButton {text-decoration: none; font-size: 12px; display: inline-block; width: 65px; height: 20px; background-color: #ccc; border: 1px solid #808080; text-align: center; color: #000; }
+
+/* Admin ProductList */
+.adminProListTable { width: 600px; margin: 10px auto; }
+
+/* Admin ProductEdit */
