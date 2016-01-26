@@ -44,12 +44,23 @@
             #parse("SideBar.html")
             <div class="page-content-wrapper">
                 <div class="page-content">
-                    <h3 class="page-title">产品管理&nbsp;<small>产品列表</small></h3>
+                    <h3 class="page-title">
+                        #if($Data.Action=="addNew")
+                        产品编辑&nbsp;<small>产品新增</small>
+                        #else
+                        产品编辑&nbsp;<small>产品编辑</small>
+                        #end
+                    </h3>
                     <div class="page-bar">
                         <ul class="page-breadcrumb">					        
 					        <li>
-						        <a href="#">产品管理</a>
+                                #if($Data.Action=="addNew")
+						        <a href="#">产品新增</a>
                                 <i class="fa fa-angle-right"></i>
+                                #else if($Data.Action=="edit")
+                                <a href="#">产品编辑</a>
+                                <i class="fa fa-angle-right"></i>
+                                #end
 					        </li>
 				        </ul>
                     </div>
@@ -58,21 +69,27 @@
                             <div class="portlet box blue">
 						        <div class="portlet-title">
 							        <div class="caption">
-								        <i class="icon-handbag"></i>产品列表
+                                        #if($Data.Action=="addNew")
+								        <i class="icon-handbag"></i>产品新增
+                                        #else if($Data.Action=="edit")
+                                        <i class="icon-handbag"></i>产品编辑
+                                        #end
 							        </div>							    
 						        </div>
                                 <div class="portlet-body">
+                                    <!--
                                     <div class="table-toolbar">
                                         <div class="row">
                                             <div class="col-md-6">
 										        <div class="btn-group">
-                                                    <a href="productEdit.ashx?action=addNew" class="btn green">
-                                                        产品新增 <i class="fa fa-plus"></i>
-                                                    </a>											        
+											        <button id="sample_editable_1_new" class="btn green">
+											        Add New <i class="fa fa-plus"></i>
+											        </button>
 										        </div>
 									        </div>
                                         </div>
                                     </div>
+                                    
                                     <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
 							            <thead>
 							                <tr role="row" class="heading">
@@ -97,7 +114,7 @@
                                             #foreach($p in $Data.Products)
 							                <tr>
 								                <td width="1%">
-									                 <!--<input type="checkbox" class="group-checkable">-->
+									                 <input type="checkbox" class="group-checkable">
                                                     <input type="checkbox" name="proCheck" >
 								                </td>
 								                <td width="24%">
@@ -121,6 +138,39 @@
                                             #end
                                         </tbody>
                                     </table>
+                                        -->
+                                    <form action="productEdit.ashx" method="post" enctype="multipart/form-data" >
+                                        <table>
+                                            <tr>
+                                                <td width="30%"><label>产品名称</label></td>
+                                                <td width="70%"><input type="text" name="productName"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30%"><label>产品类别</label></td>
+                                                <td width="70%">
+                                                    <select name="proCategory">
+                                                        #foreach($pc in $Data.ProCategories)
+                                                        <option>$pc.Name</option>                                                       
+                                                        #end
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30%"><label>产品图片</label></td>
+                                                <td width="70%"><input type="file" name="proImage"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30%"><label>产品描述</label></td>
+                                                <td width="70%"> 
+                                                    <textarea rows="10" cols="50" name="proDescription"></textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td><input type="submit" name="save" value="保存"></td>
+                                            </tr>
+                                        </table>
+                                    </form>
                                 </div>
                             </div>
                             <!--

@@ -62,6 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\logo.png" />
+    <Content Include="images\productImg\20110611023092419241.jpg" />
+    <Content Include="images\productImg\20110611023489748974.jpg" />
+    <Content Include="images\productImg\20110611023652335233.jpg" />
+    <Content Include="images\productImg\20110611030589108910.jpg" />
     <Content Include="js\metronic\assets\admin\layout\css\custom.css" />
     <Content Include="js\metronic\assets\admin\layout\css\layout.css" />
     <Content Include="js\metronic\assets\admin\layout\css\themes\blue.css" />
@@ -2853,6 +2857,7 @@
     <Content Include="js\metronic\templates\frontend\shop-wishlist.html" />
     <Content Include="NVelocity.dll" />
     <Content Include="templates\Admin\adminIndex.html" />
+    <Content Include="templates\Admin\productEdit.html" />
     <Content Include="templates\Admin\productList.html" />
     <Content Include="templates\Content.html" />
     <Content Include="templates\Footer.html" />
@@ -2864,6 +2869,9 @@
   <ItemGroup>
     <Compile Include="handlers\adminIndex.ashx.cs">
       <DependentUpon>adminIndex.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\productEdit.ashx.cs">
+      <DependentUpon>productEdit.ashx</DependentUpon>
     </Compile>
     <Compile Include="handlers\productList.ashx.cs">
       <DependentUpon>productList.ashx</DependentUpon>
@@ -3225,6 +3233,7 @@
     <Content Include="js\metronic\templates\admin\demo\username_checker.php" />
     <Content Include="handlers\adminIndex.ashx" />
     <Content Include="handlers\productList.ashx" />
+    <Content Include="handlers\productEdit.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
