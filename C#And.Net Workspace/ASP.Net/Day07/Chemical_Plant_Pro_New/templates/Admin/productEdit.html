@@ -77,69 +77,8 @@
 							        </div>							    
 						        </div>
                                 <div class="portlet-body">
-                                    <!--
-                                    <div class="table-toolbar">
-                                        <div class="row">
-                                            <div class="col-md-6">
-										        <div class="btn-group">
-											        <button id="sample_editable_1_new" class="btn green">
-											        Add New <i class="fa fa-plus"></i>
-											        </button>
-										        </div>
-									        </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
-							            <thead>
-							                <tr role="row" class="heading">
-									            <th width="1%">
-										            <input type="checkbox" class="group-checkable">
-									            </th>
-									            <th width="24%">
-										             产品ID
-									            </th>
-									            <th width="25%">
-										             产品名称
-									            </th>
-									            <th width="25%">
-										             产品类别
-									            </th>									    
-									            <th width="25%">
-										             操作
-									            </th>
-								            </tr>
-							            </thead>
-                                        <tbody>
-                                            #foreach($p in $Data.Products)
-							                <tr>
-								                <td width="1%">
-									                 <input type="checkbox" class="group-checkable">
-                                                    <input type="checkbox" name="proCheck" >
-								                </td>
-								                <td width="24%">
-									                $p.Id
-								                </td>
-								                <td width="25%">
-									                $p.Name
-								                </td>
-								                <td width="25%">
-                                                    #foreach($pc in $Data.ProCategories)
-                                                        #if($pc.Id == $p.CategoryId)
-                                                            $pc.Name                                                        
-                                                        #end
-									                #end
-								                </td>
-								                <td width="25%">
-									                <a href="productEdit.ashx?action=edit&Id=$p.Id" class="btn default btn-xs blue"><i class="fa fa-edit"></i> 产品编辑 </a>
-                                                    <a href="productEdit.ashx?action=delete&Id=$p.Id" class="btn default btn-xs black"><i class="fa fa-trash-o"></i> 产品删除 </a>
-								                </td>								                
-							                </tr>
-                                            #end
-                                        </tbody>
-                                    </table>
-                                        -->
-                                    <form action="productEdit.ashx" method="post" enctype="multipart/form-data" >
+                                    #if($Data.Action=="addNew")
+                                    <form action="productEdit.ashx?action=addNew" method="post" enctype="multipart/form-data" >
                                         <table>
                                             <tr>
                                                 <td width="30%"><label>产品名称</label></td>
@@ -150,7 +89,7 @@
                                                 <td width="70%">
                                                     <select name="proCategory">
                                                         #foreach($pc in $Data.ProCategories)
-                                                        <option>$pc.Name</option>                                                       
+                                                        <option value="$pc.Id">$pc.Name</option>                                                       
                                                         #end
                                                     </select>
                                                 </td>
@@ -171,6 +110,40 @@
                                             </tr>
                                         </table>
                                     </form>
+                                    #else
+                                    <form action="productEdit.ashx?action=edit&Id=$Data.Products.Id" method="post" enctype="multipart/form-data" >
+                                        <table>
+                                            <tr>
+                                                <td width="30%"><label>产品名称</label></td>
+                                                <td width="70%"><input type="text" name="productName"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30%"><label>产品类别</label></td>
+                                                <td width="70%">
+                                                    <select name="proCategory">
+                                                        #foreach($pc in $Data.ProCategories)
+                                                        <option value="$pc.Id">$pc.Name</option>                                                       
+                                                        #end
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30%"><label>产品图片</label></td>
+                                                <td width="70%"><input type="file" name="proImage"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30%"><label>产品描述</label></td>
+                                                <td width="70%"> 
+                                                    <textarea rows="10" cols="50" name="proDescription"></textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td><input type="submit" name="save" value="保存"></td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                    #end
                                 </div>
                             </div>
                             <!--
