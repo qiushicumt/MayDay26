@@ -57,7 +57,7 @@
                                 #if($Data.Action=="addNew")
 						        <a href="#">产品新增</a>
                                 <i class="fa fa-angle-right"></i>
-                                #else if($Data.Action=="edit")
+                                #else
                                 <a href="#">产品编辑</a>
                                 <i class="fa fa-angle-right"></i>
                                 #end
@@ -71,7 +71,7 @@
 							        <div class="caption">
                                         #if($Data.Action=="addNew")
 								        <i class="icon-handbag"></i>产品新增
-                                        #else if($Data.Action=="edit")
+                                        #else
                                         <i class="icon-handbag"></i>产品编辑
                                         #end
 							        </div>							    
@@ -88,7 +88,7 @@
                                                 <td width="30%"><label>产品类别</label></td>
                                                 <td width="70%">
                                                     <select name="proCategory">
-                                                        #foreach($pc in $Data.ProCategories)
+                                                        #foreach($pc in $Data.productCategories)
                                                         <option value="$pc.Id">$pc.Name</option>                                                       
                                                         #end
                                                     </select>
@@ -111,18 +111,22 @@
                                         </table>
                                     </form>
                                     #else
-                                    <form action="productEdit.ashx?action=edit&Id=$Data.Products.Id" method="post" enctype="multipart/form-data" >
+                                    <form action="productEdit.ashx?action=edit&Id=$Data.Product.Id" method="post" enctype="multipart/form-data" >
                                         <table>
                                             <tr>
                                                 <td width="30%"><label>产品名称</label></td>
-                                                <td width="70%"><input type="text" name="productName"></td>
+                                                <td width="70%"><input type="text" name="productName" value="$Data.Product.Name"></td>
                                             </tr>
                                             <tr>
                                                 <td width="30%"><label>产品类别</label></td>
                                                 <td width="70%">
                                                     <select name="proCategory">
                                                         #foreach($pc in $Data.ProCategories)
-                                                        <option value="$pc.Id">$pc.Name</option>                                                       
+                                                            #if($pc.Id == $Data.Product.CategoryId)
+                                                            <option value="$pc.Id" selected>$pc.Name</option>
+                                                            #else
+                                                            <option value="$pc.Id">$pc.Name</option> 
+                                                            #end                                                      
                                                         #end
                                                     </select>
                                                 </td>
@@ -134,7 +138,7 @@
                                             <tr>
                                                 <td width="30%"><label>产品描述</label></td>
                                                 <td width="70%"> 
-                                                    <textarea rows="10" cols="50" name="proDescription"></textarea>
+                                                    <textarea rows="10" cols="50" name="proDescription">$Data.Product.ProductDescription</textarea>
                                                 </td>
                                             </tr>
                                             <tr>
