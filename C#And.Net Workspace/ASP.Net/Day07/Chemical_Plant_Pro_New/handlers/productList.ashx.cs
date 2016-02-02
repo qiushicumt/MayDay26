@@ -18,6 +18,7 @@ namespace Chemical_Plant_Pro_New.handlers
             context.Response.ContentType = "text/html";
             DataTable dtProducts = SQLHelper.ExecuteDataTable("select * from T_Products");
             DataTable dtProCategory = SQLHelper.ExecuteDataTable("select * from T_ProductCategory");
+            SQLHelper.ExecuteScalar()
             var data = new { Products = dtProducts.Rows, ProCategories = dtProCategory.Rows };
             string html = NVelocity.ReturnHtml("Admin/productList.html", data);
             context.Response.Write(html);

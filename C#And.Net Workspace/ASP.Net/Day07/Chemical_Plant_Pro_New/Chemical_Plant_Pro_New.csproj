@@ -62,10 +62,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\logo.png" />
-    <Content Include="images\productImg\20110611023092419241.jpg" />
-    <Content Include="images\productImg\20110611023489748974.jpg" />
-    <Content Include="images\productImg\20110611023652335233.jpg" />
-    <Content Include="images\productImg\20110611030589108910.jpg" />
+    <Content Include="images\productImg\072880e2-99a1-4946-ad6b-1b0f3ff5867f.jpg" />
+    <Content Include="images\productImg\28e7905a-5ceb-4e1d-bb6a-6b498c5fc182.jpg" />
+    <Content Include="images\productImg\37d55a75-9432-46ed-ad38-dfb78971bea0.jpg" />
+    <Content Include="images\productImg\45ce437a-f233-485d-997e-27f6e86f8638.jpg" />
+    <Content Include="images\productImg\5f5d8ea1-ccbf-4c14-8771-1dad39afca71.jpg" />
+    <Content Include="images\productImg\617b90a0-cb87-490f-ac3d-a9ad50f2a2cf.jpg" />
+    <Content Include="images\productImg\797e95f6-3332-4534-b58c-92ffe5e55e22.jpg" />
+    <Content Include="images\productImg\9a85920a-d9a6-47d6-99be-7df77ffdc368.jpg" />
+    <Content Include="images\productImg\9ba2dbd1-e185-4c70-9a81-60cde5c53187.jpg" />
+    <Content Include="images\productImg\9fdb54aa-9290-433a-87c5-e43d72ecb026.jpg" />
+    <Content Include="images\productImg\a1bb6044-f4b0-4d0c-af1e-4920a008bd18.jpg" />
+    <Content Include="images\productImg\acbce3b7-ddd3-4c55-a01e-0e6fb2bfae6d.jpg" />
+    <Content Include="images\productImg\aed5eabd-1b2e-4f40-8d9c-a6276f46d5d6.jpg" />
+    <Content Include="images\productImg\df4d427d-2b92-4ef4-8c88-376c713192a3.jpg" />
+    <Content Include="images\productImg\e3023da0-0d7c-4255-9daf-49fb36ab1336.jpg" />
+    <Content Include="images\productImg\fc2ab2ce-80e1-4c8b-b9fa-29d33873048a.jpg" />
     <Content Include="js\metronic\assets\admin\layout\css\custom.css" />
     <Content Include="js\metronic\assets\admin\layout\css\layout.css" />
     <Content Include="js\metronic\assets\admin\layout\css\themes\blue.css" />
@@ -2856,6 +2868,7 @@
     <Content Include="js\metronic\templates\frontend\shop-terms-conditions-page.html" />
     <Content Include="js\metronic\templates\frontend\shop-wishlist.html" />
     <Content Include="NVelocity.dll" />
+    <Content Include="style\style.css" />
     <Content Include="templates\Admin\adminIndex.html" />
     <Content Include="templates\Admin\productEdit.html" />
     <Content Include="templates\Admin\productList.html" />
@@ -3243,7 +3256,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="js\metronic\assets\global\plugins\jquery-file-upload\server\php\files\thumbnail\" />
-    <Folder Include="style\" />
     <Folder Include="templates\Front\" />
   </ItemGroup>
   <PropertyGroup>

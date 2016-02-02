@@ -85,7 +85,37 @@ namespace Chemical_Plant_Pro_New.handlers
                     }
                     else
                     {
-                                
+                        //  编辑保存
+
+                        int id = Convert.ToInt32(context.Request["Id"]);
+                        string productName = context.Request["productName"];
+                        int proCategoryId = Convert.ToInt32(context.Request["proCategory"]);
+                        string proDescription = context.Request["proDescription"];
+                        HttpPostedFile imgFile = context.Request.Files["proImage"];
+                        if (imgFile.ContentLength != 0)
+                        {
+                            Guid newGuid = Guid.NewGuid();
+                            string fileName = newGuid.ToString() + Path.GetExtension(imgFile.FileName);
+                            string filePath = context.Server.MapPath("~/images/productImg/");
+                            imgFile.SaveAs(filePath + fileName);
+                            string imgPath = "../images/productImg/" + fileName;
+                            SQLHelper.ExecuteNonQuery("update T_Products set Name=@ProductName, ImagePath=@ImagePath, ProductDescription=@ProDescription, CategoryId=@ProCategoryId where Id=@Id",
+                                new SqlParameter("@ProductName", productName),
+                                new SqlParameter("@ImagePath", imgPath),
+                                new SqlParameter("@ProDescription", proDescription),
+                                new SqlParameter("@ProCategoryId", proCategoryId),
+                                new SqlParameter("@Id", id));
+                            context.Response.Redirect("productList.ashx");
+                        }
+                        else
+                        {
+                            SQLHelper.ExecuteNonQuery("update T_Products set Name=@ProductName, ProductDescription=@ProDescription, CategoryId=@ProCategoryId where Id=@Id",
+                                new SqlParameter("@ProductName", productName),
+                                new SqlParameter("@ProDescription", proDescription),
+                                new SqlParameter("@ProCategoryId", proCategoryId),
+                                new SqlParameter("@Id", id));
+                            context.Response.Redirect("productList.ashx");
+                        }
                     }
                     
                 }
