@@ -105,21 +105,17 @@
                                                     <input type="checkbox" name="proCheck" >
 								                </td>
 								                <td width="24%">
-									                $p.Id
+									                $p.ProductId
 								                </td>
 								                <td width="25%">
-									                $p.Name
+									                $p.ProductName
 								                </td>
 								                <td width="25%">
-                                                    #foreach($pc in $Data.ProCategories)
-                                                        #if($pc.Id == $p.CategoryId)
-                                                            $pc.Name                                                        
-                                                        #end
-									                #end
+                                                    $p.CategoryName
 								                </td>
 								                <td width="25%">
-									                <a href="productEdit.ashx?action=edit&Id=$p.Id" class="btn default btn-xs blue"><i class="fa fa-edit"></i> 产品编辑 </a>
-                                                    <a href="productEdit.ashx?action=delete&Id=$p.Id" class="btn default btn-xs black"><i class="fa fa-trash-o"></i> 产品删除 </a>
+									                <a href="productEdit.ashx?action=edit&Id=$p.ProductId" class="btn default btn-xs blue"><i class="fa fa-edit"></i> 产品编辑 </a>
+                                                    <a href="productEdit.ashx?action=delete&Id=$p.ProductId" class="btn default btn-xs black"><i class="fa fa-trash-o"></i> 产品删除 </a>
 								                </td>								                
 							                </tr>
                                             #end
@@ -128,21 +124,41 @@
                                     <div class="tablePagination">
                                         <nav>
                                             <ul class="pagination">
-                                                <li>
+                                                #if($Data.CurrentPage==1)
+                                                <li class="disabled">
                                                     <a href="#" aria-label="Previous">
                                                         <span aria-hidden="true">&laquo;</span>
                                                     </a>
                                                 </li>
-                                                <li><a href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#">5</a></li>
+                                                #else
                                                 <li>
+                                                    #set ($cpNum = $Data.CurrentPage - 1)
+                                                    <a href="productList.ashx?PageNum=$cpNum" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                #end
+                                                #foreach($pn in $Data.PageDatas)
+                                                    #if($pn.ThePage==$Data.CurrentPage)
+                                                    <li class="active"><a href="$pn.Href">$pn.ThePage</a></li>
+                                                    #else
+                                                    <li><a href="$pn.Href">$pn.ThePage</a></li>
+                                                    #end
+                                                #end
+                                                #if($Data.CurrentPage==$Data.PageDatas.length)
+                                                <li class="disabled">
                                                     <a href="#" aria-label="Next">
                                                         <span aria-hidden="true">&raquo;</span>
                                                     </a>
                                                 </li>
+                                                #else
+                                                <li>
+                                                    #set ($cpNum = $Data.CurrentPage + 1)
+                                                    <a href="productList.ashx?PageNum=$cpNum" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                                #end
                                             </ul>
                                         </nav>
                                     </div>
