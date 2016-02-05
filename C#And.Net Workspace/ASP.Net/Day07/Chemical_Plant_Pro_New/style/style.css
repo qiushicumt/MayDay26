@@ -1,4 +1,11 @@
 ﻿
+/* Footer 样式 */
+#footer {
+    text-align:center;
+    margin:20px auto;
+}
+
+
 /* ProductList 分页 */
 .tablePagination {
     display:block;
