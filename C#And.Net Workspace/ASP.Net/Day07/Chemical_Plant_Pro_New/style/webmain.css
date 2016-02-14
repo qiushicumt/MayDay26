@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 body,button,input,select,textarea{color:#333;font:12px/1.5 Tahoma,Helvetica,Arial,\5b8b\4f53}
 a:link,a:visited,a:active{color:#000;text-decoration:none}
@@ -27,7 +27,7 @@ body{background:#f6f6f6 url(../images/body_bg.gif) top repeat-x}
 #index_main{background:url(../images/v_line.gif) 720px top no-repeat}
 #index_main h2{background-image:url(../images/site_title.gif);background-repeat:no-repeat;height:34px;line-height:34px;font-size:100%;font-weight:normal}
 #index_main h2 span{float:left;display:none}
-#index_main h2 a{float:right;margin:15px 10px 0px 0px}
+#index_main h2 a{float:right;margin:0px 10px 0px 0px}
 .index-left{float:left;padding:0px 5px 0px 9px;width:706px;overflow:hidden}
 .index-newproducts{padding-bottom:15px}
 .index-newproducts h2{background-position:0px 0px}

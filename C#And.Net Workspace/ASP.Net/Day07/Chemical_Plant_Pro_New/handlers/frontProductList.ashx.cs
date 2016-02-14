@@ -26,7 +26,7 @@ namespace Chemical_Plant_Pro_New.handlers
             {
                 pageNum = Convert.ToInt32(context.Request["PageNum"]);
             }
-            int startNum = 9*(pageNum-1)+1;
+            int startNum = 9*(pageNum-1)+1; 
             int endNum = 9*pageNum;
             DataTable dtProducts = SQLHelper.ExecuteDataTable("select * from (select *, row_number() over (order by p.Id asc) as Num from T_Products p) as s where s.Num between @Start and @End",
                 new SqlParameter("@Start",startNum),
