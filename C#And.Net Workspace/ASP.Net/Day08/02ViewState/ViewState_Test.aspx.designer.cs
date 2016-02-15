@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace _01ASPX_Basis {
+namespace _02ViewState {
     
     
-    public partial class WebBasis {
+    public partial class ViewState_Test {
         
         /// <summary>
         /// form1 控件。
@@ -22,30 +22,39 @@ namespace _01ASPX_Basis {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ClickBtn 控件。
+        /// OldAddBtn 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ClickBtn;
+        protected global::System.Web.UI.WebControls.Button OldAddBtn;
         
         /// <summary>
-        /// Label1 控件。
+        /// AddBtn 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Button AddBtn;
         
         /// <summary>
-        /// ProductDDL 控件。
+        /// DefaultAddBtn 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ProductDDL;
+        protected global::System.Web.UI.WebControls.Button DefaultAddBtn;
+        
+        /// <summary>
+        /// TextLabel 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TextLabel;
     }
 }

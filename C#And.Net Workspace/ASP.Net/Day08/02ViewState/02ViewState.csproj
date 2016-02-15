@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{25CEB45F-37F1-49D9-9F08-2EF5BD562CE9}</ProjectGuid>
+    <ProjectGuid>{E5322618-6F53-4840-833F-24633C2B4C20}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_01ASPX_Basis</RootNamespace>
-    <AssemblyName>01ASPX Basis</AssemblyName>
+    <RootNamespace>_02ViewState</RootNamespace>
+    <AssemblyName>02ViewState</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,18 +57,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ViewState_Test.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebBasis.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQLHelper.cs" />
-    <Compile Include="WebBasis.aspx.cs">
-      <DependentUpon>WebBasis.aspx</DependentUpon>
+    <Compile Include="ViewState_Test.aspx.cs">
+      <DependentUpon>ViewState_Test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebBasis.aspx.designer.cs">
-      <DependentUpon>WebBasis.aspx</DependentUpon>
+    <Compile Include="ViewState_Test.aspx.designer.cs">
+      <DependentUpon>ViewState_Test.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -94,7 +93,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50102/</IISUrl>
+          <IISUrl>http://localhost:62302/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
