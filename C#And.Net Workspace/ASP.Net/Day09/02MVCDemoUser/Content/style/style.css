@@ -1,0 +1,13 @@
+﻿body, p, div, section, main, header, footer, ul, li {
+    margin:0;
+    padding:0;
+}
+ul, ol {
+    list-style:none;
+}
+a, a:hover {
+    text-decoration:none;
+}
+
+#wrappage { margin: 50px auto; width: 800px; }
+        #wrappage table { text-align: center; }
