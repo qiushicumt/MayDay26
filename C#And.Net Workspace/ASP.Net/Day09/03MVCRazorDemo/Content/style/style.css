@@ -1,0 +1,10 @@
+﻿body, main, section, header, footer, ul, li, ol {
+    margin:0px;
+    padding:0px;
+}
+
+#wrappage {
+    width:800px;
+    margin:50px auto;
+}
+
