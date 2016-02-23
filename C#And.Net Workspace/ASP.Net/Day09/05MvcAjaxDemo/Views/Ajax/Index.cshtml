@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    @*<script>
+        $(document).ready(function () {
+            $("#btnJQ").click = function () {
+                $.ajax(
+                    {
+                        url: "/Ajax/GetDate",
+                        type:"POST",
+                        success: function (recText) {
+                            //$("#showText").text = recText;
+                            alert(recText);
+                        },
+                    });
+            }
+        });
+    </script>*@
+
+    <script>
+        $(function () {
+            $("#btnJQ").click(function () {
+                $.ajax({
+                    url: "/Ajax/GetDate",
+                    type: "POST",
+                    success: function (recText) {
+                        //alert(recText);
+                        $("#showText").text = recText;
+                    },
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div> 
+        <input type="button" id="btnJQ" value="获取服务器当前时间">
+        <span id="showText"></span>
+    </div>
+</body>
+</html>
