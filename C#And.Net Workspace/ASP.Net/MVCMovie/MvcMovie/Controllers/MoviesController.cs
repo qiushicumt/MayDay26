@@ -15,10 +15,40 @@ namespace MVCMovie.Controllers
         //  生成一个Movie的数据库的实例，实例可用于对数据库进行查询、编辑、删除等操作
         private MovieDBContext db = new MovieDBContext();
 
+        /*
         // GET: Movies
-        public ActionResult Index()
+        public ActionResult Index(string searchStr)
         {
-            return View(db.Movies.ToList());    //  给index视图返回Movies数据的list形式
+            //LINQ查询语句，查询包含searchStr的MovieName
+            var movies = from m in db.Movies select m;
+            if (!String.IsNullOrEmpty(searchStr))
+            {
+                movies = movies.Where(s => s.MovieName.Contains(searchStr));
+            }
+            
+            return View(movies);    //  给index视图返回Movies数据的list形式
+        }
+        */
+
+        public ActionResult Index(string movieGenre, string searchStr)
+        {
+            var GenreList = new List<string>();     //定义MovieGenre的list集合
+            var GenreQry = from d in db.Movies orderby d.Genre select d.Genre;  // 从数据库中检索所有的Genre的LINQ查询
+            GenreList.AddRange(GenreQry.Distinct());
+            ViewBag.movieGenre = new SelectList(GenreList);
+
+            var movies = from m in db.Movies select m;
+            if(!String.IsNullOrEmpty(searchStr))
+            {
+                movies = movies.Where(s => s.MovieName.Contains(searchStr));
+            }
+
+            if (!String.IsNullOrEmpty(movieGenre))
+            {
+                movies = movies.Where(x => x.Genre == movieGenre);
+            }
+
+            return View(movies);
         }
 
         #region 显示详情的action        

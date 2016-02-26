@@ -9,6 +9,14 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
+    @using(Html.BeginForm("Index", "Movies", FormMethod.Get))    // Html.BeginForm(ActionName, ControllerName, FormMethod)  Html.BeginForm能够指定表单提交的方式
+    {
+        <p>Movie:
+            @Html.DropDownList("movieGenre", "请选择")
+            @Html.TextBox("SearchStr")
+            <input type="submit" id="searchStr" value="Search">
+        </p>
+    }
 </p>
 <table class="table">
     <tr>
@@ -42,6 +50,7 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
+            @* Html.ActionLink不指定Controller时默认回到来时的Controller *@
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
