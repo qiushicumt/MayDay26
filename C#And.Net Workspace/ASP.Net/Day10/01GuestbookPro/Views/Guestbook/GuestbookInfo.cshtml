@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "GuestbookInfo";
+}
+
+<h2>GuestbookInfo</h2>
+<p><a href="~/Guestbook/Create">添加留言</a></p>
+@foreach (var entry in ViewBag.Entries)
+{
+    <section class="contact">
+        <header>
+            <h4>@entry.Message</h4>
+        </header>
+        <p>
+            Posted by <span style="font-weight:bold;">@entry.Name</span> on @entry.DateAdded.ToLongDateString()
+        </p>
+        <hr/>
+    </section>
+}
