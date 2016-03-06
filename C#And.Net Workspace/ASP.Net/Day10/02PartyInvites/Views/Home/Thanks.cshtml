@@ -1,0 +1,28 @@
+﻿ @* @model为强类型视图添加model，使得页面中可以通过model.属性名的形式对属性进行操作 *@
+@model _02PartyInvites.Models.GuestResponse    
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <div>
+        <h2>Thanks, @Model.Name!</h2>
+        @if (Model.WillAttend == true)
+        {
+            @:It's great that you're coming. The drinks are already in the fridge！
+        }
+        else
+        {
+            @:Sorry to hear that you can't come. Thanks for letting us know that!    
+        }
+    </div>
+</body>
+</html>
