@@ -1,0 +1,30 @@
+﻿
+@model IEnumerable<_03MVC4MovieDemo.Models.Movie>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div>@Html.ActionLink("Create new movie", "Create")</div>
+<table class="table table-hover">
+    <tr>
+        <th>MovieName</th>
+        <th>ReleaseDate</th>
+        <th>MovieGenre</th>
+        <th>MoviePrice</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelitem=>item.Name)</td>
+            <td>@Html.DisplayFor(modelitem=>item.ReleaseTime)</td>
+            <td>@Html.DisplayFor(modelitem=>item.Genre)</td>
+            <td>@Html.DisplayFor(modelitem=>item.Price)</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { item.Id }) | @Html.ActionLink("Details", "Details", new { item.Id }) | @Html.ActionLink("Delete", "Delete", new { item.Id })</td>
+        </tr>
+    }
+        
+</table>

@@ -1,0 +1,17 @@
+﻿@model _03MVC4MovieDemo.Models.Movie
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.DisplayNameFor(m=>m.Name)
+    </div>
+    <button type="submit" class="btn btn-success">保存</button>
+    <!-- <input type="submit" value="保存" class="btn btn-success"> -->
+}

@@ -1,0 +1,16 @@
+﻿@model _03MVC4MovieDemo.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h2>Details</h2>
+    <p><strong>@Html.DisplayNameFor(m=>m.Name)</strong> @Html.DisplayFor(m=>m.Name)</p>
+    <p><strong>@Html.DisplayNameFor(m=>m.ReleaseTime)</strong> @Html.DisplayFor(m=>m.ReleaseTime)</p>
+    <p><strong>@Html.DisplayNameFor(m=>m.Genre)</strong> @Html.DisplayFor(m=>m.Genre)</p>
+    <p><strong>@Html.DisplayNameFor(m=>m.Price)</strong> @Html.DisplayFor(m=>m.Price)</p>
+    @*@Html.ActionLink("返回", "Index", "Movies", null, new { @class = "btn btn-success", role="button" })*@
+    @Html.ActionLink("返回", "Index")
+</div>

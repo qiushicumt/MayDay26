@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "CommentSummary";
+}
+@model IEnumerable<_01GuestbookPro.Models.CommentSummary>
+<h2>CommentSummary</h2>
+
+<table>
+    <tr>
+        <th width="50%">Number of comment</th>
+        <th width="50%">UserName</th>
+    </tr>
+    @foreach(var summaryRow in Model)
+    {
+        <tr>
+            <td width="50%">@summaryRow.NumberOfComments</td>
+            <td width="50%">@summaryRow.UserName</td>
+        </tr>
+    }
+</table>

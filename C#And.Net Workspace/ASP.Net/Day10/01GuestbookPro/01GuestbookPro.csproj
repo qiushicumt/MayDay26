@@ -138,11 +138,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GuestbookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccountContext.cs" />
+    <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\CommentSummary.cs" />
     <Compile Include="Models\GuestbookContext.cs" />
     <Compile Include="Models\GuestbookEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -222,6 +226,8 @@
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Guestbook\GuestbookInfo.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Guestbook\CommentSummary.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />

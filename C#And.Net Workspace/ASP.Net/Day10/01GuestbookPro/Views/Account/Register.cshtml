@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Register";
+}
+
+<h2>用户注册</h2>
+
+<fieldset>    
+    <form method="post" action="~/Account/Register">
+        <p><span style="font-weight:bold;">用户名：</span><input type="text" name="UserName"></p>
+        <p><span style="font-weight:bold;">密码：</span><input type="password" name="Password"></p>
+        <p><span style="font-weight:bold;">Email：</span><input type="email" name="Email"></p>
+        <input type="submit" value="注册">
+    </form>
+</fieldset>
