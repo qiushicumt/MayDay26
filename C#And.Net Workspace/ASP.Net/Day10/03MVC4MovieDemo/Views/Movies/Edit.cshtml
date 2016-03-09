@@ -9,8 +9,22 @@
 
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary(true)           <!-- 添加页面验证功能 -->
     <div class="form-group">
         @Html.DisplayNameFor(m=>m.Name)
+        @Html.TextBoxFor(m => m.Name, new { value = Model.Name })
+    </div>
+    <div class="form-group">
+        @Html.DisplayNameFor(m=>m.ReleaseTime)
+        @Html.TextBoxFor(m => m.ReleaseTime, new { value = Model.ReleaseTime })
+    </div>
+    <div class="form-group">
+        @Html.DisplayNameFor(m=>m.Genre)
+        @Html.TextBoxFor(m => m.Genre, new { value = Model.Genre })
+    </div>
+    <div class="form-group">
+        @Html.DisplayNameFor(m=>m.Price)
+        @Html.TextBoxFor(m => m.Price, new { value = Model.Price })
     </div>
     <button type="submit" class="btn btn-success">保存</button>
     <!-- <input type="submit" value="保存" class="btn btn-success"> -->
