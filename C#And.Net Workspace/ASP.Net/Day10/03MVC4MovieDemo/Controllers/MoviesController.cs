@@ -110,14 +110,38 @@ namespace _03MVC4MovieDemo.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult SearchIndex(string searchString, string Genre)
+        public ActionResult SearchIndex(string searchString)
         {
             var movies = from m in _db.Movies select m;
             if (!String.IsNullOrEmpty(searchString))
             {
                 movies = movies.Where(m => m.Name.Contains(searchString));
             }
+
             return View(movies);
         }
+
+        /*
+        public ActionResult SearchIndex(string searchString, string Genre)
+        {
+            
+            var GenreLst = new List<string>();
+            var GenreQry = from d in _db.Movies orderby d.Genre select d.Genre;
+            GenreLst.AddRange(GenreQry);
+            ViewBag.MovieGenre = new SelectList(GenreLst);
+
+            var movies = from m in _db.Movies select m;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(m => m.Name.Contains(searchString));
+            }
+
+            if (!String.IsNullOrEmpty(Genre))
+            {
+                movies = 
+            }
+            return View(movies);
+        }
+         * */
     }
 }
