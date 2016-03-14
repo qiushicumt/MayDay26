@@ -8,6 +8,7 @@ using Ninject;
 using Moq;
 using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Entities;
+using SportsStore.Domain.Concrete;
 
 namespace SportsStore.WebUI.Infrastructure
 {
@@ -24,7 +25,8 @@ namespace SportsStore.WebUI.Infrastructure
         {
             return controllerType == null ? null : (IController)ninjectKernel.Get(controllerType);
         }
-
+        #region 对模拟数据库的绑定
+        /*
         private void AddBindings()
         {
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
@@ -34,6 +36,14 @@ namespace SportsStore.WebUI.Infrastructure
                 new Product{ProductName="Running shoes", Price=95}
             }.AsQueryable());       //AsQueryable()方法用于将IEnumerable<T>转换成IQueryable<T>
             ninjectKernel.Bind<IProductRepository>().ToConstant(mock.Object);
+        }
+        */
+        #endregion
+
+        private void AddBindings()
+        {
+            //  通过创建EFProductRepository类的实例来实现接口IProductRepository的绑定
+            ninjectKernel.Bind<IProductRepository>().To<EFProductRepository>();
         }
     }
 }
