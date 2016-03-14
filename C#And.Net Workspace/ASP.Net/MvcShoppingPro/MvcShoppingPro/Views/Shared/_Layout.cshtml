@@ -1,15 +1,28 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title - Shop</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/Style/basestyle.css">
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="~/Content/js/jquery-1.12.1.min.js"></script>
+    <script src="~/Content/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-    @RenderBody()
+    <nav class="navbar navbar-inverse navbar-fixed-top">
 
+    </nav>
+    <div class="container">
+    @RenderBody()
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>
