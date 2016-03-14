@@ -1,0 +1,19 @@
+﻿@model IEnumerable<_04Mvc4MusicStore.Models.Genre>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GenreList</h2>
+<table class="table table-hover">
+    <tr>
+        <th>GenresName</th>
+    </tr>
+    @foreach(var genre in Model)
+    {
+        <tr>
+            <td>@genre.GenreName</td>
+        </tr>
+    }
+</table>

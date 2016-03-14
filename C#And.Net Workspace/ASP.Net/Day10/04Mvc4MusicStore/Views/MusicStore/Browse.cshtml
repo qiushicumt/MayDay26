@@ -1,0 +1,20 @@
+﻿@model _04Mvc4MusicStore.Models.Genre
+
+@{
+    ViewBag.Title = "Browse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Browsing Genre:@Model.GenreName</h2>
+
+<table class="table">
+    <tr>
+        <th>Albums Name</th>
+    </tr>
+    @foreach(var album in Model.Albums)
+    {
+        <tr><td>@album.AlbumTitle</td></tr>
+    }
+</table>
+
+
