@@ -1,0 +1,39 @@
+﻿@model MvcShoppingPro.Models.Product
+
+@{
+    ViewBag.Title = "ProductDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "AddToCartSuccess",
+        OnFailure = "AddToCartFailure",
+        HttpMethod = "POST"
+    };
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval");
+    <script>
+        function AddToCartSuccess() {
+            alert("商品添加到购物车成功！");
+        }
+        function AddToCartFailure(xhr) {
+            alert('商品添加失败，HTTP错误代码为：' + xhr.status + ')');
+        }
+    </script>
+}
+
+<h2>商品“@Html.DisplayNameFor(m=>m.Name)”的详情</h2>
+
+<fieldset>
+    <legend>@Html.DisplayNameFor(m=>m)</legend>
+    <div class="display-label">@Html.DisplayNameFor(m=>m.Description)</div>
+    <div class="display-field">@Html.DisplayFor(m=>m.Description)</div>
+    <div class="display-label">@Html.DisplayNameFor(m=>m.Price)</div>
+    <div class="display-field">@Html.DisplayFor(m=>m.Price)</div>
+    <div class="display-label">@Html.DisplayNameFor(m=>m.PublishOn)</div>
+    <div class="display-field">@Html.DisplayFor(m=>m.PublishOn)</div>
+</fieldset>

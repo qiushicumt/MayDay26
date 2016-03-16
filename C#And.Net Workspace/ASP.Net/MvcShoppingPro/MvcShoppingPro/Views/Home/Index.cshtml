@@ -1,0 +1,15 @@
+﻿@model IList<MvcShoppingPro.Models.ProductCategory>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ProductCategory List Index</h2>
+
+<div class="list-group">
+    @foreach(var item in Model)
+    {
+        @Html.ActionLink(item.Name, "ProductList", new { Id = item.Id }, new { @class = "list-group-item" })
+    }
+</div>

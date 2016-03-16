@@ -1,0 +1,49 @@
+﻿@model IEnumerable<MvcShoppingPro.Models.Product>
+@{
+    ViewBag.Title = "ProductList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "AddToCartSuccess",
+        HttpMethod = "POST",
+        OnFailure = "AddToCartFailure"
+    };
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        function AddToCartSuccess() {
+            alert("添加购物车成功！");
+        }
+        function AddToCartFailure(xhr) {
+            alert('添加购物车失败 （Http状态代码：' + xhr.status + ')');
+        }
+    </script>        
+}
+
+@*此处model.ToList()[0]得到的是序列中的第一个实体，将Product实体的DisplayName显示在页面中*@
+<h2>@Html.DisplayNameFor(model=>model.ToList()[0])</h2>
+
+<h3>您正在浏览【@Model.First().Category.Name】类的商品</h3>
+
+<table class="table table-hover">
+    <tr>
+        <th>@Html.DisplayNameFor(m=>m.Name)</th>
+        <th>@Html.DisplayNameFor(m=>m.Description)</th>
+        <th>@Html.DisplayNameFor(m=>m.Price)</th>
+        <th>添加购物车</th>
+    </tr>
+    @foreach (var proItem in Model)
+    {
+        <tr>
+            <td>@Html.ActionLink(proItem.Name, "ProductDetails", new { Id = proItem.Id })</td>
+            <td>@Html.DisplayFor(modelitem=>proItem.Description)</td>
+            <td>@Html.DisplayFor(modelitem=>proItem.Price)</td>
+            <td>@Ajax.ActionLink("添加购物车", "AddToCart", "Cart", new { ProductId = proItem.Id }, ajaxOption)</td>
+        </tr>
+    }
+</table>
