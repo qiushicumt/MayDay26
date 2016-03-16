@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>    
+    <link href="~/Contents/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Contents/style/basestyle.css">
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="~/Contents/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>    
+    <div class="container navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Contoso University", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Students", "Index", "Student")</li>
+                <li>@Html.ActionLink("Courses", "Index", "Course")</li>
+                <li>@Html.ActionLink("Instructors", "Index", "Instructor")</li>
+                <li>@Html.ActionLink("Departments", "Index", "Department")</li>
+            </ul>            
+        </div>
+    </div>
+    <div class="container body-content">      
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My Music Store </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<_05Mvc5ContosoUniversity.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Students Index</h2>
+
+@Html.ActionLink("Create New", "Create", null, new {@class="btn btn-success", style="margin-bottom:1.5em;" })
+
+<table class="table table-hover">
+    <tr>
+        <th>@Html.DisplayNameFor(model=>model.LastName)</th>
+        <th>@Html.DisplayNameFor(model=>model.FirstMidName)</th>
+        <th>@Html.DisplayNameFor(model=>model.EnrollmentDate)</th>
+        <th></th>
+    </tr>
+    @foreach (var studentItem in Model)
+    {
+        <tr>
+            <td>@studentItem.LastName</td>
+            <td>@studentItem.FirstMidName</td>
+            <td>@Html.DisplayFor(modelItem => studentItem.EnrollmentDate)</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { Id = studentItem.Id }) | @Html.ActionLink("Detail", "Detail", new { Id = studentItem.Id }) | @Html.ActionLink("Delete", "Delete", new { Id = studentItem.Id }, new { onclick = "return (confirm('确定要删除吗?'))"})</td>
+        </tr>
+    }
+</table>
+

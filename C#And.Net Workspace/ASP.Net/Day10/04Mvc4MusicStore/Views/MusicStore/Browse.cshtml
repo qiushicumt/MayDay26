@@ -13,7 +13,10 @@
     </tr>
     @foreach(var album in Model.Albums)
     {
-        <tr><td>@album.AlbumTitle</td></tr>
+        @*<tr><td>@album.AlbumTitle</td></tr>*@
+        <tr>
+            <td>@Html.ActionLink(album.AlbumTitle, "Details", new { Id = album.AlbumId })</td>
+        </tr>
     }
 </table>
 

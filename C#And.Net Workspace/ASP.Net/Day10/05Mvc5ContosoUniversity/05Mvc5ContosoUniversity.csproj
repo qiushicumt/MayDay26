@@ -38,6 +38,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -81,19 +89,62 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Contents\bootstrap-3.3.5\css\bootstrap-theme.css" />
+    <Content Include="Contents\bootstrap-3.3.5\css\bootstrap-theme.min.css" />
+    <Content Include="Contents\bootstrap-3.3.5\css\bootstrap.css" />
+    <Content Include="Contents\bootstrap-3.3.5\css\bootstrap.min.css" />
+    <Content Include="Contents\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Contents\bootstrap-3.3.5\js\bootstrap.js" />
+    <Content Include="Contents\bootstrap-3.3.5\js\bootstrap.min.js" />
+    <Content Include="Contents\bootstrap-3.3.5\js\npm.js" />
+    <Content Include="Contents\Style\basestyle.css" />
     <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentsTestController.cs" />
+    <Compile Include="DAL\SchoolContext.cs" />
+    <Compile Include="DAL\SchoolInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Enrollment.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Contents\bootstrap-3.3.5\css\bootstrap-theme.css.map" />
+    <Content Include="Contents\bootstrap-3.3.5\css\bootstrap.css.map" />
+    <Content Include="Contents\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Contents\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Contents\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Contents\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\StudentsTest\Create.cshtml" />
+    <Content Include="Views\StudentsTest\Delete.cshtml" />
+    <Content Include="Views\StudentsTest\Details.cshtml" />
+    <Content Include="Views\StudentsTest\Edit.cshtml" />
+    <Content Include="Views\StudentsTest\Index.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Detail.cshtml" />
+    <Content Include="Views\Student\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -103,8 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

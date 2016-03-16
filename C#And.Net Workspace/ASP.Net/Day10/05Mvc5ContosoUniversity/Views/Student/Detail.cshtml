@@ -1,0 +1,37 @@
+﻿@model _05Mvc5ContosoUniversity.Models.Student
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Student Detail</h2>
+@Html.ActionLink("Back to list", "Index")
+<div>
+    <label>@Html.DisplayNameFor(m=>m.LastName)</label>
+    @Html.DisplayFor(m=>m.LastName)
+</div>
+<div>
+    <label>@Html.DisplayNameFor(m=>m.FirstMidName)</label>
+    @Html.DisplayFor(m=>m.FirstMidName)
+</div>
+<div>
+    <label>@Html.DisplayNameFor(m=>m.EnrollmentDate)</label>
+    @Html.DisplayFor(m=>m.EnrollmentDate)
+</div>
+<div>
+    <label>@Html.DisplayNameFor(m=>m.Enrollments)</label>
+    <table class="table table-hover" style="width:60%;max-width:60%;">
+        <tr>
+            <th>Course Title</th>
+            <th>Grade</th>
+        </tr>
+        @foreach (var enrollmentItem in Model.Enrollments)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelitem => enrollmentItem.Course.Title)</td>
+                <td>@Html.DisplayFor(modelitem => enrollmentItem.Grade)</td>
+            </tr>
+        }
+    </table>
+</div>
+<div>@Html.ActionLink("Edit", "Edit", null, new { Id = Model.Id })</div>

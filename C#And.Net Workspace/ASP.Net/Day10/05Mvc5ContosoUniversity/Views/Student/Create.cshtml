@@ -1,0 +1,25 @@
+﻿@model _05Mvc5ContosoUniversity.Models.Student
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create a new student info</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label class="col-sm-2 control-label" style="width:12%;">@Html.DisplayNameFor(m => m.LastName)</label>
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", style = "width:20%" })
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" style="width:12%;">@Html.DisplayNameFor(m=>m.FirstMidName)</label>       
+        @Html.TextBoxFor(m=>m.FirstMidName, new { @class = "form-control", style = "width:20%" })
+    </div>
+    @*<div class="form-group">
+        <label class="col-sm-2 control-label" style="width:12%;">@Html.DisplayNameFor(m=>m.EnrollmentDate)</label>
+        @Html.TextBoxFor(m=>m.EnrollmentDate, new { @class = "form-control", style = "width:20%" })
+    </div>*@
+    <input type="submit" value="Create" class="btn btn-default">    
+}
+<div style="margin-top:1.5em;">@Html.ActionLink("Back to list", "Index")</div>

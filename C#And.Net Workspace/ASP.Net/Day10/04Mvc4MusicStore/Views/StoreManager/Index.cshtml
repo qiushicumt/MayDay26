@@ -1,0 +1,29 @@
+﻿@model IEnumerable<_04Mvc4MusicStore.Models.Album>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Albums</h2>
+@Html.ActionLink("Create New Album", "Create", null, new { @class="btn btn-success", style="margin-bottom:2em;" })
+
+<table class="table table-hover">
+    <tr>
+        <th>Genre</th>
+        <th>Artist</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    @foreach (var album in Model)
+    {
+        <tr>
+            <td>@album.AlbumGenre.GenreName</td>
+            <td>@album.Artist.ArtistName</td>
+            <td>@album.AlbumTitle</td>
+            <td>@album.AlbumPrice</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { id = album.AlbumId }) | @Html.ActionLink("Details", "Details", new { id = album.AlbumId }) | @Html.ActionLink("Delete", "Delete", new { id = album.AlbumId })</td>
+        </tr>        
+    }
+</table>

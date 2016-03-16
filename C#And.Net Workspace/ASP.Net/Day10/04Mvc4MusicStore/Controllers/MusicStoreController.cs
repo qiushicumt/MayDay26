@@ -25,9 +25,16 @@ namespace _04Mvc4MusicStore.Controllers
             return View(genreModel);
         }
 
-        public ActionResult Details()
+        /// <summary>
+        /// 显示专辑详情
+        /// </summary>
+        /// <param name="id">传入的专辑Id</param>
+        /// <returns></returns>
+        public ActionResult Details(int id)
         {
-            return View();
+            //Find()方法根据传入的Id查找到专辑
+            var album = musicstoreDB.Albums.Find(id);
+            return View(album);
         }
     }
 }
