@@ -9,17 +9,33 @@
 @using (Html.BeginForm())
 {
     <div class="form-group">
+        <label class="col-sm-2 control-label" style="width:12%;">@Html.DisplayNameFor(m=>m.LastName)</label>
+        <div class="col-md-10">
+            @Html.EditorFor(m=>m.LastName)
+            @Html.ValidationMessageFor(m=>m.LastName)
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" style="width:12%;">@Html.DisplayNameFor(m=>m.FirstMidName)</label>
+        <div class="col-md-10">
+            @Html.EditorFor(m=>m.FirstMidName)
+            @Html.ValidationMessageFor(m=>m.FirstMidName)
+        </div>
+    </div>
+    <input type="submit" value="Create" class="btn btn-default">
+}
+<div style="margin-top:1.5em;">@Html.ActionLink("Back to list", "Index")</div>
+
+@*@using (Html.BeginForm())
+{
+    <div class="form-group">
         <label class="col-sm-2 control-label" style="width:12%;">@Html.DisplayNameFor(m => m.LastName)</label>
         @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", style = "width:20%" })
     </div>
     <div class="form-group">
         <label class="col-sm-2 control-label" style="width:12%;">@Html.DisplayNameFor(m=>m.FirstMidName)</label>       
         @Html.TextBoxFor(m=>m.FirstMidName, new { @class = "form-control", style = "width:20%" })
-    </div>
-    @*<div class="form-group">
-        <label class="col-sm-2 control-label" style="width:12%;">@Html.DisplayNameFor(m=>m.EnrollmentDate)</label>
-        @Html.TextBoxFor(m=>m.EnrollmentDate, new { @class = "form-control", style = "width:20%" })
-    </div>*@
+    </div>   
     <input type="submit" value="Create" class="btn btn-default">    
 }
-<div style="margin-top:1.5em;">@Html.ActionLink("Back to list", "Index")</div>
+<div style="margin-top:1.5em;">@Html.ActionLink("Back to list", "Index")</div>*@

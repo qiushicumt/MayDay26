@@ -1,7 +1,10 @@
-﻿@model IEnumerable<_05Mvc5ContosoUniversity.Models.Student>
+﻿@*@model IEnumerable<_05Mvc5ContosoUniversity.Models.Student>*@
+@model PagedList.IPagedList<_05Mvc5ContosoUniversity.Models.Student>
+@using PagedList.Mvc；
+
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Students";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -9,11 +12,24 @@
 
 @Html.ActionLink("Create New", "Create", null, new {@class="btn btn-success", style="margin-bottom:1.5em;" })
 
+@using (Html.BeginForm("Index", "Student", FormMethod.Get))
+{
+    <div class="navbar-form">
+        Find by name
+        @*<input type="text" name="SearchString" class="form-control" placeholder="Search for..." style="width:20%;">*@
+        @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { style = "width:20%;" })
+        <button type="submit" class="btn btn-default">Search</button>        
+    </div>
+}
+
 <table class="table table-hover">
     <tr>
-        <th>@Html.DisplayNameFor(model=>model.LastName)</th>
-        <th>@Html.DisplayNameFor(model=>model.FirstMidName)</th>
-        <th>@Html.DisplayNameFor(model=>model.EnrollmentDate)</th>
+        @*<th>@Html.DisplayNameFor(model=>model.LastName)</th>*@
+        <th>@Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })</th>
+        <th>First Name</th>
+        @*<th>@Html.DisplayNameFor(model=>model.FirstMidName)</th>*@
+        @*<th>@Html.DisplayNameFor(model=>model.EnrollmentDate)</th>*@
+        <th>@Html.ActionLink("Enrollment Date", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })</th>
         <th></th>
     </tr>
     @foreach (var studentItem in Model)
@@ -26,4 +42,7 @@
         </tr>
     }
 </table>
+<br />
+Page @(Model.PageCount <　Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
 
