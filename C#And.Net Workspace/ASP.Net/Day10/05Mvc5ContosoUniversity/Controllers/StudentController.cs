@@ -56,12 +56,22 @@ namespace _05Mvc5ContosoUniversity.Controllers
             return View(students.ToList());
         }
         */
-        public ActionResult Index(string sortOrder, string currentFilter, string SearchString, int? page)
+
+        /// <summary>
+        /// 学生信息列表展示
+        /// </summary>
+        /// <param name="sortOrder">排序参数</param>
+        /// <param name="currentFilter">搜索条件参数，在分页链接中使用</param>
+        /// <param name="SearchString"></param>
+        /// <param name="page"></param>
+        /// <returns></returns>
+        public ActionResult Index(string sortOrder, string currentFilter, string SearchString, int? page)       
         {
-            ViewBag.CurrentSort = sortOrder;
+            ViewBag.CurrentSort = sortOrder;        //ViewBag.CurrentSort用于保存当前的排序参数，在前台页面中的分页链接中当作传递到后台的参数
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
 
+            //  当点击分页的链接时，url中传递的SearchString为空，此时，需要通过currentFilter来获得上一次的搜索条件参数
             if (SearchString != null)
             {
                 page = 1;
@@ -70,7 +80,7 @@ namespace _05Mvc5ContosoUniversity.Controllers
             {
                 SearchString = currentFilter;
             }
-            ViewBag.CurrentFilter = SearchString;
+            ViewBag.CurrentFilter = SearchString;       //ViewBag.CurrentFilter用于保存当前的搜索条件，用于在前台页面的分页链接中用作参数传递到后台
 
             var students = from s in _dbContext.Students select s;
 

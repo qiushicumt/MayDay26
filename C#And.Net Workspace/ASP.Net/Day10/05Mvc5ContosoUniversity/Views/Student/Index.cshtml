@@ -1,6 +1,6 @@
 ﻿@*@model IEnumerable<_05Mvc5ContosoUniversity.Models.Student>*@
 @model PagedList.IPagedList<_05Mvc5ContosoUniversity.Models.Student>
-@using PagedList.Mvc；
+@using PagedList.Mvc;
 
 
 @{
@@ -23,12 +23,9 @@
 }
 
 <table class="table table-hover">
-    <tr>
-        @*<th>@Html.DisplayNameFor(model=>model.LastName)</th>*@
+    <tr>        
         <th>@Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })</th>
-        <th>First Name</th>
-        @*<th>@Html.DisplayNameFor(model=>model.FirstMidName)</th>*@
-        @*<th>@Html.DisplayNameFor(model=>model.EnrollmentDate)</th>*@
+        <th>First Name</th>        
         <th>@Html.ActionLink("Enrollment Date", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })</th>
         <th></th>
     </tr>
