@@ -25,7 +25,7 @@ namespace MvcShoppingPro.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register(Members member)
+        public ActionResult Register([Bind(Exclude = "RegisterTime, AuthCode")]Members member)  //[Bind()]特性修饰Members，用于指定Members的特性
         {
             return View();
         }
