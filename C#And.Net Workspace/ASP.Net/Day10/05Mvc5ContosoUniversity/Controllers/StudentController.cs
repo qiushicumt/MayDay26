@@ -9,6 +9,7 @@ using System.Data.Entity;
 using System.Net;
 using System.Data;
 using PagedList;
+using System.Data.Entity.Infrastructure;
 
 namespace _05Mvc5ContosoUniversity.Controllers
 {
@@ -145,7 +146,7 @@ namespace _05Mvc5ContosoUniversity.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch
+            catch(RetryLimitExceededException)
             {
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }

@@ -14,6 +14,8 @@ namespace _05Mvc5ContosoUniversity.Controllers
         private SchoolContext _dbSchoolContext = new SchoolContext();
         public ActionResult Index()
         {
+
+            var aa = from s in _dbSchoolContext.Departments select s;
             return View();
         }
 

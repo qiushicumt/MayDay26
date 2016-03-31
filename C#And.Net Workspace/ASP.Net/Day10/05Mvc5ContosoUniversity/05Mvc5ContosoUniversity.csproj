@@ -120,15 +120,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\TestCourseController.cs" />
+    <Compile Include="DAL\SchoolConfiguration.cs" />
     <Compile Include="DAL\SchoolContext.cs" />
     <Compile Include="DAL\SchoolInitializer.cs" />
+    <Compile Include="DAL\SchoolInterceptorLogging.cs" />
+    <Compile Include="DAL\SchoolInterceptorTransientErrors.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Migrations\201603220724357_InitialCreate.cs" />
+    <Compile Include="Migrations\201603220724357_InitialCreate.Designer.cs">
+      <DependentUpon>201603220724357_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603290902386_Deparment.cs" />
+    <Compile Include="Migrations\201603290902386_Deparment.Designer.cs">
+      <DependentUpon>201603290902386_Deparment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Enrollment.cs" />
+    <Compile Include="Models\Instructor.cs" />
+    <Compile Include="Models\OfficeAssignment.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Viewmodel\EnrollmentDateGroup.cs" />
@@ -150,6 +169,12 @@
     <Content Include="Views\Student\Detail.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\TestCourse\Create.cshtml" />
+    <Content Include="Views\TestCourse\Delete.cshtml" />
+    <Content Include="Views\TestCourse\Details.cshtml" />
+    <Content Include="Views\TestCourse\Edit.cshtml" />
+    <Content Include="Views\TestCourse\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -159,6 +184,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201603220724357_InitialCreate.resx">
+      <DependentUpon>201603220724357_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603290902386_Deparment.resx">
+      <DependentUpon>201603290902386_Deparment.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
