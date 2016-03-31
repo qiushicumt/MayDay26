@@ -40,7 +40,7 @@
     @foreach (var proItem in Model)
     {
         <tr>
-            <td>@Html.ActionLink(proItem.Name, "ProductDetails", new { Id = proItem.Id })</td>
+            <td>@Html.ActionLink(proItem.Name, "ProductDetail", new { Id = proItem.Id })</td>
             <td>@Html.DisplayFor(modelitem=>proItem.Description)</td>
             <td>@Html.DisplayFor(modelitem=>proItem.Price)</td>
             <td>@Ajax.ActionLink("添加购物车", "AddToCart", "Cart", new { ProductId = proItem.Id }, ajaxOption)</td>

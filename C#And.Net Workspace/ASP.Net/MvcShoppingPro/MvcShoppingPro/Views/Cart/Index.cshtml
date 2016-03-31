@@ -1,0 +1,56 @@
+﻿@model List<MvcShoppingPro.Models.Cart>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "Remove Cart Success",
+        OnFailure = "Remove Cart Failure",
+        Confirm = "确定要删除这个购物车吗？",
+        HttpMethod = "POST"
+    };
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval");
+    <script>
+        function RemoveCartSuccess() {
+            alert("删除购物车成功！");
+        }
+        function RemoveCartFailure(xhr) {
+            alert('删除购物车失败，(HTTP状态码为：' + xhr.status + ')');
+        }
+    </script>
+}
+
+<h2>购物车列表</h2>
+@using (Html.BeginForm())
+{
+    <table class="table table-hover">
+        <tr>
+            <th>产品名称</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th></th>
+        </tr>
+        @{ int subTotal = 0; }
+        @foreach(var modelItem in Model)
+        {
+            subTotal = Convert.ToInt32(modelItem.Product.Price * modelItem.Amount);
+            var ddlAmountList = new SelectList(Enumerable.Range(1, 10), modelItem.Amount);
+            @Html.HiddenFor(m => modelItem.Product.Id);
+            <tr>
+                <td>@Html.DisplayFor(m=>modelItem.Product.Name)</td>
+                <td>NT$ @Html.DisplayFor(m=>modelItem.Product.Price)</td>
+                <td>@Html.DropDownListFor(m=>modelItem.Amount, ddlAmountList)</td>
+                <td>@Ajax.ActionLink("删除", "Remove", new { ProductId = modelItem.Product.Id }, ajaxOption)</td>
+            </tr>
+        }
+       
+    </table>
+}

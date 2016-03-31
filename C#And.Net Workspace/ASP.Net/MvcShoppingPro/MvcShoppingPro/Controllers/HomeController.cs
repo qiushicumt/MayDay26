@@ -42,8 +42,9 @@ namespace MvcShoppingPro.Controllers
         #region 商品详情
         public ActionResult ProductDetail(int Id)
         {
-
-            return View();
+            var productCategory = new ProductCategory() { Id = 1, Name = "文具" };
+            var data = new Product() { Id = Id, Name = "商品" + Id, Category = productCategory, Description = "N/A", Price = 30M, PublishOn = DateTime.Now, ProductColor = Color.Green };
+            return View(data);
         }
         #endregion
         
