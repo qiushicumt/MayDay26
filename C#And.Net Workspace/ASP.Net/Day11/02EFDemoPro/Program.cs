@@ -12,6 +12,8 @@ namespace _02EFDemoPro
 {
     public class Program
     {
+        #region
+        /*
         static void Main(string[] args)
         {
             EFContext _dbContext = new EFContext();
@@ -36,6 +38,20 @@ namespace _02EFDemoPro
 
             var categoryData = from s in _dbContext.Categories select s;
             foreach (var item in categoryData)
+            {
+                Console.WriteLine("类别：{0}，说明：{1}", item.CategoryName, item.Description);
+            }
+            Console.ReadKey();
+        }
+         * */
+        #endregion
+
+        public static void Main(string[] args)
+        {
+            EFContext _dbContext = new EFContext();
+
+            var data = from s in _dbContext.Categories select s;
+            foreach (var item in data)
             {
                 Console.WriteLine("类别：{0}，说明：{1}", item.CategoryName, item.Description);
             }

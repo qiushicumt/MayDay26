@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02EFDemoPro", "02EFDemoPro\02EFDemoPro.csproj", "{3888832B-A505-406B-B634-744DBAC45843}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01EssentialTools", "01EssentialTools\01EssentialTools.csproj", "{40D22A41-CD0E-406D-B831-9AF396551CB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03EFDemoPro2", "03EFDemoPro2\03EFDemoPro2.csproj", "{EAAA64D3-27DE-4C7E-BA24-231302DBA4A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{3888832B-A505-406B-B634-744DBAC45843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3888832B-A505-406B-B634-744DBAC45843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3888832B-A505-406B-B634-744DBAC45843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D22A41-CD0E-406D-B831-9AF396551CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D22A41-CD0E-406D-B831-9AF396551CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D22A41-CD0E-406D-B831-9AF396551CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D22A41-CD0E-406D-B831-9AF396551CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAAA64D3-27DE-4C7E-BA24-231302DBA4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAAA64D3-27DE-4C7E-BA24-231302DBA4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAAA64D3-27DE-4C7E-BA24-231302DBA4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAAA64D3-27DE-4C7E-BA24-231302DBA4A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

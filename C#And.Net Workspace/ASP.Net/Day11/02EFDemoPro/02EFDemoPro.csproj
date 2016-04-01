@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\EFContext.cs" />
+    <Compile Include="DAL\SampleData.cs" />
     <Compile Include="Migrations\201603310832168_InitialCreate.cs" />
     <Compile Include="Migrations\201603310832168_InitialCreate.Designer.cs">
       <DependentUpon>201603310832168_InitialCreate.cs</DependentUpon>
@@ -74,6 +75,10 @@
     <Compile Include="Migrations\201603310845298_Category11.cs" />
     <Compile Include="Migrations\201603310845298_Category11.Designer.cs">
       <DependentUpon>201603310845298_Category11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604010759409_Category2.cs" />
+    <Compile Include="Migrations\201604010759409_Category2.Designer.cs">
+      <DependentUpon>201604010759409_Category2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
@@ -98,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603310845298_Category11.resx">
       <DependentUpon>201603310845298_Category11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604010759409_Category2.resx">
+      <DependentUpon>201604010759409_Category2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
