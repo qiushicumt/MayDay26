@@ -1,0 +1,44 @@
+﻿@model _04ContosoUniversity.Models.Student
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+<h3>Student</h3>
+<hr />
+<table>
+    <tr>
+        <th width="50%">@Html.DisplayNameFor(model => model.LastName)</th>   
+        <td width="10%"></td>     
+        <td width="40%">@Html.DisplayFor(model => model.LastName)</td>
+    </tr>
+    <tr>
+        <th width="50%">@Html.DisplayNameFor(model => model.FirstMidName)</th>
+        <td width="10%"></td>
+        <td width="40%">@Html.DisplayFor(model => model.FirstMidName)</td>
+    </tr>
+    <tr>
+        <th width="50%">@Html.DisplayNameFor(model => model.EnrollmentDate)</th>
+        <td width="10%"></td>
+        <td width="40%">@Html.DisplayFor(model => model.EnrollmentDate)</td>
+    </tr>
+</table>
+<table class="table table-striped">
+    <caption>Enrollments</caption>
+    <tr>
+        <th width="50%">Course Title</th>
+        <th width="50%">Grade</th>
+    </tr>
+    @foreach (var item in Model.Enrollments)
+    {
+        <tr>
+            <td width="50%">@item.Course.Title</td>
+            <td width="50%">@item.Grade</td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) | @Html.ActionLink("BackToList", "Index")
+</p>

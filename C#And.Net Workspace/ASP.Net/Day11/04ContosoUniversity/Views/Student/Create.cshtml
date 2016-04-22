@@ -1,0 +1,28 @@
+﻿@model _04ContosoUniversity.Models.Student
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+<p><h3>Student</h3></p>
+@using (Html.BeginForm("Create", "Student", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="form-group">
+        <label>LastName</label>
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>FirstMidName</label>
+        @Html.TextBoxFor(m => m.FirstMidName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>EnrollmentDate</label>
+        @Html.TextBoxFor(m => m.EnrollmentDate, new { @class = "form-control" })
+    </div>
+    <input type="submit" value="Create" class="btn btn-default">
+}
+
+<p style="margin-top:10px;">@Html.ActionLink("BackToList", "Index")</p>
