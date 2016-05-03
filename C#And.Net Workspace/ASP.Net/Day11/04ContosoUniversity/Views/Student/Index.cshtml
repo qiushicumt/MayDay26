@@ -1,4 +1,52 @@
-﻿@model IEnumerable<_04ContosoUniversity.Models.Student>
+﻿@using PagedList.Mvc;   @*PagedList.Mvc的using语句使MVC帮助器可以使用PagedListPager扩展方法来生成分页按钮*@
+@model PagedList.IPagedList<_04ContosoUniversity.Models.Student>    
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<h3>Student</h3>
+<p>@Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success", style = "margin-bottom:1em;" })</p>
+@using (Html.BeginForm("Index", "Student", FormMethod.Get, new { @class = "form-inline" }))     //当表单提交不影响数据更新时可以使用get方式进行提交
+{
+    <div class="form-group">
+        <label>Find by name: </label>
+        @Html.TextBox("search_str", null, new { @class = "form-control" })
+    </div>
+    <input type="submit" value="search" class="btn btn-default">
+}
+<table class="table table-hover" style="margin-top:1em;">
+    <tr>
+        @* <th>@Html.DisplayNameFor(m => m.LastName)</th> *@
+        <th>@Html.ActionLink("LastName", "Index", new { sortorder = ViewBag.NameSort }, new { style = "text-decoration:none;color:#000;" })</th>
+        @*<th>@Html.DisplayNameFor(m => m.FirstMidName)</th>*@
+        @* <th>@Html.DisplayNameFor(m => m.EnrollmentDate)</th> *@
+        <th>FirstMidName</th>
+        <th>@Html.ActionLink("EnrollmentDate", "Index", new { sortorder = ViewBag.DateSort }, new { style = "text-decoration:none;color:#000;" })</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.LastName)</td>
+            <td>@Html.DisplayFor(m => item.FirstMidName)</td>
+            <td>@Html.DisplayFor(m => item.EnrollmentDate)</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { id = item.StudentId }) | @Html.ActionLink("Detail", "Detail", new { id = item.StudentId }) | @Html.ActionLink("Delete", "Delete", new { id = item.StudentId })</td>
+        </tr>
+    }
+</table>
+<div>
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortorder = ViewBag.currentSort, currentFilter = ViewBag.currentFilter }))
+</div>
+
+
+<!--
+<div>
+    @*
+@model IEnumerable<_04ContosoUniversity.Models.Student>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -14,7 +62,7 @@
 {
     <div class="form-group">		
     	<div class="input-group">
-            @*Html.TextBox("search_str", new { @class="form-control", placeholder = "Search String" })*@
+            /* Html.TextBox("search_str", new { @class="form-control", placeholder = "Search String" }) */
             @Html.TextBox("search_str", null, new { @class = "form-control", placeholder = "Search String" })      		    				
     	</div>
   	</div>  	
@@ -22,12 +70,14 @@
 }
 
 <table class="table table-hover">
-    @*<tr>er
+    /*
+    <tr>er
         <th>LastName</th>
         <th>FirstMidName</th>
         <th>EnrollmentDate</th>
         <th></th>
-    </tr>*@
+    </tr>
+    */
     <tr>
         <th>@Html.ActionLink("LastName", "Index", null, new { sortorder = ViewBag.NameOrder }, new { style = "color:#000;text-decoration:none;" })</th>
         <th>FirstMidName</th>
@@ -46,3 +96,6 @@
         </tr>
     }
 </table>
+*@
+</div>
+-->

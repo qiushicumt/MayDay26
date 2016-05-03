@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using System.Net;
 using System.Data;
 using System.Data.Entity;
+using PagedList;
 
 namespace _04ContosoUniversity.Controllers
 {
@@ -84,6 +85,14 @@ namespace _04ContosoUniversity.Controllers
         #endregion
 
         #region 带查询、分页、排序功能的Students索引展示
+        /// <summary>
+        /// Students索引展示
+        /// </summary>
+        /// <param name="sortorder">排序参数</param>
+        /// <param name="search_str">查询参数</param>
+        /// <param name="currentFilter">当前筛选参数</param>
+        /// <param name="page">传递的page参数</param>
+        /// <returns></returns>
         public ActionResult Index(string sortorder, string search_str, string currentFilter, int? page)
         {
             ViewBag.NameSort = string.IsNullOrEmpty(sortorder) ? "des_name" : "";
@@ -97,10 +106,31 @@ namespace _04ContosoUniversity.Controllers
             {
                 search_str = currentFilter;
             }
-            currentFilter = search_str;
+            ViewBag.currentFilter = search_str;
 
-
-            return View();
+            var students = from s in _dbContext.Students select s;
+            if (!string.IsNullOrEmpty(search_str))
+            {
+                students = students.Where(s => s.LastName.ToUpper().Contains(search_str.ToUpper()) || s.FirstMidName.ToUpper().Contains(search_str.ToUpper()));
+            }
+            switch (sortorder)
+            {
+                case "des_name":
+                    students = students.OrderByDescending(s => s.LastName);
+                    break;
+                case "date":
+                    students = students.OrderBy(s => s.EnrollmentDate);
+                    break;
+                case "des_date":
+                    students = students.OrderByDescending(s => s.EnrollmentDate);
+                    break;
+                default:
+                    students = students.OrderBy(s => s.LastName);
+                    break;
+            }
+            int pageSize = 4;
+            int pageNumber = (page ?? 1);
+            return View(students.ToPagedList(pageNumber, pageSize));
         }
         #endregion
 
