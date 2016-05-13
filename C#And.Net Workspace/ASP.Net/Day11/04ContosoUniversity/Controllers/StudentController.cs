@@ -90,7 +90,7 @@ namespace _04ContosoUniversity.Controllers
         /// </summary>
         /// <param name="sortorder">排序参数</param>
         /// <param name="search_str">查询参数</param>
-        /// <param name="currentFilter">当前筛选参数</param>
+        /// <param name="currentFilter">当前搜索条件</param>
         /// <param name="page">传递的page参数</param>
         /// <returns></returns>
         public ActionResult Index(string sortorder, string search_str, string currentFilter, int? page)

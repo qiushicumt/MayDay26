@@ -28,9 +28,32 @@ namespace _04ContosoUniversity.DAL
                 new Student{ FirstMidName = "Laura", LastName = "Norman", EnrollmentDate = DateTime.Parse("2003-09-01") },
                 new Student{ FirstMidName = "NinoNo", LastName = "Olivetto", EnrollmentDate = DateTime.Parse("2005-09-02") },
             };
-            students.ForEach(s => context.Students.Add(s));
+            // students.ForEach(s => context.Students.Add(s));
+            students.ForEach(s => context.Students.AddOrUpdate(p => p.LastName, s));
             context.SaveChanges();
 
+            var instructors = new List<Instructor>
+            {
+                new Instructor { FirstName = "Kim", LastName = "Abercrombie", HireTime = DateTime.Parse("1995-03-11") },
+                new Instructor { FirstName = "Fadi", LastName = "Fakhouri", HireTime = DateTime.Parse("2002-07-06") },
+                new Instructor { FirstName = "Roger", LastName = "Harui", HireTime = DateTime.Parse("1998-07-01") },
+                new Instructor { FirstName = "Candace", LastName = "Kapoor", HireTime = DateTime.Parse("2001-01-15") },
+                new Instructor { FirstName = "Roger", LastName = "Zheng", HireTime = DateTime.Parse("2004-02-12") }
+            };
+            // instructors.ForEach(i => context.Instructors.Add(i));
+            instructors.ForEach(s => context.Instructors.AddOrUpdate(p => p.LastName, s));
+            context.SaveChanges();
+
+            var departments = new List<Department>
+            {
+                new Department { Name = "English", Budget = 350000, StartDate = DateTime.Parse("2007-09-01"), InstructorID = instructors.Single(i => i.LastName == "Abercrombie").InstructorID },
+                new Department { Name = "Mathematics", Budget = 100000, StartDate = DateTime.Parse("2007-09-01"), InstructorID = instructors.Single(i => i.LastName == "Fakhouri").InstructorID },
+                new Department { Name = "Engineering", Budget = 350000, StartDate = DateTime.Parse("2007-09-01"), InstructorID = instructors.Single(i => i.LastName == "Harui").InstructorID },
+                new Department { Name = "Economics", Budget = 100000, StartDate = DateTime.Parse("2007-09-01"), InstructorID = instructors.Single(i => i.LastName == "Kapoor").InstructorID }
+            };
+            departments.ForEach(s => context.Departments.AddOrUpdate(p => p.Name, s));
+            context.SaveChanges();
+            /*
             var courses = new List<Course>
             {
                 new Course{ CourseId = 1050 , Title = "Chemistry", Credits = 3 },
@@ -43,6 +66,31 @@ namespace _04ContosoUniversity.DAL
             };
             courses.ForEach(c => context.Courses.Add(c));
             context.SaveChanges();
+            */
+
+            var courses = new List<Course>
+            {
+                new Course { CourseId = 1050, Title = "Chemistry", Credits = 3, DepartmentID = departments.Single(s => s.Name == "Engineering").DepartmentID, Instructors = new List<Instructor>() },
+                new Course { CourseId = 4022, Title = "Microeconomics", Credits = 3, DepartmentID = departments.Single(s => s.Name == "Economics").DepartmentID, Instructors = new List<Instructor>() },
+                new Course { CourseId = 4041, Title = "Microeconomics", Credits = 3, DepartmentID = departments.Single(s => s.Name == "Economics").DepartmentID, Instructors = new List<Instructor>() },
+                new Course { CourseId = 1045, Title = "Calculus", Credits = 4, DepartmentID = departments.Single(s => s.Name == "Mathematics").DepartmentID, Instructors = new List<Instructor>() },
+                new Course { CourseId = 3141, Title = "Trigonometry", Credits = 4, DepartmentID = departments.Single(s => s.Name == "Mathematics").DepartmentID, Instructors = new List<Instructor>() },
+                new Course { CourseId = 2021, Title = "Composition", Credits = 3, DepartmentID = departments.Single(s => s.Name == "English").DepartmentID, Instructors = new List<Instructor>() },
+                new Course { CourseId = 2042, Title = "Literature", Credits = 4, DepartmentID = departments.Single(s => s.Name == "English").DepartmentID, Instructors = new List<Instructor>() }
+            };
+            courses.ForEach(s => context.Courses.AddOrUpdate(p => p.CourseId, s));
+            context.SaveChanges();
+
+            var officeAssignments = new List<OfficeAssignment>
+            {
+                new OfficeAssignment { InstructorID = instructors.Single(i => i.LastName == "Fakhouri").InstructorID, Location = "Smith 17" },
+                new OfficeAssignment { InstructorID = instructors.Single(i => i.LastName == "Harui").InstructorID, Location = "Gowan 27" },
+                new OfficeAssignment { InstructorID = instructors.Single(i => i.LastName == "Kapoor").InstructorID, Location = "Thompson 304" }
+            };
+            officeAssignments.ForEach(s => context.OfficeAssignments.AddOrUpdate(p => p.InstructorID, s));
+            context.SaveChanges();
+
+            
 
             var enrollments = new List<Enrollment>
             {
@@ -62,6 +110,18 @@ namespace _04ContosoUniversity.DAL
             enrollments.ForEach(e => context.Enrollments.Add(e));
             context.SaveChanges();
         }
+
+
+        protected void AddOrUpdateInstructor(SchoolContext context, string courseTitle, string instructorName)
+        {
+            var crs = context.Courses.SingleOrDefault(c => c.Title == courseTitle);
+            var inst = context.Instructors.SingleOrDefault(i => i.LastName == instructorName);
+            if (inst == null)
+            {
+                crs.Instructors.Add(context.Instructors.Single(i => i.LastName == instructorName));
+            }
+        }
+
 
         /* Seed方法将数据库的上下文对象作为输入参数，并在方法中的代码使用该上下文对象将新的实体添加到数据库中。
          * 对于每个实体模型，代码创建新的实体集合添加他们到相应的DbSet属性，然后将更改保存到数据库。
