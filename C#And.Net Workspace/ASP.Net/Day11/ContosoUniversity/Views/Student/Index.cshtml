@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ContosoUniversity.Models.Student>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Student Index</h2>
+<p>
+    @Html.ActionLink("Create New Student", "Create", null, new { @class = "btn btn-success", style = "text-decoration:none;" })
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.LastName)</th>
+        <th>@Html.DisplayNameFor(m => m.FirstMidName)</th>
+        <th>@Html.DisplayNameFor(m => m.EnrollmentDate)</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.LastName)</td>
+            <td>@Html.DisplayFor(m => item.FirstMidName)</td>
+            <td>@Html.DisplayFor(m => item.EnrollmentDate)</td>
+            <td>@Html.ActionLink("Edit", "Edit", null, new { id = item.StudentID }, new { style = "text-decoration:none;" }) | @Html.ActionLink("Detail", "Detail", null, new { id = item.StudentID }, new { style = "text-decoration:none;" }) | @Html.ActionLink("Delete", "Delete", null, new { id = item.StudentID }, new { style = "text-decoration:none;" })</td>
+        </tr>
+    }
+</table>
