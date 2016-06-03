@@ -1,0 +1,42 @@
+﻿@model ContosoUniversityDemo.Models.Course
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+<h3>Course</h3>
+
+@using (Html.BeginForm("Create", "Course", FormMethod.Post))
+{
+    @Html.ValidationSummary(true);
+    @Html.AntiForgeryToken();
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.CourseID)
+        @Html.TextBoxFor(m => m.CourseID, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CourseID, null, new { style = "color:red;font-weight:bold;" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Title)
+        @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Title, null, new { style = "color:red;font-weight:bold;" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Credits)
+        @Html.TextBoxFor(m => m.Credits, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Credits, null, new { style = "color:red;font-weight:bold;" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Department)
+        @*Html.DropDownList("DepartmentID", String.Empty)*@
+        @Html.DropDownListFor(m => m.DepartmentID, (SelectList)ViewBag.DepartmentID, " === Select Department === ", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Department, null, new { style = "color:red;font-weight:bold;" })
+    </div>
+    
+    <input type="submit" value="Save" class="btn btn-success">
+}
+<br />
+<p>
+    @Html.ActionLink("Back To CourseList", "Index", null, new { style = "text-decoration:none;" })
+</p>

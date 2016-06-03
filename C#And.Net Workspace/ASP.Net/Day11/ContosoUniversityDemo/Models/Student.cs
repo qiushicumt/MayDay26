@@ -29,6 +29,12 @@ namespace ContosoUniversityDemo.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime EnrollmentDate { get; set; }
 
+        [DisplayName("FullName")]
+        public string FullName 
+        {
+            get { return LastName + ", " + FirstMidName; }
+        }
+
         public virtual ICollection<Enrollment> Enrollments { get; set; }
     }
 }

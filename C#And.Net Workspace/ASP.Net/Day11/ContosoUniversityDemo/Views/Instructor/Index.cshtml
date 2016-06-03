@@ -1,0 +1,113 @@
+﻿@model ContosoUniversityDemo.ViewModels.InstructorIndexData
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Instructor</h2>
+<p>
+    @Html.ActionLink("Create A New Instructor", "Create", null, new { @class = "btn btn-success" })
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>LastName</th>
+        <th>FirstName</th>
+        <th>HireDate</th>
+        <th>Office</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model.Instructors)
+    {
+        string selectedRow = "";
+        if (item.InstructorID == ViewBag.InstructorID)
+        {
+            selectedRow = "success";
+        }
+        <tr class="@selectedRow">
+            <td>@Html.DisplayFor(m => item.LastName)</td>
+            <td>@Html.DisplayFor(m => item.FirstMidName)</td>
+            <td>@Html.DisplayFor(m => item.HireDate)</td>
+            <td>
+                @if(item.OfficeAssignment != null)
+                {
+                    @Html.DisplayFor(m => item.OfficeAssignment.Location)
+                }
+            </td>
+            <td>@Html.ActionLink("Select", "Index", null, new { id = item.InstructorID }, new { style = "text-decoration:none;" }) | 
+                @Html.ActionLink("Edit", "Edit", null, new { id = item.InstructorID }, new { style = "text-decoration:none;" }) |
+                @Html.ActionLink("Detail", "Detail", null, new { id = item.InstructorID }, new { style = "text-decoration:none;" }) |
+                @Html.ActionLink("Delete", "Delete", null, new { id = item.InstructorID }, new { style = "text-decoration:none;" })
+            </td>
+        </tr>
+    }
+</table>
+
+@if (Model.Courses != null)
+{
+    <br />
+    <h3>Courses Taught By Selected Instructor</h3>
+    <table class="table table-hover">
+        <tr>
+            <th></th>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Department</th>
+        </tr>
+        @foreach (var item in Model.Courses)
+        {
+            string selectedRow = "";
+            if (item.CourseID == ViewBag.CourseID)
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow">
+                <td>@Html.ActionLink("Select", "Index", null, new { id = ViewBag.InstructorID, courseID = item.CourseID }, new { style = "text-decoration:none;" })</td>
+                <td>@Html.DisplayFor(m => item.CourseID)</td>
+                <td>@Html.DisplayFor(m => item.Title)</td>
+                <td>@Html.DisplayFor(m => item.Department.Name)</td>
+            </tr>
+        }
+    </table>
+}
+
+@if (Model.Enrollments != null)
+{
+    <br />
+    <h3>Students Enrolled In Select Course</h3>
+    <table class="table table-hover">
+        <tr>
+            <th>Name</th>
+            <th>Grade</th>
+        </tr>
+        @foreach(var item in Model.Enrollments)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => item.Student.FullName)</td>
+                <td>@Html.DisplayFor(m => item.Grade)</td>
+            </tr>
+        }
+    </table>
+}
+
+<!--
+@*
+<h3>Courses Taught By Selected Instructor</h3>
+<table class="table table-hover">
+    <tr>
+        <th></th>
+        <th>Number</th>
+        <th>Title</th>
+        <th>Department</th>
+    </tr>
+    @foreach (var item in Model.Courses)
+    {
+        <tr>
+            <td>@Html.ActionLink("Select", "Index", null, new { id = ViewBag.InstructorID, courseID = item.CourseID }, new { style = "text-decoration:none;" })</td>
+            <td>@Html.DisplayFor(m => item.CourseID)</td>
+            <td>@Html.DisplayFor(m => item.Title)</td>
+            <td>@Html.DisplayFor(m => item.Department.Name)</td>
+        </tr>
+    }
+</table>
+*@
+-->
