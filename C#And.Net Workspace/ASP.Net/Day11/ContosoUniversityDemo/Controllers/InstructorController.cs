@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Net;
 using ContosoUniversityDemo.Models;
 using ContosoUniversityDemo.DAL;
@@ -62,12 +63,29 @@ namespace ContosoUniversityDemo.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        public ActionResult Edit(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            int InstructorID = (int)id;
+            var instructor = dbContext.Instructors.Include(i => i.OfficeAssignment).Where(i => i.InstructorID == InstructorID).Single();
+            if (instructor == null)
+            {
+                return HttpNotFound();
+            }
+            return View(instructor);
         }
 
-        public ActionResult Detail()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind]Instructor instructor)
+        {
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Detail(int? id)
         {
             return View();
         }
@@ -80,7 +98,23 @@ namespace ContosoUniversityDemo.Controllers
             }
             int InstructorID = (int)id;
             var instructor = dbContext.Instructors.Find(InstructorID);
-            return View();
+            if (instructor == null)
+            {
+                return HttpNotFound();
+            }
+            dbContext.Instructors.Remove(instructor);
+            dbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        //  释放数据库上下文
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                dbContext.Dispose();
+            }
+            base.Dispose(disposing);
         }
 	}
 }

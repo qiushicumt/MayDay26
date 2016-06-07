@@ -99,15 +99,46 @@ namespace ContosoUniversityDemo.Controllers
             return View(course);
         }
 
-
-        public ActionResult Detail(int )
+        public ActionResult Detail(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            int CourseID = (int)id;
+            var course = dbContext.Courses.Find(CourseID);
+            if (course == null)
+            {
+                return new HttpNotFoundResult();
+            }
+            //PopulateDepartmentDropdownList();
+            return View(course);
         }
 
-        public ActionResult Delete()
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            int CourseID = (int)id;
+            var course = dbContext.Courses.Find(CourseID);
+            if (course == null)
+            {
+                return HttpNotFound();
+            }
+            dbContext.Courses.Remove(course);
+            dbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                dbContext.Dispose();
+            }
+            base.Dispose(disposing);
         }
 	}
 }

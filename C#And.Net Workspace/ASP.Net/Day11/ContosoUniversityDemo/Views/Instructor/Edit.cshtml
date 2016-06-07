@@ -1,0 +1,39 @@
+﻿@model ContosoUniversityDemo.Models.Instructor
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+<h3>Instructor Edit</h3>
+
+@using (Html.BeginForm("Edit", "Instructor", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+    
+    <div class="form-group">
+        <label>@Html.DisplayNameFor(m => m.LastName)</label>
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.LastName, null, new { style = "color:red;font-weight:bold;" })
+    </div>
+    <div class="form-group">
+        <label>@Html.DisplayNameFor(m => m.FirstMidName)</label>
+        @Html.TextBoxFor(m => m.FirstMidName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FirstMidName, null, new { style = "color:red;font-weight:bold;" })
+    </div>
+    <div class="form-group">
+        <label>@Html.DisplayNameFor(m => m.HireDate)</label>
+        @Html.TextBoxFor(m => m.HireDate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.HireDate, null, new { style = "color:red;font-weight:bold;" })
+    </div>
+    <div class="form-group">
+        <label>@Html.DisplayNameFor(m => m.OfficeAssignment.Location)</label>
+        @Html.TextBoxFor(m => m.OfficeAssignment.Location, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.OfficeAssignment.Location, null, new { style = "color:red;font-weight:bold;" })
+    </div>
+    
+    <input type="submit" value="Save" class="btn btn-success">
+}
+<br />
+<p>@Html.ActionLink("Back To InstructorIndex", "Index", null, new { style = "text-decoration:none;" })</p>
