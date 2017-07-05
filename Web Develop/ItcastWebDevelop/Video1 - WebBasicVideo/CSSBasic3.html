@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS复合选择器</title>
+		<link rel="stylesheet" href="style/CSSBasic3_style.css">
+	</head>
+	<body>
+		<div class="wrappage">
+			<!--
+            	作者：qiushicumt@126.com
+            	时间：2017-05-10
+            	描述：复合选择器之指定式选择器
+            -->
+			<div class="compoundSpan">
+				<h3 class="titleText">传智播客 - 前端与移动开发学院</h3>
+				<h3>http://web.itcast.cn</h3>
+				<p class="titleText">我是一个段落标签，也拥有‘title’class属性</p>
+			</div>
+			<hr />
+			<!--
+            	作者：qiushicumt@126.com
+            	时间：2017-05-10
+            	描述：复合选择器之后代选择器
+            -->
+			<div class="descendantSpan">
+				<div class="ul_li_1">
+					<ul>
+						<li>北京</li>
+						<li>上海</li>
+						<li>广州</li>
+						<li>深圳</li>						
+					</ul>
+					<ul>
+						<li>前端与移动开发学院</li>
+						<li>Java学院</li>
+						<li>网页平面设计学院</li>
+					</ul>
+				</div>
+				<div class="ul_li_2">
+					<ul>
+						<li>武汉</li>
+						<li>长沙</li>
+						<li>合肥</li>
+					</ul>
+				</div>
+			</div>
+			<hr />
+			<!--
+            	作者：qiushicumt@126.com
+            	时间：2017-05-10
+            	描述：复合选择器之并集选择器
+            -->
+			<div class="mergeSpan">
+				<h2>中国的房价要大涨了</h2>
+				<h3>中国的物价也要大涨了</h3>
+				<p>但是，人民币要贬值了。。。</p>
+			</div>
+			<hr />
+			<!--
+            	作者：qiushicumt@126.com
+            	时间：2017-05-15
+            	描述：复合选择器之子元素选择器
+            -->
+			<div class="sunSpan">
+				<h1>传智播客 - 前端与移动开发学院落户大上海</h1>
+				<p>传智前端，重新定义什么是真正的前端工程师</p>
+				<p>大前端改变世界，而我们改变前端</p>
+				<p><a href="http://web.itcast.cn">大前端地址： http://web.itcast.cn</a></p>
+				<ul>
+					<li>
+						<p>我是一个ul、li标签下的段落</p>
+					</li>
+				</ul>
+			</div>
+			<p>传智播客前端广州校区颠覆整个广州的前端界</p>
+			<hr />
+			<!--
+            	作者：qiushicumt@126.com
+            	时间：2017-05-16
+            	描述：CSS伪类
+            -->
+            <div class="fakeCSS">
+            		<a href="#">当前网站</a>
+            		<a href="http://www.itcast.cn">传智播客官网</a>
+            		<a href="http://web.itcast.cn">传智播客前端官网</a>
+            		<a href="https://www.baidu.com">百度首页</a>
+            		<p><a href="http://sina.cn">新浪首页</a></p>
+            </div>
+            <hr />
+            <div class="fakeElement">
+            		<p>
+            			jdbc操作数据库的问题或缺点
+问题1、对数据库进行操作前要先创建一个数据库连接，在操作完成后，要释放此数据连接，下次操作数据库的时候再重新建立数据库连接。这样当对数据库进行频繁操作的时候，需要频繁对数据库进行连接和释放，造成数据库资源的浪费。
+解决方案：通过数据库连接池进行数据库连接的管理
+问题2、sql语句在jdbc操作中是被硬编码到java语句中，当sql请求发生变化时，java语句需要重新进行编写，不利于后期维护。
+解决方案：通过配置xml文件，将sql语句添加到xml文件中，有利于系统的维护更改
+问题3、向preparedStatement中设置参数，对占位符位置和设置参数值都是硬编码在java代码中，不利于后期更改
+解决方案：通过xml配置sql语句的时候，将占位符位置和参数值同时配置在xml中。
+问题4、在得到的结果集中进行数据的遍历时，获取数据也是通过硬编码到Java语句中获取的，不利于后期的操作。
+解决方案：将获取的结果集数据映射成java对象
+            		</p>
+            </div>
+            <hr />
+            <!--
+            	作者：qiushicumt@126.com
+            	时间：2017-06-13
+            	描述：CSSy优先级
+            -->
+            <div class="priorityCSS">
+            		<div class="aside">
+            			<div class="aside-dt" id="title-txt">
+            				<h1>我是一个标题</h1>
+            			</div>
+            			<div class="aside-dd">
+            				<p>我是一个段落</p>
+            			</div>
+            		</div>
+            </div>
+            <hr />
+            <br />
+            <!--
+            	作者：qiushicumt@126.com
+            	时间：2017-06-15
+            	描述：元素的display属性设置
+            -->
+            <div class="displaySpan">
+            		<span>我是一个span标签</span>
+            		<strong>我是一个strong标签</strong>
+            		<s>我是一个s标签</s>
+            		<div>我是一个div标签</div>
+            		<div class="divInlineBlock">
+            			我是一个行内块div标签
+            		</div>
+            </div>
+		</div>
+	</body>
+</html>

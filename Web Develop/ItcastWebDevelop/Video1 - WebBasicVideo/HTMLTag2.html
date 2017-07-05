@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML中的高级标签</title>
+	<style type="text/css">
+		body {
+			margin:0px;
+			padding:0px;
+		}
+		.wrappage {
+			width:980px;
+			margin:0 auto;
+			padding-top:20px;
+		}
+		.listTable {
+			border:1px solid gray;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrappage">
+		<div class="list">
+			<div class="order_list">
+				<p>传智播客分校前端开发课程开设顺序</p>
+				<ol>
+					<li>北京</li>
+					<li>上海</li>
+					<li>深圳</li>
+					<li>广州</li>
+					<li>郑州</li>
+					<li>武汉</li>
+				</ol>
+			</div>
+			<div class="no_order_list">
+				<p>我的个人爱好</p>
+				<ul>
+					<li>足球</li>
+					<li>阅读</li>
+					<li>网球</li>
+					<li>看电影</li>
+					<li>打游戏</li>
+					<li>跑步</li>
+					<li>旅游</li>
+				</ul>
+			</div>
+			<div class="define_list">
+				<p>自定义列表通常用于对术语或名词进行解释和描述，自定义列表的列表项前没有任何项目符号</p>
+				<dl>
+					<dt>名词1</dt>
+					<dd>名词1解释1</dd>
+					<dd>名词1解释2</dd>
+					<dd>名词1解释3</dd>
+					<dt>名词2</dt>
+					<dd>名词2解释1</dd>
+					<dd>名词2解释2</dd>
+					<dd>名词2解释3</dd>
+				</dl>
+			</div>
+			<div class="table_list">
+				<table class="listTable" border="1px">
+					<tr>
+						<td>基本参数</td>
+						<td>生产时间</td>
+						<td>发动机位置</td>
+						<td>车身结构</td>
+						<td>最高车速(km/h)</td>
+						<td>整车质保</td>
+						<td>保养周期</td>
+					</tr>
+					<tr>
+						<td>2015帕萨特1.4T手动尊雅版</td>
+						<td>2015</td>
+						<td>前置</td>
+						<td>4门5座三厢车</td>
+						<td>200</td>
+						<td>3年/10万公里</td>
+						<td>10000</td>
+					</tr>
+					<tr>
+						<td>2015帕萨特1.4T手动尊雅版</td>
+						<td>2015</td>
+						<td>前置</td>
+						<td>4门5座三厢车</td>
+						<td>200</td>
+						<td>3年/10万公里</td>
+						<td>10000</td>
+					</tr>
+					<tr>
+						<td>2015帕萨特1.4T手动尊荣版</td>
+						<td>2015</td>
+						<td>前置</td>
+						<td>4门5座三厢车</td>
+						<td>200</td>
+						<td>3年/10万公里</td>
+						<td>10000</td>
+					</tr>
+					<tr>
+						<td>2015帕萨特1.8TDSG尊雅版</td>
+						<td>2015</td>
+						<td>前置</td>
+						<td>4门5座三厢车</td>
+						<td>210</td>
+						<td>3年/10万公里</td>
+						<td>10000</td>
+					</tr>
+					<tr>
+						<td>2015帕萨特1.4TDSG尊荣版</td>
+						<td>2015</td>
+						<td>前置</td>
+						<td>4门5座三厢车</td>
+						<td>200</td>
+						<td>3年/10万公里</td>
+						<td>10000</td>
+					</tr>
+					<tr>
+						<td>2015帕萨特1.4TDSG蓝驱版</td>
+						<td>2015</td>
+						<td>前置</td>
+						<td>4门5座三厢车</td>
+						<td>200</td>
+						<td>3年/10万公里</td>
+						<td>10000</td>
+					</tr>
+					<tr>
+						<td>2015帕萨特1.8TSI自动尊荣版</td>
+						<td>2015</td>
+						<td>前置</td>
+						<td>4门5座三厢车</td>
+						<td>210</td>
+						<td>3年/10万公里</td>
+						<td>10000</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr color="green" size="8px" >
+		<div class="fieldset">
+			<fieldset>
+				<legend>组别1</legend>
+				用户名：<input type="text" name="username1"><br>
+				密码：<input type="password" name="password1">
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>组别2</legend>
+				电子邮箱：<input type="email" name="email2"><br>
+				手机号码：<input type="tel" name="phoneNum2">
+			</fieldset>
+		</div>
+		<hr color="green" size="8px" >
+		<div class="form">
+			<form action="#">
+				<table>
+					<p>注册账号<hr></p>
+					
+					<tbody>
+						<tr>
+							<td><label for="nickName">昵称：</label></td>
+							<td><input type="text" name="nickname" id="nickName" placeholder="请输入昵称"></td>
+						</tr>
+						<tr>
+							<td><label for="password">密码：</label></td>
+							<td><input type="password" id="password" name="password" placeholder="请输入密码"></td>
+						</tr>
+						<tr>
+							<td><label for="checkpwd">请确认密码：</label></td>
+							<td><input type="password" id="checkpwd" name="checkpwd" placeholder="请确认密码"></td>
+						</tr>
+						<tr>
+							<td><label>性别:</label></td>
+							<td><input type="radio" name="gender" checked="true" value="male">男&nbsp;&nbsp;<input type="radio" name="gender" value="female">女</td>
+						</tr>
+						<tr>
+							<td><label>生日：</label></td>
+							<td>
+								<select>
+									<option value="gongli">公历</option>
+									<option value="nongli">农历</option>
+								</select>
+								<select>
+									<option>年</option>
+									<option>2017</option>
+									<option>2016</option>
+									<option>2015</option>
+									<option>2014</option>
+									<option>2013</option>
+									<option>2012</option>
+									<option>2011</option>
+									<option>2010</option>
+									<option>2009</option>
+									<option>2008</option>
+									<option>2007</option>
+									<option>2006</option>
+									<option>2005</option>
+									<option>2004</option>
+									<option>2003</option>
+									<option>2002</option>
+									<option>2001</option>
+									<option>2000</option>
+									<option>1999</option>
+									<option>1998</option>
+									<option>1997</option>
+									<option>1996</option>
+									<option>1995</option>
+									<option>1994</option>
+									<option>1993</option>
+									<option>1992</option>
+									<option>1991</option>
+									<option>1990</option>
+									<option>1989</option>
+									<option>1988</option>
+									<option>1987</option>
+									<option>1986</option>
+									<option>1985</option>
+									<option>1984</option>
+									<option>1983</option>
+									<option>1982</option>
+									<option>1981</option>
+									<option>1980</option>
+									<option>1979</option>
+									<option>1978</option>
+									<option>1977</option>
+									<option>1976</option>
+									<option>1975</option>
+									<option>1974</option>
+									<option>1973</option>
+									<option>1972</option>
+									<option>1971</option>
+									<option>1970</option>
+									<option>1969</option>
+									<option>1968</option>
+									<option>1967</option>
+									<option>1966</option>
+									<option>1965</option>
+									<option>1964</option>
+									<option>1963</option>
+									<option>1962</option>
+									<option>1961</option>
+									<option>1960</option>
+									<option>1959</option>
+									<option>1958</option>
+									<option>1957</option>
+									<option>1956</option>
+									<option>1955</option>
+									<option>1954</option>
+									<option>1953</option>
+									<option>1952</option>
+									<option>1951</option>
+									<option>1950</option>
+									<option>1949</option>
+									<option>1948</option>
+									<option>1947</option>
+									<option>1946</option>
+									<option>1945</option>
+									<option>1944</option>
+									<option>1943</option>
+									<option>1942</option>
+									<option>1941</option>
+									<option>1940</option>
+								</select>
+								<select>
+									<option>月</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+								</select>
+								<select>
+									<option>日</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									<option>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>
+									<option>24</option>
+									<option>25</option>
+									<option>26</option>
+									<option>27</option>
+									<option>28</option>
+									<option>29</option>
+									<option>30</option>
+									<option>31</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label>所在地：</label></td>
+							<td>
+								<select>
+									<option>中国</option>
+									<option>阿尔巴尼亚</option>
+									<option>阿尔及利亚</option>
+									<option>阿富汗</option>
+									<option>阿根廷</option>
+									<option>阿拉伯联合酋长国</option>
+									<option>阿鲁巴</option>
+									<option>阿曼</option>
+									<option>阿森松岛</option>
+									<option>阿塞拜疆</option>
+								</select>
+								<select>
+									<option>省/市</option>
+									<option>北京市</option>
+									<option>上海市</option>
+									<option>天津市</option>
+									<option>重庆市</option>
+									<option>安徽省</option>
+									<option>福建省</option>
+									<option>甘肃省</option>
+									<option>广东省</option>
+									<option>广西壮族自治区</option>
+									<option>贵州省</option>
+									<option>海南省</option>
+									<option>河北省</option>
+									<option>黑龙江省</option>
+									<option>河南省</option>
+									<option>湖南省</option>
+									<option>湖北省</option>
+									<option>吉林省</option>
+									<option>江苏省</option>
+									<option>江西省</option>
+									<option>辽宁省</option>
+									<option>内蒙古自治区</option>
+									<option>宁夏回族自治区</option>
+									<option>青海省</option>
+									<option>山东省</option>
+									<option>山西省</option>
+									<option>陕西省</option>
+									<option>四川省</option>
+									<option>西藏自治区</option>
+									<option>新疆维吾尔自治区</option>
+									<option>云南省</option>
+									<option>浙江省</option>
+								</select>
+								<select>
+									<option>市/县</option>
+									<option>北京市</option>
+									<option>上海市</option>
+									<option>天津市</option>
+									<option>重庆市</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label>验证码：</label></td>
+							<td><input type="text" name="checkImg"><img src="#" alt="验证码"></td>
+						</tr>
+						<tr>
+							<td><label for="phoneNum">手机号码：</label></td>
+							<td><input type="text" name="phoneNum" id="phoneNum" placeholder="请输入手机号码"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="phoneCheckNum" placeholder="请输入收到的手机验证码"></td>
+							<td><button>获取短信验证码</button></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="checkbox1"><label>同时开通QQ空间</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="checkbox2"><label>我已阅读并同意相关服务</label></td>
+						</tr>
+						<tr>
+							<td><input type="submit" name="regButton" value="提交注册"></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<hr color="green" size="8px" >
+	</div>
+</body>
+</html>

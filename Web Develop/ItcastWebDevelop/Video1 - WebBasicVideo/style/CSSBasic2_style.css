@@ -1,0 +1,18 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.wrappage {
+	width: 980px;
+	margin: 20px auto;
+}
+h1 {
+	color: #2A3466;
+}
+h1 > span {
+	color: #FF558A;
+}
+li > span {
+	color: #FF558A;
+	font-weight: bold;
+}
