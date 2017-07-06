@@ -93,3 +93,18 @@ h3.titleText {
 	/* overline设置文字上方的顶线 */
 	text-decoration: overline;
 }
+
+/* CSS 文本空白符 */
+.text-white-space p {
+	width:180px;
+	height:150px;
+	margin-bottom: 5px;
+	background-color: #ADFF2F;
+}
+.text-white-space .nowrap {
+	white-space:nowrap;
+}
+.text-white-space .pre {
+	white-space:pre;
+}
+
