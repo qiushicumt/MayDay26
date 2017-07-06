@@ -76,3 +76,20 @@ h3.titleText {
 	display: inline-block;
 	height:50px;
 }
+
+/* CSS文本装饰线的设置 */
+.text-line a {
+	text-decoration: none;
+}
+.text-line .text-underline {
+	/* underline即设置为下划线 */
+	text-decoration: underline;
+}
+.text-line .text-linethrough {
+	/* line-through设置删除线 */
+	text-decoration: line-through;
+}
+.text-line .text-topline {
+	/* overline设置文字上方的顶线 */
+	text-decoration: overline;
+}
