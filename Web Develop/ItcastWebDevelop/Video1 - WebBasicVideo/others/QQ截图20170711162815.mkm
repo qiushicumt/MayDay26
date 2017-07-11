@@ -1,0 +1,13 @@
+<MKM version="2.0" imageFileUrl="file:///C:/Users/Administrator/Desktop/QQ%e6%88%aa%e5%9b%be20170711162815.png">
+  <Marks>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="3947762" offsetX="25" offsetY="10" x="583" y="78"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="12541791" offsetX="25" offsetY="10" x="394" y="75"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="4078909" offsetX="25" offsetY="10" x="669" y="25"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="13224393" offsetX="25" offsetY="10" x="421" y="101"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="15329769" offsetX="25" offsetY="10" x="296" y="73"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="3058687" offsetX="25" offsetY="10" x="300" y="310"/>
+    <LengthMark direction="3" color="16711680" length="20" x="33" y="101"/>
+    <LengthMark direction="12" color="16711680" length="768" x="31" y="101"/>
+    <LengthMark direction="3" color="16711680" length="16" x="316" y="161"/>
+  </Marks>
+</MKM>

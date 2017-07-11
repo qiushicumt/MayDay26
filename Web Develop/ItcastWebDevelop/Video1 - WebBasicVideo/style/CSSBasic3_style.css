@@ -108,3 +108,33 @@ h3.titleText {
 	white-space:pre;
 }
 
+/* CSS的word-break设置 */
+/* 默认设置为normal，按照浏览器的换行规则自动换行 
+ * 设置为break-all时，当单词遇到边缘时，会被换行，单词会被打断
+ * 设置为keep-all时，遇到空格或者单词连接符再换行，否则一直不换行
+ * */
+.wordBreak .wordBreakNormal {
+	width:100px;
+	height:150px;
+	background-color: #33CCFF;
+	color: #fff;
+	border:1px solid gray;
+	margin-bottom: 5px;
+}
+.wordBreak .wordBreakAll {
+	width:100px;
+	height:150px;
+	background-color: #33CCFF;
+	color: #fff;
+	border:1px solid gray;
+	word-break: break-all;
+	margin-bottom: 5px;
+}
+.wordBreak .wordKeepAll {
+	width:100px;
+	height:150px;
+	background-color: #33CCFF;
+	color: #fff;
+	border:1px solid gray;
+	word-break: keep-all;
+}
