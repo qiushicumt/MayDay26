@@ -1,6 +1,7 @@
 body {
 	margin:0px;
 	padding:0px;
+	font-family: "宋体";
 }
 .wrappage {
 	width:768px;
@@ -13,7 +14,18 @@ body {
 	color:#3E3D3D;
 	font-weight: 500;
 }
-.wrappage .fuBiaoTi {
+.wrappage .sub-title {
 	font-size: 14px;
 	text-align: center;
+	color:#bf5f5f;
+}
+.wrappage .sub-title .sub-title-date {
+	color:#e9e9e9;
+}
+.wrappage .main-content {
+	text-indent: 2em;
+}
+.wrappage .main-content a {
+	color:#2EABFF;
+	text-decoration: none;
 }
