@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript循环语句for循环</title>
+    <script>
+        /**
+         *  1、输出1到100
+         for(var i = 1; i <=100; i++) {
+                console.log(i);
+            }
+         */
+
+        /**
+         *  2、输出1到100的和
+         *  var sum = 0;
+         for(var i = 1; i <= 100; i++) {
+                sum += i;
+            }
+         console.log(sum);
+         */
+
+        /**
+         *  3、求1~100之间所有数的和、平均值
+         *   var sum = 0, avg = 0, num = 0 ;
+         for(var i = 1; i <= 100; i++) {
+                sum += i;
+                num++;
+             }
+         console.log(sum);
+         avg = sum/num;
+         console.log(avg);
+         */
+
+        /**
+         *  4、求1~100之间所有偶数的和、所有奇数的和
+         *   var sum1 = 0, sum2 = 0;
+         for(var i = 1; i <= 100; i++) {
+                 if (i % 2 === 1) {
+                     sum1 += i;
+                 } else {
+                     sum2 += i;
+                 }
+             }
+         console.log("1~100之间的奇数和为：" + sum1);
+         console.log("1~100之间的偶数和为：" + sum2);
+         */
+
+        /**
+         *  5、本金10000元存入银行，年利率是千分之三，每过一年，将利息和本金相加作为新的本金。计算5年后，获得的总的本金数
+         */
+         var capital = 10000;
+         for(var i = 1; i <= 5; i++) {
+             capital += capital * 0.003;
+         }
+         console.log(capital);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
