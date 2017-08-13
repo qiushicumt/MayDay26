@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4b6fcd-a76a-467b-80a2-98074d5121cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaScript Develop/JS Demo/JS Practise/html/js_getCurrTime.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web Develop/Bootstrap Project/html/Bootstrap_Thumbnail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01_XunHuanYuJu.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web Develop/Bootstrap Project/images/index/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web Develop/Bootstrap Project/images/index/navbar_left_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web Develop/Bootstrap Project/images/index/navbar_left_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web Develop/Bootstrap Project/images/index/navbar_left_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web Develop/Bootstrap Project/css/eshop_style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web Develop/Bootstrap Project/html/EShop_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01_XunHuanYuJu.html" afterPath="$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01_XunHuanYuJu.html" />
     </list>
     <ignored path="MayDay26.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +31,8 @@
       <file leaf-file-name="JavaScript_JiChuJiaQiang_Day01_XunHuanYuJu.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01_XunHuanYuJu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1045">
-              <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+            <state relative-caret-position="413">
+              <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -43,6 +46,7 @@
         <option value="Html5" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -65,6 +69,8 @@
         <option value="$PROJECT_DIR$/Web Develop/Bootstrap Project/html/Starter_template.html" />
         <option value="$PROJECT_DIR$/Web Develop/Bootstrap Project/html/Bootstrap_Thumbnail.html" />
         <option value="$PROJECT_DIR$/JavaScript Develop/JS Demo/JS Practise/html/js_getCurrTime.html" />
+        <option value="$PROJECT_DIR$/Web Develop/Bootstrap Project/css/eshop_style.css" />
+        <option value="$PROJECT_DIR$/Web Develop/Bootstrap Project/html/EShop_index.html" />
         <option value="$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01_XunHuanYuJu.html" />
       </list>
     </option>
@@ -75,10 +81,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="23" />
-    <option name="width" value="1368" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="72" />
+    <option name="y" value="45" />
+    <option name="width" value="1362" />
     <option name="height" value="745" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -107,32 +113,6 @@
             <path>
               <item name="MayDay26" type="b2602c69:ProjectViewProjectNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MayDay26" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScript Develop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MayDay26" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScript Develop" type="462c0819:PsiDirectoryNode" />
-              <item name="JS Demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MayDay26" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScript Develop" type="462c0819:PsiDirectoryNode" />
-              <item name="JS Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="JS Practise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MayDay26" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScript Develop" type="462c0819:PsiDirectoryNode" />
-              <item name="JS Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="JS Practise" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MayDay26" type="b2602c69:ProjectViewProjectNode" />
@@ -173,9 +153,11 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="recentsLimit" value="5" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Web Develop/Bootstrap Project/images/index" />
       <recent name="$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html" />
     </key>
   </component>
@@ -275,17 +257,19 @@
       <workItem from="1502089950902" duration="36000" />
       <workItem from="1502090063450" duration="1913000" />
       <workItem from="1502156228920" duration="3056000" />
+      <workItem from="1502413320104" duration="10256000" />
+      <workItem from="1502611253357" duration="1593000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9503000" />
+    <option name="totallyTimeSpent" value="21352000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1368" height="745" extended-state="0" />
+    <frame x="4" y="23" width="1362" height="745" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15350877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14610866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -300,7 +284,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17384844" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -323,11 +307,36 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JavaScript Develop/JS Demo/JS Practise/html/js_getCurrTime.html">
+    <entry file="file://$PROJECT_DIR$/Web Develop/Bootstrap Project/html/EShop_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web Develop/Bootstrap Project/css/eshop_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01_XunHuanYuJu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript Develop/JS Demo/JS Practise/html/js_getCurrTime.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -433,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -441,14 +449,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
           <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web Develop/Bootstrap Project/images/index/navbar_left_2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web Develop/Bootstrap Project/images/index/navbar_left_3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web Develop/Bootstrap Project/html/EShop_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="65" column="16" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web Develop/Bootstrap Project/css/eshop_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01_XunHuanYuJu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        <state relative-caret-position="413">
+          <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
           <folding />
         </state>
       </provider>

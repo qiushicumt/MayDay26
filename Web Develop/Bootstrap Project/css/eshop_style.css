@@ -1,0 +1,29 @@
+/* 主页index的样式 */
+.navbar-collapse .right {
+    display: inline-block;
+    text-align: right;
+}
+.masthead .mid-header .login,
+.masthead .mid-header .logout,
+.masthead .mid-header .shopping-cart,
+.masthead .mid-header .search {
+    display: inline-block;
+    padding: 0 0 0 2em;
+    vertical-align: middle;
+}
+.shopping-cart {
+    color:#d6183c !important;
+    cursor: pointer;
+}
+.navbar-brand-nopadding {
+    padding:0 !important;
+}
+.navbar-noborder {
+    border: none;
+}
+.nav-justified-button {
+    max-height: 52px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

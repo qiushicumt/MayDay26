@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript循环语句for循环</title>
+    <title>JavaScript循环语句</title>
     <script>
+        //  ===============================
+        //  for循环
+        //  ===============================
+
         /**
          *  1、输出1到100
          for(var i = 1; i <=100; i++) {
@@ -54,6 +58,40 @@
              capital += capital * 0.003;
          }
          console.log(capital);
+
+        /**
+         * 6、求200~300之间，第一个能被7整除的数
+         *
+         */
+         var num = 0;
+         for(var i = 200; i <= 300; i++) {
+             if(i % 7 === 0) {
+                num = i;
+                break;          //  break直接结束for循环
+             }
+         }
+         console.log(num);
+
+        //  ===============================
+        //  while和do while循环
+        //  ===============================
+
+        /**
+         *  1、输入任意一个整数，求此数的位数
+         */
+        var num = 21323;
+        var i = 0;
+        var j = 0;
+        //  while循环
+        while (num / 10 >= 1) {
+            i++;
+            num /= 10;
+        }
+        console.log(i + 1);
+        //  do while循环
+        num = 21323;
+        
+
     </script>
 </head>
 <body>
