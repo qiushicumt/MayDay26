@@ -78,20 +78,57 @@
 
         /**
          *  1、输入任意一个整数，求此数的位数
+         *
+         *  ======== 错误 =================
+         *  var num = 21323;
+             var i = 0;
+             var j = 0;
+             //  while循环
+             while (num / 10 >= 1) {
+                i++;
+                num /= 10;
+            }
+             console.log(i + 1);
+             //  do while循环
+             num = 21323;
          */
-        var num = 21323;
-        var i = 0;
-        var j = 0;
-        //  while循环
-        while (num / 10 >= 1) {
-            i++;
-            num /= 10;
-        }
-        console.log(i + 1);
-        //  do while循环
-        num = 21323;
-        
+            // prompt(String, defaultValue)函数，弹出提示框，提示用户，获取用户的输入信息
+            //  String：提示语句
+            //  DefaultValue：默认值
+            //  注：返回值为String类型
+            //  注：构造函数 Number() 可以不与运算符 new 一起使用，而直接作为转化函数来使用。
+            //      以这种方式调用 Number() 时，它会把自己的参数转化成一个数字，然后返回转换后的原始数值（或 NaN）。
 
+            /*
+             var num = number(prompt("请输入一个数字"));
+             if(num) {
+                 var i = 0;
+                 while(num >= 10) {
+                     num = parseInt(num / 10);
+                     i++;
+                 }
+                 i++;
+                 console.log("位数为：" + i);
+             } else if(num === 0) {
+                console.log("位数为：1");
+             } else {
+                console.log("请输入数字");
+             }
+             */
+            //  2、输入一个整数，翻转输出这个数的每一个数字
+            var num = parseInt(Number(prompt("请输入一个整数")));
+            if(num) {
+                var i = 0;
+                while (num > 0) {
+                    i = num % 10;
+                    num = parseInt(num / 10);
+                    console.log(i);
+                }
+            } else if(num === 0) {
+                console.log("0");
+            } else {
+                console.log("请输入数字！");
+            }
     </script>
 </head>
 <body>
