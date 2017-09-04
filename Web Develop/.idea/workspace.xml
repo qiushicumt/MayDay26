@@ -16,12 +16,24 @@
     <favorites_list name="Web Develop" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="JavaScript_JiChuJiaQiang_Day05_Object.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day05_Object.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -30,11 +42,21 @@
       <list>
         <option value="$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01.html" />
         <option value="$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01_KongZhiYuJu.html" />
+        <option value="$PROJECT_DIR$/ItcastWebDevelop/Video3 - jQueryVideo/html/jQueryBasic_Demo1.html" />
+        <option value="$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/js/jsObject.js" />
+        <option value="$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day05_Object.html" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -60,6 +82,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -85,12 +109,17 @@
               <item name="Video2 - Java_JavaScriptVideo" type="462c0819:PsiDirectoryNode" />
               <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Web Develop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Web Develop" type="462c0819:PsiDirectoryNode" />
+              <item name="ItcastWebDevelop" type="462c0819:PsiDirectoryNode" />
+              <item name="Video2 - Java_JavaScriptVideo" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -99,6 +128,12 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html" />
+      <recent name="$PROJECT_DIR$/ItcastWebDevelop/Video3 - jQueryVideo/js" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -125,11 +160,14 @@
       <workItem from="1501510568337" duration="133000" />
       <workItem from="1501511064526" duration="2687000" />
       <workItem from="1501682897933" duration="2051000" />
+      <workItem from="1502117396488" duration="272000" />
+      <workItem from="1502726089972" duration="991000" />
+      <workItem from="1504529797658" duration="647000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4871000" />
+    <option name="totallyTimeSpent" value="6781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -142,8 +180,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1276" height="777" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07680251" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13322884" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -172,7 +211,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01.html">
+    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video3 - jQueryVideo/html/jQueryBasic_Demo1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -180,19 +219,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaVideo_Day02_JavaScript.html" />
-    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01.html">
+    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01_KongZhiYuJu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01.html" />
+    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaVideo_Day02_JavaScript.html" />
+    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01.html" />
+    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day02_Array.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day01_KongZhiYuJu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
-          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video3 - jQueryVideo/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video3 - jQueryVideo/html/jQueryBasic_Demo1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/js/jsObject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day05_Object.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding />
         </state>
       </provider>
