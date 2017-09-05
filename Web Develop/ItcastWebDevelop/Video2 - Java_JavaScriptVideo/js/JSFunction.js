@@ -80,3 +80,66 @@ function getMinInArray(array) {
     }
     return min;
 }
+
+/**
+ * 判断一个数是否为素数
+ * @param num1
+ * @returns {string}
+ */
+function getSuShu(num1) {
+    num1 = num1 || 1;
+    var tmp = 0;
+    for (var i = 1; i <= num1; i++) {
+        if ((num1 % i) === 0 ) {
+            tmp++;
+        }
+    }
+    return tmp > 2 ? "这个数不是素数" : "这个数是素数";
+}
+
+/**
+ * 获取一组数中的素数和合数
+ * @param array {Array}
+ */
+function getSushuHeshu(array) {
+    array = array || [];
+    var sushuArray = [];
+    var heshuArray = [];
+    for (var i = 0; i < array.length; i++) {
+        var tmp = 0;
+        for (var j = 1; j <= array[i]; j++) {
+            if(array[i] % j === 0)
+                tmp++;
+        }
+        if(tmp === 2) {
+            sushuArray[sushuArray.length] = array[i];
+        } else {
+            heshuArray[heshuArray.length] = array[i];
+        }
+    }
+    console.log("这组数中所有的素数为：" + sushuArray);
+    console.log("这组数中所有的合数为：" + heshuArray);
+}
+
+/**
+ * 求一个数的阶乘
+ * @param num
+ * @returns {number}
+ */
+function getFactorial(num) {
+    num = num || 0;
+    var fac = 1;
+    for(var i = num; i >= 1; i--) {
+        fac *= i;
+    }
+    return fac;
+}
+
+function getFactorialSum(num) {
+    num = num || 0;
+    var sum = 0;
+    for(var i = num; i >= 1; i--) {
+        sum += getFactorial(i);
+    }
+    return sum;
+}

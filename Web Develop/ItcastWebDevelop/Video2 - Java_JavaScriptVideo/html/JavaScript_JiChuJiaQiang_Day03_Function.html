@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>JavaScript函数</title>
-    <script src="../js/jsFunction.js"></script>
+    <script src="../js/JSFunction.js"></script>
     <script>
         //  JavaScript函数
 
@@ -30,6 +30,21 @@
         var array1 = new Array(31, 21, 43, 15, 48, 22, 39, 10);
         console.log(array1 + "  数组中的最大值为：" + getMaxInArray(array1));
         console.log(array1 + "  数组中的最小值为：" + getMinInArray(array1));
+
+        //  6、调用函数，判断一个数是否是素数
+        console.log(getSuShu(13));
+
+        //  7、调用函数，求一组数中的素数和合数
+        var array2 = [21, 43, 8, 13, 35, 53, 69, 71, 88, 92];
+        getSushuHeshu(array2);
+
+        //  8、调用函数，求阶乘
+        var num6 = 9;
+        console.log("9的阶乘为：" + getFactorial(num6));
+
+        //  9、调用函数，求 1! + 2! + 3! + ... + n!
+        var num7 = 7;
+        console.log("1! + 2! + ... + 7! = " + getFactorialSum(num7));
 
     </script>
 </head>
