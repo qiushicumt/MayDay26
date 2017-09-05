@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <title>jQuery基础Demo1</title>
+</head>
+<body>
+    <div class="container">
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        //  document.ready()事件，表示在页面的所有DOM加载完成后执行此方法
+        //  一般情况下，大多数的jQuery代码都应当放在$(document).ready()方法中
+        var numberShows = 10;
+        var numberTickets = 100;
+        $(document).ready(function () {
+            for (var i = 0; i < numberTickets; i++) {
+                var numberTotal = i + 1;
+                $('.container').append("<p>There are " + numberTotal + "tickets available</p>");
+            }
+        });
+    </script>
+</body>
+</html>
