@@ -1,0 +1,29 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+/* CSS盒模型 */
+.cssBox .box1 {
+	background-color: dodgerblue;
+	color:white;
+	width:200px;
+	height:200px;
+	border:20px solid gray;
+	padding: 50px;
+}
+
+/* CSS盒模型设置边框 */
+.cssBox .box2 {
+	width:200px;
+	height:200px;
+	background-color:lightseagreen;
+	//	单独设置下边框的样式
+	border-bottom-color: #EC008C;
+	border-bottom-style: dashed;
+	border-bottom-width: 8px;
+	
+	//	合写某一边框的样式
+	//	合写的语法格式为: border-*:宽度 样式 颜色
+	border-top:10px solid #ED1C24;
+}

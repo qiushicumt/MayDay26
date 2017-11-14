@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript循环语句</title>
+    <script>
+        //  ===============================
+        //  for循环
+        //  ===============================
+
+        /**
+         *  1、输出1到100
+         for(var i = 1; i <=100; i++) {
+                console.log(i);
+            }
+         */
+
+        /**
+         *  2、输出1到100的和
+         *  var sum = 0;
+         for(var i = 1; i <= 100; i++) {
+                sum += i;
+            }
+         console.log(sum);
+         */
+
+        /**
+         *  3、求1~100之间所有数的和、平均值
+         *   var sum = 0, avg = 0, num = 0 ;
+         for(var i = 1; i <= 100; i++) {
+                sum += i;
+                num++;
+             }
+         console.log(sum);
+         avg = sum/num;
+         console.log(avg);
+         */
+
+        /**
+         *  4、求1~100之间所有偶数的和、所有奇数的和
+         *   var sum1 = 0, sum2 = 0;
+         for(var i = 1; i <= 100; i++) {
+                 if (i % 2 === 1) {
+                     sum1 += i;
+                 } else {
+                     sum2 += i;
+                 }
+             }
+         console.log("1~100之间的奇数和为：" + sum1);
+         console.log("1~100之间的偶数和为：" + sum2);
+         */
+
+        /**
+         *  5、本金10000元存入银行，年利率是千分之三，每过一年，将利息和本金相加作为新的本金。计算5年后，获得的总的本金数
+         */
+         var capital = 10000;
+         for(var i = 1; i <= 5; i++) {
+             capital += capital * 0.003;
+         }
+         console.log(capital);
+
+        /**
+         * 6、求200~300之间，第一个能被7整除的数
+         *
+         */
+         var num = 0;
+         for(var i = 200; i <= 300; i++) {
+             if(i % 7 === 0) {
+                num = i;
+                break;          //  break直接结束for循环
+             }
+         }
+         console.log(num);
+
+        //  ===============================
+        //  while和do while循环
+        //  ===============================
+
+        /**
+         *  1、输入任意一个整数，求此数的位数
+         *
+         *  ======== 错误 =================
+         *  var num = 21323;
+             var i = 0;
+             var j = 0;
+             //  while循环
+             while (num / 10 >= 1) {
+                i++;
+                num /= 10;
+            }
+             console.log(i + 1);
+             //  do while循环
+             num = 21323;
+         */
+            // prompt(String, defaultValue)函数，弹出提示框，提示用户，获取用户的输入信息
+            //  String：提示语句
+            //  DefaultValue：默认值
+            //  注：返回值为String类型
+            //  注：构造函数 Number() 可以不与运算符 new 一起使用，而直接作为转化函数来使用。
+            //      以这种方式调用 Number() 时，它会把自己的参数转化成一个数字，然后返回转换后的原始数值（或 NaN）。
+
+            /*
+             var num = number(prompt("请输入一个数字"));
+             if(num) {
+                 var i = 0;
+                 while(num >= 10) {
+                     num = parseInt(num / 10);
+                     i++;
+                 }
+                 i++;
+                 console.log("位数为：" + i);
+             } else if(num === 0) {
+                console.log("位数为：1");
+             } else {
+                console.log("请输入数字");
+             }
+             */
+            //  2、输入一个整数，翻转输出这个数的每一个数字
+            var num = parseInt(Number(prompt("请输入一个整数")));
+            if(num) {
+                var i = 0;
+                while (num > 0) {
+                    i = num % 10;
+                    num = parseInt(num / 10);
+                    console.log(i);
+                }
+            } else if(num === 0) {
+                console.log("0");
+            } else {
+                console.log("请输入数字！");
+            }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

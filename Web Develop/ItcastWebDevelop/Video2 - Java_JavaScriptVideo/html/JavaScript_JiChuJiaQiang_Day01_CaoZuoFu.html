@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScriptjich基础加强视频Day01</title>
+</head>
+<body>
+    <div class="wrappage">
+
+    </div>
+    <script>
+        //JavaScript的逻辑运算符，&&、||、！
+
+        /**
+         * 当逻辑与和逻辑或的两端进行判断的值为布尔类型的值时：
+         *   逻辑与&&：有一个false，则表达式返回为false，只有两个都为true时，整个表达式的值返回true；
+         *   逻辑或||：有一个为true，则表达式返回为true，只有两个都为false时，整个表达式返回false；
+         * @type {boolean}
+         */
+        var a = true && false;  //  表达式返回值为false
+        var b = true || false;  //  表达式返回值为true
+
+        /**
+         * 当逻辑与和逻辑或的两端进行判断的值为其他类型的值时：
+         *   逻辑与&&：当两个操作数转换成布尔类型的值都为true时，则整个表达式返回第二个操作数；
+         *            当两个操作数有一个转换成布尔类型的值为false时，则整个表达式返回false的这个操作数
+         *   逻辑或||：当两个操作数转换成布尔类型的值都为false时，则整个表达式返回第二个操作数；
+         *            当两个操作数有一个转换成布尔类型的值为true时，若这个数为第一个操作数，则直接返回第一个操作数，否则返回第二个操作数
+         *
+         */
+        var c = "abc" && "def";     //  表达式返回"def"
+        var d = undefined && "bcd"; //  表达式返回undefined
+        var m = "abc" || undefined; //  表达式返回abc
+        var n = undefined || "bcd"; //  表达式返回bcd
+        var x = undefined || null;  //  表达式返回null
+        var y = "abc" || "bcd";     //  表达式返回abc
+
+    </script>
+</body>
+</html>
