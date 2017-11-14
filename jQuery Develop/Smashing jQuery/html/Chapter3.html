@@ -1,0 +1,70 @@
+
+<!--
+===================================
+    2、jQuery组合选择器
+===================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h2>Book Club</h2>
+    </div>
+    <div class="book-one">
+        <p>Travel Guide to NYC</p>
+    </div>
+    <div class="book-two">
+        <p>Travel Guide to San Francisco</p>
+    </div>
+    <div class="book-three">
+        <p>Travel Guide to Seattle</p>
+    </div>
+    <div class="book-four">
+        <p>Travel Guide to Miami</p>
+    </div>
+    <div class="book-five">
+        <p>Travel Guide to Palo Alto</p>
+    </div>
+    <div id="footer">
+        <p>@Copyright 2017</p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.book-one, .book-two, .book-three, .book-four, .book-five, #header, #footer p').css('background','#ccc');
+        });
+    </script>
+</body>
+</html>
+<!--
+===================================
+    1、一般的常用的选择器
+===================================
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <title>第三章 - jQuery选择器、过滤器及CSS</title>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Hello jQuery!</h2>
+        <p>
+            精彩绝伦的jQuery的第三章是jQuery的核心:<span>选择器</span>、<span>过滤器</span>及<span>CSS</span>
+        </p>
+    </div>
+<script>
+    $(document).ready(function () {
+        $('*').css('border','1px solid #333');
+        $('p').css('font-family', 'arial,vardana');
+    });
+</script>
+</body>
+</html>
+-->
