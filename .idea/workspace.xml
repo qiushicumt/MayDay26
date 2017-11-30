@@ -47,6 +47,9 @@
         <option value="$PROJECT_DIR$/JavaScript Develop/JavaScript全栈开发/html/chapter1.html" />
         <option value="$PROJECT_DIR$/Web Develop/2016_HTML CSS Bootstrap_Video/html/day1.html" />
         <option value="$PROJECT_DIR$/Web Develop/Bootstrap Project/html/Starter_template.html" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/jQuery Develop/Smashing jQuery/html/Chapter3.html" />
+=======
         <option value="$PROJECT_DIR$/Web Develop/Bootstrap Project/html/Bootstrap_Thumbnail.html" />
         <option value="$PROJECT_DIR$/JavaScript Develop/JS Demo/JS Practise/html/js_getCurrTime.html" />
         <option value="$PROJECT_DIR$/Web Develop/Bootstrap Project/css/eshop_style.css" />
@@ -60,9 +63,13 @@
         <option value="$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/js/JSFunctionAndObject.js" />
         <option value="$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day04_FunctionAndObject.html" />
         <option value="$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day05_Object.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video3 - jQueryVideo/css/form-validate-css.css" />
         <option value="$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video3 - jQueryVideo/html/formValidate.html" />
         <option value="$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video3 - jQueryVideo/html/FormValidateDemo.html" />
+=======
+>>>>>>> 97f03366b1ab2badfde91d30ac1b872950b4c31f
+>>>>>>> 9b1179b661c89434fe2f1d1c621ca58ed0c29236
       </list>
     </option>
   </component>
@@ -106,6 +113,136 @@
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+<<<<<<< HEAD
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MayDay26" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MayDay26" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workspace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MayDay26" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workspace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MayDay26" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workspace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ItcastWebDevelop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Video2 - JavaScriptVideo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MayDay26" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workspace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ItcastWebDevelop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MayDay26" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workspace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jQuery Develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Smashing jQuery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MayDay26" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workspace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jQuery Develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Smashing jQuery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MayDay26" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workspace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jQuery Develop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+=======
           <expand>
             <path>
               <item name="MayDay26" type="b2602c69:ProjectViewProjectNode" />
@@ -155,6 +292,7 @@
             </path>
           </expand>
           <select />
+>>>>>>> 97f03366b1ab2badfde91d30ac1b872950b4c31f
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -164,6 +302,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+<<<<<<< HEAD
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="recentsLimit" value="5" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+=======
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="recentsLimit" value="5" />
@@ -188,6 +333,7 @@
         </RuleState>
       </list>
     </option>
+>>>>>>> 97f03366b1ab2badfde91d30ac1b872950b4c31f
   </component>
   <component name="RunManager" selected="JavaScript Debug.closure.html">
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -267,6 +413,11 @@
       <workItem from="1486476739922" duration="1346000" />
       <workItem from="1487077641512" duration="1439000" />
       <workItem from="1492698620760" duration="154000" />
+<<<<<<< HEAD
+      <workItem from="1500565273540" duration="45000" />
+      <workItem from="1500820952887" duration="1259000" />
+      <workItem from="1509104670035" duration="2518000" />
+=======
       <workItem from="1501825392089" duration="297000" />
       <workItem from="1501825854346" duration="75000" />
       <workItem from="1501825965456" duration="969000" />
@@ -284,6 +435,7 @@
       <workItem from="1503372474917" duration="1631000" />
       <workItem from="1503992175553" duration="351000" />
       <workItem from="1504147923429" duration="1182000" />
+<<<<<<< HEAD
       <workItem from="1504597102767" duration="1347000" />
       <workItem from="1508313935704" duration="475000" />
       <workItem from="1509592344268" duration="11730000" />
@@ -291,16 +443,38 @@
       <workItem from="1510195957645" duration="1362000" />
       <workItem from="1510211892516" duration="2224000" />
       <workItem from="1512031325008" duration="61000" />
+=======
+      <workItem from="1504597102767" duration="884000" />
+>>>>>>> 97f03366b1ab2badfde91d30ac1b872950b4c31f
+>>>>>>> 9b1179b661c89434fe2f1d1c621ca58ed0c29236
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="71993000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="6979000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="4" y="23" width="1362" height="745" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21218796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <option name="totallyTimeSpent" value="55052000" />
+>>>>>>> 9b1179b661c89434fe2f1d1c621ca58ed0c29236
   </component>
   <component name="ToolWindowManager">
     <frame x="205" y="88" width="1462" height="773" extended-state="0" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16552667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30469897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 97f03366b1ab2badfde91d30ac1b872950b4c31f
+>>>>>>> 9b1179b661c89434fe2f1d1c621ca58ed0c29236
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -362,6 +536,16 @@
     <entry file="file://$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day04_FunctionAndObject.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
+<<<<<<< HEAD
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web Develop/Bootstrap Project/html/Starter_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -384,6 +568,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> 97f03366b1ab2badfde91d30ac1b872950b4c31f
+>>>>>>> 9b1179b661c89434fe2f1d1c621ca58ed0c29236
         </state>
       </provider>
     </entry>
@@ -544,6 +733,25 @@
     <entry file="file://$PROJECT_DIR$/Web Develop/Bootstrap Project/html/Starter_template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
+<<<<<<< HEAD
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaVideo_Day02_JavaScript.html" />
+    <entry file="file://$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - JavaScriptVideo/html/JavaVideo_Day02_JavaScript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery Develop/jQuery Novice To Ninja/html/chapter02.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
           <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
@@ -639,13 +847,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+<<<<<<< HEAD
+=======
+>>>>>>> 97f03366b1ab2badfde91d30ac1b872950b4c31f
+          <folding />
+>>>>>>> 9b1179b661c89434fe2f1d1c621ca58ed0c29236
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/jQuery Develop/Smashing jQuery/html/Chapter3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+=======
     <entry file="file://$PROJECT_DIR$/Web Develop/ItcastWebDevelop/Video2 - Java_JavaScriptVideo/html/JavaScript_JiChuJiaQiang_Day05_Object.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -691,6 +911,10 @@
           <folding>
             <element signature="e#1296#1302#0" expanded="true" />
           </folding>
+=======
+>>>>>>> 97f03366b1ab2badfde91d30ac1b872950b4c31f
+          <folding />
+>>>>>>> 9b1179b661c89434fe2f1d1c621ca58ed0c29236
         </state>
       </provider>
     </entry>

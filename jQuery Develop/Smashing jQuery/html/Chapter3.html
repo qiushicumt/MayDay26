@@ -1,0 +1,211 @@
+<!--
+
+    ==================================
+      3、jQuery过滤器
+    ==================================
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery过滤器</title>
+    <link rel="stylesheet" href="../css/BasicStylesheet.css" />
+    <style>
+        ul {  width: 200px; font-family: Arial; }
+        ul li { border-bottom: 1px solid #333; }
+        ul li a {text-decoration: none; }
+    </style>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <!--
+    ================================
+        3、通过过滤器选择包含特定内
+        容的元素
+    ================================
+    <div class="wrappage">
+        <div class="content">
+            <p>This is my content</p>
+        </div>
+        <div class="alternate">
+            <p>This is alternate content</p>
+        </div>
+        <br />
+        <hr />
+        <br />
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Paper Towels</td>
+                <td>The most absorbent paper towels.</td>
+                <td>$18.99</td>
+            </tr>
+            <tr>
+                <td>Paper Napkins</td>
+                <td>Perfect for your outdoor gathering.</td>
+                <td>$16.99</td>
+            </tr>
+            <tr>
+                <td>Paper Plates</td>
+                <td>The best value.</td>
+                <td>$5.99</td>
+            </tr>
+            <tr>
+                <td>Plastic Forks</td>
+                <td>The essential picnic accessory.</td>
+                <td>$2.99</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.content:has(p)').css('font-size', '22px');
+            $("td:contains('$')").css('border','1px dashed #333');
+        });
+    </script>
+
+    ==================================
+        2、过滤器选择结果集第一个元素
+        和最后一个元素
+    ==================================
+    <div class="wrappage">
+        <div id="side-bar">
+            <h2>My Sidebar</h2>
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/customer-service">Customer Service</a></li>
+                <li><a href="/contact">Contact us</a></li>
+                <li><a href="/coupons">Coupons</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            //  :first，匹配结果集中的第一个的元素； :last，匹配结果集中的最后一个元素
+            $('ul li:first').css('border', 'none');
+            $('ul li:last').css('border', 'none');
+        });
+    </script>
+
+    =================================
+        1、  jQuery实现条纹效果
+    =================================
+    <div class="wrappage">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Paper Towels</td>
+                <td>The most absorbent paper towels.</td>
+                <td>$18.99</td>
+            </tr>
+            <tr>
+                <td>Paper Napkins</td>
+                <td>Perfect for your outdoor gathering.</td>
+                <td>$16.99</td>
+            </tr>
+            <tr>
+                <td>Paper Plates</td>
+                <td>The best value.</td>
+                <td>$5.99</td>
+            </tr>
+            <tr>
+                <td>Plastic Forks</td>
+                <td>The essential picnic accessory.</td>
+                <td>$2.99</td>
+            </tr>
+        </table>
+    </div>
+<script>
+    $(document).ready(function() {
+        //  :even过滤器，选择偶数项元素； :odd过滤器，选择奇数项元素
+        $('tr:even').css('background-color', '#dedede');
+        $('tr:odd').css('background-color', '#ffffff');
+    });
+</script>
+    -->
+</body>
+</html>
+
+
+<!--
+===================================
+    2、jQuery组合选择器
+===================================
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h2>Book Club</h2>
+    </div>
+    <div class="book-one">
+        <p>Travel Guide to NYC</p>
+    </div>
+    <div class="book-two">
+        <p>Travel Guide to San Francisco</p>
+    </div>
+    <div class="book-three">
+        <p>Travel Guide to Seattle</p>
+    </div>
+    <div class="book-four">
+        <p>Travel Guide to Miami</p>
+    </div>
+    <div class="book-five">
+        <p>Travel Guide to Palo Alto</p>
+    </div>
+    <div id="footer">
+        <p>@Copyright 2017</p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.book-one, .book-two, .book-three, .book-four, .book-five, #header, #footer p').css('background','#ccc');
+        });
+    </script>
+</body>
+</html>
+
+-->
+
+
+<!--
+===================================
+    1、一般的常用的选择器
+===================================
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <title>第三章 - jQuery选择器、过滤器及CSS</title>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Hello jQuery!</h2>
+        <p>
+            精彩绝伦的jQuery的第三章是jQuery的核心:<span>选择器</span>、<span>过滤器</span>及<span>CSS</span>
+        </p>
+    </div>
+<script>
+    $(document).ready(function () {
+        $('*').css('border','1px solid #333');
+        $('p').css('font-family', 'arial,vardana');
+    });
+</script>
+</body>
+</html>
+-->
