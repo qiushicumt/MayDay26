@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrappage {
+    width: 970px;
+    margin: 10px auto;
+}
+.errorInfo {
+    color: red;
+}
+.inputs {
+    border: solid 1px #a4c8e0;
+    width: 150px;
+    height: 15px;
+}
+
+.form_div {
+    margin-top:10px;
+}
+
+/* 鼠标放到文本框时，提示文本的样式 */
+.import_prompt {
+    border:1px solid #ffcd00;
+    background-color: #ffffda;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 20px;
+}
+
+/* 文本框内容不符合要求时，提示文本的样式 */
+.error_prompt {
+    border: 1px solid #ff3300;
+    background-color: #fff2e5;
+    padding: 2px 5px 0 25px;
+    line-height: 20px;
+}
+
+/* 文本框输入正确时，提示文本的样式 */
+.ok_prompt {
+    border: 1px solid #01be00;
+    background-color: #e6fee4;
+    padding: 2px 5px 0 25px;
+    line-height: 20px;
+}
