@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery中的显示和隐藏元素的特效</title>
+    <link rel="stylesheet" href="../../css/BasicStylesheet.css" />
+    <script src="../../js/jquery.min.js"></script>
+    <style>
+        .recipe { display: none; }
+    </style>
+</head>
+<body>
+    <div class="wrappage">
+        <h2><a href="#" class="recipe-name">Key Lime Pie</a></h2>
+        <div class="recipe">
+            Key pie is an American dessert made of key lime juice, egg yolks, and sweetened condensed milk in a pie crust
+        </div>
+    </div>
+<script>
+    $(document).ready(function() {
+        $('.recipe-name').bind('click', function () {
+            //  toggle()方法可以用于切换元素的隐藏/显示的状态
+            $('.recipe').toggle();
+        });
+    });
+</script>
+</body>
+</html>
+<!--
+===============================
+    2、hide()方法隐藏元素
+===============================
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery中的显示和隐藏元素的特效</title>
+    <link rel="stylesheet" href="../../css/BasicStylesheet.css" >
+    <script src="../../js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrappage">
+        <h2><a href="javascript:;" class="recipe-name">Key Lime Pie</a></h2>
+        <div class="recipe">
+            Key pie is an American dessert made of key lime juice, egg yolks, and sweetened condensed milk in a pie crust
+        </div>
+    </div>
+<script>
+    $(document).ready(function() {
+        $('.recipe-name').bind('click', function() {
+            //  hide()方法，可以通过给元素设置行内样式display:none，来隐藏元素
+            //  hide(duration, callback)，包含两个可选参数
+            //      参数duration，用于控制动画持续的时间，fast、slow或者具体的毫秒数值
+            //      参数callback，是回调函数，在show执行完成的时候调用
+            $('.recipe').hide();
+        });
+    });
+</script>
+</body>
+</html>
+
+==================================
+    1、show()方法显示元素
+==================================
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery中的显示和隐藏元素的特效</title>
+    <link rel="stylesheet" href="../../css/BasicStylesheet.css" />
+    <script src="../../js/jquery.min.js"></script>
+    <style>
+        .recipe { display: none; }
+    </style>
+</head>
+<body>
+    <div class="wrappage">
+        <h2><a href="javascript:;" class="recipe-name">Key Lime Pie</a></h2>
+        <div class="recipe">
+            Key pie is an American dessert made of key lime juice, egg yolks, and sweetened condensed milk in a pie crust
+        </div>
+    </div>
+<script>
+    $(document).ready(function() {
+        $('.recipe-name').bind('click', function() {
+            //  show()方法用于将原本隐藏的元素显示在页面上，即，改变原本隐藏的元素的display:none;的值
+            //  show(duration, callback)方法，包含两个可选参数
+            //      参数duration，用于控制动画持续的时间，fast、slow或者具体的毫秒数值
+            //      参数callback，是回调函数，在show执行完成的时候调用
+            $('.recipe').show();
+        });
+    });
+</script>
+</body>
+</html>
+-->

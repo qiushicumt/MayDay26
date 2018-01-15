@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"  />
+	<title>键盘捕获事件</title>
+	<link rel="stylesheet" href="../../css/BasicStylesheet.css" />
+	<script src="../../js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="wrappage">
+		<h2>Hello jQuery！</h2>
+		<br />
+		<textarea rows="5" cols="50" id="status">
+			
+		</textarea>
+		<div class="counter">140</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+			$('#status').bind({
+				keypress : function() {
+					//	声明一个变量maxNum，存放允许的最大字数
+					var maxNum = 140;
+					//	声明一个变量inputText，存放输入框的值
+					var inputText = $(this).val();
+					//	声明一个变量numChar，存放inputText变量的长度
+					var numChar = inputText.length;
+					//	声明一个变量charRemain，存放剩余字符数量
+					var charRemain = maxNum - numChar;
+					if(numChar <= maxNum) {
+						$('.counter').text(charRemain);
+					} else {
+						//	添加一个方法，字符值超过允许输入的最大值时，阻止用户继续输入
+						event.preventDefault();
+					}
+				}
+			});
+		});
+	</script>
+</body>
+</html>

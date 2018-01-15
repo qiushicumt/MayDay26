@@ -25,7 +25,7 @@ $(function(){
 $(document).ready(function(){
 	alert($('#celebs tbody tr').length + ' elements!');
 });
-*/
+
 //	jQuery筛选器可以删除特定元素，保留筛选下来的元素。在想要进行使用筛选器的元素后加:，再加上筛选器
 //	jQuery常用筛选器包括： 
 //						:even		//	选择偶数
@@ -38,4 +38,11 @@ $(document).ready(function(){
 $(document).ready(function(){
 	//	alert($('#celebs tbody tr:even').length + ' elements!');
 	$('#celebs tbody tr:even').css('background-color', '#ccc');
+
+	//	$(this)，一般指触发事件的元素本身，在此代表触发click事件的id为#hideButton的按钮
+	$('#hideButton').click(function() {
+		$(this).hide();
+	});
+
 });
+*/

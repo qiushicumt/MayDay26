@@ -1,7 +1,23 @@
 @charset "utf-8";
 @import url("reset.css");
 
-body{background-color:rgb(145,198,232);}
+body{
+    background: #94C5EB url(../images/background-grad.png) repeat-x;
+    font-size: 12px;
+    font-family:"Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+    color: #3E3E3E;
+}
 
-#wrappage {width:650px;margin:0px auto;background-color:#fff;}
-h1#webTitle {color:#000;font-size:36px;font-weight:bold;}
+.wrappage {
+    width:650px;
+    margin:0px auto;
+}
+h1 {
+    margin: 5px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.content {
+    background-color: #fff;
+    border-radius: 5px;
+}
