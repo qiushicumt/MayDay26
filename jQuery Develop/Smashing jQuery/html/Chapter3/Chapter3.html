@@ -10,15 +10,61 @@
 <head>
     <meta charset="utf-8" />
     <title>jQuery过滤器</title>
-    <link rel="stylesheet" href="../css/BasicStylesheet.css" />
+    <link rel="stylesheet" href="../../css/BasicStylesheet.css" />
     <style>
         ul {  width: 200px; font-family: Arial; }
         ul li { border-bottom: 1px solid #333; }
         ul li a {text-decoration: none; }
+        .main { color: #1c94c4; }
+
     </style>
-    <script src="../js/jquery.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
 </head>
 <body>
+    <!--
+    =====================================
+        4、利用jQuery操作HTML和CSS
+
+
+    =====================================
+    -->
+    <div class="wrappage">
+        <div class="content">
+            <p>I run 4 times a week.</p>
+            <p>I lift weights 3 times a week.</p>
+        </div>
+    </div>
+    <script>
+        /*
+         *  .html()，没有参数时可以获取
+            DOM元素的HTML，有参数时可以
+            向DOM元素中添加HTML
+        $(document).ready(function() {
+           $('.content').html('<div class="main">Hello jQuery！</div>')
+        });
+
+         *  .text()，没有参数时可以获取
+            DOM元素的文本内容，有参数时
+            可以给DOM元素设置文本内容
+        $(document).ready(function() {
+            $('.content').text('Testing 123');
+        });
+
+         *  .append()，向DOM元素内的末尾元素后面插入内容
+         *  .prepend()，向DOM元素内的首个元素前面插入内容
+        $(document).ready(function() {
+            $('.content').append('<p>I play basketball 2 times a week.</p>');
+            $('.content').prepend('<p>I ride my bike 3 times a week.</p>');
+        });
+
+        *  .before()，向DOM元素外的前面插入内容
+        *  .after()，向DOM元素外的后面插入内容
+        $(document).ready(function() {
+            $('.content').before("<p class='main'>I play basketball 2 times a week.</p>");
+            $('.content').after("<p class='main'>I ride my bike 3 times a week.</p>")
+        });
+        */
+    </script>
     <!--
     ================================
         3、通过过滤器选择包含特定内

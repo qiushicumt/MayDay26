@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>单击鼠标触发添加或删除行为</title>
+    <link rel="stylesheet" href="../../css/BasicStylesheet.css" />
+    <style>
+        .show-content { display: none; }
+    </style>
+    <script src="../../js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrappage">
+        <h2>Hello jQuery！</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida rhoncus commmodo. Aenean sit amet augue iaculis sem consectetur accumsan vitae a arcu. Donec gravida augue iaculis sem consectetur ipsum dolor sit. Donec consectetur adipiscing sollicitudin vel porta eget, vestibulum id justo.</p>
+        <button class="showButton" type="button">Show More</button>
+        <div class="show-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida rhoncus commmodo. Aenean sit amet augue iaculis sem consectetur accumsan vitae a arcu. Donec gravida augue iaculis sem consectetur ipsum dolor sit. Donec consectetur adipiscing sollicitudin vel porta eget, vestibulum id justo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida rhoncus commmodo. Aenean sit amet augue iaculis sem consectetur accumsan vitae a arcu. Donec gravida augue iaculis sem consectetur ipsum dolor sit. Donec consectetur adipiscing sollicitudin vel porta eget, vestibulum id justo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida rhoncus commmodo. Aenean sit amet augue iaculis sem consectetur accumsan vitae a arcu. Donec gravida augue iaculis sem consectetur ipsum dolor sit. Donec consectetur adipiscing sollicitudin vel porta eget, vestibulum id justo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida rhoncus commmodo. Aenean sit amet augue iaculis sem consectetur accumsan vitae a arcu. Donec gravida augue iaculis sem consectetur ipsum dolor sit. Donec consectetur adipiscing sollicitudin vel porta eget, vestibulum id justo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida rhoncus commmodo. Aenean sit amet augue iaculis sem consectetur accumsan vitae a arcu. Donec gravida augue iaculis sem consectetur ipsum dolor sit. Donec consectetur adipiscing sollicitudin vel porta eget, vestibulum id justo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida rhoncus commmodo. Aenean sit amet augue iaculis sem consectetur accumsan vitae a arcu. Donec gravida augue iaculis sem consectetur ipsum dolor sit. Donec consectetur adipiscing sollicitudin vel porta eget, vestibulum id justo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida rhoncus commmodo. Aenean sit amet augue iaculis sem consectetur accumsan vitae a arcu. Donec gravida augue iaculis sem consectetur ipsum dolor sit. Donec consectetur adipiscing sollicitudin vel porta eget, vestibulum id justo.</p>
+        </div>
+    </div>
+    <script>
+        /*
+        $(document).ready(function() {
+            $('.showButton').bind('click', function() {
+                $('.show-content').show();
+            });
+        }
+        */
+        $(document).ready(function() {
+            $('.showButton').bind('click', function() {
+                $('.show-content').toggle();
+            });
+        });
+    </script>
+</body>
+</html>

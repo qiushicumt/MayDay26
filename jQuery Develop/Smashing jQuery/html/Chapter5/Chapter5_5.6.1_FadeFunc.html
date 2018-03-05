@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery中元素的淡入淡出效果</title>
+    <link rel="stylesheet" href="../../css/BasicStylesheet.css" />
+    <script src="../../js/jquery.min.js"></script>
+    <style>
+        ul#nav { list-style-type: none; margin:10px 0 10px; padding: 0; }
+        ul#nav li { float: left; width:30px; }
+        ul#nav li a { text-decoration: none; background-color: #05609A; color: #fff; padding: 5px; }
+        ul#nav li a.active { background-color: #B4F114; }
+        .slide-image { width: 400px; height: 300px; border: 2px solid #05609A; overflow: hidden; }
+        .slide-image img { display:none; }
+    </style>
+</head>
+<body>
+    <div class="wrappage">
+        <div class="container">
+            <h2>jQuery Images Galore</h2>
+        </div>
+    </div>
+<script>
+$(document).ready(function() {
+    //  声明一个数组slideArray用于保存图片的名称
+    //  声明一个变量imgPath用于保存图片的存放路径
+    var slideArray = [
+        "wallpaper_01.png",
+        "wallpaper_02.png",
+        "wallpaper_03.png",
+        "wallpaper_04.png",
+        "wallpaper_05.png"
+    ];
+    var imgPath = "../../images/";
+
+    //  在container元素尾部添加一个类为slide-image的div元素，在slide-image的div元素中添加img元素，即在div中存放img
+    $('.container').append('<div class="slide-image"></div>');
+    $('.slide-image').html('<img src="' + imgPath + slideArray[0] + '"/>');
+
+    //  在.slide-image的div元素后添加一个无序列表<ul>元素
+    //  根据图片数组的元素个数，在ul元素中添加对应的li
+    $('.slide-image').after('<ul id="nav"></ul>');
+    for (var i = 0; i < slideArray.length; i++) {
+        var slideText = i + 1;
+        $('#nav').append('<li><a href="#" rel="' + slideText + '">' + slideText + '</a></li>');
+    }
+
+    //  在创建的nav导航无序列表中，为每一个链接a元素绑定click事件
+    $('#nav li a').bind('click', function() {
+        var numSlide = $(this).attr('rel');
+        $('.slide-image').html('<img src="' + imgPath + 'wallpaper_0' + numSlide + '.png" />' );
+        $('.slide-image img').fadeIn();
+        $('#nav li a').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('#nav li a').eq(0).click();
+});
+</script>
+</body>
+</html>

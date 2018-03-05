@@ -1,0 +1,37 @@
+<!--
+===========================
+   jQuery的toggle方法测试
+===========================
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery测试</title>
+    <link rel="stylesheet" href="../css/BasicStylesheet.css" />
+    <style>
+        .hiddenText {
+            display: none;
+        }
+    </style>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrappage">
+        <h2>jQuery的toggle方法测试</h2>
+        <button type="button" id="show-button">ShowMore</button>
+        <br />
+        <hr />
+        <br />
+        <p class="hiddenText">这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。这是一段测试文字，用来测试jQuery的Toggle方法。</p>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#show-button').bind('click', function() {
+                $('.hiddenText').toggle();
+            });
+        });
+    </script>
+</body>
+</html>
+-->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>元素的隐藏和显示的滑动特效</title>
+    <link rel="stylesheet" href="../../css/BasicStylesheet.css" />
+    <script src="../../js/jquery.min.js"></script>
+    <style>
+        .advanced { display: none; padding: 3px; border: 1px solid #ccc; width: 300px; }
+    </style>
+</head>
+<body>
+    <div class="wrappage">
+        <div id="search">
+            <h2>Johnny's Superstore</h2>
+            <input type="text" width="60" />
+            <input type="submit" value="search" />
+            <br />
+            <a href="#" class="advanced-search">Advanced Search</a>
+            <div class="advanced">
+                <input type="radio" name="category" /> Clothing <br />
+                <input type="radio" name="category" />  Electronics <br/>
+                <input type="checkbox" name="sale" /> Clearance Only <br/>
+            </div>
+        </div>
+    </div>
+<script>
+    $(document).ready(function() {
+        $('.advanced-search').bind('click', function() {
+            //  slideToggle()方法，用于设置元素的滑动显示和隐藏的效果
+            //  slideDown()方法，用于滑动显示元素
+            //  slideUp()方法，用于滑动隐藏元素
+            $('.advanced').slideToggle();
+        });
+    });
+</script>
+</body>
+</html>
