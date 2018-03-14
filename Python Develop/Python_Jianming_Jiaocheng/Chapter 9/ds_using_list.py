@@ -4,7 +4,11 @@
 
 '''
     list(列表)，是一种有序的数据集合，用方括号括起来
-
+    使用for...in循环可以遍历列表中的每一项
+    append()方法：list列表可以通过append方法向列表中添加新的项
+    sort()方法：   list列表可以通过sort方法将list列表项中的所有项进行排序。
+        注：使用sort方法对list列表进行排序，会改变list列表
+    del语句可以直接删除列表中的某一项
 '''
 
 shoplist = ['apple', 'mango', 'carrot', 'banana']
