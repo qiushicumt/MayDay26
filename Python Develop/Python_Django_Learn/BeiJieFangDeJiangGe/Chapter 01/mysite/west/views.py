@@ -1,0 +1,7 @@
+# -*- coding:utf-8 -*-
+
+# from django.shortcuts import render
+from django.http import HttpResponse
+
+def first_page(request):
+    return HttpResponse("<h2>西餐</h2>")
