@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Django Index</title>
+        <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        #wrappage {
+            width: 960px;
+            margin: 10px auto;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="wrappage">
+            <!--
+                # 写死的超链接，更改不方便
+                <a href="/add/23/15">计算 23+15 的值</a>
+            -->
+            <!-- {% url 'name' 参数 %} 这是-->
+            <a href="{% url 'add2' 23 25 %}">计算两个参数的值</a>
+        </div>
+    </body>
+</html>
